@@ -2,8 +2,9 @@
 var path = require('path');
 
 module.exports = {
-    entry: './frontend/entry.jsx',
+    entry: './frontend/eating_easy.jsx',
     output: {
+        ath: path.resolve(__dirname, "app", "assets", "javascripts"),
         filename: './bundle.js',
     },
     module: {
