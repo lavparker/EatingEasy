@@ -11,12 +11,13 @@ class Api::SessionsController < ApplicationController
       login!(@user)
       redirect_to users_url
     else
-      flash.now[:errors] = ['Invalid username or password']
+      flash.now[:errors] = ['Invalid username or password'], status: 401
       render :new
     end
   end
 
   def destroy
+    
     logout!
     render json: {}
 
