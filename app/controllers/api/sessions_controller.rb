@@ -18,6 +18,9 @@ class Api::SessionsController < ApplicationController
 
   def destroy
     logout!
-    redirect_to new_session_url
+    render json: {}
+
+    # render a Render a 404 message if there is no current_user to logout.
+
   end
 end
