@@ -4,10 +4,10 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
-
-const receiveCurrentUser = currentUser =>({
+//action creators 
+const receiveCurrentUser = user =>({
     type: RECEIVE_CURRENT_USER,
-    currentUser
+    user
 })
 
 const logoutCurrentUser = () =>({
@@ -20,17 +20,20 @@ const receiveErrors = errors =>({
     errors
 })
 
-export const login = user => dispatch =>{
-     APIUtil.login(user)
-     .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
+
+//thunk action creators 
+
+export const login = formUser => dispatch =>{
+     APIUtil.postSession(formUser)
+     .then(user => dispatch(receiveCurrentUser(user)))
 }
 
 export const logout = () => dispatch =>{
-    APIUtil.logout()
+    APIUtil.deleteSession()
     .then(() => dispatch(logoutCurrentUser()))
 }
 
-export const signup = user => dispatch =>{
-    APIUtil.signup(user)
-    .then(user => dispatch(receiveCurrentUser(currentUser)))
+export const createNewUser = formUser => dispatch =>{
+    APIUtil.postUser(formUser)
+    .then(user => dispatch(receiveCurrentUser(user)))
 }
