@@ -24,16 +24,16 @@ const receiveErrors = errors =>({
 //thunk action creators 
 
 export const login = formUser => dispatch =>{
-     APIUtil.postSession(formUser)
+     return APIUtil.postSession(formUser)
      .then(user => dispatch(receiveCurrentUser(user)))
 }
 
 export const logout = () => dispatch =>{
-    APIUtil.deleteSession()
+    return APIUtil.deleteSession()
     .then(() => dispatch(logoutCurrentUser()))
 }
 
 export const createNewUser = formUser => dispatch =>{
-    APIUtil.postUser(formUser)
+    return APIUtil.postUser(formUser)
     .then(user => dispatch(receiveCurrentUser(user)))
 }

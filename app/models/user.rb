@@ -3,7 +3,7 @@ class User < ApplicationRecord
     validates :username, :email, uniqueness: true
     validates :password, length: {minimum: 6, allow_nil: true} 
     validates :session_token, presence: true, uniqueness: true 
-    attr_reader: :password
+    attr_reader :password
 
     has_many :reservations,
         foreign_key: :user_id,

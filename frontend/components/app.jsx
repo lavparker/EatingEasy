@@ -6,6 +6,7 @@ import {
 import signup_container from './session/signup_container';
 
 
+
 const App = () =>(
     <div>
         <header>
@@ -19,3 +20,4 @@ const App = () =>(
 )
 
 export default App;
+

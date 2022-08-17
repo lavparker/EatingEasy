@@ -22,8 +22,13 @@ class Signup extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createNewUser(this.state)
-        .then(() => this.props.history.push('/reservations'))
+        this.props.createNewUser({ first_name: this.state.firstName, 
+            last_name: this.state.lastName, 
+            username: this.state.username, 
+            email: this.state.email,
+            password: this.state.password
+        })
+        .then(() => this.props.history.push('/reservations'));
     }
     render() {
         return(
