@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createNewUser } from '../../actions/session_actions';
-import Signup from './signup';
+import SessionForm from './session_form';
+// import { Link } from 'react-router-dom';
 
+const mapStateToProps = (state, ownProps) => ({
+    errors: state.errors.session,
+    formType: 'SignUp'
+})
 const mapDispatchToProps = dispatch =>({
     createNewUser: formUser => dispatch(createNewUser(formUser)),
 
 });
 
-export default connect(null, mapDispatchToProps)(Signup);
+export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
 

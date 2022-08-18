@@ -9,10 +9,10 @@
 //     ReactDOM.render(<h1>Welcome to EatingEasy</h1>, root);
 // });
 
-//React
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-//Components
+
 import Root from './components/root';
 import configureStore from './store/store';
 

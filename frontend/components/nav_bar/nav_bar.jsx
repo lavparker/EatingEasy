@@ -1,16 +1,21 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+
 const NavBar = ({currentUser, logout}) =>{
     const display = currentUser ? (
         <div>
+
             <p>Hello, {currentUser.username}</p>
             <button onClick={logout}>Log Out</button>
         </div>
     ) : (
         <div>
-            <Link className ="btn" to="/signup">Sign Up</Link>
-            <Link className = "btn" to="/login">Log In</Link>
+            <button className="signup-btn" onClick={() => openModal}>Sign Up</button>
+            <button className="signin-btn">Log In</button>
+
+            {/* <Link className ="signup-btn" to="/signup">Sign Up</Link>
+            <Link className= "signin-btn" to="/login">Log In</Link> */}
         </div>
     );
     
