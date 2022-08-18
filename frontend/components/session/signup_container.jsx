@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
     formType: 'SignUp'
 })
 const mapDispatchToProps = dispatch =>({
-    createNewUser: formUser => dispatch(createNewUser(formUser)),
+    processForm: formUser => dispatch(createNewUser(formUser)),
 
 });
 

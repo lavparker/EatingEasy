@@ -14,22 +14,28 @@ class SessionForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
     handleInput(type){
         return(e) => {
-            this.setState({ [type]: e.target.value });
+            this.setState({ [type]: e.currentTarget.value });
         };
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createNewUser({ first_name: this.state.firstName, 
+        this.props.processForm({ first_name: this.state.firstName, 
             last_name: this.state.lastName, 
             username: this.state.username, 
             email: this.state.email,
             password: this.state.password
         })
-        .then(() => this.props.history.push('/reservations'));
     }
+    
     render() {
         return(
             <div className='session-form'>
