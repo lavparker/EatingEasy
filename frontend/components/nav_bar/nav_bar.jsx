@@ -11,7 +11,7 @@ const NavBar = ({currentUser, logout}) =>{
         </div>
     ) : (
         <div>
-            <button className="signup-btn" onClick={() => openModal}>Sign Up</button>
+            <button className="signup-btn">Sign Up</button>
             <button className="signin-btn">Log In</button>
 
             {/* <Link className ="signup-btn" to="/signup">Sign Up</Link>
