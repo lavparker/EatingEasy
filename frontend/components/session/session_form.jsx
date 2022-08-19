@@ -76,6 +76,7 @@ class SessionForm extends React.Component{
                 <form onSubmit={this.handleSubmit} className="signupin-form">
                     Welcome to Eating Easy!
                     <br />
+                    <br />
                     Please {this.props.formType} or {this.props.otherForm}
                     <br />
                     <br />

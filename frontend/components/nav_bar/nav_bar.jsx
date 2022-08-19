@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 
-const NavBar = ({currentUser, logout}) =>{
+
+const NavBar = ({currentUser, login, logout, openModal}) =>{
     const display = currentUser ? (
         <div>
 
@@ -10,18 +11,23 @@ const NavBar = ({currentUser, logout}) =>{
             <button onClick={logout}>Log Out</button>
         </div>
     ) : (
-        <div>
-            <button className="signup-btn">Sign Up</button>
-            <button className="signin-btn">Log In</button>
+        <nav className="session-buttons"> 
+            <Link to="/signup">
+                <button onClick={() => openModal("signup")}
+                className="signup-btn">Sign Up</button>
+            </Link>
+            
+            <Link to="/login">
+                <button onClick={() => openModal("login")}
+                className="signin-btn">Log In</button>
+            </Link>
 
-            {/* <Link className ="signup-btn" to="/signup">Sign Up</Link>
-            <Link className= "signin-btn" to="/login">Log In</Link> */}
-        </div>
+        </nav>
     );
     
     return (
         <header className="nav-bar">
-            <h1 className="logo">EATINGEASY</h1>
+            {/* <h1 className="logo">EasyEating</h1> */}
             <div>
                 { display }
             </div>
