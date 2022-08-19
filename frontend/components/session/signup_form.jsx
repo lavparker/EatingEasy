@@ -41,7 +41,7 @@ class Signup extends React.Component{
         };
 
         this.props.processForm(user)
-        .then(() => {this.props.closeModal()});
+        .then(() => this.props.closeModal());
 
     }
     // handleSubmit(e) {
