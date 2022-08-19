@@ -15,7 +15,7 @@ const logoutCurrentUser = () =>({
 
 })
 
-const receiveErrors = errors =>({
+const receiveSessionErrors = errors =>({
     type: RECEIVE_SESSION_ERRORS,
     errors
 })
@@ -23,9 +23,10 @@ const receiveErrors = errors =>({
 
 //thunk action creators 
 
-export const login = formUser => dispatch =>{
-     return APIUtil.postSession(formUser)
-     .then(user => dispatch(receiveCurrentUser(user)))
+export const login = user => dispatch =>{
+     return APIUtil.postSession(user)
+     .then(user => dispatch(receiveCurrentUser(user)),
+        err => (dispatch(receiveSessionErrors(err.responseJSON))))
 }
 
 export const logout = () => dispatch =>{
@@ -33,7 +34,8 @@ export const logout = () => dispatch =>{
     .then(() => dispatch(logoutCurrentUser()))
 }
 
-export const createNewUser = formUser => dispatch =>{
-    return APIUtil.postUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)))
+export const createNewUser = user => dispatch =>{
+    return APIUtil.postUser(user)
+    .then(user => dispatch(receiveCurrentUser(user))),
+        err => (dispatch(receiveSessionErrors(err.responseJSON)))
 }

@@ -3,17 +3,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
-const mapStateToProps = (state, ownProps) =>{
+//destructuring state and taking out errors 
+const mapStateToProps = ({ errors }, ownProps) =>{
     return({
-        errors: state.errors.session,
+        errors: errors.session,
         formType: "Log In", 
     });
 };
 
 const mapDispatchToProps = dispatch => {
     return{
-        processForm: (user) => dispatch(login(user)),
+        processForm: user => dispatch(login(user)),
+        otherForm: (
+            <button onClick={() => dispatch(openModal("signup"))}>SignUp</button>
+        ),
+        removeErrors: () => dispatch(removeErrors()),
+        closeModal: () => dispatch(closeModal())
     };
 }
 

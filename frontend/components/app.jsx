@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {
     Route, Redirect, Switch, Link, HashRouter
 } from 'react-router-dom'; 
-import signup_container from './session/signup_container';
+import signupContainer from './session/signup_container';
 import NavBarContainer from "./nav_bar/nav_bar_container.jsx";
 
 
@@ -18,7 +18,7 @@ const App = () =>(
             <NavBarContainer/>
         </header>
 
-        <Route path="/signup" component={signup_container}/>
+        <Route path="/signup" component={signupContainer}/>
     </div>
 )
 
