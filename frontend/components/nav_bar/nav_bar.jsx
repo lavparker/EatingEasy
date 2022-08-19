@@ -7,8 +7,9 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
     const display = currentUser ? (
         <div>
 
-            <p>Hello, {currentUser.username}</p>
-            <button onClick={logout}>Log Out</button>
+            <p>Hello, {currentUser.first_name}!</p>
+    
+            <button className="logout-btn" onClick={logout}>Log Out</button>
         </div>
     ) : (
         <nav className="session-buttons"> 

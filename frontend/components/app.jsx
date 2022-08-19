@@ -13,7 +13,9 @@ import mainPage from "./main/main"
 
 const App = () =>(
     <div className= "main-page">
+        
         <Modal/>
+        <div>
         <header>
             <Link to="/" className="link-header">
                 <h1>EasyEats</h1>
@@ -25,11 +27,12 @@ const App = () =>(
             <Route exact path="/" component={mainPage} />
             <Route exact path="/signup" component={signupContainer} />
             <Route exact path="/login" component={loginFormContainer} />
+            <Redirect to="/"/>
         </Switch>
         
-    
+        </div>
     </div>
-)
+);
 
 export default App;
 
