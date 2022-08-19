@@ -37,6 +37,6 @@ export const logout = () => dispatch =>{
 
 export const createNewUser = user => dispatch =>{
     return APIUtil.postUser(user)
-    .then(user => dispatch(receiveCurrentUser(user))),
-        err => (dispatch(receiveSessionErrors(err.responseJSON)))
+    .then(user => dispatch(receiveCurrentUser(user)),
+        err => (dispatch(receiveSessionErrors(err.responseJSON))))
 }

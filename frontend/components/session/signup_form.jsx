@@ -32,18 +32,17 @@ class Signup extends React.Component{
        
         e.preventDefault();
 
-        // const creds = {
-        //     first_name: this.state.firstName,
-        //     last_name: this.state.lastName,
-        //     username: this.state.username,
-        //     email: this.state.email,
-        //     password: this.state.password
-        // }
+        const user = {
+            first_name: this.state.firstName,
+            last_name: this.state.lastName,
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password
+        };
 
-        const user = Object.assign({},this.state);
-     
         this.props.processForm(user)
-            .then(this.props.closeModal)
+        .then(() => {this.props.closeModal()});
+
     }
     // handleSubmit(e) {
     //     console.log(this.props);
@@ -65,18 +64,18 @@ class Signup extends React.Component{
         this.props.openModal("login");
     }
 
-    renderErrors(){
+    // renderErrors(){
        
-        return(
-            <ul>
-                {this.props.errors.map((error, i) =>(
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    };
+    //     return(
+    //         <ul>
+    //             {this.props.errors.map((error, i) =>(
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // };
 
     render() {
         return(
