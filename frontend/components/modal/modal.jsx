@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
 import LoginFormContainer from "../session/login_form_container";
 import SignupContainer from "../session/signup_container";
+import SignUp from "../session/signup_form";
 
 function Modal({ modal, closeModal }) {
     if (!modal) {

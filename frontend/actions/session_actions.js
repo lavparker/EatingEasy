@@ -30,6 +30,7 @@ export const login = user => dispatch =>{
 }
 
 export const logout = () => dispatch =>{
+    // debugger
     return APIUtil.deleteSession()
     .then(() => dispatch(logoutCurrentUser()))
 }

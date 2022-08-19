@@ -12,18 +12,19 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
             <button className="logout-btn" onClick={logout}>Log Out</button>
         </div>
     ) : (
-        <nav className="session-buttons"> 
-            <Link to="/signup">
+        <div className="session-buttons"> 
+            {/* <Link to="/signup"> */}
                 <button onClick={() => openModal("signup")}
                 className="signup-btn">Sign Up</button>
-            </Link>
+            {/* </Link> */}
+            
             
             <Link to="/login">
                 <button onClick={() => openModal("login")}
                 className="signin-btn">Log In</button>
             </Link>
 
-        </nav>
+        </div>
     );
     
     return (

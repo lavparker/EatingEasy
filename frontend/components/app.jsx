@@ -7,7 +7,7 @@ import loginFormContainer from './session/login_form_container';
 import signupContainer from './session/signup_container';
 import NavBarContainer from "./nav_bar/nav_bar_container.jsx";
 import {AuthRoute, ProtectedRoute } from "../util/route_utils";
-import mainPage from "./main/main"
+import mainPage from "./main/main";
 
 
 
