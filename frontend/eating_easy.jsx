@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 
 import Root from './components/root';
 import configureStore from './store/store';
-import {receiveSessionErrors} from './actions/session_actions';
+import { RECEIVE_SESSION_ERRORS, receiveSessionErrors } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    window.receiveSessionErrors = receiveSessionErrors; 
+    // window.receiveSessionErrors = receiveSessionErrors; 
 
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
