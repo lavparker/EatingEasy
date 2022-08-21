@@ -18,6 +18,7 @@ const App = () =>(
         <div>
         <header>
             <Link to="/" className="link-header">
+                    <img className="logo" src={'icons8-reservation-64.png'} alt="logo" />
                 <h1>EasyEats</h1>
             </Link>
 
@@ -25,8 +26,6 @@ const App = () =>(
         </header>
         <Switch>
             <Route exact path="/" component={mainPage} />
-            <Route exact path="/signup" component={signupContainer} />
-            <Route exact path="/login" component={loginFormContainer} />
             <Redirect to="/"/>
         </Switch>
         

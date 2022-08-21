@@ -1,11 +1,16 @@
 class Api::UsersController < ApplicationController
     skip_before_action :verify_authenticity_token, only: [:create]
     # before_action :require_logged_in, only: [:index, :show]
+    def index
+      @users = User.all
+      render:index
+    end
+    
     def create
       # debugger
       @user = User.new(user_params)
 
-      if @user.save!
+      if @user.save
         login!(@user)
         render :show
       else
@@ -13,14 +18,16 @@ class Api::UsersController < ApplicationController
       end
     end
 
-    # # def show
-    # #   @user = User.find(params[:id])
+    def show
+      @user = User.find(params[:id])
       
-    #   if @user
-    #   render :show
-    # end
+      if @user
+        render :show
+      else
+        render json: ["user not found"], status: 404
+      end
+    end
 
-    
 
 
 

@@ -22,6 +22,7 @@ function Modal({ modal, closeModal }) {
             return null;
     } return (
         // boilerplate?
+        //add close modal here 
         <div className="background-modal" onClick={closeModal}>
             <div className="modal-next" onClick={e => e.stopPropagation()}>
                 {component}

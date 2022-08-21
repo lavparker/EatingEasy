@@ -14,7 +14,7 @@ class Login extends React.Component{
 
     handleInput(field){
         return e =>{
-            this.setState({ [type]: e.currentTarget.value })
+            this.setState({ [field]: e.currentTarget.value })
 
         };
     }
@@ -24,7 +24,7 @@ class Login extends React.Component{
 
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-        .then(this.props.closeModal)
+        .then(() => this.props.closeModal());
     }
 
 
@@ -45,6 +45,7 @@ class Login extends React.Component{
         <div className='session-form'>
             <h2>Sign Up!</h2>
               <form onSubmit={this.handleSubmit} className="signupin-form">
+                  <div onClick={this.props.closeModal} className="close-modal">X</div>
                 Welcome to Eating Easy!
                 <br />
                 <br />
@@ -68,7 +69,7 @@ class Login extends React.Component{
                       />
                   </label>
                   <br />
-                 {/* <button className="signup-btn" onClick={this.handleSubmit}> Sign Up</button> */}
+                 <button className="signup-btn" onClick={this.handleSubmit}> Login</button>
               </form>
           </div>
       )
