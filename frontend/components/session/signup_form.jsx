@@ -12,14 +12,14 @@ class Signup extends React.Component{
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.openModalLogIn = this.openModalLogIn.bind(this);
+        this.openModalLogIn = this.openModalSignUp.bind(this);
     }
 
 
     update(field) {
         return e => this.setState({
-            [field]: e.currentTarget.value
-        });
+            [field]: e.currentTarget.value});
+        
     }
 
     handleInput(type){
@@ -58,10 +58,10 @@ class Signup extends React.Component{
     //     }).then(this.props.closeModal);
     // };
 
-    openModalLogIn (e) {
+    openModalSignUp (e) {
         e.preventDefault();
         this.props.closeModal();
-        this.props.openModal("login");
+        this.props.openModal("signup");
     }
 
     // renderErrors(){
@@ -85,7 +85,7 @@ class Signup extends React.Component{
                 <form onSubmit={this.handleSubmit} className="signup-form">
                     <div onClick={this.props.closeModal} className="close-modal">X</div>
                     Welcome to Eating Easy!
-                    {this.renderErrors()}
+                    {/* {this.renderErrors()} */}
                     <br />
                     <br />
                

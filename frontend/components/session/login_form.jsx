@@ -10,12 +10,12 @@ class Login extends React.Component{
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.openModalLogIn = this.openModalLogIn.bind(this);
     }
 
     handleInput(field){
-        return e =>{
-            this.setState({ [field]: e.currentTarget.value })
-
+        return e =>{ this.setState({ 
+            [field]: e.currentTarget.value })
         };
     }
 
@@ -26,7 +26,12 @@ class Login extends React.Component{
         this.props.processForm(user)
         .then(() => this.props.closeModal());
     }
-
+    //BRING THIS BACK
+    openModalLogIn(e) {
+        e.preventDefault();
+        this.props.closeModal();
+        this.props.openModal("login");
+    }
 
     // renderErrors() {
     //     return (
@@ -43,10 +48,11 @@ class Login extends React.Component{
     render() {
       return(
         <div className='session-form'>
-            <h2>Sign Up!</h2>
+            <h2>Login!</h2>
               <form onSubmit={this.handleSubmit} className="signupin-form">
                   <div onClick={this.props.closeModal} className="close-modal">X</div>
                 Welcome to Eating Easy!
+                {/* {this.renderErrors()} */}
                 <br />
                 <br />
                 <label> Username:
