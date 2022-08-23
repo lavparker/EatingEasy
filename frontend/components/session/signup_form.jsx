@@ -81,14 +81,17 @@ class Signup extends React.Component{
         return(
 
             <div className='signup-box'>
-                <h2>Sign Up!</h2>
+                
                 <form onSubmit={this.handleSubmit} className="signup-form">
                     <div onClick={this.props.closeModal} className="close-modal">X</div>
-                    Welcome to Eating Easy!
+                    <h3 className="modal-welcome">Welcome to Eating Easy!</h3>
+                    
                     {/* {this.renderErrors()} */}
                     <br />
                     <br />
-               
+                    <h2 className="sign-up">Sign up below!</h2>
+                    <br />
+
                     <label> First Name: 
                         <input 
                             type="text"
@@ -98,6 +101,7 @@ class Signup extends React.Component{
                             className="input-signinup"
                              />
                     </label>
+                    <br />
                     <br />
                     <label> Last Name:
                         <input
@@ -109,6 +113,7 @@ class Signup extends React.Component{
                         />
                     </label>
                     <br />
+                    <br />
                     <label> Username:
                         <input
                             type="text"
@@ -119,15 +124,17 @@ class Signup extends React.Component{
                         />
                     </label>
                     <br />
+                    <br />
                     <label> Email:
                         <input
                             type="text"
                             placeholder="Email"
                             value={this.state.email}
-                            onChange={this.handleInput('email')}
+                            onChange=  {this.handleInput('email')}
                             className="input-signinup"
                         />
                     </label>
+                    <br />
                     <br />
                     <label> Password:
                         <input
@@ -139,7 +146,9 @@ class Signup extends React.Component{
                         />
                     </label>
                     <br />
-                   <button className="signup-btn" onClick={this.handleSubmit}> Sign Up Here!</button>
+                    <br />
+
+                   <button className="signup-btn-mod" onClick={this.handleSubmit}> Sign Up Here!</button>
 
                 </form>
             </div>

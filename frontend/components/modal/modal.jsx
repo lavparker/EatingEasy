@@ -21,14 +21,19 @@ function Modal({ modal, closeModal }) {
         default:
             return null;
     } return (
-        // boilerplate?
+    
         //add close modal here 
         <div className="background-modal" onClick={closeModal}>
             <div className="modal-next" onClick={e => e.stopPropagation()}>
                 {component}
             </div>
         </div>
-
+//should i show this popup ovrlay? yes or no? (loging page state)
+//if loging in modal is true-create a loging in component (loging modal screen) if
+//login modal is true (user has pressed login)
+//when they click x, it'll change modal to false 
+//if should show modal is true, then load in new log in component, otherwise dont 
+//show anything 
     )
 }
 

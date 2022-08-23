@@ -48,10 +48,12 @@ class Login extends React.Component{
     render() {
       return(
         <div className='session-form'>
-            <h2>Login!</h2>
               <form onSubmit={this.handleSubmit} className="signupin-form">
                   <div onClick={this.props.closeModal} className="close-modal">X</div>
-                Welcome to Eating Easy!
+                  <h3 className="modal-welcome">Welcome to Eating Easy!</h3> 
+                  <br />
+                  <br />
+                  <h2 className="log-in">Login Here!</h2>
                 {/* {this.renderErrors()} */}
                 <br />
                 <br />
@@ -65,6 +67,7 @@ class Login extends React.Component{
                       />
                 </label>
                   <br />
+                  <br />
                   <label> Password:
                     <input
                         type="password"
@@ -74,6 +77,7 @@ class Login extends React.Component{
                         className="input-signinup"
                       />
                   </label>
+                  <br />
                   <br />
                  <button className="signup-btn" onClick={this.handleSubmit}> Login</button>
               </form>

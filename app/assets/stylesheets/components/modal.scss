@@ -4,13 +4,51 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: black;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 10;
+    
 }
 
-.modal-child{
+.modal-next{
     position: absolute;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background: white;
+    border-color: black;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+}
+
+.close-modal {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-welcome{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.sign-up{
+    display: flex; 
+    justify-content: center; 
+    font-weight: bold;
+}
+
+.signup-btn-mod{
+    display: flex; 
+    justify-content: center;
+    font-weight: bold; 
+}
+
+.log-in{
+    display: flex; 
+    justify-content: center;
+    font-weight: bold; 
 }

@@ -3,15 +3,17 @@
 // }
 .session-buttons{
     display: flex;
-    justify-content: space-between;
-    
- 
+    justify-content: flex-end;
+    margin: 10px;
+    radius: 5px;
+
 }
+
 .signin-btn {
     background-color: #247f9e;
     height: 40px;
     width: 90px;
-    
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -19,12 +21,39 @@
     background-color: #247f9e;
     height: 40px;
     width: 90px;
+    margin-right: 5px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .logout-btn{
     background-color: #247f9e;
-    height: 40px;
-    width: 90px;
+    height: 30px;
+    width: 70px;
+    margin: 5px;
+    font-weight: bold;
     cursor: pointer;
 }
+
+.signup-btn-mod{
+    align-items: center;
+    background-color: #247f9e;
+    height: 40px;
+    width: 150px;
+   
+
+    cursor: pointer;
+}
+
+.user-login{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.user-login p{
+    font-weight: bold; 
+    margin: 5px;
+    font-size: 24px;
+}
+

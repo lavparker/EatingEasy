@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({currentUser, login, logout, openModal}) =>{
     const display = currentUser ? (
-        <div>
+        <div className="user-login">
 
             <p>Hello, {currentUser.first_name}!</p>
     
@@ -38,3 +38,5 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
 };
 
 export default NavBar; 
+
+// .classname p
