@@ -8,7 +8,7 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
         <div className="user-login">
 
             <p>Hello, {currentUser.first_name}!</p>
-    
+            {/* add dropdown here...include favorites user profile etc */}
             <button className="logout-btn" onClick={logout}>Log Out</button>
         </div>
     ) : (

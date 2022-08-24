@@ -7,4 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # Post.create!(:title => "Post 4", :body => "Body 4")
 
+Restaurant.destroy_all
+
+#wills tart at 2 next time 
 Restaurant.create(:name => 'Boucherie', :address => '123 orange st', :phone_number => "5555555", :cuisine => "african", :details => "good to eat", :hours => "8 to 5", :dress_code => "casual", :website => "www.www.com", :dining_style => "casz")
+#Restaurant.create(:name => 'Boucherie', :address => '123 orange st', :phone_number => "5555555", :cuisine => "african", :details => "good to eat", :hours => "8 to 5", :dress_code => "casual", :website => "www.www.com", :dining_style => "casz")
