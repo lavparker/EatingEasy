@@ -39,7 +39,7 @@ class Api::RestaurantsController < ApplicationController
         if @restaurant
             render :show
         else
-            render json: ["restaurant not found"], status 404
+            render json: ["restaurant not found"], status: 404
         end
     end
 

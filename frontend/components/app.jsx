@@ -8,6 +8,7 @@ import signupContainer from './session/signup_container';
 import NavBarContainer from "./nav_bar/nav_bar_container.jsx";
 import {AuthRoute, ProtectedRoute } from "../util/route_utils";
 import mainPage from "./main/main";
+import RestaurantShow from "./restaurants/restaurant_showPage_container"
 // import { } from 'react-icons/fa';
 
 
@@ -27,7 +28,9 @@ const App = () =>(
         </header>
         <Switch>
             <Route exact path="/" component={mainPage} />
-            <Redirect to="/"/>
+            <Route exact path="/restaurants/:id" component={RestaurantShow}/>
+            <Redirect to="/" />
+
         </Switch>
         
         </div>

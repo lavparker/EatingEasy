@@ -20,7 +20,7 @@ export const getRestaurants = () => dispatch =>(
 
 export const getRestaurant = restaurant => dispatch =>(
     APIUtil.getRestaurant(restaurant)
-    .then((restaurant) => dispatch(receiveRestaurant(restaurant)))
+    .then((restaurant) => {dispatch(receiveRestaurant(restaurant))})
 )
 
 export const createRestaurant = restaurant => dispatch =>(
