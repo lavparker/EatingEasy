@@ -4,16 +4,16 @@ import { getRestaurants } from '../../actions/restaurant_actions';
 
 
 const mapStateToProps = state => {
-    return({
+    return{
         restaurants: Object.values(state.entities.restaurants)
         
-    })
+    }
 }
 
 const mapDispatchToProps = dispatch =>{
-    return({
+    return{
         getRestaurants: () => dispatch(getRestaurants())
-    })
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RestaurantIndex);
