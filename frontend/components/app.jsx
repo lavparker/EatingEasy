@@ -10,7 +10,7 @@ import NavBarContainer from "./nav_bar/nav_bar_container.jsx";
 import RestaurantIndexContainer from "./restaurant_index/restaurant_index_container";
 import mainPage from "./main/main";
 import RestaurantShowContainer from "./restaurants/restaurant_showPage_container";
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
 
 
 
@@ -22,8 +22,8 @@ const App = () =>(
         <div>
         <header>
             <Link to="/" className="link-header">
-                    {/* <img className="logo" src={'icons8-reservation-64.png'} alt="icon place holder" /> */}
-                {/* <h1>EatingEasy</h1> */}
+             
+                <h1>EatingEasy</h1>
             </Link>
 
             <NavBarContainer/>

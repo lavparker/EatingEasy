@@ -82,9 +82,9 @@ class Signup extends React.Component{
 
             <div className='signup-box'>
                 
-                <form onSubmit={this.handleSubmit} className="signup-form">
+                <form onSubmit={this.handleSubmit} className="session-form">
                     <div onClick={this.props.closeModal} className="close-modal">X</div>
-                    <h3 className="modal-welcome">Welcome to Eating Easy!</h3>
+                    <h2 className="modal-welcome">Welcome to Eating Easy!</h2>
                     
                     {/* {this.renderErrors()} */}
                     <br />
@@ -143,7 +143,7 @@ class Signup extends React.Component{
                     <br />
                     <br />
 
-                   <button className="signup-btn-mod" onClick={this.handleSubmit}> Sign Up Here!</button>
+                   <button className="session-btn-mod" onClick={this.handleSubmit}> Sign Up Here!</button>
 
                 </form>
             </div>

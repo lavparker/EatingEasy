@@ -35,7 +35,7 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
     return (
         <header className="nav-bar">
             {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
-            <h1 className="logo">EasyEating</h1>
+            {/* <h1 className="logo">EasyEating</h1> */}
             <div>
                 { display }
             </div>

@@ -53,7 +53,7 @@ class Login extends React.Component{
                   <h3 className="modal-welcome">Welcome to Eating Easy!</h3> 
                   <br />
                   <br />
-                  <h2 className="log-in">Login Here!</h2>
+                  <h2 className="sign-up">Login Here!</h2>
                 {/* {this.renderErrors()} */}
                 <br />
                 <br />
@@ -79,7 +79,7 @@ class Login extends React.Component{
                   </label>
                   <br />
                   <br />
-                 <button className="signup-btn" onClick={this.handleSubmit}> Login</button>
+                 <button className="session-btn-mod" onClick={this.handleSubmit}> Login</button>
               </form>
           </div>
       )
