@@ -92,59 +92,54 @@ class Signup extends React.Component{
                     <h2 className="sign-up">Sign up below!</h2>
                     <br />
 
-                    <label> First Name: 
                         <input 
+                            className="input-signinup"
                             type="text"
                             placeholder = "First Name"
                             value= {this.state.firstName}
                             onChange={this.handleInput('firstName')}
-                            className="input-signinup"
+                            
                              />
-                    </label>
                     <br />
                     <br />
-                    <label> Last Name:
                         <input
+                            className="input-signinup"
                             type="text"
                             placeholder= "Last Name"
                             value={this.state.lastName}
                             onChange={this.handleInput('lastName')}
-                            className="input-signinup"
+                            
                         />
-                    </label>
                     <br />
                     <br />
-                    <label> Username:
                         <input
+                            className="input-signinup"
                             type="text"
                             placeholder="Username"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
-                            className="input-signinup"
+                            
                         />
-                    </label>
                     <br />
                     <br />
-                    <label> Email:
                         <input
+                            className="input-signinup"
                             type="text"
                             placeholder="Email"
                             value={this.state.email}
                             onChange=  {this.handleInput('email')}
-                            className="input-signinup"
+                            
                         />
-                    </label>
                     <br />
                     <br />
-                    <label> Password:
                         <input
+                            className="input-signinup"
                             type="password"
                             placeholder="Password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
-                            className="input-signinup"
+                            
                         />
-                    </label>
                     <br />
                     <br />
 

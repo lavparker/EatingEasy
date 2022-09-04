@@ -8,7 +8,9 @@
 # Post.create!(:title => "Post 4", :body => "Body 4")
 
 Restaurant.destroy_all
+User.destroy_all
 
+#Restaurant seeds
 #wills start at 3 next time 
 Restaurant.create(:name => 'La Grande Boucherie', :address => '145 W 53rd St, New York, NY 10019', :phone_number => "2125107777", :cuisine => "French", :details => "Polished French restaurant in an expansive art nouveau–style space with an elegant heated atrium.", :hours => "11:00AM - 12:00AM", :dress_code => "Business Casual", :website => "www.boucherie.nyc", :dining_style => "Fine Dining")
 Restaurant.create(:name => 'Gramercy Tavern', :address => '42 E 20th St, New York, NY 10003', :phone_number => "2124477777", :cuisine => "New American", :details => "Flatiron District tavern with food you can't find anywhere else.", :hours => "11:30AM - 6:00PM", :dress_code => "Fancy Schmancy", :website => "www.gramercytavern.com", :dining_style => "Pre Fixe")
@@ -18,5 +20,6 @@ Restaurant.create(:name => 'COTE Korean Steakhouse', :address => '16 W 22nd St, 
 Restaurant.create(:name => 'Melbas Restaurant', :address => '300 W 114th St, New York, NY 10026', :phone_number => "2128647777", :cuisine => "Southern Soul", :details => "Southern classics served in a retro setting that's relaxed & homey by day, bustling in the evening..", :hours => "12:0PM - 12:00AM", :dress_code => "Casual", :website => "www.melbasrestaurant.com", :dining_style => "Casual")
 
 
+#Demo User 
 
-
+User.create!(first_name: "Demo", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password")

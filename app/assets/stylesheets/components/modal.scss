@@ -1,24 +1,46 @@
 .modal-background{
     position: fixed;
+    
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 10;
+    z-index: 400;
     
+}
+
+.signup-form{
+   display: block;
+    border-radius: 50px;
+    background-color: green;
+    padding: 100px;
+
+}
+
+.input-signinup{
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // border: 40px; 
+    // border-color: red;
+    // border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    // display: block;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 7px;
+    margin-bottom: 8px;
+    width: 100%;
 }
 
 .modal-next{
     position: absolute;
-
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    border-color: black;
-    border-radius: 10px;
-    padding: 20px 20px 20px 20px;
+    background: whitesmoke;
+    border-radius: 250px;
+    padding: 250px 100px 250px 100px;
 }
 
 .close-modal {
@@ -45,6 +67,8 @@
     display: flex; 
     justify-content: center;
     font-weight: bold; 
+    border-radius: 14px;
+    padding: 20px;
 }
 
 .log-in{

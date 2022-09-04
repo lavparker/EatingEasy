@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faCoffee} from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faC} from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -29,7 +34,8 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
     
     return (
         <header className="nav-bar">
-            {/* <h1 className="logo">EasyEating</h1> */}
+            {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
+            <h1 className="logo">EasyEating</h1>
             <div>
                 { display }
             </div>

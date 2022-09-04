@@ -57,7 +57,7 @@ class Login extends React.Component{
                 {/* {this.renderErrors()} */}
                 <br />
                 <br />
-                <label> Username:
+                <label> 
                     <input
                         type="text"
                         placeholder="Username"
@@ -68,7 +68,7 @@ class Login extends React.Component{
                 </label>
                   <br />
                   <br />
-                  <label> Password:
+                  <label> 
                     <input
                         type="password"
                         placeholder="Password"

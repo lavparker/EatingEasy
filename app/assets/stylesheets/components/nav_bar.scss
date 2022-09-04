@@ -4,13 +4,17 @@
 .session-buttons{
     display: flex;
     justify-content: flex-end;
-    margin: 10px;
-    radius: 5px;
+    // padding-top: -100px;
+    margin-top: -70px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    // margin: 10px;
+    // border-radius: 100px;
 
 }
 
 .signin-btn {
-    background-color: #247f9e;
+    background-color: whitesmoke;
     height: 40px;
     width: 90px;
     font-weight: bold;
@@ -40,8 +44,6 @@
     background-color: #247f9e;
     height: 40px;
     width: 150px;
-   
-
     cursor: pointer;
 }
 
