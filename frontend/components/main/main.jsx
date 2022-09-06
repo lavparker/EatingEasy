@@ -7,12 +7,15 @@ const mainPage = () =>(
 
             <h1 className="find-your-table">Find your table for any occasion</h1>
         </div>
-        {/* <div className="res-index-container">
+        <div className="res-index-container">
             <RestaurantIndexContainer/>
-        </div> */}
+        </div>
+        
+       
     </div>
-
-    
+     
+          
+      
 )
 
 export default mainPage;

@@ -2,7 +2,7 @@ import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT} from "../actions/restaurant_ac
 
 const restaurantsReducer = (oldState = {}, action) => {
     Object.freeze(oldState); 
-    // console.log('in reducer')
+    // console.log('in restaurants reducer');
     
     switch (action.type) {
         case RECEIVE_RESTAURANTS:

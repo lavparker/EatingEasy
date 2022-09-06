@@ -3,11 +3,11 @@ import {
     Route, Redirect, Switch, Link, HashRouter
 } from 'react-router-dom'; 
 import { AuthRoute, ProtectedRoute } from "../util/route_utils";
-import Modal from './modal/modal';
 import loginFormContainer from './session/login_form_container';
 import signupContainer from './session/signup_container';
 import NavBarContainer from "./nav_bar/nav_bar_container.jsx";
-import RestaurantIndexContainer from "./restaurant_index/restaurant_index_container";
+// import RestaurantIndexContainer from "./restaurant_index/restaurant_index_container";
+import Modal from './modal/modal';
 import mainPage from "./main/main";
 import RestaurantShowContainer from "./restaurants/restaurant_showPage_container";
 import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
@@ -17,28 +17,26 @@ import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
 
 const App = () =>(
     <div className= "main-page">
-        
-        <Modal/>
-        <div>
+        <Modal />
+        {/* <div> */}
         <header>
             <Link to="/" className="link-header">
-             
                 <h1>EatingEasy</h1>
             </Link>
-
-            <NavBarContainer/>
+            <NavBarContainer />
         </header>
            
         <Switch>
             <Route exact path="/" component={mainPage} />
-            {/* <Route path="/" component={RestaurantIndexContainer} /> */}
+
+            {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
             {/* <Route exact path="/restaurants/:id" component={RestaurantShowContainer} /> */}
             
             <Redirect to="/" />
 
         </Switch>
         
-        </div>
+        {/* </div> */}
 
         <footer>
             <div>

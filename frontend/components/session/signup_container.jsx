@@ -20,9 +20,10 @@ const mapDispatchToProps = dispatch =>({
         <button onClick={() => dispatch(openModal("login"))}> Login</button>
     ),
     // removeErrors: () => dispatch(removeErrors()),
-    closeModal: () => dispatch(closeModal())    
-    
+    closeModal: () => dispatch(closeModal()),
+   
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
 
+removeErrors: () => dispatch(removeErrors())

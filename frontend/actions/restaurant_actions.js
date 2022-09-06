@@ -18,14 +18,13 @@ export const getRestaurants = () => dispatch =>(
     .then((restaurants) => dispatch(receiveRestaurants(restaurants)))
 )
 
-export const getRestaurant = restaurant => dispatch =>(
-    APIUtil.getRestaurant(restaurant)
-    .then((restaurant) => {dispatch(receiveRestaurant(restaurant))})
+export const getRestaurant = id => dispatch =>(
+    APIUtil.getRestaurant(id)
+    .then((restaurant) => dispatch(receiveRestaurant(restaurant)))
 )
 
 export const createRestaurant = restaurant => dispatch =>(
     APIUtil.getRestaurant(restaurant)
     .then((restaurant) => dispatch(receiveRestaurant(restaurant)))
 )
-
 
