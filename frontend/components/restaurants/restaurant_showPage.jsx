@@ -28,8 +28,25 @@ class RestaurantShow extends React.Component{
         }
         return(
             <div className="restaurant-show-page">
-                <h1>I'm a restaurant!</h1>
-                <li>Name: {this.props.restaurant.name}</li>
+                <div className="show-page-res-img">
+                    <p>image placeholder</p>
+                    <div className="show-page-fave-btn">
+                    <p>favorite button placeholder</p>
+                    </div>
+                </div>
+                <div className="show-page-gen-res">
+                    <div className="show-page-res-info-bar">
+                    <p>Overview reviews</p>
+                </div>
+                </div>
+                
+
+                <div className="show-page-res-info">
+                    <ul>
+
+                    </ul>
+                </div>
+                <h1 className="show-page-res-name">{this.props.restaurant.name}</h1>
                 <li>Address: {this.props.restaurant.address}</li>
                 <li>Phone: {this.props.restaurant.phone_number}</li>
                 <li>Cuisine: {this.props.restaurant.cuisine}</li>

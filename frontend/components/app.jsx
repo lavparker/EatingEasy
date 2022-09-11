@@ -30,7 +30,7 @@ const App = () =>(
             <Route exact path="/" component={mainPage} />
 
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
-            {/* <Route exact path="/restaurants/:id" component={RestaurantShowContainer} /> */}
+            <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
             
             <Redirect to="/" />
 

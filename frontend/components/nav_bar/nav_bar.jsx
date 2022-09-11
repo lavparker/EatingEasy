@@ -25,6 +25,7 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
             
             
             <Link to="/login">
+            {/* <Link to="/"> */}
                 <button onClick={() => openModal("login")}
                 className="signin-btn">Log In</button>
             </Link>

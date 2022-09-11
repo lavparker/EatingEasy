@@ -13,15 +13,13 @@ class RestaurantIndex extends React.Component{
         this.props.getRestaurants(); 
     }
 
-    
-
     render(){
         // const { restaurants } = this.props;
         // debugger for reference :) 
     
         return(
             <div className="restaurants-index">
-                <h2>Local Restaurants</h2>
+                <h2 className="local-restaurants">Local Restaurants</h2>
                 
                 <ul>
                     {

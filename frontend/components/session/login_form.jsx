@@ -11,6 +11,7 @@ class Login extends React.Component{
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.openModalLogIn = this.openModalLogIn.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleInput(field){
@@ -33,17 +34,21 @@ class Login extends React.Component{
         this.props.openModal("login");
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, idx) => (
-    //                 <li key={`error-${idx}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // };
+    handleDemo(){
+        this.setState({username: "DemoUser1", password: "password"})
+    }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => (
+                    <li key={`error-${idx}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    };
 
     render() {
       return(
@@ -54,7 +59,8 @@ class Login extends React.Component{
                   <br />
                   <br />
                   <h2 className="sign-up">Login Here!</h2>
-                {/* {this.renderErrors()} */}
+                  <br />
+                {this.renderErrors()}
                 <br />
                 <br />
                 <label> 
@@ -80,6 +86,8 @@ class Login extends React.Component{
                   <br />
                   <br />
                  <button className="session-btn-mod" onClick={this.handleSubmit}> Login</button>
+                 <br />
+                 <button className="session-demo-btn" onClick={this.handleDemo}>Demo Login</button>
               </form>
           </div>
       )

@@ -8,7 +8,6 @@
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
-   
     display: flex;
     background-size: cover;
     background-position: center;
@@ -30,6 +29,29 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.restaurant-index-item{
+    display: flex;
+    font-size: 20px;
+}
+
+.local-restaurants{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.res-index-container{
+    display: flex;
+    // justify-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 30px;
+    width: 100%;
+    margin-top:85%;
+  
+   
+
 }
 
 // .find-your-table{
