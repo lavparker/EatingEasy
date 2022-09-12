@@ -4,15 +4,31 @@ import { Link } from 'react-router-dom';
 // import {faCoffee} from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {faC} from '@fortawesome/free-solid-svg-icons';
-
-
+import { FaUser } from 'react-icons/fa';
+import { FaAngleDown } from 'react-icons/fa';
 
 
 const NavBar = ({currentUser, login, logout, openModal}) =>{
+
+    const helloWords = ["Hello", "Guten tag", "Salve", "Nǐn hǎo", "Olá", "Asalaam alaikum", "Konnichiwa", "Anyoung haseyo", "Zdravstvuyte"];
+    let hello = helloWords[Math.floor(Math.random()*helloWords.length)];
+
     const display = currentUser ? (
         <div className="user-login">
+            <p>{hello}, {currentUser.first_name}!</p>
 
-            <p>Hello, {currentUser.first_name}!</p>
+            <div className="hover-dropdown">
+                <p className="dropdown-btn" ><FaUser/> <FaAngleDown/></p>
+
+                <ul>
+                    <li>Reservations</li>
+                    <li>Favorites</li>
+                    <li>Logout</li>
+                </ul>
+
+            </div>
+            
+
             {/* add dropdown here...include favorites user profile etc */}
             <button className="logout-btn" onClick={logout}>Log Out</button>
         </div>

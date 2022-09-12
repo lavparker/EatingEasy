@@ -2,7 +2,50 @@
 // <a href="www.linkedin.com/in/laviniaparker" target="_blank" className="fab fa-linkedin"></a>
 // <a href="https://instagram.com/vinia.tech?igshid=YmMyMTA2M2Y=" target="_blank" className="fab fa-instagram"></a>
 
-.github{
-    
-    background-color: yellow;
+
+
+.github:hover{
+    animation: shake 2s;
+    background-color: black;
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius: -100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+
+}
+
+.linkedin:hover{
+    animation: shake 2s;
+    background-color: #0072b1;
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius: -100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+
+}
+
+.instagram:hover{
+    animation: shake 2s;
+    background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius: -100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+@keyframes shake {
+    10%{
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+
+
 }
