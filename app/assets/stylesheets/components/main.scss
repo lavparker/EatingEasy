@@ -5,6 +5,10 @@
 //     font-family: Arial, Helvetica, sans-serif;
 //     font-weight: 900;
 // }
+
+.main-page{
+    background-color: aliceblue;
+}
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
@@ -36,40 +40,49 @@
 
 .local-restaurants{
     display:flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+
 }
 
 .res-index-container{
     background-color: aqua;
     // display: flex;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // position:static;
     // justify-content: center;
     justify-content: space-around;
     flex-direction: row;
     font-size: 30px;
     // width: 100%;
-    margin-top:25%;
+    
+    margin-top:55%;
     margin-bottom: -40%;
+    margin-left: -40%;
     max-width: 100%;
 
 
 }
 
 .restaurants-index{
-    background-color: black;
+    // display: flex;
+    background-color:burlywood;
+    // justify-content: space-around;
 }
 
 .restaurant-index-item {
     display: flex;
+    margin: 5px 5px 5px 5px;
     font-size: 20px;
     flex-direction: row;
+    border-color: black;
+    border-style: double;
+    border-width: 20px;
 }
 
 
 .find-your-table{
-    display: flex;
+    // display: flex;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 200px;
     // margin-left: 5%;

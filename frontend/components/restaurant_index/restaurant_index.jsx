@@ -19,9 +19,9 @@ class RestaurantIndex extends React.Component{
     
         return(
             <div className="restaurants-index">
-                <h2 className="local-restaurants">Local Restaurants</h2>
+                <h2 >Local Restaurants</h2>
                 
-                <ul>
+                <ul className="local-restaurants">
                     {
                         this.props.restaurants.map(restaurant => 
                              <RestaurantIndexItem
