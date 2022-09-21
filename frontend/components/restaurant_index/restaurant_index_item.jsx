@@ -14,7 +14,7 @@ class RestaurantIndexItem extends React.Component{
                 <Link to={`/restaurants/${restaurant.id}`} >
                     <li>
                         <div className='res-photo-row-1'>
-                            <p>Photo placeholder</p>
+                            <img src={restaurant.photoUrl} alt="restaurant image" />
                         </div>
                         <div className='res-name-row-2'>{restaurant.name}</div>
                         <div>

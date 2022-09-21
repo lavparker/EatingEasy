@@ -29,7 +29,7 @@ class RestaurantShow extends React.Component{
         return(
             <div className="restaurant-show-page">
                 <div className="show-page-res-img">
-                    <p>image placeholder</p>
+                    <img src={this.props.restaurant.photoUrl} alt="restaurant image" />
                     <div className="show-page-fave-btn">
                     <p>favorite button placeholder</p>
                     </div>
