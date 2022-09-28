@@ -13,15 +13,18 @@ class RestaurantIndexItem extends React.Component{
             <div className="restaurant-index-item">
                 <Link to={`/restaurants/${restaurant.id}`} >
                     <li>
-                        <div className='res-photo-row-1'>
+                        <div className='res-item-body'>
+                            <div className='res-photo-row-1'>
                             <img src={restaurant.photoUrl} alt="restaurant image" />
-                        </div>
-                        <div className='res-name-row-2'>{restaurant.name}</div>
-                        <div>
+                            </div>
+                            <div className='res-name-row-2'>{restaurant.name}</div>
+                            <div>
                             <p>Star rating placeholder</p>
+                            </div>
+                            <div className='res-address-row-3'>{restaurant.address}</div>
+                            <button className='reserve-btn'>Make a Reservation</button>
                         </div>
-                        <div className='res-address-row-3'>{restaurant.address}</div>
-                        <button className='reserve-btn'>Make a Reservation</button>
+                        
                     </li>
                 </Link>
                 

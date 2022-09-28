@@ -45,7 +45,7 @@
 }
 
 .res-index-container{
-    background-color: aqua;
+    // background-color: aqua;
     // display: flex;
     display: flex;
     // flex-wrap: wrap;
@@ -64,20 +64,66 @@
 
 .restaurants-index{
     // display: flex;
-    background-color:burlywood;
-    // justify-content: space-around;
+    // background-color:burlywood;
+
+    // background-color:magenta;
+    justify-content: space-around;
 }
 
 .restaurant-index-item {
-    display: flex;
-    margin: 5px 5px 5px 5px;
+
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+    box-shadow:0 2px 20px ;
+    // margin: 5px 5px 5px 5px;
+    margin: 1rem;
+    padding: 0px;
     font-size: 20px;
     flex-direction: row;
     border-color: black;
-    border-style: double;
+    // border-style: double;
     border-width: 20px;
+    border-radius: 20px;
+    cursor:pointer;
+    
+
+    
 }
 
+.restaurant-index-item:hover{
+    transform: scale(1.05);
+}
+
+.res-photo-row-1{
+    height: 5rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.res-name-row-2{
+    padding: 10px;
+}
+
+.res-item-body{
+    margin: 2rem;
+}
+
+.reserve-btn{
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 3px;
+    border-style: solid;
+    border-color: aqua;
+}
+
+.reserve-btn:hover{
+    background-color: adjust-hue($color: blue, $degrees: 80);
+}
 
 .find-your-table{
     // display: flex;

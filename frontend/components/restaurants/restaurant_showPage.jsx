@@ -36,15 +36,18 @@ class RestaurantShow extends React.Component{
                 </div>
                 <div className="show-page-gen-res">
                     <div className="show-page-res-info-bar">
-                    <p>Overview reviews</p>
+                        <ul>
+                            <li>Overview</li>
+                            <li>Reviews</li>
+
+                        </ul>
+                    {/* <p>Overview reviews</p> */}
                 </div>
                 </div>
                 
 
                 <div className="show-page-res-info">
-                    <ul>
-
-                    </ul>
+                    
                 </div>
                 <h1 className="show-page-res-name">{this.props.restaurant.name}</h1>
                 <li>Address: {this.props.restaurant.address}</li>

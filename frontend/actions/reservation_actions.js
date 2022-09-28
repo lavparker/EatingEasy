@@ -3,7 +3,7 @@ import * as APIUtil from "../util/reservation_api_util";
 export const RECEIVE_ALL_RESERVATIONS = "RECEIVE_ALL_RESERVATIONS";
 export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const UPDATE_RESERVATION = "UPDATE_RESERVATION";
-export const REMOVE__RESERVATION = "REMOVE_RESERVATION"; 
+export const REMOVE_RESERVATION = "REMOVE_RESERVATION"; 
 // export const RECEIVE_ERRORS = "RECEIVE_ERRORS"; 
 // export const REMOVE_ERRORS = "REMOVE_ERRORS";
 
@@ -41,6 +41,8 @@ export const createReservation = reservation => dispatch =>(
     APIUtil.createReservation(reservation)
     .then(reservation => dispatch(receiveReservation(reservation)))
 );
+
+
 
 export const deleteReservation = reservationId => dispatch =>(
     APIUtil.deleteReservation(reservationId)
