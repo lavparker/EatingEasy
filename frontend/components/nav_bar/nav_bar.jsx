@@ -20,7 +20,7 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
             <div className="hover-dropdown">
                 <p className="dropdown-btn" ><FaUser/> <FaAngleDown/></p>
 
-                <ul>
+                <ul className="user-dropdown">
                     <li>Reservations</li>
                     <li>Favorites</li>
                     <li>Logout</li>

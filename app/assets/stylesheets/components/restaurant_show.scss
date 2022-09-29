@@ -1,0 +1,124 @@
+.restaurant-show-page{
+    display:grid;
+    flex-direction: row;
+    // position: relative;
+    width: 90%;
+
+}
+
+.show-page-res-img{
+    object-fit: cover;
+    width: 111%;
+    height: 300px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 1rem;
+    z-index: 5000;
+}
+
+.show-page-fave-btn{
+    // display: flex;
+    // justify-content: flex-end;
+    position: absolute;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 235px; 
+    margin-left: 78%;
+    box-sizing: border-box;
+    // margin-right: 100%;
+    margin-top: -20%;
+    // z-index: -2000;
+    cursor: pointer;
+}
+
+.show-page-fave-btn:hover{
+    border-color: aquamarine;
+}
+
+// .show-page-gen-res{
+//     padding: 0px;
+// }
+
+.show-page-res-info-bar{
+    border-bottom: 1px solid rgba(142, 23, 23, 0.3);
+
+  
+}
+
+.res-overview-btn{
+    background-color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.res-overview-btn:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.res-reviews-btn{
+    background-color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.res-reviews-btn:hover {
+    color: blue;
+    text-decoration: underline;
+    
+}
+
+.show-page-gen-res{
+    // display: inline-block;
+    background-color: whitesmoke;
+    list-style: none;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    // box-shadow: 0 2px 20px;
+    margin-top: -3rem;
+    margin-left: 10%;
+    margin-right: 50%;
+    width: 70%;
+    // margin: 1rem; 
+    border-radius: 0.3rem;
+    flex-direction: row;
+    // border-color: black;
+    z-index: 100;
+
+}
+
+// .show-page-res-info{
+    
+
+
+// }
+
+.show-page-res-name{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(142, 23, 23, 0.3);
+}
+
+.res-over{
+    border-bottom: 1px solid rgba(142, 23, 23, 0.3);
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+.res-details{
+    font-weight:100;
+    overflow-wrap:normal;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+

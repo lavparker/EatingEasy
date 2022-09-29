@@ -40,6 +40,9 @@ rest2 = Restaurant.create(
     :dining_style => "Fine Dining"
 )
 
+rest2.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/la_grande_boucherie.png"), filename: 'la_grande_boucherie.png')
+
+
 rest3 = Restaurant.create(
     :name => 'Bunna Café', 
     :address => '1084 Flushing Ave, Brooklyn, NY 11237', 

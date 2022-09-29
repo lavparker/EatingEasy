@@ -42,7 +42,7 @@ const App = () =>(
         <footer>
             <div className="socials">
                 {/* <FontAwesomeIcon icon="faHatChef" /> */}
-                <a href="https://github.com/lavparker/EatingEasy" className="github" target="_blank"><FaGithub/></a>
+                <a href="https://github.com/lavparker/" className="github" target="_blank"><FaGithub/></a>
                 <a href="www.linkedin.com/in/laviniaparker" className="linkedin" target="_blank"><FaLinkedin/></a>
                 <a href="https://instagram.com/vinia.tech?igshid=YmMyMTA2M2Y=" className="instagram" target="_blank"><FaInstagram/></a>
             </div>

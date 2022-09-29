@@ -28,38 +28,47 @@ class RestaurantShow extends React.Component{
         }
         return(
             <div className="restaurant-show-page">
-                <div className="show-page-res-img">
-                    <img src={this.props.restaurant.photoUrl} alt="restaurant image" />
-                    <div className="show-page-fave-btn">
-                    <p>favorite button placeholder</p>
-                    </div>
-                </div>
+
+                <div className="res-show-head">
+                    <img className="show-page-res-img" src={this.props.restaurant.photoUrl} alt="restaurant image" />
+                    <button className="show-page-fave-btn">favorite button placeholder</button>
+                </div>        
+            
                 <div className="show-page-gen-res">
                     <div className="show-page-res-info-bar">
                         <ul>
-                            <li>Overview</li>
-                            <li>Reviews</li>
+                            <li>
+                                <button className="res-overview-btn">Overview</button>
+                                <button className="res-reviews-btn">Reviews</button>
+
+                            </li>
+                            {/* <li>
+                                <button className="res-reviews-btn">Reviews</button>
+                            </li> */}
 
                         </ul>
                     {/* <p>Overview reviews</p> */}
-                </div>
-                </div>
-                
+                    </div>
 
-                <div className="show-page-res-info">
-                    
-                </div>
-                <h1 className="show-page-res-name">{this.props.restaurant.name}</h1>
-                <li>Address: {this.props.restaurant.address}</li>
-                <li>Phone: {this.props.restaurant.phone_number}</li>
-                <li>Cuisine: {this.props.restaurant.cuisine}</li>
-                <li>Details: {this.props.restaurant.details}</li>
-                <li>Additional Features: {this.props.restaurant.additional_features}</li>
-                <li>Hours: {this.props.restaurant.hours}</li>
-                <li>Dress Code: {this.props.restaurant.dress_code}</li>
-                <li>Website: {this.props.restaurant.website}</li>
-                <li>Dining Style: {this.props.restaurant.dining_style}</li>
+                    < div className="show-page-res-info">
+                        
+                        <header className="show-page-res-name">{this.props.restaurant.name}</header>
+                        <h1 className="res-over">Overview</h1>
+                        <ul className="res-info">
+                            <li>star reating</li>
+                            <li className="res-cuisine">Cuisine: {this.props.restaurant.cuisine}</li>
 
+                        </ul>
+                        <li className="res-details">{this.props.restaurant.details}</li>
+                        <li className="res-address">Address: {this.props.restaurant.address}</li>
+                        <li className="res-phone">Phone: {this.props.restaurant.phone_number}</li>
+                        <li className="res-addfea">Additional Features: {this.props.restaurant.additional_features}</li>
+                        <li className="res-hours">Hours: {this.props.restaurant.hours}</li>
+                        <li className="res-dress">Dress Code: {this.props.restaurant.dress_code}</li>
+                        <li className="res-web">Website: {this.props.restaurant.website}</li>
+                        <li className="res-dinsty">Dining Style: {this.props.restaurant.dining_style}</li>
+                    </div>
+                </div>
             </div>
         )
     }
