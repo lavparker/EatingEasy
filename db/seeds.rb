@@ -139,7 +139,246 @@ rest10 = Restaurant.create!(
     :dining_style =>  "multicourse tasting menu"
 )
 
+rest11 = Restaurant.create!(
+    :name => "Cafe Himalaya",
+    :address => "78 East 1st Street (bet 1st Ave & Ave A) New York, NY 10009",
+    :phone_number => "2123580000",
+    :cuisine => "Tibetan/Nepalese",
+    :details => "Cafe Himalaya is a Tibetan/Nepalese restaurant located in the Lower East Side of NYC. Visit us for simple, delicious, homemade food from the Himalayas. 
+                We take pride in making food that is natural, nutritious and healthy without any preservatives. We aim to bring the taste of the Himalayas to you!",
+    :hours => "M: Closed // Tue-Sat: Noon-10 pm // Sun: Noon-9 pm",
+    :dress_code => "Casual",
+    :website => "https://cafehimalaya.weebly.com/", 
+    :dining_style => "Relaxed"
+)
 
+rest12 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest13 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
+
+rest11 = Restaurant.create!(
+    :name => "",
+    :address => "",
+    :phone_number => "",
+    :cuisine => "",
+    :details => "",
+    :hours => "",
+    :dress_code => "",
+    :website => "", 
+    :dining_style => ""
+)
 #Demo User 
 
 User.create!(first_name: "Beyonce", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password")

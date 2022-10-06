@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, useParams } from 'react-router-dom';
 import { getReservation, createReservation, updateReservation, deleteReservation } from '../../actions/reservation_actions';
 import ReservationForm from './reservation_form';
 
 const mapStateToProps = (state, ownProps) =>{
     return({
-        reservation: state.entities.reservations[ownProps.match.params.id],
-        restaurant: entities.restaurants[match.params.id],
+        // reservation: state.entities.reservations[ownProps.match.params.id],
+        // restaurant: entities.restaurants[match.params.id],
         currentUser: state.entities.users[sessionStorage.id], 
         // errors: , 
     })

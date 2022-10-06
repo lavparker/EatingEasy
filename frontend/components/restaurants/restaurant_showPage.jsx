@@ -1,4 +1,6 @@
 import React from "react";
+import { FaHeart, FaHome, FaPhone, FaTag, FaClock, FaTshirt, FaLaptop, FaBell, FaApple } from 'react-icons/fa';
+import ReservationForm from "../reservations/reservation_form_container";
 
 class RestaurantShow extends React.Component{
     constructor(props){
@@ -31,7 +33,8 @@ class RestaurantShow extends React.Component{
 
                 <div className="res-show-head">
                     <img className="show-page-res-img" src={this.props.restaurant.photoUrl} alt="restaurant image" />
-                    <button className="show-page-fave-btn">favorite button placeholder</button>
+                    <button className="show-page-fave-btn"><FaHeart/>  favorite button placeholder</button>
+            
                 </div>        
             
                 <div className="show-page-gen-res">
@@ -56,18 +59,87 @@ class RestaurantShow extends React.Component{
                         <h1 className="res-over">Overview</h1>
                         <ul className="res-info">
                             <li>star reating</li>
-                            <li className="res-cuisine">Cuisine: {this.props.restaurant.cuisine}</li>
+                            <li className="res-cuisine"><FaApple/> {this.props.restaurant.cuisine}</li>
 
                         </ul>
                         <li className="res-details">{this.props.restaurant.details}</li>
-                        <li className="res-address">Address: {this.props.restaurant.address}</li>
-                        <li className="res-phone">Phone: {this.props.restaurant.phone_number}</li>
-                        <li className="res-addfea">Additional Features: {this.props.restaurant.additional_features}</li>
-                        <li className="res-hours">Hours: {this.props.restaurant.hours}</li>
-                        <li className="res-dress">Dress Code: {this.props.restaurant.dress_code}</li>
-                        <li className="res-web">Website: {this.props.restaurant.website}</li>
-                        <li className="res-dinsty">Dining Style: {this.props.restaurant.dining_style}</li>
+                        <li className="res-address"> 
+                        
+                        <div className="res-add-icon">
+                            <FaHome/>Address  
+                        </div>
+                        <div className="res-add-word">
+                            {this.props.restaurant.address}
+                        </div>
+                        </li>
+
+                        <br />
+
+                        <li className="res-phone"> 
+                            <div className="res-phone-icon">
+                                <FaPhone/>Phone
+                            </div>
+                            <div className="res-phone-word">
+                             {this.props.restaurant.phone_number}
+                            </div>
+                        </li>
+                        <br />
+
+                        <li className="res-addfea">
+                            <div className="res-addfea-icon">
+                             <FaTag/>Additional Features
+                            </div>
+                            <div className="res-addfea-word">
+                              {this.props.restaurant.additional_features}
+                            </div>
+                        </li>
+                        <br />
+
+                        <li className="res-hours">
+                            <div className="res-hours-icon">
+                             <FaClock/> Hours
+                            </div>
+                            <div className="res-hours-word">
+                              {this.props.restaurant.hours}
+                            </div>
+                        </li>
+                        <br />
+
+                        <li className="res-dress">
+                            <div className="res-dress-icon">
+                             <FaTshirt/> Dress Code
+                            </div>
+                            <div className="res-dress-word">
+                              {this.props.restaurant.dress_code}
+                            </div>
+                        </li>
+                        <br />
+
+                        <li className="res-web">
+                            <div className="res-web-icon">
+                             <FaLaptop/>Website
+                            </div>
+                            <div className="res-web-word">
+                              {this.props.restaurant.website}
+                            </div>  
+                        </li>
+                        <br />
+
+                        <li className="res-dinsty">
+                            <div className="res-dinsty-icon">
+                             <FaBell/> Dining Style
+
+                            </div>
+
+                            <div className="res-dinsty-word">
+                            {this.props.restaurant.dining_style}
+                            </div>
+                        </li>
                     </div>
+                </div>
+
+                <div className="res-form">
+                    <ReservationForm/>
                 </div>
             </div>
         )

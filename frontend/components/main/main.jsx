@@ -9,6 +9,7 @@ const mainPage = () =>(
         </div>
         <div className="res-index-container">
             <RestaurantIndexContainer/>
+            
         </div>
         
        

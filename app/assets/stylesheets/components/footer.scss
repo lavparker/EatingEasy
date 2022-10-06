@@ -4,9 +4,9 @@
 
 
 
-.github{
+.github:hover{
     animation: shake 2s;
-    background-color: black;
+    color: black;
     border-bottom-left-radius:100%;
     border-bottom-right-radius: -100%;
     border-top-left-radius: 100%;
@@ -16,7 +16,7 @@
 
 .linkedin:hover{
     animation: shake 2s;
-    background-color: #0072b1;
+    color: #0072b1;
     border-bottom-left-radius:100%;
     border-bottom-right-radius: -100%;
     border-top-left-radius: 100%;

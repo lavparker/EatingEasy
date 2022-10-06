@@ -7,12 +7,12 @@
 // }
 
 .main-page{
-    background-color: whitesmoke;
+    background-color: white;
 }
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
-    display: flex;
+    display: grid;
     background-size: cover;
     background-position: center;
     // margin-top: -5%;
@@ -39,26 +39,34 @@
 
 
 .local-restaurants{
-    display:flex;
-    flex-wrap: wrap;
+    display:grid;
+    // margin-top: 20%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;  
+    // overflow-wrap:normal;
 
 }
 
 .res-index-container{
     // background-color: aqua;
     // display: flex;
-    display: flex;
+    display: grid;
+    // overflow-wrap: normal;
+    // grid-template-rows: repeat(5, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
     // flex-wrap: wrap;
     // position:static;
     // justify-content: center;
     justify-content: space-around;
-    flex-direction: row;
+
     font-size: 30px;
     // width: 100%;
-    margin-top:55%;
-    margin-bottom: -40%;
-    margin-left: -40%;
-    max-width: 100%;
+    // margin-top:55%;
+    // margin-bottom: -40%;
+    // margin-left: -40%;
+    // max-width: 100%;
 
 }
 
@@ -67,21 +75,22 @@
     // background-color:burlywood;
 
     // background-color:magenta;
+    margin-top: 20%;
     justify-content: space-around;
 }
 
 .restaurant-index-item {
-
+    
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
     gap: 2rem;
     justify-content: center;
-    box-shadow:0 2px 20px ;
+    box-shadow:0 1px 10px ;
     // margin: 5px 5px 5px 5px;
     margin: 1rem;
     padding: 0px;
-    font-size: 20px;
+    font-size: 16px;
     flex-direction: row;
     border-color: black;
     // border-style: double;
@@ -113,7 +122,7 @@
 
 .reserve-btn{
     padding: 10px;
-    margin: 10px;
+    margin-top: 100%;
     font-weight: bold;
     font-size: 1rem;
     border: 3px;
@@ -125,7 +134,7 @@
     background-color: adjust-hue($color: blue, $degrees: 80);
 }
 
-.find-your-table{
+ .main-header{
     // display: flex;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 200px;

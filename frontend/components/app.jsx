@@ -11,6 +11,7 @@ import Modal from './modal/modal';
 import mainPage from "./main/main";
 import RestaurantShowContainer from "./restaurants/restaurant_showPage_container";
 import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
+import ReservationFormContainer from './reservations/reservation_form_container';
 
 
 
@@ -31,7 +32,9 @@ const App = () =>(
             <Route exact path="/" component={mainPage} />
 
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
+            <Route exact path="/reservations/:id " component={ReservationFormContainer}/>
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
+
             
             <Redirect to="/" />
 
@@ -39,7 +42,7 @@ const App = () =>(
         
         {/* </div> */}
 
-        <footer>
+        <footer className='footer'>
             <div className="socials">
                 {/* <FontAwesomeIcon icon="faHatChef" /> */}
                 <a href="https://github.com/lavparker/" className="github" target="_blank"><FaGithub/></a>
