@@ -153,231 +153,407 @@ rest11 = Restaurant.create!(
 )
 
 rest12 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+    :name => "Popular",
+    :address => "215 Chrystie St, New York, NY 10002",
+    :phone_number => "2122739444",
+    :cuisine => "Peruvian",
+    :details => "At POPULAR, diners have a special opportunity to enjoy
+                 authentic, original, healthy and globally inspired Peruvian
+                 cuisine by Chef Diego Muñoz, who helmed The World’s 50 Best
+                 Restaurants’ #1 rated Latin American restaurant, 
+                 Astrid y Gaston, in Lima. Chef Diego, a rare talent, proudly
+                 brings to New York City, the ultimate international gateway, 
+                 the best of his Peruvian homeland’s multicultural cuisine—a 
+                 microcosm of some of the world’s greatest culinary 
+                 traditions—Incan, Spanish, Moorish, African, Italian, Chinese 
+                 and Japanese.",
+    :hours => "Breakfast: Daily 7AM-11AM
+               Brunch: Saturdays & Sundays 11AM–3PM
+               Dinner: Daily 6PM–11PM
+               Special Cocktail Hour: Monday to Friday 5PM-7PM",
+    :dress_code => "Business casual",
+    :website => "https://www.popularnyc.com/", 
+    :additional_features => "Michelin Starred",
+    :dining_style => "Fine dining"
 )
 
 rest13 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+    :name => "Momofuku Ko",
+    :address => "8 Extra Pl, New York, NY 10003",
+    :phone_number => "2122038000",
+    :cuisine => "Asian-American",
+    :details => "At Ko we are guided by the Japanese 
+                 kaiseki tradition as well as seasonality, the innovation of our 
+                 mentors and peers, food memories, and the breadth of cuisine 
+                 available in the melting pot of New York City.",
+    :hours => "Friday 4–9:30PM
+                Saturday 4–9:30PM
+                Sunday Closed
+                Monday Closed
+                Tuesday 4–9:30PM
+                Wednesday 4–9:30PM
+                Thursday 4–9:30PM",
+    :dress_code => "Black Tie",
+    :website => "https://ko.momofuku.com/", 
+    :dining_style => "Fine dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest14 = Restaurant.create!(
+    :name => "Max Brenner New York",
+    :address => "841 Broadway, New York, NY 10003",
+    :phone_number => "2124678888",
+    :cuisine => "Comfort food, Dessert, American",
+    :details => "For more than 20 years, Max Brenner has offered a chocolate 
+                 experience for all the senses. A visit to our Chocolate Bar and 
+                 Shop, will entice magical memories in everyone. Because, 
+                 chocolate, more than any other food, symbolizes our childhood.",
+    :hours => "Mon–Wed, Sun 10:00 am–11:00 pm Thu–Sat 10:00 am–12:00 am",
+    :dress_code => "Casual",
+    :website => "https://maxbrenner.com/", 
+    :dining_style => "Casual Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest15 = Restaurant.create!(
+    :name => "Upland",
+    :address => "345 Park Ave S, New York, NY 10010",
+    :phone_number => "2126861006",
+    :cuisine => "Californian",
+    :details => "Built around a California-inspired philosophy that takes heavy 
+                 cues from the seasons, Upland balances a familiar rusticity 
+                 with a smart global approach, all enhanced by an enticing and 
+                 urbane touch.",
+    :hours => "Friday 11:30AM–3:30PM, 5–10PM
+               Saturday	10AM–3PM, 5–10PM
+               Sunday 10AM–3PM, 5–9PM
+               Monday 11:30AM–3:30PM, 5–10PM
+               Tuesday	11:30AM–3:30PM, 5–10PM
+               Wednesday 11:30AM–3:30PM, 5–10PM
+               Thursday	11:30AM–3:30PM, 5–10PM",
+    :dress_code => "Boho-chic",
+    :website => "https://uplandnyc.com/", 
+    :dining_style => "Fast Casual"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest16 = Restaurant.create!(
+    :name => "Sigiri",
+    :address => "91 1st Ave., New York, NY 10003",
+    :phone_number => "2126149333",
+    :cuisine => "Sri Lankan",
+    :details => "You are about too taste a vast selection of authentic Sri Lankan
+                 cuisine, the way it's meant to be cooked with a variety of herbs
+                 and spices unique to Sri Lanka.",
+    :hours => "Friday 11:30AM–9:30PM
+               Saturday 11:30AM–9:30PM
+               Sunday 11:30AM–9:30PM
+               Monday 11:30AM–9:30PM
+               Tuesday 11:30AM–9:30PM
+               Wednesday 11:30AM–9:30PM
+               Thursday	11:30AM–9:30PM",
+    :dress_code => "Business Casual",
+    :website => "https://sigiriny.com/", 
+    :additional_features => "Cash only, BYOB",
+    :dining_style => "Fast Casual"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest17 = Restaurant.create!(
+    :name => "Manousheh Bleecker",
+    :address => "193 Bleecker St, New York, NY 10012",
+    :phone_number => "2103314111",
+    :cuisine => "Lebanese",
+    :details => "Manousheh is a specialty bakery in the heart of New York City. 
+                 Here you’ll find the single most popular street food in Lebanon 
+                 delicious variations of an authentic flatbread.",
+    :hours => "Friday 8AM–11PM
+               Saturday	8AM–11PM
+               Sunday 8AM–11PM
+               Monday 8AM–11PM
+               Tuesday 8AM–11PM
+               Wednesday 8AM–11PM
+               Thursday	8AM–11PM",
+    :dress_code => "Casual",
+    :website => "https://www.manousheh.com/", 
+    :dining_style => "Cafe"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest18 = Restaurant.create!(
+    :name => "Queen of Sheba",
+    :address => "650 10th Ave, New York, NY 10036",
+    :phone_number => "2123970111",
+    :cuisine => "Ethiopian",
+    :details => "Located just a few blocks away from Times Square, the heart of
+                the city, on the corner of 10th Avenue and 46th Street in Midtown Manhattan 
+                is Queen of Sheba, an Ethiopian eatery that is “perfect for sharing Ethiopian 
+                traditional meal, stories and culture with family and friends”. The rum cake 
+                is unbelievable! Owner and Executive Chef Philipos Mengistu is truly an 
+                Ambassador of Ethiopian food and has been profiled in several TV shows in 
+                the US. With a décor that takes you back to Ethiopia, the seating in the 
+                restaurant is deliberate; to amplify a sense of community. And you cannot 
+                be ashamed to eat with your hands; Queen of Sheba would not have it any 
+                other way!",
+    :hours => "Monday 5-10pm
+               Tuesday - Thursday 12-10pm
+               Friday & Saturday 12-11pm
+               Sunday 12-10pm",
+    :dress_code => "Business Casual",
+    :website => "https://www.shebanyc.com/", 
+    :additional_features => "Gluten-Free injera available upon request",
+    :dining_style => "Family-style"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest19 = Restaurant.create!(
+    :name => "Salam",
+    :address => "104 W 13th St, New York, NY 10011",
+    :phone_number => "2127410277",
+    :cuisine => "Middle Eastern & Moroccan",
+    :details => "Salam is a family business serving new yorkers for over 30-+ 
+                 years. We are proud of our traditional middle Eastern dishes 
+                 and our creative interpretation of old favorites .our unique 
+                 dishes make us a neighborhood favorite",
+    :hours => "Friday 5–9PM
+               Saturday	5–9PM
+               Sunday 5–9PM
+               Monday 5–9PM
+               Tuesday 5–9PM
+               Wednesday 5–9PM
+               Thursday	5–9PM",
+    :dress_code => "Casual",
+    :website => "http://www.salamrestaurant.com/", 
+    :dining_style => "Fast Casual"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest20 = Restaurant.create!(
+    :name => "Chama Mama",
+    :address => "149 W 14th St, New York, NY 10011",
+    :phone_number => "2104389000",
+    :cuisine => "Georgian",
+    :details => "You’d expect a Georgian restaurant of this caliber to be tucked 
+                 away in South Brooklyn. But no, Chama Mama — with its incredible 
+                 regional specialties, Georgian natural wines, and large clay oven 
+                 firing fresh bread (for everyone’s favorite khachapuri) — sits 
+                 in a sleek space off 14th Street, courtesy of a Tbilisi native 
+                 and a chef who cooked for Georgia’s president in a previous life.",
+    :hours => "Friday 11AM–11PM
+               Saturday	11AM–11PM
+               Sunday 11AM–11PM
+               Monday 11AM–11PM
+               Tuesday 11AM–11PM
+               Wednesday 11AM–11PM
+               Thursday	11AM–11PM",
+    :dress_code => "Business Casual",
+    :website => "https://www.chamamama.com/", 
+    :additional_features => "Women Operated, Vegan, Organic Wines",
+    :dining_style => "Fine dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest21 = Restaurant.create!(
+    :name => "Dirt Candy",
+    :address => "86 Allen St, New York, NY 10002",
+    :phone_number => "2122287732",
+    :cuisine => "Vegetarian",
+    :details => "Leave it to Amanda Cohen to still be blowing to smithereens 
+                 every preconceived notion about vegetarian dining. The chef-owner 
+                 of Dirt Candy is a James Beard nominee, a pioneer of the 
+                 vegetable-forward culinary movement, and a leader intent on building 
+                 a better industry: Thanks to a no-tipping system, the entire team 
+                 shares equally in the restaurant’s profits. Her layered plates 
+                 elate, but they’re also a lot of fun — start with the Korean fried 
+                 broccoli; there’s a reason it rarely leaves the menu.",
+    :hours => "Friday 5:30–10:30PM
+               Saturday	5:30–10:30PM
+               Sunday Closed
+               Monday Closed
+               Tuesday 5:30–10:30PM
+               Wednesday 5:30–10:30PM
+               Thursday	5:30–10:30PM",
+    :dress_code => "Boho Chic",
+    :website => "https://www.dirtcandynyc.com/", 
+    :additional_features => "Michelin Starred, Woman Operated",
+    :dining_style => "Fine dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest22 = Restaurant.create!(
+    :name => "Verōnika",
+    :address => "281 Park Ave. S, Second Floor, E 22nd St Entrance, New York, NY 10010",
+    :phone_number => "2109936999",
+    :cuisine => "European",
+    :details => "Just beyond the bar lies the Restaurant, designed to evoke an 
+                 elegant brasserie-style setting. The menu offers continental 
+                 European classics with a twist that highlights in-season produce, 
+                 sustainable seafood, and humanely raised meats, with desserts 
+                 showcasing traditional recipes prepared with modern techniques. 
+                 Music and grand windows with views of the city complete the backdrop, 
+                 creating a lively, bohemian vibe which builds into the night.",
+    :hours => "Friday 5PM–2AM
+               Saturday	5PM–2AM
+               Sunday 5PM–2AM
+               Monday 5PM–2AM
+               Tuesday 5PM–2AM
+               Wednesday 5PM–2AM
+               Thursday	5PM–2AM",
+    :dress_code => "Smart Casual",
+    :website => "https://www.veronikanyc.com/", 
+    :dining_style => "Fine dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest23 = Restaurant.create!(
+    :name => "Antique Garage Tribeca",
+    :address => "313 Church St, New York, NY 10013",
+    :phone_number => "2122260000",
+    :cuisine => "Mediterranean, Turkish, Greek",
+    :details => "One of the Soho's little gems opening up its doors to Tribeca 
+                 with well-picked antiques and offers an eclectic, unique and 
+                 romantic ambiance, charming and elegant in the tradition of old 
+                 New York. We serve lunch and dinner daily as well as brunch on 
+                 weekends, accompanied by live jazz music.",
+    :hours => "Dinner Wed–Sat 5:00 pm–11:00 pm",
+    :dress_code => "Smart Casual",
+    :website => "antiquegaragetribeca.com", 
+    :additional_features => "Every night live Jazz 7:00 PM to 10:00 PM",
+    :dining_style => "Casual Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest24 = Restaurant.create!(
+    :name => "A La Turka Restaurant",
+    :address => "1417 2nd Ave, New York, NY 10021",
+    :phone_number => "2127442444",
+    :cuisine => "Turkish",
+    :details => "Known for its family recipes and lively atmosphere. Sharing our 
+                 authentic Mediterranean-style flavors with the world, we invite 
+                 our guests to celebrate life’s special moments with a place to 
+                 eat and drink in the heart of New York City.",
+    :hours => "Friday 11AM–11PM
+              Saturday 11AM–11PM
+              Sunday 11AM–11PM
+              Monday 11AM–11PM
+              Tuesday 11AM–11PM
+              Wednesday	11AM–11PM
+              Thursday	11AM–11PM",
+    :dress_code => "Smart Casual",
+    :website => "alaturkany.com", 
+    :dining_style => "Fine Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest25 = Restaurant.create!(
+    :name => "Tito Murphy's",
+    :address => "346 W 46th St, New York, NY 10036",
+    :phone_number => "2122452000",
+    :cuisine => "Mexican",
+    :details => "Tito Murphy’s is a lively cantina offering authentic Mexican 
+                 Cuisine in the heart of the Theatre District on Restaurant Row. 
+                 It’s the perfect location to enjoy fresh authentic food, amazing 
+                 drinks and a great atmosphere. Outdoor Dining options for the 
+                 Front Street Cafe, as well as our Rooftop Patio are both HEATED, 
+                 and we welcome you to enjoy our Al Fresco dining!",
+    :hours => "Mon, Sun 11:30 am–10:30 pm Tue–Thu 11:30 am–11:30 pm Fri, Sat 11:30 am–2:00 am",
+    :dress_code => "Casual",
+    :website => "https://www.titomurphys.com/", 
+    :dining_style => "Casual Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest26 = Restaurant.create!(
+    :name => "Peachy Keen",
+    :address => "325 W 44th St, New York, NY 10036",
+    :phone_number => "2122452333",
+    :cuisine => "American, Cocktails",
+    :details => "Peachy Keen combines '70s inspiration with a modern twist through 
+                 high-quality eats, over-the-top sweets and nostalgic cocktails. 
+                 Our colorful, comfortable space captures the spirit of the city 
+                 with a vibrant atmosphere.",
+    :hours => "Brunch Sat, Sun 10:00 am–3:45 pm Lunch Mon–Fri 11:00 am–4:00 pm Dinner Daily 4:00 pm–11:00 pm",
+    :dress_code => "Casual",
+    :website => "https://www.peachykeennyc.com/", 
+    :dining_style => "Casual Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest27 = Restaurant.create!(
+    :name => "Ashford & Simpson's Sugar Bar",
+    :address => "254 W 72nd St, New York, NY 10023",
+    :phone_number => "2125790222",
+    :cuisine => "Soul food, Latin",
+    :details => "Come to Ashford & Simpson's Sugar Bar, an eatery established by 
+                 the couple behind Ain't No Mountain High Enough & Ain't Nothing Like The Real Thing.
+                 Their culinary venture, Sugar Bar showcases the duo's love for 
+                 great music and Southern accented dining.",
+    :hours => "Friday 3–11PM
+               Saturday	3–11PM
+               Sunday 12–8PM
+               Monday Closed
+               Tuesday	3–10PM
+               Wednesday 3–10PM
+               Thursday	3PM–12AM",
+    :dress_code => "Casual",
+    :website => "https://www.sugarbarnyc.com/", 
+    :dining_style => "Casual Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest28 = Restaurant.create!(
+    :name => "Renaissance Harlem",
+    :address => "2245 Adam Clayton Powell Jr Blvd, New York, NY 10030",
+    :phone_number => "2108387444",
+    :cuisine => "American",
+    :details => "Renaissance Harlem offers delicious dining, takeout and delivery 
+                 to New York, NY. Renaissance Harlem is a cornerstone in the New York 
+                 community and has been recognized for its outstanding Italian cuisine, 
+                 excellent service and friendly staff.Our restaurant is known for 
+                 its modern interpretation of classic dishes and its insistence on 
+                 only using high quality fresh ingredients.",
+    :hours => " Friday 7–11PM
+                Saturday 7–11PM
+                Sunday 7–11PM
+                Monday Closed
+                Tuesday	Closed
+                Wednesday Closed
+                Thursday 7–11PM",
+    :dress_code => "Casual",
+    :website => "http://www.renaissanceharlemny.com/", 
+    :dining_style => "Casual"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest29 = Restaurant.create!(
+    :name => "Chocobar Cortés",
+    :address => "141 Alexander Ave, The Bronx, NY 10454",
+    :phone_number => "2108419333",
+    :cuisine => "Puerto-Rican",
+    :details => "Chocolate Cortés is a 4th generation, family-owned, Caribbean, 
+                 bean-to-bar chocolate manufacturing company. Originally established 
+                 in the Dominican Republic in 1929 by Don Pedro Cortés Forteza, 
+                 his pioneer spirit promptly moved him to export, and subsequently 
+                 begin production of Cortés products from his native Puerto Rico; 
+                 thus paving the way to fulfill his vision of developing Caribbean 
+                 grown cacao to its fullest potential. Known for its rich and delicious 
+                 hot chocolate, Chocolate Cortés quickly became a favorite of Puerto Rican 
+                 and Dominican households to this very day.",
+    :hours => "Friday 12–10PM
+               Saturday	12–10PM
+               Sunday 12–7PM
+               Monday 12–8PM
+               Tuesday	12–8PM
+               Wednesday 12–8PM
+               Thursday	12–8PM",
+    :dress_code => "Casual",
+    :website => "https://www.chocobarcortes.com/", 
+    :dining_style => "Casual Dining"
 )
 
-rest11 = Restaurant.create!(
-    :name => "",
-    :address => "",
-    :phone_number => "",
-    :cuisine => "",
-    :details => "",
-    :hours => "",
-    :dress_code => "",
-    :website => "", 
-    :dining_style => ""
+rest30 = Restaurant.create!(
+    :name => "Trailer Park Lounge",
+    :address => "271 W 23rd St, New York, NY 10011",
+    :phone_number => "2102612777",
+    :cuisine => "American",
+    :details => "Trailer Park Lounge is a good natured parody with questionable 
+                 taste! For nearly 20 years Trailer Park Lounge has been serving 
+                 NYC delicious food, delightful cocktails, collectible souvenirs 
+                 and outstanding service. Hope to see you soon!",
+    :hours => "Friday 4PM–12AM
+               Saturday	4PM–12AM
+               Sunday 4PM–12AM
+               Monday 4PM–12AM
+               Tuesday 4PM–12AM
+               Wednesday 4PM–12AM
+               Thursday	4PM–12AM",
+    :dress_code => "Casual",
+    :website => "http://www.trailerparklounge.com/", 
+    :dining_style => "Fast Casual"
 )
 #Demo User 
 
