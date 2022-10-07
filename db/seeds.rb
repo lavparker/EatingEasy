@@ -55,6 +55,8 @@ rest3 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
+rest3.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/bunna_cafe.jpg"), filename: 'bunna_cafe.jpg')
+
 rest4 = Restaurant.create(
     :name => 'Gramercy Tavern', 
     :address => '42 E 20th St, New York, NY 10003', 
@@ -66,6 +68,8 @@ rest4 = Restaurant.create(
     :website => "www.gramercytavern.com", 
     :dining_style => "Pre Fixe"
 )
+
+rest4.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/gramerc_taver.png"), filename: 'gramerc_taver.png')
 
 rest5 = Restaurant.create(
     :name => 'Jasmine’s Caribbean Cuisine', 
@@ -79,6 +83,8 @@ rest5 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
+rest5.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/jasmines.jpeg"), filename: 'jasmines.jpeg')
+
 rest6 = Restaurant.create(
     :name => '1803 NYC', 
     :address => '82 Reade St, New York, NY 10007', 
@@ -90,6 +96,8 @@ rest6 = Restaurant.create(
     :website => "www.1803nyc.com", 
     :dining_style => "Fine Dining"
 )
+
+rest6.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/1803-nyc-new-york-ny-interior-2.png"), filename: '1803-nyc-new-york-ny-interior-2.png')
 
 rest7 = Restaurant.create(
     :name => 'Zou Zou’s', 
@@ -103,6 +111,8 @@ rest7 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
+rest7.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/zou-zous.png"), filename: 'zou-zous.png')
+
 rest8 = Restaurant.create(
     :name => 'COTE Korean Steakhouse', 
     :address => '16 W 22nd St, New York, NY 10010', 
@@ -114,6 +124,8 @@ rest8 = Restaurant.create(
     :website => "www.cotenyc.com", 
     :dining_style => "Fast Casual"
 )
+
+rest8.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/cote-korean.jpg"), filename: 'cote-korean.jpg')
 
 rest9 = Restaurant.create(
     :name => 'Melbas Restaurant', 
@@ -127,6 +139,8 @@ rest9 = Restaurant.create(
     :dining_style => "Casual"
 )
 
+rest9.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/melbas.png"), filename: 'melbas.png')
+
 rest10 = Restaurant.create!(
     :name =>  "Kochi", 
     :address =>  "652 10th Ave, New York, NY  10036", 
@@ -138,6 +152,8 @@ rest10 = Restaurant.create!(
     :website => "www.kochiny.com", 
     :dining_style =>  "multicourse tasting menu"
 )
+
+rest10.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/kochi.jpeg"), filename: 'kochi.jpeg')
 
 rest11 = Restaurant.create!(
     :name => "Cafe Himalaya",
@@ -151,6 +167,8 @@ rest11 = Restaurant.create!(
     :website => "https://cafehimalaya.weebly.com/", 
     :dining_style => "Relaxed"
 )
+
+rest11.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/cafe_himalaya.jpeg"), filename: 'cafe_himalaya.jpeg')
 
 rest12 = Restaurant.create!(
     :name => "Popular",
@@ -177,6 +195,8 @@ rest12 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
+rest12.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/popular_peru.jpeg"), filename: 'popular_peru.jpeg')
+
 rest13 = Restaurant.create!(
     :name => "Momofuku Ko",
     :address => "8 Extra Pl, New York, NY 10003",
@@ -198,6 +218,8 @@ rest13 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
+rest13.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/momofuku_ko.jpeg"), filename: 'momofuku_ko.jpeg')
+
 rest14 = Restaurant.create!(
     :name => "Max Brenner New York",
     :address => "841 Broadway, New York, NY 10003",
@@ -212,6 +234,8 @@ rest14 = Restaurant.create!(
     :website => "https://maxbrenner.com/", 
     :dining_style => "Casual Dining"
 )
+
+rest14.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/max_brenner.jpeg"), filename: 'max_brenner.jpeg')
 
 rest15 = Restaurant.create!(
     :name => "Upland",
@@ -234,6 +258,8 @@ rest15 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
+rest15.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/upland.jpeg"), filename: 'upland.jpeg')
+
 rest16 = Restaurant.create!(
     :name => "Sigiri",
     :address => "91 1st Ave., New York, NY 10003",
@@ -255,6 +281,8 @@ rest16 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
+rest16.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/sigri.jpeg"), filename: 'sigri.jpeg')
+
 rest17 = Restaurant.create!(
     :name => "Manousheh Bleecker",
     :address => "193 Bleecker St, New York, NY 10012",
@@ -274,6 +302,8 @@ rest17 = Restaurant.create!(
     :website => "https://www.manousheh.com/", 
     :dining_style => "Cafe"
 )
+
+rest17.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/manousheh.jpeg"), filename: 'manousheh.jpeg')
 
 rest18 = Restaurant.create!(
     :name => "Queen of Sheba",
@@ -300,6 +330,8 @@ rest18 = Restaurant.create!(
     :dining_style => "Family-style"
 )
 
+rest18.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/queen_of_sheba.jpeg"), filename: 'queen_of_sheba.jpeg')
+
 rest19 = Restaurant.create!(
     :name => "Salam",
     :address => "104 W 13th St, New York, NY 10011",
@@ -320,6 +352,8 @@ rest19 = Restaurant.create!(
     :website => "http://www.salamrestaurant.com/", 
     :dining_style => "Fast Casual"
 )
+
+rest19.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/salam.png"), filename: 'salam.png')
 
 rest20 = Restaurant.create!(
     :name => "Chama Mama",
@@ -344,6 +378,8 @@ rest20 = Restaurant.create!(
     :additional_features => "Women Operated, Vegan, Organic Wines",
     :dining_style => "Fine dining"
 )
+
+rest20.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/chama_mama.jpeg"), filename: 'chama_mama.jpeg')
 
 rest21 = Restaurant.create!(
     :name => "Dirt Candy",
@@ -371,6 +407,8 @@ rest21 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
+rest21.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/dirt_candy.jpeg"), filename: 'dirt_candy.jpeg')
+
 rest22 = Restaurant.create!(
     :name => "Verōnika",
     :address => "281 Park Ave. S, Second Floor, E 22nd St Entrance, New York, NY 10010",
@@ -395,6 +433,8 @@ rest22 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
+rest22.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/veronika.jpeg"), filename: 'veronika.jpeg')
+
 rest23 = Restaurant.create!(
     :name => "Antique Garage Tribeca",
     :address => "313 Church St, New York, NY 10013",
@@ -411,6 +451,8 @@ rest23 = Restaurant.create!(
     :additional_features => "Every night live Jazz 7:00 PM to 10:00 PM",
     :dining_style => "Casual Dining"
 )
+
+rest23.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/antique_garage_tribeca .jpeg"), filename: 'antique_garage_tribeca .jpeg')
 
 rest24 = Restaurant.create!(
     :name => "A La Turka Restaurant",
@@ -433,6 +475,8 @@ rest24 = Restaurant.create!(
     :dining_style => "Fine Dining"
 )
 
+rest24.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/a_la_turka.jpeg"), filename: 'a_la_turka.jpeg')
+
 rest25 = Restaurant.create!(
     :name => "Tito Murphy's",
     :address => "346 W 46th St, New York, NY 10036",
@@ -450,6 +494,8 @@ rest25 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
+rest25.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/tito_murphys.jpeg"), filename: 'tito_murphys.jpeg')
+
 rest26 = Restaurant.create!(
     :name => "Peachy Keen",
     :address => "325 W 44th St, New York, NY 10036",
@@ -464,6 +510,8 @@ rest26 = Restaurant.create!(
     :website => "https://www.peachykeennyc.com/", 
     :dining_style => "Casual Dining"
 )
+
+rest26.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/peachy_keen.jpeg"), filename: 'peachy_keen.jpeg')
 
 rest27 = Restaurant.create!(
     :name => "Ashford & Simpson's Sugar Bar",
@@ -485,6 +533,8 @@ rest27 = Restaurant.create!(
     :website => "https://www.sugarbarnyc.com/", 
     :dining_style => "Casual Dining"
 )
+
+rest27.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/ashford_simpsons_sugar_bar.jpeg"), filename: 'ashford_simpsons_sugar_bar.jpeg')
 
 rest28 = Restaurant.create!(
     :name => "Renaissance Harlem",
@@ -508,6 +558,8 @@ rest28 = Restaurant.create!(
     :website => "http://www.renaissanceharlemny.com/", 
     :dining_style => "Casual"
 )
+
+rest28.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/renaissance_harlem.png"), filename: 'renaissance_harlem.png')
 
 rest29 = Restaurant.create!(
     :name => "Chocobar Cortés",
@@ -535,6 +587,8 @@ rest29 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
+rest29.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/chocobar-cortes.jpeg"), filename: 'chocobar-cortes.jpeg')
+
 rest30 = Restaurant.create!(
     :name => "Trailer Park Lounge",
     :address => "271 W 23rd St, New York, NY 10011",
@@ -555,6 +609,8 @@ rest30 = Restaurant.create!(
     :website => "http://www.trailerparklounge.com/", 
     :dining_style => "Fast Casual"
 )
+rest30.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/assets/images/trailer_park_lounge.jpg"), filename: 'trailer_park_lounge.jpg')
+
 #Demo User 
 
 User.create!(first_name: "Beyonce", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password")
