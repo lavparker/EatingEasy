@@ -7,8 +7,9 @@
 // }
 
 .main-page{
-    background-color: white;
+    background-color: whitesmoke;
 }
+
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
@@ -36,13 +37,11 @@
     flex-direction: column;
 }
 
-
-
 .local-restaurants{
     display:grid;
     // margin-top: 20%;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;  
     // overflow-wrap:normal;
@@ -50,37 +49,26 @@
 }
 
 .res-index-container{
-    // background-color: aqua;
-    // display: flex;
-    display: grid;
-    // overflow-wrap: normal;
-    // grid-template-rows: repeat(5, 1fr);
-    // grid-template-columns: repeat(3, 1fr);
-    // flex-wrap: wrap;
-    // position:static;
-    // justify-content: center;
+    display: block;
     justify-content: space-around;
-
     font-size: 30px;
-    // width: 100%;
-    // margin-top:55%;
-    // margin-bottom: -40%;
-    // margin-left: -40%;
-    // max-width: 100%;
-
 }
 
 .restaurants-index{
-    // display: flex;
-    // background-color:burlywood;
-
-    // background-color:magenta;
     margin-top: 20%;
     justify-content: space-around;
+
+}
+
+.restaurants-index h2{
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    border-top: 1px solid rgba(14, 12, 62, 0.3);
+    padding-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .restaurant-index-item {
-    
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
@@ -92,28 +80,49 @@
     padding: 0px;
     font-size: 16px;
     flex-direction: row;
-    border-color: black;
-    // border-style: double;
-    border-width: 20px;
-    border-radius: 20px;
+    border-color: gray;
+    color:black; 
+    border-width: 5px;
+    border-radius: 5px;
     cursor:pointer;
     
 
     
 }
 
+.find-your-table{
+    margin: 0% 15%; 
+}
+
 .restaurant-index-item:hover{
-    transform: scale(1.07);
+    transform: scale(1.01);
+    transition: .8s;
+    cursor: pointer;
 }
 
 .res-photo-row-1{
     height: 5rem;
     width: 100%;
     object-fit: cover;
+    
 }
 
 .res-name-row-2{
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.res-address-row-3{
+    padding-top: 10px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .res-item-body{
@@ -122,19 +131,25 @@
 
 .reserve-btn{
     padding: 10px;
-    margin-top: 100%;
+    margin-top: 25px;
     font-weight: bold;
     font-size: 1rem;
+    color: antiquewhite;
     border: 3px;
     border-style: solid;
-    border-color: aqua;
+    background-color: #247f9e;
+    border-color: #247f9e;
+    border-radius: 5px;
 }
 
 .reserve-btn:hover{
-    background-color: adjust-hue($color: blue, $degrees: 80);
+    background-color: #0f4e63;
+    border-color: #0f4e63;
+    // border-radius: 5px;
 }
 
- .main-header{
+
+.main-header{
     // display: flex;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 200px;

@@ -7,30 +7,30 @@
 .github:hover{
     animation: shake 2s;
     color: black;
-    border-bottom-left-radius:100%;
-    border-bottom-right-radius: -100%;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
+    // border-bottom-left-radius:100%;
+    // border-bottom-right-radius: -100%;
+    // border-top-left-radius: 100%;
+    // border-top-right-radius: 100%;
 
 }
 
 .linkedin:hover{
     animation: shake 2s;
     color: #0072b1;
-    border-bottom-left-radius:100%;
-    border-bottom-right-radius: -100%;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
+    // border-bottom-left-radius:100%;
+    // border-bottom-right-radius: -100%;
+    // border-top-left-radius: 100%;
+    // border-top-right-radius: 100%;
 
 }
 
 .instagram:hover{
     animation: shake 2s;
     background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
-    border-bottom-left-radius:100%;
-    border-bottom-right-radius: -100%;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
+    // border-bottom-left-radius:100%;
+    // border-bottom-right-radius: -100%;
+    // border-top-left-radius: 100%;
+    // border-top-right-radius: 100%;
 }
 
 @keyframes shake {

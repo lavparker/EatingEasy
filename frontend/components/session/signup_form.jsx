@@ -89,7 +89,8 @@ class Signup extends React.Component{
                     <br />
                     <h2 className="sign-up">Sign up below!</h2>
                     <br />
-                    {this.renderErrors()}
+                    <p>{this.renderErrors()}</p>
+                    
                     <br />
 
                         <input 
@@ -141,7 +142,7 @@ class Signup extends React.Component{
                             
                         />
                     <br />
-                    <br />
+                    {/* <br /> */}
 
                    <button className="session-btn-mod" onClick={this.handleSubmit}> Sign Up Here!</button>
                     <br />
