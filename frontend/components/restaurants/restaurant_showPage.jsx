@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHeart, FaHome, FaPhone, FaTag, FaClock, FaTshirt, FaLaptop, FaBell, FaApple } from 'react-icons/fa';
+import { FaHeart, FaHome, FaPhone, FaTag, FaClock, FaTshirt, FaLaptop, FaBell, FaApple, FaRegStar } from 'react-icons/fa';
 import ReservationForm from "../reservations/reservation_form_container";
 
 class RestaurantShow extends React.Component{
@@ -58,15 +58,15 @@ class RestaurantShow extends React.Component{
                         <header className="show-page-res-name">{this.props.restaurant.name}</header>
                         <h1 className="res-over">Overview</h1>
                         <ul className="res-info">
-                            <li>star reating</li>
-                            <li className="res-cuisine"><FaApple/> {this.props.restaurant.cuisine}</li>
+                            <li className="res-stars"><FaRegStar/><FaRegStar/><FaRegStar/><FaRegStar/><FaRegStar/></li>
+                            <li className="res-cuisine"><FaApple/> &nbsp; {this.props.restaurant.cuisine}</li>
 
                         </ul>
                         <li className="res-details">{this.props.restaurant.details}</li>
                         <li className="res-address"> 
                         
                         <div className="res-add-icon">
-                            <FaHome/>Address  
+                            <FaHome/> &nbsp;  Address  
                         </div>
                         <div className="res-add-word">
                             {this.props.restaurant.address}
@@ -77,7 +77,7 @@ class RestaurantShow extends React.Component{
 
                         <li className="res-phone"> 
                             <div className="res-phone-icon">
-                                <FaPhone/>Phone
+                                <FaPhone/> &nbsp;  Phone
                             </div>
                             <div className="res-phone-word">
                              {this.props.restaurant.phone_number}
@@ -87,7 +87,7 @@ class RestaurantShow extends React.Component{
 
                         <li className="res-addfea">
                             <div className="res-addfea-icon">
-                             <FaTag/>Additional Features
+                             <FaTag/> &nbsp;  Additional Features
                             </div>
                             <div className="res-addfea-word">
                               {this.props.restaurant.additional_features}
@@ -97,7 +97,7 @@ class RestaurantShow extends React.Component{
 
                         <li className="res-hours">
                             <div className="res-hours-icon">
-                             <FaClock/> Hours
+                             <FaClock/> &nbsp;  Hours
                             </div>
                             <div className="res-hours-word">
                               {this.props.restaurant.hours}
@@ -107,7 +107,7 @@ class RestaurantShow extends React.Component{
 
                         <li className="res-dress">
                             <div className="res-dress-icon">
-                             <FaTshirt/> Dress Code
+                             <FaTshirt/> &nbsp;  Dress Code
                             </div>
                             <div className="res-dress-word">
                               {this.props.restaurant.dress_code}
@@ -117,17 +117,18 @@ class RestaurantShow extends React.Component{
 
                         <li className="res-web">
                             <div className="res-web-icon">
-                             <FaLaptop/>Website
+                             <FaLaptop/> &nbsp;  Website
                             </div>
                             <div className="res-web-word">
-                              {this.props.restaurant.website}
+                                {this.props.restaurant.website}
+                              {/* <a href="{this.props.restaurant.website}"></a> */}
                             </div>  
                         </li>
                         <br />
 
                         <li className="res-dinsty">
                             <div className="res-dinsty-icon">
-                             <FaBell/> Dining Style
+                             <FaBell/> &nbsp;  Dining Style
 
                             </div>
 

@@ -15,6 +15,9 @@ class Signup extends React.Component{
         this.openModalLogIn = this.openModalSignUp.bind(this);
     }
 
+    componentDidMount(){
+        this.props.clearSessionErrors();
+    }
 
     update(field) {
         return e => this.setState({

@@ -13,15 +13,15 @@
 }
 
 .link-header:hover{
-    // text-shadow: blue -5px 0,
-                // purple 5px 0;
+    text-shadow: blue -2px 0,
+                purple 2px 0;
 
     text-shadow: black;
 }
 
 footer div {
     display: flex;
-    
+    position: relative;
     background-color: #427492;
     align-items: center;
     justify-content: space-around;

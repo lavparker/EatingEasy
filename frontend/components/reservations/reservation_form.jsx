@@ -24,6 +24,11 @@ class ReservationForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // const randomNum(min, max){
+    //     let num = Math.random(min, max)
+    //     return num;
+    // }
+
     handleInput(field){
         return (e) => { this.setState({ [field]: e.currentTarget.value })};
     }
@@ -46,7 +51,7 @@ class ReservationForm extends React.Component{
                 <div>
                     <label className="party-size"> Party Size</label>
                     <br />
-                    <select name="party" id="party-select" onChange={this.handleInput("party_size")}> 
+                    <select className="party" onChange={this.handleInput("party_size")}> 
                         
                         <option value="1 person">1 person</option>
                         <option value="2 people" selected> 2 people</option>
@@ -78,11 +83,12 @@ class ReservationForm extends React.Component{
                     <input  type="date" 
                             value={this.state.date}
                             onChange={this.handleInput("date")}
+                            className="date"
                     />
 
                     <label className="res-time">Time</label>
                     <br />
-                    <select name="times" id="time-select" onChange={this.handleInput("time")}>
+                    <select className="times" onChange={this.handleInput("time")}>
                         <option value="12:00 AM">12:00 AM</option>
                         <option value="12:30 AM">12:20 AM</option>
                         <option value="1:00 AM">1:00 AM</option>
@@ -139,6 +145,7 @@ class ReservationForm extends React.Component{
 
                 <button className="res-button" onClick={this.handleSubmit}>Confirm Reservation</button>
                 <br />
+                <p> Booked times today</p>
             </form>
         </div>
             

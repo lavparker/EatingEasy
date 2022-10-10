@@ -1,13 +1,153 @@
 .reservation-container{
    
-    display: grid;
- 
-    margin-top: 10%;
-    
-    z-index: 200;
-    background-color: aqua;
-    border-radius: 0.3rem;
+    display: block;
+    // border-top: 3rem;
+    margin-top: -770px;
+    // align-items: center;
+    height: 100%;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 
+                 Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, 
+                 Segoe UI Symbol;
 
-  
+}
+
+.reservation-main{
+    // display: block;
+    // margin-top: -740px;
+    // background-color: aquamarine;
+    background-color: whitesmoke;
+    // align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #2d333f33;
+    // height: 100%; 
+    line-height: 1.15;
+    margin-left: -350px;
+    z-index: 9999;
+
+}
+
+.reservation-main h3{
+    padding-top:1rem;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    // padding-top: 0.4rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+    font-weight: bold;
+    color:grayscale($color: #2d2b2b);
+
+}
+
+.party-size{
+    // padding-top: 2rem;
+    margin-top: 10%;
+    font-family: inherit;
+    font-weight: 500;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 1.15px;
+}
+
+.party{
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    margin-top: 1rem;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 90%;
+    height: 2rem;
+    background-color: inherit;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.res-date{
+    // padding-top: 2rem;
+    // margin-top: 3rem;
+    font-family: inherit;
+    font-weight: 500;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 1.15px;
+}
+
+.date{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    margin-top: 1rem;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 40%;
+    height: 2rem;
+    background-color: inherit;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.res-time{
+    display: flex;
+    // padding-top: 2rem;
+    // margin-top: 3rem;
+    font-family: inherit;
+    margin-top: 1rem;
+    font-weight: 500;
+    margin-left: 16px;
+    font-size: 14px;
+    line-height: 1.15px;
+}
+
+.times{
+    display: flex;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    margin-top: 1rem;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 40%;
+    height: 2rem;
+    background-color: inherit;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.res-button {
+    
+    padding: 10px;
+    // margin-top: 25px;
+    margin-left: 11%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: antiquewhite;
+    border: 3px;
+    border-style: solid;
+    background-color: #247f9e;
+    border-color: #247f9e;
+    border-radius: 5px;
+    width:80%;
+    max-width: 80%;
+
+}
+
+.res-button:hover {
+    background-color: #0f4e63;
+    border-color: #0f4e63;
+    // border-radius: 5px;
+}
+
+.reservation-main p{
+    display: flex;
+    padding-bottom: 3rem;
+    margin-left: 25%;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
 
 }

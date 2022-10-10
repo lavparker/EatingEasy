@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
+import { FaRegStar } from 'react-icons/fa'
 
 class RestaurantIndexItem extends React.Component{
     constructor(props){
@@ -20,7 +21,7 @@ class RestaurantIndexItem extends React.Component{
                             </div>
                             <div className='res-name-row-2'>{restaurant.name}</div>
                             <div>
-                            <p>Star rating here</p>
+                            <p className="res-stars"><FaRegStar/><FaRegStar/><FaRegStar/><FaRegStar/><FaRegStar/></p>
                             </div>
                             <div className='res-address-row-3'>{restaurant.address}</div>
                             <button className='reserve-btn'>Make a Reservation</button>

@@ -7,7 +7,10 @@
 // }
 
 .main-page{
+
     background-color: whitesmoke;
+    height:100%;
+
 }
 
 .main{
@@ -41,7 +44,7 @@
     display:grid;
     // margin-top: 20%;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;  
     // overflow-wrap:normal;
@@ -91,11 +94,15 @@
 }
 
 .find-your-table{
-    margin: 0% 15%; 
+    // padding-right: 100px;
+    margin: 0% 25%; 
+    // overflow-wrap: none;
+    // background-color: aqua;
+    width: 70%;
 }
 
 .restaurant-index-item:hover{
-    transform: scale(1.01);
+    transform: scale(1.05);
     transition: .8s;
     cursor: pointer;
 }

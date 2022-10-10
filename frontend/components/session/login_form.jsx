@@ -14,6 +14,10 @@ class Login extends React.Component{
         this.handleDemo = this.handleDemo.bind(this);
     }
 
+    componentDidMount(){
+        this.props.clearSessionErrors();
+    }
+
     handleInput(field){
         return e =>{ this.setState({ 
             [field]: e.currentTarget.value })

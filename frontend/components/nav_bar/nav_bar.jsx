@@ -62,4 +62,3 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
 
 export default NavBar; 
 
-// .classname p
