@@ -6,9 +6,11 @@ class Signup extends React.Component{
         this.state = {
             firstName: '',
             lastName: '',
+            phoneNumber: '',
             username: '',
             email: '',
             password: '',
+
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,7 +42,8 @@ class Signup extends React.Component{
             last_name: this.state.lastName,
             username: this.state.username,
             email: this.state.email,
-            password: this.state.password
+            password: this.state.password,
+            phone_number: this.state.phoneNumber
         };
 
         this.props.processForm(user)
@@ -133,6 +136,14 @@ class Signup extends React.Component{
                             
                         />
                     <br />
+                    {/* <input
+                            className="input-signinup"
+                            type="phonenumber"
+                            placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.handleInput('phone number')}
+                            
+                        /> */}
                     {/* <br /> */}
 
                    <button className="session-btn-mod" onClick={this.handleSubmit}> Sign Up Here!</button>

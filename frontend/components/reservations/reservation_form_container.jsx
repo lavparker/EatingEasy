@@ -7,22 +7,32 @@ import { getRestaurant } from '../../actions/restaurant_actions';
 import ReservationForm from './reservation_form';
 
 const mapStateToProps = (state, ownProps) =>{
+    //mapStateToProps, takes state and makes those parts available as props in the form 
+    let current_user_id = state.session.id
+    let current_user = state.entities.users[current_user_id]
+
     return({
         //sessionStorage or localStorage ??
-        currentUser: state.entities.users[sessionStorage.id], 
+        
+        // currentUser: state.entities.users.id,
+        currentUser: {
+            id: current_user.id,
+            phone_number: "2002000200",
+            first_name: current_user.first_name,
+            last_name: current_user.last_name,
+            email: current_user.email
+        },
+        
         // restaurant:state.entities.restaurants[ownProps.match.params.restaurant.id],
         // restaurant: state.entities.restaurants[ownProps.match.params.id],
-        restaurant: state.entities.restaurants.id,
+        restaurant_id: ownProps.restaurant.id,
         reservation: {
-            restaurant_id: ownProps.restaurant_id,
             date: "",
             time: "",
             party_size: "",
-            phone_number: "",
-            first_name: "",
-            last_name: ""
+            special_request: ""
         },
-        errors: state.errors.reservaiton,
+        errors: state.errors.reservation,
         formType: "New Reservation"
 
     })

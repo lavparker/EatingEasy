@@ -16,7 +16,7 @@ User.destroy_all
 rest1 = Restaurant.create(
     :name => 'Aunts et Uncles', 
     :address => '1407 Nostrand Ave., Brooklyn, NY 11226', 
-    :phone_number => "2112950001", 
+    :phone_number => "211-295-0001", 
     :cuisine => "Caribbean", 
     :details => "Relaxed vegan eatery serving plant-based burgers, breakfast sandwiches & sides, plus cocktails.", 
     :hours => "Mon–Sat 10:00 am–10:00 pm Sun 10:00 am–6:00 pm", 
@@ -31,7 +31,7 @@ rest1.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest2 = Restaurant.create(
     :name => 'La Grande Boucherie', 
     :address => '145 W 53rd St, New York, NY 10019', 
-    :phone_number => "2125107777", 
+    :phone_number => "212-510-7777", 
     :cuisine => "French", 
     :details => "Polished French restaurant in an expansive art nouveau–style space with an elegant heated atrium.", 
     :hours => "11:00AM - 12:00AM", 
@@ -60,7 +60,7 @@ rest3.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest4 = Restaurant.create(
     :name => 'Gramercy Tavern', 
     :address => '42 E 20th St, New York, NY 10003', 
-    :phone_number => "2124477777", 
+    :phone_number => "212-447-7777", 
     :cuisine => "New American", 
     :details => "Flatiron District tavern with food you can't find anywhere else.", 
     :hours => "11:30AM - 6:00PM", 
@@ -74,7 +74,7 @@ rest4.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest5 = Restaurant.create(
     :name => 'Jasmine’s Caribbean Cuisine', 
     :address => '371 W 46th St, New York, NY 10036', 
-    :phone_number => "2109645337", 
+    :phone_number => "210-964-5337", 
     :cuisine => "Caribbean, Seafood, Vegetarian / Vegan", 
     :details => "A gem on Restaurant Row, Jasmine’s Caribbean Cuisine provides an escape from the city through the senses with savory dishes and fruit-filled blends of cocktails inspired by islands throughout the Caribbean.", 
     :hours => "Tue–Fri 4:00 pm–10:30 pm Sat 2:00 pm–11:30 pm Sun 2:00 pm–10:30 pm", 
@@ -88,7 +88,7 @@ rest5.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest6 = Restaurant.create(
     :name => '1803 NYC', 
     :address => '82 Reade St, New York, NY 10007', 
-    :phone_number => "2122673333", 
+    :phone_number => "212-267-3333", 
     :cuisine => "Cajun-Creole", 
     :details => "Spot for upstcale takes on Cajun-Creole food and drinks. One bite will take you to NOLA's French Quarter in the season of Mardi Gras.", 
     :hours => "11:30AM - 9:00PM", 
@@ -102,7 +102,7 @@ rest6.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest7 = Restaurant.create(
     :name => 'Zou Zou’s', 
     :address => '385 9th Ave Suite 85, New York, NY 10001', 
-    :phone_number => "2123808888", 
+    :phone_number => "212-380-8888", 
     :cuisine => "Mediterranean", 
     :details => "Zou Zou's offers a menu inspired by and celebrating the cuisine and flavors of the Eastern Mediterranean region, bringing in influences from Lebanon, Israel, Turkey, Egypt, Syria, and Jordan.", 
     :hours => "11:30AM - 11:00PM", 
@@ -116,7 +116,7 @@ rest7.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest8 = Restaurant.create(
     :name => 'COTE Korean Steakhouse', 
     :address => '16 W 22nd St, New York, NY 10010', 
-    :phone_number => "2124017777", 
+    :phone_number => "212-401-7777", 
     :cuisine => "Korean", 
     :details => "Upscale Korean steakhouse with cool smokeless grills and allllll of the wine.", 
     :hours => "5:00PM - 11:00PM", 
@@ -130,7 +130,7 @@ rest8.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest9 = Restaurant.create(
     :name => 'Melbas Restaurant', 
     :address => '300 W 114th St, New York, NY 10026', 
-    :phone_number => "2128647777", 
+    :phone_number => "212-864-7777", 
     :cuisine => "Southern Soul", 
     :details => "Southern classics served in a retro setting that's relaxed & homey by day, bustling in the evening..", 
     :hours => "12:00PM - 12:00AM", 
@@ -144,7 +144,7 @@ rest9.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/as
 rest10 = Restaurant.create!(
     :name =>  "Kochi", 
     :address =>  "652 10th Ave, New York, NY  10036", 
-    :phone_number => "2064787777", 
+    :phone_number => "206-478-7777", 
     :cuisine =>  "Korean", 
     :details =>  "Seasonal ingredients shine both on your tastebuds and on your plate in this cool, sleek venue!", 
     :hours =>  "Daily 5:00PM - 12:00AM", 
@@ -158,7 +158,7 @@ rest10.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest11 = Restaurant.create!(
     :name => "Cafe Himalaya",
     :address => "78 East 1st Street (bet 1st Ave & Ave A) New York, NY 10009",
-    :phone_number => "2123580000",
+    :phone_number => "212-358-0000",
     :cuisine => "Tibetan/Nepalese",
     :details => "Cafe Himalaya is a Tibetan/Nepalese restaurant located in the Lower East Side of NYC. Visit us for simple, delicious, homemade food from the Himalayas. 
                 We take pride in making food that is natural, nutritious and healthy without any preservatives. We aim to bring the taste of the Himalayas to you!",
@@ -173,7 +173,7 @@ rest11.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest12 = Restaurant.create!(
     :name => "Popular",
     :address => "215 Chrystie St, New York, NY 10002",
-    :phone_number => "2122739444",
+    :phone_number => "212-273-9444",
     :cuisine => "Peruvian",
     :details => "At POPULAR, diners have a special opportunity to enjoy
                  authentic, original, healthy and globally inspired Peruvian
@@ -200,7 +200,7 @@ rest12.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest13 = Restaurant.create!(
     :name => "Momofuku Ko",
     :address => "8 Extra Pl, New York, NY 10003",
-    :phone_number => "2122038000",
+    :phone_number => "212-203-8000",
     :cuisine => "Asian-American",
     :details => "At Ko we are guided by the Japanese 
                  kaiseki tradition as well as seasonality, the innovation of our 
@@ -223,7 +223,7 @@ rest13.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest14 = Restaurant.create!(
     :name => "Max Brenner New York",
     :address => "841 Broadway, New York, NY 10003",
-    :phone_number => "2124678888",
+    :phone_number => "212-467-8888",
     :cuisine => "Comfort food, Dessert, American",
     :details => "For more than 20 years, Max Brenner has offered a chocolate 
                  experience for all the senses. A visit to our Chocolate Bar and 
@@ -240,7 +240,7 @@ rest14.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest15 = Restaurant.create!(
     :name => "Upland",
     :address => "345 Park Ave S, New York, NY 10010",
-    :phone_number => "2126861006",
+    :phone_number => "212-686-1006",
     :cuisine => "Californian",
     :details => "Built around a California-inspired philosophy that takes heavy 
                  cues from the seasons, Upland balances a familiar rusticity 
@@ -263,7 +263,7 @@ rest15.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest16 = Restaurant.create!(
     :name => "Sigiri",
     :address => "91 1st Ave., New York, NY 10003",
-    :phone_number => "2126149333",
+    :phone_number => "212-614-9333",
     :cuisine => "Sri Lankan",
     :details => "You are about too taste a vast selection of authentic Sri Lankan
                  cuisine, the way it's meant to be cooked with a variety of herbs
@@ -286,7 +286,7 @@ rest16.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest17 = Restaurant.create!(
     :name => "Manousheh Bleecker",
     :address => "193 Bleecker St, New York, NY 10012",
-    :phone_number => "2103314111",
+    :phone_number => "210-331-4111",
     :cuisine => "Lebanese",
     :details => "Manousheh is a specialty bakery in the heart of New York City. 
                  Here you’ll find the single most popular street food in Lebanon 
@@ -308,7 +308,7 @@ rest17.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest18 = Restaurant.create!(
     :name => "Queen of Sheba",
     :address => "650 10th Ave, New York, NY 10036",
-    :phone_number => "2123970111",
+    :phone_number => "212-397-0111",
     :cuisine => "Ethiopian",
     :details => "Located just a few blocks away from Times Square, the heart of
                 the city, on the corner of 10th Avenue and 46th Street in Midtown Manhattan 
@@ -335,7 +335,7 @@ rest18.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest19 = Restaurant.create!(
     :name => "Salam",
     :address => "104 W 13th St, New York, NY 10011",
-    :phone_number => "2127410277",
+    :phone_number => "212-741-0277",
     :cuisine => "Middle Eastern & Moroccan",
     :details => "Salam is a family business serving new yorkers for over 30-+ 
                  years. We are proud of our traditional middle Eastern dishes 
@@ -358,7 +358,7 @@ rest19.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest20 = Restaurant.create!(
     :name => "Chama Mama",
     :address => "149 W 14th St, New York, NY 10011",
-    :phone_number => "2104389000",
+    :phone_number => "210-438-9000",
     :cuisine => "Georgian",
     :details => "You’d expect a Georgian restaurant of this caliber to be tucked 
                  away in South Brooklyn. But no, Chama Mama — with its incredible 
@@ -384,7 +384,7 @@ rest20.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest21 = Restaurant.create!(
     :name => "Dirt Candy",
     :address => "86 Allen St, New York, NY 10002",
-    :phone_number => "2122287732",
+    :phone_number => "212-228-7732",
     :cuisine => "Vegetarian",
     :details => "Leave it to Amanda Cohen to still be blowing to smithereens 
                  every preconceived notion about vegetarian dining. The chef-owner 
@@ -412,7 +412,7 @@ rest21.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest22 = Restaurant.create!(
     :name => "Verōnika",
     :address => "281 Park Ave. S, Second Floor, E 22nd St Entrance, New York, NY 10010",
-    :phone_number => "2109936999",
+    :phone_number => "210-993-6999",
     :cuisine => "European",
     :details => "Just beyond the bar lies the Restaurant, designed to evoke an 
                  elegant brasserie-style setting. The menu offers continental 
@@ -438,7 +438,7 @@ rest22.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest23 = Restaurant.create!(
     :name => "Antique Garage Tribeca",
     :address => "313 Church St, New York, NY 10013",
-    :phone_number => "2122260000",
+    :phone_number => "212-226-0000",
     :cuisine => "Mediterranean, Turkish, Greek",
     :details => "One of the Soho's little gems opening up its doors to Tribeca 
                  with well-picked antiques and offers an eclectic, unique and 
@@ -457,7 +457,7 @@ rest23.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest24 = Restaurant.create!(
     :name => "A La Turka Restaurant",
     :address => "1417 2nd Ave, New York, NY 10021",
-    :phone_number => "2127442444",
+    :phone_number => "212-744-2444",
     :cuisine => "Turkish",
     :details => "Known for its family recipes and lively atmosphere. Sharing our 
                  authentic Mediterranean-style flavors with the world, we invite 
@@ -480,7 +480,7 @@ rest24.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest25 = Restaurant.create!(
     :name => "Tito Murphy's",
     :address => "346 W 46th St, New York, NY 10036",
-    :phone_number => "2122452000",
+    :phone_number => "212-245-2000",
     :cuisine => "Mexican",
     :details => "Tito Murphy’s is a lively cantina offering authentic Mexican 
                  Cuisine in the heart of the Theatre District on Restaurant Row. 
@@ -499,7 +499,7 @@ rest25.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest26 = Restaurant.create!(
     :name => "Peachy Keen",
     :address => "325 W 44th St, New York, NY 10036",
-    :phone_number => "2122452333",
+    :phone_number => "212-245-2333",
     :cuisine => "American, Cocktails",
     :details => "Peachy Keen combines '70s inspiration with a modern twist through 
                  high-quality eats, over-the-top sweets and nostalgic cocktails. 
@@ -516,7 +516,7 @@ rest26.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest27 = Restaurant.create!(
     :name => "Ashford & Simpson's Sugar Bar",
     :address => "254 W 72nd St, New York, NY 10023",
-    :phone_number => "2125790222",
+    :phone_number => "212-579-0222",
     :cuisine => "Soul food, Latin",
     :details => "Come to Ashford & Simpson's Sugar Bar, an eatery established by 
                  the couple behind Ain't No Mountain High Enough & Ain't Nothing Like The Real Thing.
@@ -539,7 +539,7 @@ rest27.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest28 = Restaurant.create!(
     :name => "Renaissance Harlem",
     :address => "2245 Adam Clayton Powell Jr Blvd, New York, NY 10030",
-    :phone_number => "2108387444",
+    :phone_number => "210-838-7444",
     :cuisine => "American",
     :details => "Renaissance Harlem offers delicious dining, takeout and delivery 
                  to New York, NY. Renaissance Harlem is a cornerstone in the New York 
@@ -564,7 +564,7 @@ rest28.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest29 = Restaurant.create!(
     :name => "Chocobar Cortés",
     :address => "141 Alexander Ave, The Bronx, NY 10454",
-    :phone_number => "2108419333",
+    :phone_number => "210-841-9333",
     :cuisine => "Puerto-Rican",
     :details => "Chocolate Cortés is a 4th generation, family-owned, Caribbean, 
                  bean-to-bar chocolate manufacturing company. Originally established 
@@ -592,7 +592,7 @@ rest29.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 rest30 = Restaurant.create!(
     :name => "Trailer Park Lounge",
     :address => "271 W 23rd St, New York, NY 10011",
-    :phone_number => "2102612777",
+    :phone_number => "210-261-2777",
     :cuisine => "American",
     :details => "Trailer Park Lounge is a good natured parody with questionable 
                  taste! For nearly 20 years Trailer Park Lounge has been serving 
@@ -613,4 +613,4 @@ rest30.photo.attach(io: File.open("/Users/laviniaparker/Desktop/EatingEasy/app/a
 
 #Demo User 
 
-User.create!(first_name: "Beyonce", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password")
+User.create!(first_name: "Beyonce", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password", phone_number: "808-867-5309")

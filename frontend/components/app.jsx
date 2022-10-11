@@ -22,7 +22,7 @@ const App = () =>(
         {/* <div> */}
         <header>
             <Link to="/" className="link-header">
-                
+                {/* <img src="app/assets/images/easy_eating_logo.png" alt="eating easy logo" /> */}
                 <h1>EatingEasy</h1>
             </Link>
             <NavBarContainer />

@@ -14,7 +14,7 @@ class ReservationForm extends React.Component{
         let year = tdyDate.getFullYear;
         let currentDate = `${ month } / ${ day } / ${ year }`;
         
-        let num = Math.floor(Math.random() * 250);
+        // let num = Math.floor(Math.random() * 250);
 
         this.state = {
             // restaurant_id: this.props.restaurant.id,
@@ -22,13 +22,13 @@ class ReservationForm extends React.Component{
             partySize: "2 people",
             date: currentDate,
             time: "5:00 PM",
-            phoneNumber: '',
+            phoneNumber: this.props.currentUser ? this.props.currentUser.phone_number : '',
             firstName: this.props.currentUser ? this.props.currentUser.first_name : '',
             lastName: this.props.currentUser ? this.props.currentUser.last_name : '',
             email: this.props.currentUser ? this.props.currentUser.email : '',
-            specialRequests: '',
-            restaurantId: this.props.restaurant,
-            userId: this.props.currentUser,
+            specialRequests: 'gluten free please',
+            restaurantId: this.props.restaurant_id,
+            userId: this.props.currentUser ? this.props.currentUser.id : '',
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,6 +46,7 @@ class ReservationForm extends React.Component{
     }
 
     handleSubmit(e) {
+        // debugger
         e.preventDefault();
         const reservation = {
             party_size: this.state.partySize,
@@ -58,7 +59,6 @@ class ReservationForm extends React.Component{
             special_requests: this.state.specialRequests,
             restaurant_id: this.state.restaurantId,
             user_id: this.state.userId
-
         };
 
         this.props.createReservation(reservation)

@@ -15,7 +15,9 @@ class Api::ReservationsController < ApplicationController
 
     def create
         # debugger
-        @reservation = Reservation.new(reservation_params)
+        # print reservation_params
+        print params 
+        @reservation = Reservation.new(params[:reservation])
         if @reservation.save!
             render :show
         else
@@ -26,7 +28,7 @@ class Api::ReservationsController < ApplicationController
     def update
         @reservation = Reservation.find(params[:id])
 
-        if @reservation && @reservation.update(reservation_params)
+        if @reservation && @reservation.update(params)
             render :show
         else
             render json: @reservation.errors.full_messages, status: 422

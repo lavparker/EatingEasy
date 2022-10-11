@@ -140,7 +140,10 @@ class RestaurantShow extends React.Component{
                 </div>
 
                 <div className="res-form">
-                    <ReservationForm/>
+                    <ReservationForm 
+                        restaurant={this.props.restaurant}
+                        
+                    />
                 </div>
             </div>
         )
