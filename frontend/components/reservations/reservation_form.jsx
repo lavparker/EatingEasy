@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaChartLine } from 'react-icons/fa';
 
 // import { Link , useParams} from "react-router-dom";
 
@@ -6,23 +7,34 @@ import React, { useState } from "react";
 class ReservationForm extends React.Component{
     constructor(props){
         super(props);
+
         const tdyDate = new Date();
         let month = tdyDate.getMonth;
         let day = tdyDate.getDate();
         let year = tdyDate.getFullYear;
         let currentDate = `${ month } / ${ day } / ${ year }`;
         
+        let num = Math.floor(Math.random() * 250);
 
         this.state = {
-            // restaurant_id: this.props.restaurantId,
+            // restaurant_id: this.props.restaurant.id,
             // user_id: this.props.currentUser.id,
-            party_size: "2 people",
+            partySize: "2 people",
             date: currentDate,
-            time: "5:00 PM"
+            time: "5:00 PM",
+            phoneNumber: '',
+            firstName: this.props.currentUser ? this.props.currentUser.first_name : '',
+            lastName: this.props.currentUser ? this.props.currentUser.last_name : '',
+            email: this.props.currentUser ? this.props.currentUser.email : '',
+            specialRequests: '',
+            restaurantId: this.props.restaurant,
+            userId: this.props.currentUser,
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+
 
     // const randomNum(min, max){
     //     let num = Math.random(min, max)
@@ -35,11 +47,27 @@ class ReservationForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createReservation(this.state)
+        const reservation = {
+            party_size: this.state.partySize,
+            date: this.state.date,
+            time: this.state.time,
+            phone_number: this.state.phoneNumber,
+            first_name: this.state.firstName,
+            last_name: this.state.lastName,
+            email: this.state.email,
+            special_requests: this.state.specialRequests,
+            restaurant_id: this.state.restaurantId,
+            user_id: this.state.userId
+
+        };
+
+        this.props.createReservation(reservation)
         .then((reservation) =>{
-            this.props.history.push(`/reservation/${reservation.id}`)
+            this.props.history.push(`/reservations/${reservation.id}`)
         })
     }
+
+
 
 
     render(){
@@ -51,7 +79,7 @@ class ReservationForm extends React.Component{
                 <div>
                     <label className="party-size"> Party Size</label>
                     <br />
-                    <select className="party" onChange={this.handleInput("party_size")}> 
+                    <select className="party" onChange={this.handleInput("partySize")}> 
                         
                         <option value="1 person">1 person</option>
                         <option value="2 people" selected> 2 people</option>
@@ -85,7 +113,6 @@ class ReservationForm extends React.Component{
                             onChange={this.handleInput("date")}
                             className="date"
                     />
-
                     <label className="res-time">Time</label>
                     <br />
                     <select className="times" onChange={this.handleInput("time")}>
@@ -145,7 +172,9 @@ class ReservationForm extends React.Component{
 
                 <button className="res-button" onClick={this.handleSubmit}>Confirm Reservation</button>
                 <br />
-                <p> Booked times today</p>
+                <p> <FaChartLine
+                        size={25}
+                        /> &nbsp; Booked 222 times today </p>
             </form>
         </div>
             

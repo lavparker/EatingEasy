@@ -107,6 +107,22 @@
     cursor: pointer;
 }
 
+.res-index-img{
+    width:141%; 
+    height: 141%; 
+    margin-top: -32px;
+    margin-left: -32px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+// .res-index-img:hover{
+//     zoom: scale(108);
+//     transition: .2s; 
+    
+// }
+
 .res-photo-row-1{
     height: 5rem;
     width: 100%;

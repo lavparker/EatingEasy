@@ -29,9 +29,11 @@
 .reservation-main h3{
     padding-top:1rem;
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    line-height: 1.15;
+    margin-bottom: 16px;
     // padding-top: 0.4rem;
     padding-bottom: 1rem;
-    padding-left: 5rem;
+    padding-left: 6.5rem;
     font-weight: bold;
     color:grayscale($color: #2d2b2b);
 
@@ -48,7 +50,6 @@
 }
 
 .party{
-
     border-top: none;
     border-left: none;
     border-right: none;

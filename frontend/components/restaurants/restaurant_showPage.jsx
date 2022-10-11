@@ -5,7 +5,7 @@ import ReservationForm from "../reservations/reservation_form_container";
 class RestaurantShow extends React.Component{
     constructor(props){
         super(props);
-
+        
         this.state={
             name: "",
             address: "",
@@ -66,7 +66,7 @@ class RestaurantShow extends React.Component{
                         <li className="res-address"> 
                         
                         <div className="res-add-icon">
-                            <FaHome/> &nbsp;  Address  
+                            <FaHome/> &nbsp;  Address:  
                         </div>
                         <div className="res-add-word">
                             {this.props.restaurant.address}

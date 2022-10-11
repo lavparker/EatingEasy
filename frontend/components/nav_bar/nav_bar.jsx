@@ -10,15 +10,15 @@ import { FaAngleDown } from 'react-icons/fa';
 
 const NavBar = ({currentUser, login, logout, openModal}) =>{
 
-    const helloWords = ["Hello", "Guten tag", "Salve", "Nǐn hǎo", "Olá", "Asalaam alaikum", "Konnichiwa", "Anyoung haseyo", "Zdravstvuyte"];
+    const helloWords = ["Hello", "Guten tag", "Salve", "Nǐn hǎo", "Olá", "Marhaban", "Kon'nichiwa", "Anyoung haseyo", "Zdravstvuyte", "Hola", "Namaste", "Privet", "Bonjour", "Assalam u alaikum", "Merhaba", "Ciao", "Sannu", "E nle o", "Habari", "Salom", "Selam", "Kedu", "Kumusta", "Ayubowan", "Kumno", "Hej"];
     let hello = helloWords[Math.floor(Math.random()*helloWords.length)];
 
     const display = currentUser ? (
         <div className="user-login">
             <p>{hello}, {currentUser.first_name}!</p>
 
-            <div className="hover-dropdown">
-                <p className="dropdown-btn" ><FaUser/> <FaAngleDown/></p>
+            <div className="dropdown-btn"><FaUser/> <FaAngleDown/>
+                {/* <p className="dropdown-btn" ><FaUser/> <FaAngleDown/></p> */}
 
                 <ul className="user-dropdown">
                     <li>Reservations</li>

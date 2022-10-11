@@ -47,19 +47,7 @@ class Signup extends React.Component{
         .then(() => this.props.closeModal());
 
     }
-    // handleSubmit(e) {
-    //     console.log(this.props);
-    //     console.log(this.props.processForm);
-    //     e.preventDefault();
-    //     // const user = Object.assign({}, this.state);
-    //     // this.props.processForm(this.state).then(this.props.closeModal)
-    //     this.props.processForm({ first_name: this.state.firstName, 
-    //         last_name: this.state.lastName, 
-    //         username: this.state.username, 
-    //         email: this.state.email,
-    //         password: this.state.password
-    //     }).then(this.props.closeModal);
-    // };
+
 
     openModalSignUp (e) {
         e.preventDefault();

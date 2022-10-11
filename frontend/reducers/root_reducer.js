@@ -4,6 +4,7 @@ import errorsReducer from "./errors_reducer";
 import entitiesReducer from "./entities_reducer";
 import uiReducer from "./ui_reducer";
 import restaurantsReducer from "./restaurants_reducer";
+import reservationsReducer from "./reservations_reducer";
 
 const rootReducer = combineReducers({
   
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     errors: errorsReducer,
     entities: entitiesReducer,
     restaurants: restaurantsReducer,
+    reservations: reservationsReducer, 
     ui: uiReducer
 }); 
 

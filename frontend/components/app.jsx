@@ -34,7 +34,7 @@ const App = () =>(
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
             <Route exact path="/reservations/:id " component={ReservationFormContainer}/>
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
-
+            
             
             <Redirect to="/" />
 
