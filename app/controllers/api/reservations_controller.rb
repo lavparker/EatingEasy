@@ -16,8 +16,8 @@ class Api::ReservationsController < ApplicationController
     def create
         # debugger
         # print reservation_params
-        print params 
-        @reservation = Reservation.new(params[:reservation])
+        # print params 
+        @reservation = Reservation.new(reservation_params)
         if @reservation.save!
             render :show
         else
@@ -49,7 +49,7 @@ class Api::ReservationsController < ApplicationController
     private
 
     def reservation_params
-        params.require(:reservation).permit(:restaurant_id, :party_size, :date, :time)
+        params.require(:reservation).permit(:restaurant_id, :party_size, :date, :time, :first_name, :last_name, :phone_number, :email, :special_requests)
     end 
 
 end

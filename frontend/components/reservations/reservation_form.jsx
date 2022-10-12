@@ -69,7 +69,6 @@ class ReservationForm extends React.Component{
 
 
 
-
     render(){
       return(
         <div className="reservation-container">
@@ -176,6 +175,7 @@ class ReservationForm extends React.Component{
                         size={25}
                         /> &nbsp; Booked 222 times today </p>
             </form>
+            
         </div>
             
       )
