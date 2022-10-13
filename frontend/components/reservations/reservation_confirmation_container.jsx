@@ -19,8 +19,9 @@
 // }
 
 // const mapDispatchToProps = dispatch =>({
-//     getReservation: reservationId => dispatch(getReservation)
-//     // deletereservation 
+//     getReservation: reservationId => dispatch(reservationId),
+//     // updateReservation: reservation => dispatch(receiveReservation(reservation)),
+//     deleteReservation: reservationId => dispatch(deleteReservation(reservationId)),
 // })
 
 // export default connect(mapStateToProps, mapDispatchToProps)(ReservationConfirmation); 

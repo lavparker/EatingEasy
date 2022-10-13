@@ -8,6 +8,7 @@
 # Post.create!(:title => "Post 4", :body => "Body 4")
 
 #run bundle exec rails db:seed command after each update to this file 
+require 'open-uri'
 Restaurant.destroy_all
 User.destroy_all
 Reservation.destroy_all
@@ -27,7 +28,7 @@ rest1 = Restaurant.create(
 )
 # pr1 = open('https://eatingeasy-dev.s3.amazonaws.com/6GwX2UNihvUppTqAuEF85yAn') 
 # rest1.photo.attach(io: pr1, filename: 'aunt_et_uncles.jpeg')
-rest1.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/aunts_et_uncles.jpeg"), filename: 'aunts_et_uncles.jpeg')
+rest1.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/aunts_et_uncles.jpeg"), filename: 'aunts_et_uncles.jpeg')
 
 rest2 = Restaurant.create(
     :name => 'La Grande Boucherie', 
@@ -41,7 +42,7 @@ rest2 = Restaurant.create(
     :dining_style => "Fine Dining"
 )
 
-rest2.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/la_grande_boucherie.png"), filename: 'la_grande_boucherie.png')
+rest2.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/la_grande_boucherie.png"), filename: 'la_grande_boucherie.png')
 
 
 rest3 = Restaurant.create(
@@ -56,7 +57,7 @@ rest3 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
-rest3.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/bunna_cafe.jpg"), filename: 'bunna_cafe.jpg')
+rest3.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/bunna_cafe.jpg"), filename: 'bunna_cafe.jpg')
 
 rest4 = Restaurant.create(
     :name => 'Gramercy Tavern', 
@@ -70,7 +71,7 @@ rest4 = Restaurant.create(
     :dining_style => "Pre Fixe"
 )
 
-rest4.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/gramerc_taver.png"), filename: 'gramerc_taver.png')
+rest4.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/gramerc_taver.png"), filename: 'gramerc_taver.png')
 
 rest5 = Restaurant.create(
     :name => 'Jasmine’s Caribbean Cuisine', 
@@ -84,7 +85,7 @@ rest5 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
-rest5.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/jasmines.jpeg"), filename: 'jasmines.jpeg')
+rest5.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/jasmines.jpeg"), filename: 'jasmines.jpeg')
 
 rest6 = Restaurant.create(
     :name => '1803 NYC', 
@@ -98,7 +99,7 @@ rest6 = Restaurant.create(
     :dining_style => "Fine Dining"
 )
 
-rest6.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/1803-nyc-new-york-ny-interior-2.png"), filename: '1803-nyc-new-york-ny-interior-2.png')
+rest6.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/1803-nyc-new-york-ny-interior-2.png"), filename: '1803-nyc-new-york-ny-interior-2.png')
 
 rest7 = Restaurant.create(
     :name => 'Zou Zou’s', 
@@ -112,7 +113,7 @@ rest7 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
-rest7.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/zou-zous.png"), filename: 'zou-zous.png')
+rest7.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/zou-zous.png"), filename: 'zou-zous.png')
 
 rest8 = Restaurant.create(
     :name => 'COTE Korean Steakhouse', 
@@ -126,7 +127,7 @@ rest8 = Restaurant.create(
     :dining_style => "Fast Casual"
 )
 
-rest8.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/cote-korean.jpg"), filename: 'cote-korean.jpg')
+rest8.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/cote-korean.jpg"), filename: 'cote-korean.jpg')
 
 rest9 = Restaurant.create(
     :name => 'Melbas Restaurant', 
@@ -140,7 +141,7 @@ rest9 = Restaurant.create(
     :dining_style => "Casual"
 )
 
-rest9.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/melbas.png"), filename: 'melbas.png')
+rest9.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/melbas.png"), filename: 'melbas.png')
 
 rest10 = Restaurant.create!(
     :name =>  "Kochi", 
@@ -154,7 +155,7 @@ rest10 = Restaurant.create!(
     :dining_style =>  "multicourse tasting menu"
 )
 
-rest10.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/kochi-1.jpeg"), filename: 'kochi.jpeg')
+rest10.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/kochi-1.jpeg"), filename: 'kochi.jpeg')
 
 rest11 = Restaurant.create!(
     :name => "Cafe Himalaya",
@@ -169,7 +170,7 @@ rest11 = Restaurant.create!(
     :dining_style => "Relaxed"
 )
 
-rest11.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/cafe_himalaya-1.jpeg"), filename: 'cafe_himalaya.jpeg')
+rest11.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/cafe_himalaya-1.jpeg"), filename: 'cafe_himalaya.jpeg')
 
 rest12 = Restaurant.create!(
     :name => "Popular",
@@ -196,7 +197,7 @@ rest12 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-rest12.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/popular_peru-1.jpeg"), filename: 'popular_peru.jpeg')
+rest12.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/popular_peru-1.jpeg"), filename: 'popular_peru.jpeg')
 
 rest13 = Restaurant.create!(
     :name => "Momofuku Ko",
@@ -219,7 +220,7 @@ rest13 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-rest13.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/momofuku_ko-1.jpeg"), filename: 'momofuku_ko.jpeg')
+rest13.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/momofuku_ko-1.jpeg"), filename: 'momofuku_ko.jpeg')
 
 rest14 = Restaurant.create!(
     :name => "Max Brenner New York",
@@ -236,7 +237,7 @@ rest14 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-rest14.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/max_brenner-1.jpeg"), filename: 'max_brenner.jpeg')
+rest14.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/max_brenner-1.jpeg"), filename: 'max_brenner.jpeg')
 
 rest15 = Restaurant.create!(
     :name => "Upland",
@@ -259,7 +260,7 @@ rest15 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
-rest15.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/upland-1.jpeg"), filename: 'upland.jpeg')
+rest15.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/upland-1.jpeg"), filename: 'upland.jpeg')
 
 rest16 = Restaurant.create!(
     :name => "Sigiri",
@@ -282,7 +283,7 @@ rest16 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
-rest16.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/sigri-1.jpeg"), filename: 'sigri.jpeg')
+rest16.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/sigri-1.jpeg"), filename: 'sigri.jpeg')
 
 rest17 = Restaurant.create!(
     :name => "Manousheh Bleecker",
@@ -304,7 +305,7 @@ rest17 = Restaurant.create!(
     :dining_style => "Cafe"
 )
 
-rest17.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/manousheh-1.jpeg"), filename: 'manousheh.jpeg')
+rest17.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/manousheh-1.jpeg"), filename: 'manousheh.jpeg')
 
 rest18 = Restaurant.create!(
     :name => "Queen of Sheba",
@@ -331,7 +332,7 @@ rest18 = Restaurant.create!(
     :dining_style => "Family-style"
 )
 
-rest18.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/queen_of_sheba-1.jpeg"), filename: 'queen_of_sheba.jpeg')
+rest18.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/queen_of_sheba-1.jpeg"), filename: 'queen_of_sheba.jpeg')
 
 rest19 = Restaurant.create!(
     :name => "Salam",
@@ -354,7 +355,7 @@ rest19 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
-rest19.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/salam-1.png"), filename: 'salam.png')
+rest19.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/salam-1.png"), filename: 'salam.png')
 
 rest20 = Restaurant.create!(
     :name => "Chama Mama",
@@ -380,7 +381,7 @@ rest20 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-rest20.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/chama_mama-1.jpeg"), filename: 'chama_mama.jpeg')
+rest20.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/chama_mama-1.jpeg"), filename: 'chama_mama.jpeg')
 
 rest21 = Restaurant.create!(
     :name => "Dirt Candy",
@@ -408,7 +409,7 @@ rest21 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-rest21.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/dirt_candy-1.jpeg"), filename: 'dirt_candy.jpeg')
+rest21.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/dirt_candy-1.jpeg"), filename: 'dirt_candy.jpeg')
 
 rest22 = Restaurant.create!(
     :name => "Verōnika",
@@ -434,7 +435,7 @@ rest22 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-rest22.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/veronika-1.jpeg"), filename: 'veronika.jpeg')
+rest22.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/veronika-1.jpeg"), filename: 'veronika.jpeg')
 
 rest23 = Restaurant.create!(
     :name => "Antique Garage Tribeca",
@@ -453,7 +454,7 @@ rest23 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-rest23.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/antique_garage_tribeca+-1.jpeg"), filename: 'antique_garage_tribeca .jpeg')
+rest23.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/antique_garage_tribeca+-1.jpeg"), filename: 'antique_garage_tribeca .jpeg')
 
 rest24 = Restaurant.create!(
     :name => "A La Turka Restaurant",
@@ -476,7 +477,7 @@ rest24 = Restaurant.create!(
     :dining_style => "Fine Dining"
 )
 
-rest24.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/a_la_turka-1.jpeg"), filename: 'a_la_turka.jpeg')
+rest24.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/a_la_turka-1.jpeg"), filename: 'a_la_turka.jpeg')
 
 rest25 = Restaurant.create!(
     :name => "Tito Murphy's",
@@ -495,7 +496,7 @@ rest25 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-rest25.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/tito_murphys-1.jpeg"), filename: 'tito_murphys.jpeg')
+rest25.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/tito_murphys-1.jpeg"), filename: 'tito_murphys.jpeg')
 
 rest26 = Restaurant.create!(
     :name => "Peachy Keen",
@@ -512,7 +513,7 @@ rest26 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-rest26.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/peachy_keen-1.jpeg"), filename: 'peachy_keen.jpeg')
+rest26.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/peachy_keen-1.jpeg"), filename: 'peachy_keen.jpeg')
 
 rest27 = Restaurant.create!(
     :name => "Ashford & Simpson's Sugar Bar",
@@ -535,7 +536,7 @@ rest27 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-rest27.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/ashford_simpsons_sugar_bar-1.jpeg"), filename: 'ashford_simpsons_sugar_bar.jpeg')
+rest27.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/ashford_simpsons_sugar_bar-1.jpeg"), filename: 'ashford_simpsons_sugar_bar.jpeg')
 
 rest28 = Restaurant.create!(
     :name => "Renaissance Harlem",
@@ -560,7 +561,7 @@ rest28 = Restaurant.create!(
     :dining_style => "Casual"
 )
 
-rest28.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/renaissance_harlem-1.png"), filename: 'renaissance_harlem.png')
+rest28.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/renaissance_harlem-1.png"), filename: 'renaissance_harlem.png')
 
 rest29 = Restaurant.create!(
     :name => "Chocobar Cortés",
@@ -588,7 +589,7 @@ rest29 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-rest29.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/chocobar-cortes-1.jpeg"), filename: 'chocobar-cortes.jpeg')
+rest29.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/chocobar-cortes-1.jpeg"), filename: 'chocobar-cortes.jpeg')
 
 rest30 = Restaurant.create!(
     :name => "Trailer Park Lounge",
@@ -610,7 +611,7 @@ rest30 = Restaurant.create!(
     :website => "http://www.trailerparklounge.com/", 
     :dining_style => "Fast Casual"
 )
-rest30.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/trailer_park_lounge.jpg"), filename: 'trailer_park_lounge.jpg')
+rest30.photo.attach(io: open("https://eatingeasy-dev.s3.amazonaws.com/trailer_park_lounge.jpg"), filename: 'trailer_park_lounge.jpg')
 
 #Demo User 
 
