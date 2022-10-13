@@ -118,14 +118,14 @@ class Signup extends React.Component{
                         />
                     <br />
                     <br />
-                        <input
+                        {/* <input
                             className="input-signinup"
                             type="phoneNumber"
                             placeholder="Phone Number"
                             value={this.state.phoneNumber}
                             onChange={this.handleInput('phoneNumber')}
                             
-                        />
+                        /> */}
                     <br />
                     <br />
                         <input
@@ -155,6 +155,7 @@ class Signup extends React.Component{
                     {/* {this.renderErrors()} */}
 
                 </form>
+
             </div>
         )
     }

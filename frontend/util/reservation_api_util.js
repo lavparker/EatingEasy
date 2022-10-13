@@ -17,7 +17,7 @@ export const getReservation = id =>{
 }
 
 export const createReservation = reservation =>{
-    console.log(reservation)
+    // console.log(reservation)
     return(
         $.ajax({
             url: '/api/reservations',
