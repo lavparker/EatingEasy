@@ -8,7 +8,7 @@ import ReservationForm from './reservation_form';
 
 const mapStateToProps = (state, ownProps) =>{
     //mapStateToProps, takes state and makes those parts available as props in the form 
-    debugger
+    // debugger
     let current_user_id = state.session.id
     let current_user = state.entities.users[current_user_id]
     

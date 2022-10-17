@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { FaChartLine } from 'react-icons/fa';
+import { useHistory } from 'react-router-dom';
 
 // import { Link , useParams} from "react-router-dom";
 
 
 class ReservationForm extends React.Component{
-    constructor(props){
-        super(props);
-
+    constructor(props) {
+        // constructor(props){
+        //     super(props);
         const tdyDate = new Date();
         let month = tdyDate.getMonth;
         let day = tdyDate.getDate();
         let year = tdyDate.getFullYear;
-        let currentDate = `${ month } / ${ day } / ${ year }`;
-        
-        // let num = Math.floor(Math.random() * 250);
+        let currentDate = `${month} / ${day} / ${year}`;
 
+        // let num = Math.floor(Math.random() * 250);
         this.state = {
             // restaurant_id: this.props.restaurant.id,
             // user_id: this.props.currentUser.id,
@@ -29,22 +29,16 @@ class ReservationForm extends React.Component{
             specialRequests: 'gluten free please',
             restaurantId: this.props.restaurant_id,
             userId: this.props.currentUser ? this.props.currentUser.id : '',
-        }
+        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
 
-    // const randomNum(min, max){
-    //     let num = Math.random(min, max)
-    //     return num;
-    // }
-
     handleInput(field){
         return (e) => { this.setState({ [field]: e.currentTarget.value })};
     }
-
     handleSubmit(e) {
         // debugger
         e.preventDefault();
@@ -59,11 +53,17 @@ class ReservationForm extends React.Component{
             special_requests: this.state.specialRequests,
             restaurant_id: this.state.restaurantId,
             user_id: this.state.userId
-        };
+        }; 
+
+        let history = useHistory();
+          console.log(history)
 
         this.props.createReservation(reservation)
-        .then((reservation) =>{
-            this.props.history.push(`/reservations/${reservation.id}`)
+        .then(reservation =>{
+            
+        history.push(`/reservations/${reservation}`)
+            console.log(history)
+
         })
     }
 
