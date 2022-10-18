@@ -1,5 +1,9 @@
-import { RECEIVE_ALL_RESERVATIONS, RECEIVE_RESERVATION,
+import { RECEIVE_ALL_RESERVATIONS, RECEIVE_CONFIRMATION, RECEIVE_RESERVATION, REMOVE_CONFIRMATION,
  REMOVE_RESERVATION } from "../actions/reservation_actions";
+
+const _resNotConfirmed = Object.freeze({
+    confirmation: false
+})
 
 const reservationsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -11,10 +15,15 @@ const reservationsReducer = (oldState = {}, action) => {
             let nextState = Object.assign({}, oldState);
             nextState[action.reservation.id] = action.reservation;
             return nextState;
+        case RECEIVE_CONFIRMATION: 
+            return {confirmation: true}
+        case REMOVE_CONFIRMATION:
+            return _resNotConfirmed; 
         case REMOVE_RESERVATION:
             delete nextState[action.reservationId];
             return nextState;
-    
+
+        
         default:
             return oldState;
     };

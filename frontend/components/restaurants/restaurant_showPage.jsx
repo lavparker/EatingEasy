@@ -22,6 +22,7 @@ class RestaurantShow extends React.Component{
 
     componentDidMount(){
         this.props.getRestaurant(this.props.match.params.id)
+        window.scrollTo(0, 0)
     }
 
     render(){

@@ -17,3 +17,20 @@
 // }
 
 // export default UsersShow;
+
+// import React from 'react'; 
+
+// class UsersShow extends React.Component{
+//     constructor(props){
+//         super(props);
+
+//     }
+
+//     // componentWillMount(){
+//     //     if(this.props.currentUser){
+//     //         this.props.getReservations(this.props.reservationId)
+//     //     }
+//     // }
+
+//     render()
+// }

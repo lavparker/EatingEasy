@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { withRouter, useParams } from 'react-router-dom';
-import { getReservation, createReservation, updateReservation, deleteReservation, removeErrors } 
+import { getReservation, createReservation, receiveConfirmation, removeConfirmation, updateReservation, deleteReservation, removeErrors } 
     from '../../actions/reservation_actions';
 import { getRestaurant } from '../../actions/restaurant_actions';
 import ReservationForm from './reservation_form';
@@ -33,8 +33,10 @@ const mapStateToProps = (state, ownProps) =>{
             party_size: "",
             special_request: ""
         },
+        resConfirmed: state.ui.reservation.confirmation,
         errors: state.errors.reservation,
         formType: "New Reservation"
+
 
     })
 
@@ -46,6 +48,7 @@ const mapDispatchToProps = dispatch =>({
 
     getReservation: reservationId => dispatch(getReservation(reservationId)),
     createReservation: reservation => dispatch(createReservation(reservation)),
+    removeConfirmation: () => dispatch(removeConfirmation()),
     removeErrors: () => dispatch(removeErrors()),
     // updateReservation: ,
     // deleteReservation: () => dispatch(deleteReservation(reservationId)), 

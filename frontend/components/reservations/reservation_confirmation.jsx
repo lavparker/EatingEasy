@@ -42,7 +42,15 @@ class ReservationConfirmation extends React.Component{
 
 
                 </div>
-        
+                <div className='res-conf-addtl-det'>
+                    <h2 className='what-to-know'> What to know before you go</h2>
+                    <br />
+                    <br />
+                    <h3 className='dining-info'> Important dining info </h3>
+                    <br />
+                    <br />
+                    {/* <p className=''></p> */}
+                </div>
 
 
             </div>

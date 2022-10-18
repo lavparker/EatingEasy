@@ -16,6 +16,7 @@
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
+    box-shadow: 0px 0px 4px 4px #7c7a7a;
     display: grid;
     background-size: cover;
     background-position: center;
@@ -43,6 +44,7 @@
 .local-restaurants{
     display:grid;
     // margin-top: 20%;
+    font-weight: 500;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 5px;
@@ -95,12 +97,44 @@
 
 .find-your-table{
     // padding-right: 100px;
-    margin: 0% 25%; 
+    text-shadow: 2px 2px #0f4e63;
+    margin: 0% 20%; 
     // overflow-wrap: none;
     // background-color: aqua;
     width: 70%;
 }
 
+.search-bar{
+    margin-top: 3.5%;
+    display:block;
+    // margin-left: 30%;
+    // margin-right: 25%;
+    // height: 2.5rem; 
+    // width: 40%; 
+    // border-radius: 4px; 
+    justify-content: space-between;
+}
+
+.search-form{
+    margin-left: 25%;
+    margin-right: 1%;
+    height: 3rem; 
+    width: 40%; 
+    border-radius: 4px; 
+    font-weight: 700;
+
+}
+
+.search-button{
+    background-color: #247f9e;
+    color: antiquewhite;
+    font-weight: 700;
+    margin-left: 10;
+    margin-right: 20;
+    height: 3rem; 
+    width: 10%; 
+    border-radius: 4px;  
+}
 .restaurant-index-item:hover{
     transform: scale(1.05);
     transition: .8s;
@@ -175,7 +209,7 @@
 .main-header{
     // display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 200px;
+    margin-top: 8rem;
     // margin-left: 5%;
     // margin-right: 50%;
     align-items: center;
