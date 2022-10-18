@@ -4,7 +4,7 @@ import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT} from "../../actions/search_act
 import SearchForm from "./search_form"; 
 
 const mapStateToProps = (state, ownProps) => ({
-        restaurant: state.ui.search, 
+        restaurant: state.ui.search,
 })
 
 const mapDispatchToProps = dispatch =>({

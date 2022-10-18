@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { FaChartLine } from 'react-icons/fa';
+import { FaChartLine, FaCheckCircle } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 import ReservationConfirmation from "./reservation_confirmation";
+
 
 // import { Link , useParams} from "react-router-dom";
 
@@ -260,10 +261,20 @@ class ReservationForm extends React.Component{
             if(!this.props.resConfirmed) return null; 
             return(
                 <div>
-                    <h2>Reservation Confirmed</h2>
+                    <h2 className="res-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; Reservation Confirmed</h2>
                 </div>
             )
     }   
+
+    modifyCancel(){
+        if(!this.props.resConfirmed) return null; 
+
+        return(
+            <div className="modify-cancel">
+                <button className="modify-btn"> Modify </button> | <button className="cancel-btn"> Cancel </button>
+            </div>
+        )
+    }
 
 
     render(){
@@ -368,9 +379,15 @@ class ReservationForm extends React.Component{
 
                 <button className="res-button" onClick={this.handleSubmit}>Confirm Reservation</button>
                 <br />
+                <br />
                 <div className="res-confirmation">
                     {this.resConfirmation()}
+                <br />
+                    {this.modifyCancel()}
                 </div>
+
+                <br />
+            
 
                 <p> <FaChartLine
                         size={25}

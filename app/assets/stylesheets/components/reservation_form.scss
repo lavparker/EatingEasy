@@ -82,7 +82,7 @@
     margin-top: 1rem;
     margin-left: 16px;
     margin-right: 16px;
-    width: 40%;
+    width: 90%;
     height: 2rem;
     background-color: inherit;
     font-weight: 100;
@@ -110,7 +110,7 @@
     margin-top: 1rem;
     margin-left: 16px;
     margin-right: 16px;
-    width: 40%;
+    width: 90%;
     height: 2rem;
     background-color: inherit;
     font-weight: 100;
@@ -141,6 +141,51 @@
     border-color: #0f4e63;
     // border-radius: 5px;
 }
+
+.res-confirmed{
+    margin-left: 20%;
+    margin-right: 15%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.res-conf-icon{
+    color: green; 
+}
+
+.modify-btn{
+    background-color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #247f9e;
+}
+
+.cancel-btn{
+    background-color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #247f9e;
+}
+
+.modify-cancel{
+    margin-left: 35%;
+    margin-right: 15%;
+    font-size: 16px;
+    font-weight: 700; 
+    color: burlywood;
+    background: none;
+}
+
+.modify-btn:hover{
+    color: black;
+}
+
+.cancel-btn:hover{
+    color: black;
+}
+
 
 .reservation-main p{
     display: flex;

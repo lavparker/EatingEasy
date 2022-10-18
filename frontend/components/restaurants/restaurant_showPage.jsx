@@ -42,7 +42,8 @@ class RestaurantShow extends React.Component{
                     <div className="show-page-res-info-bar">
                         <ul>
                             <li>
-                                <button className="res-overview-btn">Overview</button>
+                                <button className="res-overview-btn">Overview </button>
+                                {/* <p className="line-break">|</p> */}
                                 <button className="res-reviews-btn">Reviews</button>
 
                             </li>
@@ -118,11 +119,11 @@ class RestaurantShow extends React.Component{
 
                         <li className="res-web">
                             <div className="res-web-icon">
-                             <FaLaptop/> &nbsp;  Website
+                             <FaLaptop/> &nbsp; Website
                             </div>
                             <div className="res-web-word">
-                                {this.props.restaurant.website}
-                              {/* <a href="{this.props.restaurant.website}"></a> */}
+                                {/* <button>{this.props.restaurant.website}</button> */}
+                              <a  className="res-web-link" href={this.props.restaurant.website}>{this.props.restaurant.website}</a>
                             </div>  
                         </li>
                         <br />
