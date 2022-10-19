@@ -8,13 +8,12 @@ const mapStateToProps = (state, ownProps) => {
       let reservation_conf = state.entities.reservations[reservation_id];
 
     return({
-
+        resConf: state.entities.reservations[ownProps.match.params.id],
         reservation: {
             id: state.entities.reservations.id,
             // date: reservation_conf.date,
             time: reservation_conf.time,
             party_size: reservation_conf.party_size,
-
         
         }
     })
@@ -22,7 +21,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch =>({
     getReservation: reservationId => dispatch(reservationId),
-    // updateReservation: reservation => dispatch(receiveReservation(reservation)),
+    updateReservation: reservation => dispatch(receiveReservation(reservation)),
     deleteReservation: reservationId => dispatch(deleteReservation(reservationId)),
 })
 

@@ -58,8 +58,8 @@ export const createReservation = reservation => dispatch =>{
     return(
         APIUtil.createReservation(reservation)
         .then(reservation => {
-            dispatch(receiveReservation(reservation));
             dispatch(receiveConfirmation());
+            dispatch(receiveReservation(reservation));
         })
     )
 }

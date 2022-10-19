@@ -1,41 +1,41 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa'
-
-// class SearchForm extends React.Component{
-//     constructor(props){
-//         super(props);
-
-//         this.state = {
-//             resName: " ",
-//         }
-
-//         this.handleSubmit = this.handleSubmit.bind(this); 
-//     }
-
-//     // handleInput = resName => {
-//     //     return e => { this.setState({
-//     //         resName: e.target.value
-//     //     })}
-
-        
-
-//     // }
-
-
-// }
+import { FaSearch } from 'react-icons/fa'; 
 
 class SearchForm extends React.Component{
 
     constructor(props){
-            super(props); 
+        super(props); 
 
             this.state = {
-                resName: " ", 
+                restName: " ", 
+                guesses: this.props.guesses,
+                guesses: ""
             }
-            // this.handleSubmit = this.handleSubmit.bind(this); 
+            this.handleSubmit = this.handleSubmit.bind(this); 
+            // this.handleInput
     }
-   
 
+    // componentDidMount(){
+    //     this.props.searchGuesses(); 
+    // }
+   
+    handleSubmit(e){
+        // e.preventDefault();
+
+        // this.props.getRestaurants(this.state.restaurants)
+        // .then (this.props.removeRestaurants())
+    }
+
+    update(field){
+        return(e) =>{ this.setState({[field]: e.currentTarget.value})};
+        // this.props.getRestaurants(resName) ; 
+    }
+
+    // searchRestaurant = () => {
+    //     // return this.state.restaurants.filter((restaurant)) => restaurant.toLowerCase().includes(this.state.resName.toLowerCase()); 
+    // }
+
+    
 //         };
     //  handleInput = resName => {
     //     return e => { this.setState({
@@ -46,17 +46,19 @@ class SearchForm extends React.Component{
     //         this.props.receiveRestaurant(e.target.value); 
     //     }
 
-    
-    // // handleSubmit
 
     
     render(){
-        
-
         return(
             <div className='search-bar'>
-                <input className='search-form' type="search" placeholder= 'Search Restaurant Here'/>
-                <button className='search-button'>Let's go</button>
+                <input className='search-form' 
+                        type="search" 
+                        placeholder= 'Search Restaurant Here'
+                        value={this.state.restaurants}
+                        onChange={this.update('restaurants')}
+                        />
+
+                <button className='search-button' onClick={this.handleSubmit()}>Let's go</button>
             </div>
         )
     }

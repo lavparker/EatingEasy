@@ -189,8 +189,8 @@ import ReservationConfirmation from "./reservation_confirmation";
 
 class ReservationForm extends React.Component{
     constructor(props) {
-        // constructor(props){
-            super(props);
+        super(props);
+        
         const tdyDate = new Date();
         let month = tdyDate.getMonth;
         let day = tdyDate.getDate();
@@ -214,6 +214,7 @@ class ReservationForm extends React.Component{
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
     }
 
     componentWillUnmount(){
@@ -264,18 +265,41 @@ class ReservationForm extends React.Component{
                     <h2 className="res-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; Reservation Confirmed</h2>
                 </div>
             )
-    }   
+    } 
+
+    
+    handleCancel(e){
+        // e.preventDefault(); 
+
+        const reservation_id = this.props.reservation.id; 
+
+        this.props.deleteReservation(reservation_id)
+    }
+
+    cancelConfirmation(){
+        if(this.props.resConfirmed) return null; 
+        return(
+            <div>
+                <h2 className="del-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; This reservation has been cancelled </h2>
+            </div>
+        )
+    }
 
     modifyCancel(){
         if(!this.props.resConfirmed) return null; 
 
         return(
             <div className="modify-cancel">
-                <button className="modify-btn"> Modify </button> | <button className="cancel-btn"> Cancel </button>
+                <button className="modify-btn"> Modify </button> | <button onClick={this.handleCancel()} className="cancel-btn"> Cancel </button>
+
+                {this.cancelConfirmation()}
             </div>
         )
     }
 
+    // handleUpdate()
+
+    
 
     render(){
       return(

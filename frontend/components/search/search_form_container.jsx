@@ -1,20 +1,19 @@
 
 import { connect } from 'react-redux';
-import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT} from "../../actions/search_actions"
+import { withRouter } from 'react-router-dom';
+import {  searchForRestaurants, searchGuesses} from '../../actions/search_actions';
 import SearchForm from "./search_form"; 
 
 const mapStateToProps = (state, ownProps) => ({
-        restaurant: state.ui.search,
+            restaurants: Object.values(state.entities.restaurants),
+            guesses: state.entities.searches.guesses
+
 })
 
 const mapDispatchToProps = dispatch =>({
-
-        receiveRestaurant: restaurant => {
-            dispatch({type: RECEIVE_RESTAURANT, 
-                search: restaurant
-            }); 
-        }
-    
+    searchForRestaurants: resName =>dispatch(searchForRestaurants(resName)),
+    searchGuesses: () => dispatch(searchGuesses()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchForm)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchForm)); 
+ 
