@@ -216,7 +216,10 @@ class ReservationForm extends React.Component{
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleCancel = this.handleCancel.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
+    }
+    componentDidUpdate(){
+        this.props.getReservation()
     }
 
     componentWillUnmount(){
@@ -246,7 +249,9 @@ class ReservationForm extends React.Component{
         }; 
 
         // const restaurant = this.props.restaurant;
-        this.props.createReservation(reservation)
+        this.props.createReservation(reservation).then(res => {
+            debugger
+        })
 
         // console.log(this);
 
@@ -263,47 +268,35 @@ class ReservationForm extends React.Component{
 
         // })
 
-// handleSubmit(e) {
-//         e.preventDefault()
-//         let reservation = handleTime(
-//             this.props.currentUser.id,
-//             this.props.restaurant.id,
-//             this.state
-//         )
-//         const restaurant = this.props.restaurant
-//         this.props.createReservation(reservation)
-//         .then((res) => {
-//             this.props.history.push({
-//                 pathname: `/reservations/${res.reservation.id}/view`,
-//                 state: {
-//                     reservation: res.reservation,
-//                     restaurant: restaurant
-//                 }
-//             })
-//         })
-//     }
     }
+
+    // handleModify(){
+
+    // }
 
     handleCancel(){
     //     // e.preventDefault(); 
+        // debugger 
+        // const reservations = {
+        //     party_size: this.state.partySize,
+        //     date: this.state.date,
+        //     time: this.state.time,
+        //     phone_number: this.state.phoneNumber,
+        //     first_name: this.state.firstName,
+        //     last_name: this.state.lastName,
+        //     email: this.state.email,
+        //     special_requests: this.state.specialRequests,
+        //     restaurant_id: this.state.restaurantId,
+        //     user_id: this.state.userId,
+        //     resId: this.state.reservationId
+        // }; 
 
-        const reservations = {
-            party_size: this.state.partySize,
-            date: this.state.date,
-            time: this.state.time,
-            phone_number: this.state.phoneNumber,
-            first_name: this.state.firstName,
-            last_name: this.state.lastName,
-            email: this.state.email,
-            special_requests: this.state.specialRequests,
-            restaurant_id: this.state.restaurantId,
-            user_id: this.state.userId,
-            resId: this.state.reservationId
-        }; 
+        
 
         // const reservation_id = this.state.reservationId; 
         // debugger
-        this.props.deleteReservation(this.props.match.params.id)
+        this.props.deleteReservation(this.state.reservationId)
+        // this.cancelConfirmation();
     }
 
     resConfirmation(){
@@ -319,7 +312,7 @@ class ReservationForm extends React.Component{
     
 
     cancelConfirmation(){
-        // if(this.props.resConfirmed) return null; 
+        if(this.props.reservation === undefined) return null; 
         return(
             <div>
                 <h2 className="del-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; This reservation has been cancelled </h2>
@@ -327,26 +320,26 @@ class ReservationForm extends React.Component{
         )
     }
 
-    modify(){
-        if(!this.props.resConfirmed) return null; 
-        return(
-            <div>
-                <button className="modify-btn">
-                    Modify
-                </button>
-            </div>
-        )
-    }
+    // modify(){
+    //     if(!this.props.resConfirmed) return null; 
+    //     return(
+    //         <div>
+    //             <button className="modify-btn">
+    //                 Modify
+    //             </button>
+    //         </div>
+    //     )
+    // }
 
-    cancel(){
-        if(!this.props.resConfirmed) return null; 
-        return(
-            <button className="cancel-btn" onClick={this.handleCancel()}>
-            Cancel
-            </button>
-        )
+    // cancel(){
+    //     if(!this.props.resConfirmed) return null; 
+    //     return(
+    //         <button className="cancel-btn" onClick={this.handleCancel()}>
+    //         Cancel
+    //         </button>
+    //     )
         
-    }
+    // }
     // modifyCancel(){
     //     if(!this.props.resConfirmed) return null; 
 
@@ -359,17 +352,17 @@ class ReservationForm extends React.Component{
     //     )
     // }
 
-    // modifyCancel(){
-    //     if(!this.props.resConfirmed) return null; 
+    modifyCancel(){
+        if(!this.props.resConfirmed) return null; 
 
-    //     return(
-    //         <div className="modify-cancel">
-    //             <button className="modify-btn"> Modify </button> | <button onClick={this.handleCancel()} className="cancel-btn"> Cancel </button>
+        return(
+            <div className="modify-cancel">
+                <button className="modify-btn"  > Modify </button> | <button onClick={this.handleCancel} className="cancel-btn"> Cancel </button>
 
-    //             {this.cancelConfirmation()}
-    //         </div>
-    //     )
-    // }
+                {/* {this.cancelConfirmation()} */}
+            </div>
+        )
+    }
 
     // handleUpdate()
 
@@ -481,8 +474,8 @@ class ReservationForm extends React.Component{
                 <div className="res-confirmation">
                     {this.resConfirmation()}
                 <br />
-                    {this.modify()}
-                    {this.cancel()}
+                    {this.modifyCancel()}
+                    {/* {this.cancel()} */}
                 </div>
 
                 <br />

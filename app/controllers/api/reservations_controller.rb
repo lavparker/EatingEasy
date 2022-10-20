@@ -36,12 +36,15 @@ class Api::ReservationsController < ApplicationController
     end
 
     def destroy
-        @reservation = Reservation.find(params[:id])
+        # debugger
+        @reservation = Reservation.find_by(id: params[:id])
 
         if @reservation 
+            # debugger
             @reservation.delete
             render json: ['This reservation has been cancelled']
         else
+            # debugger
             render json: ['Error: This cancellation request could not be completed'] , status: 422
         end
     end
