@@ -73,6 +73,6 @@ export const updateReservation = reservation => dispatch =>(
 
 export const deleteReservation = reservationId => dispatch =>(
     APIUtil.deleteReservation(reservationId)
-    .then(() => dispatch(removeReservation(reservationId)))
+    .then((reservation) => dispatch(removeReservation(reservation)))
 );
 

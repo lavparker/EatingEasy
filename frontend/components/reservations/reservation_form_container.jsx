@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { withRouter, useParams } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { getReservation, createReservation, receiveConfirmation, removeConfirmation, updateReservation, deleteReservation, removeErrors } 
     from '../../actions/reservation_actions';
 import { getRestaurant } from '../../actions/restaurant_actions';
@@ -34,7 +34,8 @@ const mapStateToProps = (state, ownProps) =>{
             date: "",
             time: "",
             party_size: "",
-            special_request: ""
+            special_request: "",
+            // id: null
         },
         
         resConfirmed: state.ui.reservation.confirmation,
@@ -59,5 +60,5 @@ const mapDispatchToProps = dispatch =>({
     // updateReservation: ,
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReservationForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReservationForm));
 

@@ -703,9 +703,13 @@ photo30 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/trailer_park
 
 rest30.photo.attach(io: file, filename: 'trailer_park_lounge.jpg')
 
+#Reservations 
+
+# reservation1 = Reservation.create(:user_id => 4, :restaurant_id => 61-119, :first_name => "Beyonce", :last_name => "DemoUser1", :phone_number => "808-867-5309", :email => "demo.user@ymail.com", :date =>, :time =>, :party_size =>, :special_requests => )
+
 #Reviews
 
-review1 = Review.create(:user_id, :restaurant_id, :overall_rating, : )
+# review1 = Review.create(:user_id, :restaurant_id, :overall_rating, : )
 
 #Demo User 
 

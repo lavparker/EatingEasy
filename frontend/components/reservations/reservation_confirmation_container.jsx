@@ -12,8 +12,8 @@ const mapStateToProps = (state, ownProps) => {
         reservation: {
             id: state.entities.reservations.id,
             // date: reservation_conf.date,
-            time: reservation_conf.time,
-            party_size: reservation_conf.party_size,
+            // time: reservation_conf.time,
+            // party_size: reservation_conf.party_size,
         
         }
     })

@@ -105,12 +105,12 @@
 }
 
 
-// .user-dropdown{
-//     background-color: white;
-//     opacity: 1;
-//     visibility: visible;
-//     font-size: 16px;
-// }
+.user-dropdown{
+    background-color: white;
+    opacity: 1;
+    visibility: hidden;
+    font-size: 16px;
+}
 
 .dropdown-btn:hover + .user-dropdown{
     visibility: visible;
@@ -118,7 +118,7 @@
 }
 .user-dropdown > li:hover{
     list-style: none;
-    // visibility: visible;
+    visibility: visible;
     // transition:ease-in-out 200ms;
     background-color: pink;
     text-decoration-line: underline;

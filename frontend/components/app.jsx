@@ -35,10 +35,11 @@ const App = () =>(
 
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
             <Route exact path="/reservations/:id" component={ReservationConfirmationContainer}/>
+
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
             {/* <Route exact path="reservations/delete/> */}
-         
-
+          
+            {/* <Route exact path="/users/:id" component={UsersShow}/> */}
         {/* </Switch> */}
         
         {/* </div> */}

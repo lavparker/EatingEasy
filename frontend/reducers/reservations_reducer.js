@@ -8,11 +8,12 @@ const _resNotConfirmed = Object.freeze({
 const reservationsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
 
+    let nextState = Object.assign({}, oldState);
+
     switch (action.type) {
         case RECEIVE_ALL_RESERVATIONS:
             return action.reservations;
         case RECEIVE_RESERVATION:
-            let nextState = Object.assign({}, oldState);
             nextState[action.reservation.id] = action.reservation;
             return nextState;
         case RECEIVE_CONFIRMATION: 
@@ -20,7 +21,7 @@ const reservationsReducer = (oldState = {}, action) => {
         case REMOVE_CONFIRMATION:
             return _resNotConfirmed; 
         case REMOVE_RESERVATION:
-            delete nextState[action.reservationId];
+            delete nextState[action.reservation.id];
             return nextState;
 
         
