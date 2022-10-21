@@ -15,9 +15,11 @@
 //             // this.handleInput
 //     }
 
-//     // componentDidMount(){
-//     //     this.props.searchGuesses(); 
-//     // }
+//     componentDidMount(){
+//         this.props.searchGuesses(); 
+//     }
+
+
    
 //     // handleSubmit(e){
 //         // e.preventDefault();

@@ -13,6 +13,14 @@ const mapStateToProps = (state, ownProps) =>{
     let current_user = state.entities.users[current_user_id]
     // let reservation_id = state.entities.reservations.id; 
     // let reservation_conf = state.entities.reservation[reservation_id]; 
+
+
+    let resId = null 
+
+    if (Object.values(state.reservations)[0]){
+        resId = Object.values(state.reservations)[0].id
+    }
+
     return({
         //sessionStorage or localStorage ??
         
@@ -30,15 +38,15 @@ const mapStateToProps = (state, ownProps) =>{
         restaurant_id: ownProps.restaurant.id,
         reservation_id: state.entities.reservations.id,
         // reservation_conf: state.entities.reservation[reservation_id],
-        reservation: {
-            date: "",
-            time: "",
-            party_size: "",
-            special_request: "",
-            // id: null
-        },
+        // reservation: {
+        //     date: "",
+        //     time: "",
+        //     party_size: "",
+        //     special_request: "",
+        //     // id: null
+        // },
         
-        resConfirmed: state.ui.reservation.confirmation,
+        // resConfirmed: state.ui.reservation.confirmation,
         errors: state.errors.reservation,
         formType: "New Reservation"
 

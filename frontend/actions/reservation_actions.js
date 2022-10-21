@@ -55,10 +55,12 @@ export const getReservation =  reservationId => dispatch =>(
 
 
 export const createReservation = reservation => dispatch =>{
+    console.log("reservation in actions", reservation)
+    console.log("user_id in actions", reservation.user_id, typeof reservation.user_id)
     return(
         APIUtil.createReservation(reservation)
         .then(reservation => {
-            dispatch(receiveConfirmation());
+            // dispatch(receiveConfirmation());
             dispatch(receiveReservation(reservation));
         })
     )
@@ -72,10 +74,11 @@ export const updateReservation = reservation => dispatch =>(
 
 
 export const deleteReservation = reservationId => dispatch =>{
-    debugger
+    // debugger
     return(
     APIUtil.deleteReservation(reservationId)
-    .then((reservation) => dispatch(removeReservation(reservation)))
+    .then((reservationId) => dispatch(removeReservation(reservationId)))
+    // here i had reservation.... suggested to change to reservationId 
     )
 };
 

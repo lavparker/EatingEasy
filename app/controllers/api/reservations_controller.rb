@@ -15,10 +15,13 @@ class Api::ReservationsController < ApplicationController
 
     def create
         # debugger
-        # print reservation_params
-        # print params 
+  
+      
+        @user = User.find(reservation_params[:user_id])
+      
         @reservation = Reservation.new(reservation_params)
-        if @reservation.save!
+        @reservation.user = @user
+        if @reservation.save
             render :show
         else
             render json: @reservation.errors.full_messages, status: 422
@@ -41,8 +44,9 @@ class Api::ReservationsController < ApplicationController
 
         if @reservation 
             # debugger
-            @reservation.delete
-            render json: ['This reservation has been cancelled']
+            @reservation.destroy
+            render json: @reservation.id
+            # render json: ['This reservation has been cancelled']
         else
             # debugger
             render json: ['Error: This cancellation request could not be completed'] , status: 422
@@ -52,7 +56,7 @@ class Api::ReservationsController < ApplicationController
     private
 
     def reservation_params
-        params.require(:reservation).permit(:restaurant_id, :party_size, :date, :time, :first_name, :last_name, :phone_number, :email, :special_requests)
+        params.require(:reservation).permit(:restaurant_id, :party_size, :date, :time, :first_name, :last_name, :phone_number, :email, :user_id, :special_requests)
     end 
 
 end

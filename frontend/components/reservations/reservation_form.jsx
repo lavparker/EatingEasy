@@ -219,7 +219,8 @@ class ReservationForm extends React.Component{
         this.handleCancel = this.handleCancel.bind(this);
     }
     componentDidUpdate(){
-        this.props.getReservation()
+        // this.props.getReservation()
+        // debugger
     }
 
     componentWillUnmount(){
@@ -249,9 +250,7 @@ class ReservationForm extends React.Component{
         }; 
 
         // const restaurant = this.props.restaurant;
-        this.props.createReservation(reservation).then(res => {
-            debugger
-        })
+        this.props.createReservation(reservation)
 
         // console.log(this);
 
@@ -275,7 +274,9 @@ class ReservationForm extends React.Component{
     // }
 
     handleCancel(){
-    //     // e.preventDefault(); 
+        e.preventDefault(); 
+        e.stopPropagation(); 
+
         // debugger 
         // const reservations = {
         //     party_size: this.state.partySize,
@@ -295,7 +296,7 @@ class ReservationForm extends React.Component{
 
         // const reservation_id = this.state.reservationId; 
         // debugger
-        this.props.deleteReservation(this.state.reservationId)
+        this.props.deleteReservation(this.props.reservation_id).then(res => this.cancelConfirmation(res))
         // this.cancelConfirmation();
     }
 
@@ -353,7 +354,8 @@ class ReservationForm extends React.Component{
     // }
 
     modifyCancel(){
-        if(!this.props.resConfirmed) return null; 
+        // debugger
+        if(!this.props.reservation_id) return null; 
 
         return(
             <div className="modify-cancel">

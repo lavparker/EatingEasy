@@ -1,36 +1,21 @@
-// import React
-// import { Link } from "react";
+import React from 'react'; 
 
-// const UsersShow = ({ user }) => {
-//     return (
-//         <div>
-//             <div className="user-show">
-//                 <h1 className="user-fl-name">Hi, {user.firstName} {user.lastName}!</h1>
-                
-//                 link my profile */}
-//                 {/* link favorite restaurants  */}
-//                 {/* 
-//             </div>
+class UsersShow extends React.Component{
 
-//         </div>
-//     )
-// }
+    componentDidMount(){
+        this.props.getReservations(); 
+    }
 
-// export default UsersShow;
+    render(){
+        let confirm = "i'm working"
+        return(
 
-// import React from 'react'; 
+            <div className='reservations-index'>
+                <h2>Current Reservations</h2>
+                {confirm}
+            </div>
+        )
+    }
+}
 
-// class UsersShow extends React.Component{
-//     constructor(props){
-//         super(props);
-
-//     }
-
-//     // componentWillMount(){
-//     //     if(this.props.currentUser){
-//     //         this.props.getReservations(this.props.reservationId)
-//     //     }
-//     // }
-
-//     render()
-// }
+export default UsersShow;

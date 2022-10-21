@@ -12,8 +12,7 @@ import mainPage from "./main/main";
 import RestaurantShowContainer from "./restaurants/restaurant_showPage_container";
 import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
 // import ReservationFormContainer from './reservations/reservation_form_container';
-import ReservationConfirmationContainer from './reservations/reservation_confirmation_container'; 
-
+import UsersShowContainer from "./users/users_show_container"; 
 
 
 
@@ -34,7 +33,7 @@ const App = () =>(
             <Route exact path="/" component={mainPage} />
 
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
-            <Route exact path="/reservations/:id" component={ReservationConfirmationContainer}/>
+            <Route exact path="/users/:id" component={UsersShowContainer}/>
 
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
             {/* <Route path="/restaurants/query" component={SearchFormContainer}/> */}
