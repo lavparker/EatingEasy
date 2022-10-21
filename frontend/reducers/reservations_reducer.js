@@ -21,7 +21,7 @@ const reservationsReducer = (oldState = {}, action) => {
         case REMOVE_CONFIRMATION:
             return _resNotConfirmed; 
         case REMOVE_RESERVATION:
-            delete nextState[action.reservation.id];
+            delete nextState[action.reservationId];
             return nextState;
 
         

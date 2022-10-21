@@ -55,8 +55,7 @@ export const getReservation =  reservationId => dispatch =>(
 
 
 export const createReservation = reservation => dispatch =>{
-    console.log("reservation in actions", reservation)
-    console.log("user_id in actions", reservation.user_id, typeof reservation.user_id)
+   
     return(
         APIUtil.createReservation(reservation)
         .then(reservation => {
@@ -74,7 +73,7 @@ export const updateReservation = reservation => dispatch =>(
 
 
 export const deleteReservation = reservationId => dispatch =>{
-    // debugger
+    console.log("I'm deleting a reservation")
     return(
     APIUtil.deleteReservation(reservationId)
     .then((reservationId) => dispatch(removeReservation(reservationId)))
