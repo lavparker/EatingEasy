@@ -1,0 +1,61 @@
+.current-reservations{
+    font-size: 48px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0f4e63; 
+    margin-left: 25%;
+    text-decoration: underline;
+    
+}
+
+
+.reservation-boxes{
+    box-shadow: 0 2px 10px;
+    margin: 1rem; 
+    border-radius: 4px;
+    margin-left: 25%;
+    width: 50%;
+    height: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.reservation-index-img{
+    box-shadow: 0 2px 10px;
+    width:30%; 
+    height: 30%; 
+    margin-left: 2px;
+    margin-top: 2rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-radius: 2px;
+}
+
+.reservation-name{
+    margin-left: 50%;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.reservation-date{
+    margin-left: 50%;
+}
+
+.reservation-phone{
+    margin-left: 50%;
+}
+
+.reservation-party{
+    margin-left: 50%;
+}
+
+.delete-res{
+    margin-left: 50%;
+}
+
+.trash-can-btn{
+    size: 20px;
+    color: #247f9e;
+}

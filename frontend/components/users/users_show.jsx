@@ -18,7 +18,7 @@ class UsersShow extends React.Component{
 
         return (
             <div className='reservations-index'>
-                <h2>Current Reservations</h2>
+                <h2 className='current-reservations'>Current Reservations</h2>
                 <ul>
                     {this.props.reservations.map((reservation) => (
                         <ReservationItem key={reservation.id} reservation={reservation} deleteReservation={this.props.deleteReservation} />
