@@ -15,6 +15,8 @@ To use the eating easy app:
 - React, Redux, and Javascript for the frontend
 - AWS Cloud Storage for photo rendering 
 - This project will also include the Google maps API in the future 
+- React Icons
+
 
 ## Functionality 
 
