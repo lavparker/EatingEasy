@@ -30,9 +30,9 @@ rest1 = Restaurant.create(
 # rest1.photo.attach(io: pr1, filename: 'aunt_et_uncles.jpeg')
 # rest1.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/aunts_et_uncles.jpeg"), filename: 'aunts_et_uncles.jpeg')
 
-    # photo1 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/aunts_et_uncles.jpeg')
+    photo1 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/aunts_et_uncles.jpeg')
 
-    rest1.photo.attach(io: file, filename: 'aunts_et_uncles.jpeg')
+    rest1.photo.attach(io: photo1, filename: 'aunts_et_uncles.jpeg')
     
 rest2 = Restaurant.create(
     :name => 'La Grande Boucherie', 
