@@ -42,7 +42,7 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
             {/* </Link> */}
             
             
-            <Link to="/login">
+            <Link to="/">
             {/* <Link to="/"> */}
                 <button onClick={() => openModal("login")}
                 className="signin-btn">Log In</button>
