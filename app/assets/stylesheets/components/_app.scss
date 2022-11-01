@@ -1,11 +1,11 @@
 
 .link-header{
     display: flex;
-    font-size: 36px;
+    font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
     color: black;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     margin-top: 5px;
     padding-top: 20px;
     text-decoration: none;
@@ -17,6 +17,7 @@
                 purple 2px 0;
 
     text-shadow: black;
+    font-style: italic;
 }
 
 footer div {

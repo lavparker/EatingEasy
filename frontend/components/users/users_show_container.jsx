@@ -4,7 +4,7 @@ import { getReservations, deleteReservation } from '../../actions/reservation_ac
 
 
 const mapStateToProps = state => {
-    console.log('logging reservations', state.entities.reservations)
+    // console.log('logging reservations', state.entities.reservations)
     
     return{
         reservations: Object.values(state.entities.reservations)

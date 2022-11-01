@@ -22,8 +22,10 @@ const App = () =>(
         <Modal />
         {/* <div> */}
         <header>
+            
             <Link to="/" className="link-header">
-                {/* <img src="app/assets/images/easy_eating_logo.png" alt="eating easy logo" /> */}
+                {/* <img src="images/easy_eating_logo.jpg" alt="eating easy logo" /> */}
+          
                 <h1>EatingEasy</h1>
             </Link>
             <NavBarContainer />
