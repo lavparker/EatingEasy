@@ -27,7 +27,7 @@ const mapStateToProps = (state, ownProps) =>{
         // currentUser: state.entities.users.id,
         currentUser: {
             id: current_user.id,
-            phone_number: "2002000200",
+            phone_number: "200-200-0200",
             first_name: current_user.first_name,
             last_name: current_user.last_name,
             email: current_user.email

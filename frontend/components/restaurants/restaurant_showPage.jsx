@@ -34,7 +34,7 @@ class RestaurantShow extends React.Component{
 
                 <div className="res-show-head">
                     <img className="show-page-res-img" src={this.props.restaurant.photoUrl} alt="restaurant image" />
-                    <button className="show-page-fave-btn"><FaHeart/>  favorite button placeholder</button>
+                    <button className="show-page-fave-btn"><FaHeart/>  favorite this restaurant </button>
             
                 </div>        
             

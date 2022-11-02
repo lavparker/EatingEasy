@@ -86,6 +86,18 @@ class ReservationForm extends React.Component{
 
     }
 
+    renderErrors() {
+        return(
+            <ul>
+                {this.props.errors.map((error, idx) => (
+                    <li key={`error-${idx}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
+
     // handleModify(){
 
     // }
@@ -109,7 +121,6 @@ class ReservationForm extends React.Component{
         //     resId: this.state.reservationId
         // }; 
 
-        
 
         // const reservation_id = this.state.reservationId; 
         // debugger
@@ -118,7 +129,7 @@ class ReservationForm extends React.Component{
     }
 
     resConfirmation(){
-            if(!this.props.resConfirmed) return null; 
+            if(!this.props.reservation) return null; 
            
             return(
                 <div>
@@ -204,7 +215,7 @@ class ReservationForm extends React.Component{
                         <option value="3 people">3 people</option>
                         <option value="4 people">4 people</option>
                         <option value="5 people">5 people</option>
-                        <option value="6 people">6 people</option>
+                        <option valuze="6 people">6 people</option>
                         <option value="7 people">7 people</option>
                         <option value="8 people">8 people</option>
                         <option value="9 people">9 people</option>
@@ -289,6 +300,8 @@ class ReservationForm extends React.Component{
                 <br />
 
                 <button className="res-button" onClick={this.handleSubmit}>Confirm Reservation</button>
+                {/* {this.renderErrors()} */}
+
                 <br />
                 <br />
                 <div className="res-confirmation">

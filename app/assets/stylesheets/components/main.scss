@@ -16,11 +16,12 @@
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
-    box-shadow: 0px 0px 4px 4px #7c7a7a;
+    box-shadow: 0px 0px 4px 4px white inset;
+
     display: grid;
     background-size: cover;
     background-position: center;
-    // margin-top: -5%;
+    margin-top: 1rem;
     height: 400px;
     font-family: Arial, Helvetica, sans-serif;
     // margin-top: 200px;
@@ -159,7 +160,7 @@
 
 .res-photo-row-1{
     height: 5rem;
-    width: 101%;
+    max-width: 100%;
     object-fit: cover;
     
 }
@@ -210,6 +211,7 @@
     background-color: #0f4e63;
     border-color: #0f4e63;
     // border-radius: 5px;
+    font-style: none;
 }
 
 

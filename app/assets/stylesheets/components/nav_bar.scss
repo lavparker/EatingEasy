@@ -77,14 +77,26 @@
     font-size: 24px;
 }
 
+.dropdown{
+    size: 2rem; 
+}
+
 .dropdown-btn {
     font-size: 26px;
     cursor: pointer;
+    background-color: transparent;
+    border-style: none;
+    border: none;
+    padding-bottom: 16px;
+    margin-bottom: 5px;
+    
+    
 }
 
 .user-dropdown{
     list-style: none;
-    display: flex;
+    // display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
     font-size: 16px;
@@ -97,7 +109,7 @@
     background-color: white;
     border-radius: 0.5rem;
     opacity: 0;
-    visibility: hidden;
+    // visibility: hidden;
     transition:opacity 200ms ease-in-out;
     cursor: pointer;
 
@@ -105,18 +117,19 @@
 }
 
 
-.user-dropdown{
-    background-color: white;
-    opacity: 1;
-    visibility: hidden;
-    font-size: 16px;
-}
+// .user-dropdown{
+//     background-color: white;
+//     opacity: 1;
+//     visibility: hidden;
+//     font-size: 16px;
+// }
 
 .dropdown-btn:hover + .user-dropdown{
-    visibility: visible;
+    // visibility: visible;
     opacity: 1;
+    display: block;
 }
-.user-dropdown > li:hover{
+.user-dropdown  li:hover{
     list-style: none;
     visibility: visible;
     // transition:ease-in-out 200ms;
