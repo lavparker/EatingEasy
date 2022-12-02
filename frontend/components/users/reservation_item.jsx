@@ -1,5 +1,6 @@
 import React from 'react'; 
-import { FaRegTrashAlt} from 'react-icons/fa'
+import { FaRegTrashAlt, FaPencilAlt} from 'react-icons/fa'
+
 
 class ReservationItem extends React.Component{
 
@@ -18,6 +19,7 @@ class ReservationItem extends React.Component{
                         </div>
                         
                         <button className='delete-res' onClick={() => this.props.deleteReservation(reservation.id)}>< FaRegTrashAlt className='trash-can-btn'/> Cancel Reservation </button>
+                        <button className='modify-res'> < FaPencilAlt className='pencil-btn'/> Modify Reservation </button>
                 </ul>
                 
             </div>

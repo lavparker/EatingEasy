@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 // import {faC} from '@fortawesome/free-solid-svg-icons';
 import { FaUser } from 'react-icons/fa';
 import { FaAngleDown } from 'react-icons/fa';
-import { Dropdown } from '../dropdown/dropdown'; 
 
 
 const NavBar = ({currentUser, login, logout, openModal}) =>{
@@ -46,9 +45,8 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
     return (
         <header className="nav-bar">
             <div className="left-side">
-                <Link to="/">
-                    {/* <img src="" alt="" /> */}
-                    <img id="eatingeasy-logo" src="/images/easy_eating_logo.png"  />
+                <Link className="main-logo" to="/">
+                    <img id="eatingeasy-logo" src="images/chocobar-cortes.jpeg" />
                 </Link>
 
             </div>

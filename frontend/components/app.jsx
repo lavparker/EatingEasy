@@ -10,7 +10,7 @@ import NavBarContainer from "./nav_bar/nav_bar_container.jsx";
 import Modal from './modal/modal';
 import mainPage from "./main/main";
 import RestaurantShowContainer from "./restaurants/restaurant_showPage_container";
-import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaAngellist } from 'react-icons/fa';
 // import ReservationFormContainer from './reservations/reservation_form_container';
 import UsersShowContainer from "./users/users_show_container"; 
 // import SearchForm from './search/search_form';
@@ -24,15 +24,9 @@ import UsersShowContainer from "./users/users_show_container";
 const App = () =>(
     <div className= "main-page">
         <Modal />
-        {/* <div> */}
-        <header>
-            
-            {/* <Link to="/" className="link-header"> */}
-          
-                {/* <h1>EatingEasy</h1> */}
-            {/* </Link> */}
 
-            {/* <SearchForm placeholder="Find your Restaurant" /> */}
+        <header>
+
             <NavBarContainer />
     
         </header>
@@ -55,6 +49,7 @@ const App = () =>(
                 {/* <FontAwesomeIcon icon="faHatChef" /> */}
                 <a href="https://github.com/lavparker/" className="github" target="_blank"><FaGithub/></a>
                 <a href="www.linkedin.com/in/laviniaparker" className="linkedin" target="_blank"><FaLinkedin/></a>
+                <a href="https://angel.co/u/la-vinia-parker" className='angellist' target="_blank"><FaAngellist/></a>
                 <a href="https://instagram.com/vinia.tech?igshid=YmMyMTA2M2Y=" className="instagram" target="_blank"><FaInstagram/></a>
             </div>
         </footer>

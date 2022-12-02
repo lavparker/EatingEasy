@@ -1,45 +1,54 @@
 // .logo{
 
 // }
+
+.nav-bar{
+    background-image: image-url('easy_eating_logo.png');
+    z-index: 9999;
+}
+
 .session-buttons{
     display: flex;
     justify-content: flex-end;
     // padding-top: -100px;
-    margin-top: -40px;
+    margin-top: -10px;
     margin-bottom: 40px;
     margin-right: 20px;
+    font-weight: bold;
     // margin: 10px;
     // border-radius: 100px;
 
 }
 
 .signin-btn {
-    background-color: whitesmoke;
+    background-color: antiquewhite;
     color: #247f9e;
     height: 40px;
     width: 90px;
-    // font-weight: bold;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .signup-btn{
     background-color: #247f9e;
-    color:whitesmoke;
+    color: antiquewhite;
     height: 40px;
     width: 90px;
     margin-right: 5px;
-    // font-weight: bold;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
 }
 
 // .signin-btn:hover{
 //     background-color: #247f9e;
+    // color: antiquewhite;
 // }
 
 // .signup-btn:hover{
-//     background-color: whitesmoke;
+//     // background-color: antiquewhite;
+//     color: #247f9e;
 // }
 
 .user-login p{
@@ -48,12 +57,12 @@
 
 .logout-btn{
     background-color: #247f9e;
-    color: whitesmoke;
+    color: antiquewhite;
     height: 40px;
     width: 90px;
     margin: 5px;
     border-radius: 4px;
-    // font-weight: bold;
+    font-weight: bold;
     cursor: pointer;
 }
 
