@@ -77,8 +77,12 @@
     font-size: 24px;
 }
 
-.dropdown{
+.dropdown-menu{
     size: 2rem; 
+}
+
+.dropdown-menu:hover .user-dropdown{
+    display:block
 }
 
 .dropdown-btn {
@@ -87,18 +91,16 @@
     background-color: transparent;
     border-style: none;
     border: none;
-    padding-bottom: 16px;
-    margin-bottom: 5px;
-    
+    padding-bottom: 1px;
+    // margin-bottom: 2px;
     
 }
-
 .user-dropdown{
+    
     list-style: none;
-    // display: flex;
     display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    // gap: 0.5rem;
     font-size: 16px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -108,9 +110,8 @@
     box-shadow: #247f9e;
     background-color: white;
     border-radius: 0.5rem;
-    opacity: 0;
-    // visibility: hidden;
-    transition:opacity 200ms ease-in-out;
+    // opacity: 0;
+    // transition:opacity 200ms ease-in-out;
     cursor: pointer;
 
    

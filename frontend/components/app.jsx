@@ -18,6 +18,9 @@ import UsersShowContainer from "./users/users_show_container";
 
 
 
+
+
+
 const App = () =>(
     <div className= "main-page">
         <Modal />
@@ -31,6 +34,7 @@ const App = () =>(
 
             {/* <SearchForm placeholder="Find your Restaurant" /> */}
             <NavBarContainer />
+    
         </header>
            
         {/* <Switch> */}
@@ -38,12 +42,10 @@ const App = () =>(
 
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
             <Route exact path="/users/:id" component={UsersShowContainer}/>
-
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
             {/* <Route path="/restaurants/query" component={SearchFormContainer}/> */}
             {/* <Route exact path="reservations/delete/> */}
           
-            {/* <Route exact path="/users/:id" component={UsersShow}/> */}
         {/* </Switch> */}
         
         {/* </div> */}

@@ -15,6 +15,7 @@ function dropdown(){
                     <li>val1</li>
                     <li>val2</li>
                     <li>val3</li>
+                    <li>val4</li>
                 </ul>
             </div>
         </div>

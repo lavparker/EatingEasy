@@ -18,26 +18,12 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
         <div className="user-login">
             <p>{hello}, {currentUser.first_name}!</p>
 
-            {/* <div className="dropdown-btn"><FaUser/> <FaAngleDown/>
-              
-                <Link to={`/users/${currentUser.id}`}>Profile</Link>
-
+            <div className="dropdown-menu">
+                <button className="dropdown-btn"><FaUser/> <FaAngleDown/></button>
                 <ul className="user-dropdown">
-                    <li>Reservations</li>
-                    <li>Favorites</li>
-                    <li>Logout</li>
+                   <Link to={`/users/${currentUser.id}`}><li> My Reservations </li></Link> 
+                    <li> My Favorites </li>
                 </ul>
-
-            </div> */}
-
-            <div className="dropdown">
-               <Link to={`/users/${currentUser.id}`}><button className="dropdown-btn"><FaUser/> <FaAngleDown/></button></Link>
-                {/* <div className="user-dropdown">
-                     {/* <Link to={`/users/${currentUser.id}`}><li>Reservations</li> </Link> */}
-                     {/* <li>Favorites</li> */}
-                {/* </div> */} 
-
-
             </div>
             
 
@@ -46,14 +32,10 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
         </div>
     ) : (
         <div className="session-buttons"> 
-            {/* <Link to="/signup"> */}
                 <button onClick={() => openModal("signup")}
                 className="signup-btn">Sign Up</button>
-            {/* </Link> */}
-            
             
             <Link to="/">
-            {/* <Link to="/"> */}
                 <button onClick={() => openModal("login")}
                 className="signin-btn">Log In</button>
             </Link>
