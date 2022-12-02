@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaChartLine, FaCheckCircle } from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 import ReservationConfirmation from "./reservation_confirmation";
+import { Link } from 'react-router-dom';
 
 class ReservationForm extends React.Component{
     constructor(props) {
@@ -299,7 +300,8 @@ class ReservationForm extends React.Component{
                 <br />
                 <br />
 
-                <button className="res-button" onClick={this.handleSubmit}>Confirm Reservation</button>
+                {/* <Link to={`/users/${user_id}`}>apply to the button below</Link> */}
+                    <button className="res-button" onClick={this.handleSubmit}>Confirm Reservation</button>
                 {/* {this.renderErrors()} */}
 
                 <br />

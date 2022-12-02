@@ -13,6 +13,7 @@ import RestaurantShowContainer from "./restaurants/restaurant_showPage_container
 import { FaGithub, FaLinkedin, FaInstagram,  } from 'react-icons/fa';
 // import ReservationFormContainer from './reservations/reservation_form_container';
 import UsersShowContainer from "./users/users_show_container"; 
+// import SearchForm from './search/search_form';
 
 
 
@@ -23,11 +24,12 @@ const App = () =>(
         {/* <div> */}
         <header>
             
-            <Link to="/" className="link-header">
-                {/* <img src="images/easy_eating_logo.jpg" alt="eating easy logo" /> */}
+            {/* <Link to="/" className="link-header"> */}
           
-                <h1>EatingEasy</h1>
-            </Link>
+                {/* <h1>EatingEasy</h1> */}
+            {/* </Link> */}
+
+            {/* <SearchForm placeholder="Find your Restaurant" /> */}
             <NavBarContainer />
         </header>
            
