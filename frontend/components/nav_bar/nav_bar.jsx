@@ -21,8 +21,8 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
             <div className="dropdown-menu">
                 <button className="dropdown-btn"><FaUser/> <FaAngleDown/></button>
                 <ul className="user-dropdown">
-                   <Link to={`/users/${currentUser.id}`}><li> My Reservations </li></Link> 
-                    <li> My Favorites </li>
+                   <Link to={`/users/${currentUser.id}`}><li className="dropdown-res"> My Reservations </li></Link> 
+                    <li className="dropdown-faves"> My Favorites </li>
                 </ul>
             </div>
             
