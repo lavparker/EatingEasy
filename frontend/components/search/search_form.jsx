@@ -80,20 +80,20 @@
 //    }
 
     
-    // render(){
-    //     return(
-    //         <div className='search-bar'>
-    //             <input className='search-form' 
-    //                     type="search" 
-    //                     placeholder= 'Search Restaurant Here'
-    //                     value={this.state.restaurants}
-    //                     onChange={this.update('restaurants')}
-    //                     />
+//     render(){
+//         return(
+//             <div className='search-bar'>
+//                 <input className='search-form' 
+//                         type="search" 
+//                         placeholder= 'Search Restaurant Here'
+//                         value={this.state.restaurants}
+//                         onChange={this.update('restaurants')}
+//                         />
 
-    //             <button className='search-button' onClick={this.handleSubmit()}>Let's go</button>
-    //         </div>
-    //     )
-    // }
+//                 <button className='search-button' onClick={this.handleSubmit()}>Let's go</button>
+//             </div>
+//         )
+//     }
 
 // }
 

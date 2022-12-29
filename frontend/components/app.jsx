@@ -37,6 +37,8 @@ const App = () =>(
             {/* <Route exact path="/" component={RestaurantIndexContainer} /> */}
             <Route exact path="/users/:id" component={UsersShowContainer}/>
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
+            {/* <Route exact path="/users/:id/favorites" component={} /> */}
+            {/* <Route exact path="/users/:id/pastReservations" component={}/> */}
             {/* <Route path="/restaurants/query" component={SearchFormContainer}/> */}
             {/* <Route exact path="reservations/delete/> */}
           

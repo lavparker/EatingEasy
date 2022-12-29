@@ -24,6 +24,14 @@ class UsersShow extends React.Component{
                         <ReservationItem key={reservation.id} reservation={reservation} deleteReservation={this.props.deleteReservation} />
                     ))}
                 </ul>
+
+                <div>
+                    <h2>Past Reservations</h2>
+                </div>
+
+                <div>
+                    <h2>Favorite Restaurants</h2>
+                </div>
             </div>
         )
     }

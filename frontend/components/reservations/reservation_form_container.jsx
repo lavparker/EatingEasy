@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { withRouter } from 'react-router';
-import { getReservation, createReservation, receiveConfirmation, removeConfirmation, updateReservation, deleteReservation, removeErrors } 
-    from '../../actions/reservation_actions';
+import { getReservation, createReservation, receiveConfirmation, removeConfirmation, updateReservation, deleteReservation, removeErrors } from '../../actions/reservation_actions';
 import { getRestaurant } from '../../actions/restaurant_actions';
 import ReservationForm from './reservation_form';
 
