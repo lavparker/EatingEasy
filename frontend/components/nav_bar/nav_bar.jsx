@@ -27,7 +27,7 @@ const NavBar = ({currentUser, login, logout, openModal}) =>{
             
 
             {/* add dropdown here...include favorites user profile etc */}
-            <button className="logout-btn" onClick={logout}>Log Out</button>
+           <Link to="/"> <button className="logout-btn" onClick={logout}>Log Out</button></Link>
         </div>
     ) : (
         <div className="session-buttons"> 

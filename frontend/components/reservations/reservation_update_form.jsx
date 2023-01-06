@@ -4,22 +4,25 @@ class ReservationUpdate extends React.Component{
     constructor(props){
         super(props);
 
-        this.handleSubmit = this.handleSubmit.bind(this);
+        const tdyDate = new Date();
+        let month = tdyDate.getMonth;
+        let day = tdyDate.getDate();
+        let year = tdyDate.getFullYear;
+        let currentDate = `${month} / ${day} / ${year}`;
+
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.getReservation(this.props.match.params.reservationId)
     }
 
     render(){
-
-
-        return(
-            <div>
-
-            </div>
-        )
+        if(this.props.reservation){
+            
+        }
     }
+
+
 }
 
 export default ReservationUpdate; 
