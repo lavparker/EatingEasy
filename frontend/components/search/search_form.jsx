@@ -1,6 +1,6 @@
-// import React from 'react';
-// import Link from 'react-router-dom';
-// import { withRouter } from 'react-router-dom';
+import React from 'react';
+import Link from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 // import { FaSearch } from 'react-icons/fa'; 
 // import { FaRegFileCode } from "react-icons/fa";
 
@@ -116,3 +116,90 @@
 // }
 
 // export default SearchBar;
+
+// const dataByid = 
+
+// const resById = restaurants.reduce((prev, next)=>{
+//     prev[next.id] = next;
+//     return prev;
+// }, {});
+
+// class AutoCompleteResult extends React.Component{
+//     render(){
+//         const result = resById[this.props.restaurantId];
+
+//         return <div> {result.title} </div>
+//     }
+// }
+
+class SearchForm extends React.Component{
+    // constructor(props){
+    //     super(props);
+
+        state={
+            inputValue: '',
+           
+        };
+    // }
+
+    searchRestaurantName = (e) =>{
+        this.setState({ inputValue: e.target.value}); 
+        this.props.searchRestaurants(e.target.value)
+    }
+
+    restaurantNames = () =>{
+        return this.state.restaurants.filter((resName) =>{
+            resName.toLowerCase().includes(this.state.inputValue.toLocaleLowerCase())
+        })
+    }
+
+    correctRestaurantSelect = (resName) => {
+        this.setState({ inputValue: resName})
+        this.props.searchRestaurants(resName)
+    }
+
+    render(){
+        return(
+            <div className='search-container'>
+                <input 
+                    type="text"
+                    className='search-bar-input'
+                    value={this.state.inputValue}
+                    onChange={this.searchRestaurantName}
+                    placeholder="Search for Restaurant Name" />
+                
+            </div>
+        )
+    }
+
+    // render(){
+    //     return(
+    //         <div>
+    //             <div>
+    //                 <input 
+    //                 value={this.state.inputValue}
+    //                 onChange={(e) =>{
+    //                     this.setState({inputValue: e.target.value})
+    //                 }} type="text" 
+    //             />
+    //             </div>
+                
+    //             <div>
+    //                 {restaurant.result
+    //                     .filter((result) =>{
+    //                     return result.title
+    //                         .toLowerCase()
+    //                         .includes(this.state.inputValue.toLowerCase());
+    //                 })
+    //                 .map((result) =>{
+    //                     return(
+    //                         <AutoCompleteResult key={result.id} resultId={result.id}/>
+    //                     );
+    //                 })}
+    //             </div>
+    //         </div>
+    //     )
+    // }
+};
+
+export default SearchForm; 

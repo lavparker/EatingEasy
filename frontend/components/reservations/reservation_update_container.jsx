@@ -1,15 +1,11 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'; 
 import { getReservation, updateReservation } from '../../actions/reservation_actions';
-import { getRestaurants } from '../../actions/restaurant_actions';
-import ReservationUpdate from './reservation_update_form'; 
+import ReservationForm from "./reservation_form";
 
 
 const mapStateToProps = (state, ownProps) => {
     return{
-
-         currentUser: state.session.currentUser,
-        // currentUser: state.entities.users[current_user_id],
+        currentUser: state.session.currentUser,
         reservation: state.entities.reservations[ownProps.match.params.reservationId],
         restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
     }
@@ -21,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
  
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReservationUpdate); 
+export default connect(mapStateToProps, mapDispatchToProps)(ReservationForm); 
