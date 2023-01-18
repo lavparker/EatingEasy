@@ -32,13 +32,14 @@ const mapStateToProps = (state, ownProps) => {
     reservation_id: state.entities.reservations.id,
     errors: state.errors.reservation,
     formType: "New Reservation",
+    formHeader: "Make a Reservation",
   };
 
 };
 
 const mapDispatchToProps = (dispatch) => ({
   getReservation: (reservationId) => dispatch(getReservation(reservationId)),
-  createReservation: (reservation) => dispatch(createReservation(reservation)),
+  handleSubmit: (reservation) => dispatch(createReservation(reservation)),
   deleteReservation: (reservationId) =>
     dispatch(deleteReservation(reservationId)),
   removeConfirmation: () => dispatch(removeConfirmation()),

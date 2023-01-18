@@ -12,9 +12,18 @@ class ReservationForm extends React.Component {
     let currentDate = `${month} / ${day} / ${year}`;
 
     this.state = {
-      partySize: "2 people",
-      date: currentDate,
-      time: "5:00 PM",
+      partySize:
+        props.reservation && props.reservation.party_size
+          ? props.reservation.party_size
+          : "2 people",
+      date:
+        props.reservation && props.reservation.date
+          ? props.reservation.date
+          : currentDate,
+      time:
+        props.reservation && props.reservation.time
+          ? props.reservation.time
+          : "5:00 PM",
       phoneNumber: this.props.currentUser
         ? this.props.currentUser.phone_number
         : "",
@@ -34,7 +43,7 @@ class ReservationForm extends React.Component {
   }
 
   componentWillUnmount() {
-    this.props.removeConfirmation();
+    // this.props.removeConfirmation();
   }
 
   handleInput(field) {
@@ -60,7 +69,7 @@ class ReservationForm extends React.Component {
       reservation_id: this.state.reservationId,
     };
 
-    this.props.createReservation(reservation);
+    this.props.handleSubmit(reservation);
   }
 
   renderErrors() {
@@ -127,7 +136,7 @@ class ReservationForm extends React.Component {
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-main">
-          <h3> Make a Reservation </h3>
+          <h3>{this.props.formHeader}</h3>
 
           <div>
             <label className="party-size"> Party Size</label>
