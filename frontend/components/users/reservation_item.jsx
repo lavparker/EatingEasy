@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegTrashAlt, FaPencilAlt } from "react-icons/fa";
+import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
 import ReservationUpdateContainer from "../reservations/reservation_update_container";
 
 class ReservationItem extends React.Component {
@@ -38,6 +38,10 @@ class ReservationItem extends React.Component {
                 Party Size: {reservation.party_size}
               </li>
             </div>
+            <button className="review-res">
+              <FaCheckCircle className="review-btn"/>
+              Leave a Review
+            </button>
 
             <button
               className="delete-res"
@@ -54,7 +58,7 @@ class ReservationItem extends React.Component {
             </button>
           </ul>
         </div>
-        <div style={{zIndex:1000,float:'right',height:"300px",width:"400px"}}>
+        <div style={{zIndex:9999,float:'right',height:"300px",width:"400px"}}>
           {this.state.should_show_update_form ? (
             <ReservationUpdateContainer reservationId={reservation.id} />
           ) : null}
