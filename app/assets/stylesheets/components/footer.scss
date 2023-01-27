@@ -28,14 +28,22 @@
 
 }
 
+// .instagram{
+//     margin-right: 50%;
+//     margin-left: 50%;
+// }
+
 .instagram:hover{
     animation: shake 2s;
     background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
-    
-    border-bottom-left-radius:5px;
-    border-bottom-right-radius:5px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    margin-right: 50%;
+    border-radius: 25px;
+  
+ 
+    // border-bottom-left-radius:5px;
+    // border-bottom-right-radius:5px;
+    // border-top-left-radius: 15px;
+    // border-top-right-radius: 15px;
 
 }
 

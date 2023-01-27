@@ -17,23 +17,31 @@ class UsersShow extends React.Component{
         }
 
         return (
-            <div className='reservations-index'>
-                <h2 className='current-reservations'>Current Reservations</h2>
+          <div className="reservations-index">
+            <div className='user-options'>
                 <ul>
-                    {this.props.reservations.map((reservation) => (
-                        <ReservationItem key={reservation.id} reservation={reservation} deleteReservation={this.props.deleteReservation} />
-                    ))}
+                    <li>
+                        <h2 className='past-res'>Past Reservations</h2>
+                        &nbsp;
+                        <h2 className='fave-res'>Favorite Restaurants</h2>
+                    </li>
+                    
                 </ul>
-
-                <div>
-                    <h2>Past Reservations</h2>
-                </div>
-
-                <div>
-                    <h2>Favorite Restaurants</h2>
-                </div>
             </div>
-        )
+
+            <ul className="reservation-items">
+              <h2 className="current-reservations">Current Reservations</h2>
+
+              {this.props.reservations.map((reservation) => (
+                <ReservationItem
+                  key={reservation.id}
+                  reservation={reservation}
+                  deleteReservation={this.props.deleteReservation}
+                />
+              ))}
+            </ul>
+          </div>
+        );
     }
 }
 

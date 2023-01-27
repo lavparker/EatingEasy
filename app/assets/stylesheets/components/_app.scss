@@ -20,21 +20,24 @@
     font-style: italic;
 }
 
+
 footer div {
-    display: flex;
-    position: relative;
+    display: grid;
+    // position: relative;
+    grid-template-columns: 25% 25% 25% 25%;
     background-color: #427492;
     align-items: center;
     justify-content: space-around;
-    margin-top: 200%;
+    margin-top: 20%;
     padding: 70px;
-    height: 20%;
-    position: relative;
+    // height: 20%;
+    // position: relative;
 }
 
 
 footer div a{
     color: whitesmoke;
     font-size: 80px;
+    align-self: center;
     text-decoration: none;
 }

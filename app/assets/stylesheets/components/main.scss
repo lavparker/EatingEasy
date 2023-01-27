@@ -7,9 +7,10 @@
 // }
 
 .main-page{
-
+    display: grid;
+    grid-template-rows: 3fr;
     background-color: whitesmoke;
-    height:100%;
+    // height:100%;
 
 }
 
