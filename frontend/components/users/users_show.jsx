@@ -13,20 +13,38 @@ class UsersShow extends React.Component{
         }
 
         if ((this.props.reservations != null || this.props.reservations != undefined) && this.props.reservations.length === 0) {
-            return <h1>No reservations!</h1>
+            return (
+              <div className='no-res-opts'>
+                <h1> No Reservations!</h1>
+                <div className="reservations-index">
+                  <div className="no-res-user-options">
+                    <ul>
+                      <li>
+                        <h2 className="past-res">Past Reservations</h2>
+                        &nbsp;
+                        <h2 className="fave-res">Favorite Restaurants</h2>
+                        &nbsp;
+                        <h2 className="make-res">Make a Reservation</h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            );
         }
 
         return (
           <div className="reservations-index">
-            <div className='user-options'>
-                <ul>
-                    <li>
-                        <h2 className='past-res'>Past Reservations</h2>
-                        &nbsp;
-                        <h2 className='fave-res'>Favorite Restaurants</h2>
-                    </li>
-                    
-                </ul>
+            <div className="user-options">
+              <ul>
+                <li>
+                  <h2 className="past-res">Past Reservations</h2>
+                  &nbsp;
+                  <h2 className="fave-res">Favorite Restaurants</h2>
+                  &nbsp;
+                  <h2 className="make-res">Make a Reservation</h2>
+                </li>
+              </ul>
             </div>
 
             <ul className="reservation-items">

@@ -20,6 +20,11 @@
     font-style: italic;
 }
 
+.footer{
+    display: grid;
+    margin-top: 100%;
+    
+}
 
 footer div {
     display: grid;
@@ -28,7 +33,9 @@ footer div {
     background-color: #427492;
     align-items: center;
     justify-content: space-around;
-    margin-top: 20%;
+    // margin-top: 100%;
+    position: relative;
+
     padding: 70px;
     // height: 20%;
     // position: relative;
