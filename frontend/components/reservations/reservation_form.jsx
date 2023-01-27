@@ -23,7 +23,7 @@ class ReservationForm extends React.Component {
       time:
         props.reservation && props.reservation.time
           ? props.reservation.time
-          : "5:00 PM",
+          : "7:00 PM",
       phoneNumber: this.props.currentUser
         ? this.props.currentUser.phone_number
         : "",
@@ -181,7 +181,7 @@ class ReservationForm extends React.Component {
             <br />
             <select className="times" onChange={this.handleInput("time")}>
               <option value="12:00 AM">12:00 AM</option>
-              <option value="12:30 AM">12:20 AM</option>
+              <option value="12:30 AM">12:30 AM</option>
               <option value="1:00 AM">1:00 AM</option>
               <option value="1:30 AM">1:30 AM</option>
               <option value="2:00 AM">2:00 AM</option>
