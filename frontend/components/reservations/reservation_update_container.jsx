@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { getReservation, updateReservation } from '../../actions/reservation_actions';
-import ReservationForm from "./reservation_form";
+// import ReservationForm from "./reservation_form";
 
 
 const mapStateToProps = (state, ownProps) => {

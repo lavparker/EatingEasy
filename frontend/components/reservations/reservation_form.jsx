@@ -124,7 +124,7 @@ class ReservationForm extends React.Component {
     return (
       <div className="modify-cancel">
         <button className="modify-btn"> Modify </button> |{" "}
-        <button onClick={this.handleCancel} className="cancel-btn">
+        <button onClick={this.handleCancel()} className="cancel-btn">
           {" "}
           Cancel{" "}
         </button>

@@ -50,17 +50,18 @@ class ReservationItem extends React.Component {
             >
               <FaRegTrashAlt className="trash-can-btn" /> Cancel Reservation{" "}
             </button>
+            
             <button
               className="modify-res"
               onClick={() => this.showUpdateForm()}
             >
-              {" "}
+              {/* {" "} */}
               <FaPencilAlt className="pencil-btn" /> Modify Reservation{" "}
             </button>
           </div>
         </div>
         {/* </div> */}
-        {/* <div
+        <div
           style={{
             zIndex: 9999,
             float: "right",
@@ -71,7 +72,7 @@ class ReservationItem extends React.Component {
           {this.state.should_show_update_form ? (
             <ReservationUpdateContainer reservationId={reservation.id} />
           ) : null}
-        </div> */}
+        </div>
       </div>
     );
   }

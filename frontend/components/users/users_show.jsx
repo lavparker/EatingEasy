@@ -1,4 +1,5 @@
 import React from 'react';
+import { closeModal } from "../../actions/modal_actions";
 import ReservationItem from './reservation_item';
 
 class UsersShow extends React.Component{
