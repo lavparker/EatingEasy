@@ -39,6 +39,37 @@
 
 }
 
+.reservation-update-main {
+    // display: block;
+    display: grid;
+    margin-top: 75%;
+    // background-color: aquamarine;
+    background-color: whitesmoke;
+    // align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #2d333f33;
+    // height: 100%; 
+    line-height: 1.15;
+    // margin-left: -350px;
+    z-index: 9999;
+    max-width: 90%;
+
+}
+
+.reservation-update-main h3 {
+    padding-top: 1rem;
+    align-self: center;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    // padding-top: 0.4rem;
+    padding-bottom: 1rem;
+    padding-left: 6.5rem;
+    font-weight: bold;
+    color: grayscale($color: #2d2b2b);
+
+}
+
 .party-size{
     // padding-top: 2rem;
     margin-top: 10%;

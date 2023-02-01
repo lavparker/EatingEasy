@@ -199,6 +199,7 @@
     padding: 10px;
     margin-top: 25px;
     font-weight: bold;
+    word-wrap: break-word;
     font-size: 1rem;
     color: antiquewhite;
     border: 3px;
@@ -206,6 +207,8 @@
     background-color: #247f9e;
     border-color: #247f9e;
     border-radius: 5px;
+    max-width: 100%;
+    align-self: center;
 }
 
 .reserve-btn:hover{
