@@ -26,11 +26,12 @@ export const createReservation = reservation =>{
         })
     )
 }
-
+ 
 export const updateReservation = reservation =>{
+    debugger
     return(
         $.ajax({
-            url: `/api/reservations/${id}`,
+            url: `/api/reservations/${reservation.id}`,
             method: 'PATCH',
             data: { reservation }
         })

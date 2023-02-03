@@ -7,10 +7,10 @@ import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-      // currentUser: state.session.currentUser,
+      currentUser: Object.values(state.entities.users)[0],
       //   reservation: state.entities.reservations[ownProps.reservationId],
       reservation: state.reservations[ownProps.reservationId],
-
+     
       // restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
       formHeader: "Update your reservation",
     };

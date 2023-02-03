@@ -25,7 +25,7 @@ class ReservationUpdateForm extends React.Component {
           ? props.reservation.time
           : "7:00 PM",
       phoneNumber: this.props.currentUser
-        ? this.props.currentUser.phone_number
+        ? this.props.reservation.phone_number
         : "",
       firstName: this.props.currentUser
         ? this.props.currentUser.first_name
@@ -33,9 +33,9 @@ class ReservationUpdateForm extends React.Component {
       lastName: this.props.currentUser ? this.props.currentUser.last_name : "",
       email: this.props.currentUser ? this.props.currentUser.email : "",
       specialRequests: "gluten free please",
-      restaurantId: this.props.restaurantId,
-      userId: this.props.currentUser ? this.props.currentUser.id : "",
-      reservationId: this.props.reservation_id,
+      restaurantId: this.props.reservation.restaurant_id,
+      userId: this.props.reservation.user_id,
+      reservationId: this.props.reservation.id,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -66,7 +66,7 @@ class ReservationUpdateForm extends React.Component {
       special_requests: this.state.specialRequests,
       restaurant_id: this.state.restaurantId,
       user_id: this.state.userId,
-      reservation_id: this.state.reservationId,
+      id: this.state.reservationId,
     };
 
     this.props.handleSubmit(reservation).then(() => resConfirmation());
