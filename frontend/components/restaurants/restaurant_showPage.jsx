@@ -151,6 +151,7 @@ class RestaurantShow extends React.Component{
                     {this.props.restaurant.dining_style}
                   </div>
                 </li>
+                <h1 className="res-review">Reviews</h1>
               </div>
             </div>
 
