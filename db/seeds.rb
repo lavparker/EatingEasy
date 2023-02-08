@@ -680,3 +680,5 @@ rest30.photo.attach(io: photo30, filename: 'trailer_park_lounge.jpg')
 #Demo User 
 
 User.create!(first_name: "Beyonce", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password", phone_number: "808-867-5309")
+
+# un: ViniaP pw: password 

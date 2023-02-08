@@ -11,6 +11,7 @@ import mainPage from "./main/main";
 import RestaurantShowContainer from "./restaurants/restaurant_showPage_container";
 import { FaGithub, FaLinkedin, FaInstagram, FaAngellist } from 'react-icons/fa';
 import UsersShowContainer from "./users/users_show_container"; 
+import ReviewFormContainer from './reviews/review_form_container';
 // import SearchForm from './search/search_form';
 
 
@@ -34,7 +35,8 @@ const App = () =>(
 
             <Route exact path="/users/:id" component={UsersShowContainer}/>
             <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
-        
+            <Route exact path="/restaurants/reviews/" component={ReviewFormContainer} />
+            {/* <Route exact path="/restaurants/:" */}
           
         {/* </Switch> */}
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { closeModal } from "../../actions/modal_actions";
 import ReservationItem from './reservation_item';
+import { Link } from "react-router-dom";
+
 
 class UsersShow extends React.Component{
 
@@ -15,7 +17,7 @@ class UsersShow extends React.Component{
 
         if ((this.props.reservations != null || this.props.reservations != undefined) && this.props.reservations.length === 0) {
             return (
-              <div className='no-res-opts'>
+              <div className="no-res-opts">
                 <h1> No Reservations!</h1>
                 <div className="reservations-index">
                   <div className="no-res-user-options">
@@ -25,7 +27,11 @@ class UsersShow extends React.Component{
                         &nbsp;
                         <h2 className="fave-res">Favorite Restaurants</h2>
                         &nbsp;
-                        <h2 className="make-res">Make a Reservation</h2>
+                        <Link to="/">
+                          <button>
+                            <h2 className="make-res">Make a Reservation</h2>
+                          </button>
+                        </Link>
                       </li>
                     </ul>
                   </div>

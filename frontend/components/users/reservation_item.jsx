@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import ReservationUpdateContainer from "../reservations/reservation_update_container";
 
 class ReservationItem extends React.Component {
@@ -8,6 +9,7 @@ class ReservationItem extends React.Component {
 
     this.state = {
       should_show_update_form: false,
+      // should_show_review_form: true,
     };
   }
 
@@ -16,16 +18,21 @@ class ReservationItem extends React.Component {
     this.setState(newState);
   }
 
+  // showReviewForm() {
+  //   let newState = Object.assign({}, {should_show_review_form: true});
+  //   this.setState(newState);
+  // }
+
   render() {
     let reservation = this.props.reservation;
-
+    const { restaurant } = this.props;
     return (
       <div>
         {/* <div className="reservation-index-container"> */}
         <div className="reservation-boxes">
           <img
             className="reservation-index-img"
-            src={reservation.photoUrl}
+            src={reservation.photoUrl} 
             alt="restaurant image"
           />
           <ul className="reservation-details">
@@ -40,17 +47,20 @@ class ReservationItem extends React.Component {
             </li>
           </ul>
           <div className="res-buttons">
-            <button className="review-res">
-              <FaCheckCircle className="review-btn" /> 
-               Leave a Review
-            </button>
+            <Link to={"/restaurants/reviews/"}>
+              <button className="review-res">
+                <FaCheckCircle className="review-btn" />
+                Leave a Review
+              </button>
+            </Link>
+
             <button
               className="delete-res"
               onClick={() => this.props.deleteReservation(reservation.id)}
             >
               <FaRegTrashAlt className="trash-can-btn" /> Cancel Reservation{" "}
             </button>
-            
+
             <button
               className="modify-res"
               onClick={() => this.showUpdateForm()}
