@@ -40,11 +40,13 @@ class Api::ReviewsController < ApplicationController
         else
             render json: ['Error: This deletion request could not be completed'], status: 422
         end
-
-        private
-        def review_params
-            params.require(:review).permit(:restaurant_id, :user_id, :overall_rating, :food_rating, :ambiance_rating, :value_rating, :noise_level, :body)
-        end
+    end
+    
+    private
+    def review_params
+        params.require(:review).permit(:restaurant_id, :user_id, :overall_rating, :food_rating, :ambiance_rating, :value_rating, :noise_level, :body)
+    end
+        
 end
 
 

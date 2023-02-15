@@ -1,5 +1,6 @@
 import React from "react";
-import { FaPencilAlt } from "react-icons/fa"
+import { FaPencilAlt } from "react-icons/fa";
+import StarRatings from "react-star-ratings";
 
 class ReviewForm extends React.Component{
     constructor(props){
@@ -18,7 +19,7 @@ class ReviewForm extends React.Component{
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.changeStarRating = this.changeStarRating;(this);
 
     }
 
@@ -56,6 +57,12 @@ class ReviewForm extends React.Component{
         this.props.handleSubmit(review);
     }
 
+    changeStarRating( rating, name ) {
+      this.setState({
+        [name]: rating
+      });
+    }
+
     renderErrors(){
         return(
             <ul>
@@ -73,22 +80,80 @@ class ReviewForm extends React.Component{
 
         return (
           <div className="review-form">
+            <h1>Please review your experience</h1>
             <form onSubmit={this.handleSubmit} className="review-form-main">
-              <h1>Please review your experience</h1>
               <br />
-              <label className="rev-overall">Overall</label>
+              <p>Overall</p>
+
+              <StarRatings
+                rating={this.state.overall_rating}
+                numberOfStars={5}
+                changeRating={this.changeStarRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#e8e3b5"
+                starDimension="40px"
+                starSpacing="1px"
+                name="overall"
+              />
+
               <br />
               <br />
-              <label className="rev-food">Food</label>
+              <p>Food</p>
+              <StarRatings
+                rating={this.state.food_rating}
+                numberOfStars={5}
+                changeRating={this.changeStarRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#e8e3b5"
+                starDimension="40px"
+                starSpacing="1px"
+                name="food"
+              />
+
               <br />
               <br />
-              <label className="rev-ambiance">Ambiance</label>
+              <p>Ambiance</p>
+              <StarRatings
+                rating={this.state.ambiance_rating}
+                numberOfStars={5}
+                changeRating={this.changeStarRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#e8e3b5"
+                starDimension="40px"
+                starSpacing="1px"
+                name="ambiance"
+              />
               <br />
               <br />
-              <label className="rev-noise">Noise Level</label>
+              <p>Noise Level</p>
+              <StarRatings
+                rating={this.state.noise_level}
+                numberOfStars={5}
+                changeRating={this.changeStarRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#e8e3b5"
+                starDimension="40px"
+                starSpacing="1px"
+                name="noise-level"
+              />
               <br />
               <br />
-              <label className="rev-value">Value</label>
+              <p>Value</p>
+              <StarRatings
+                rating={this.state.value_rating}
+                numberOfStars={5}
+                changeRating={this.changeStarRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#e8e3b5"
+                starDimension="40px"
+                starSpacing="1px"
+                name="value"
+              />
               <br />
               <br />
               <h2>Please leave a detailed review</h2>
