@@ -1,13 +1,140 @@
+// // .logo{
+
+// // }
+// .session-buttons{
+//     display: flex;
+//     justify-content: flex-end;
+//     // padding-top: -100px;
+//     margin-top: -40px;
+//     margin-bottom: 40px;
+//     margin-right: 20px;
+//     // margin: 10px;
+//     // border-radius: 100px;
+
+// }
+
+// .signin-btn {
+//     background-color: whitesmoke;
+//     color: #247f9e;
+//     height: 40px;
+//     width: 90px;
+//     // font-weight: bold;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
+
+// .signup-btn{
+//     background-color: #247f9e;
+//     color:whitesmoke;
+//     height: 40px;
+//     width: 90px;
+//     margin-right: 5px;
+//     // font-weight: bold;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
+
+// // .signin-btn:hover{
+// //     background-color: #247f9e;
+// // }
+
+// // .signup-btn:hover{
+// //     background-color: whitesmoke;
+// // }
+
+// .user-login p{
+//     font-family: Arial, Helvetica, sans-serif;
+// }
+
+// .logout-btn{
+//     background-color: #247f9e;
+//     color: whitesmoke;
+//     height: 40px;
+//     width: 90px;
+//     margin: 5px;
+//     border-radius: 4px;
+//     // font-weight: bold;
+//     cursor: pointer;
+// }
+
+// .signup-btn-mod{
+//     align-items: center;
+//     background-color: #247f9e;
+//     height: 40px;
+//     width: 150px;
+//     cursor: pointer;
+// }
+
+// .user-login{
+//     display: flex;
+//     justify-content: flex-end;
+    
+// }
+
+// .user-login p{
+//     font-weight: bold; 
+//     margin: 5px;
+//     font-size: 24px;
+// }
+
+// .dropdown-btn {
+//     font-size: 26px;
+//     cursor: pointer;
+// }
+
+// .user-dropdown{
+//     list-style: none;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5rem;
+//     font-size: 16px;
+//     font-weight: bold;
+//     font-family: Arial, Helvetica, sans-serif;
+//     position: relative;
+//     padding: 1.5rem 1rem;
+//     box-shadow: 0 0 5px;
+//     box-shadow: #247f9e;
+//     background-color: white;
+//     border-radius: 0.5rem;
+//     opacity: 0;
+//     visibility: hidden;
+//     transition:opacity 200ms ease-in-out;
+//     cursor: pointer;
+
+   
+// }
+
+
+// .user-dropdown{
+//     background-color: white;
+//     opacity: 1;
+//     visibility: hidden;
+//     font-size: 16px;
+// }
+
+// .dropdown-btn:hover + .user-dropdown{
+//     visibility: visible;
+//     opacity: 1;
+// }
+// .user-dropdown > li:hover{
+//     list-style: none;
+//     visibility: visible;
+//     // transition:ease-in-out 200ms;
+//     background-color: pink;
+//     text-decoration-line: underline;
+
+// }
+
 // .logo{
 
 // }
 
-.nav-bar{
+.nav-bar {
     background-image: image-url('easy_eating_logo.png');
     z-index: 9999;
 }
 
-.session-buttons{
+.session-buttons {
     display: flex;
     justify-content: flex-end;
     // padding-top: -100px;
@@ -30,7 +157,7 @@
     cursor: pointer;
 }
 
-.signup-btn{
+.signup-btn {
     background-color: #247f9e;
     color: antiquewhite;
     height: 40px;
@@ -43,7 +170,7 @@
 
 // .signin-btn:hover{
 //     background-color: #247f9e;
-    // color: antiquewhite;
+// color: antiquewhite;
 // }
 
 // .signup-btn:hover{
@@ -51,11 +178,11 @@
 //     color: #247f9e;
 // }
 
-.user-login p{
+.user-login p {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.logout-btn{
+.logout-btn {
     background-color: #247f9e;
     color: antiquewhite;
     height: 40px;
@@ -66,7 +193,7 @@
     cursor: pointer;
 }
 
-.signup-btn-mod{
+.signup-btn-mod {
     align-items: center;
     background-color: #247f9e;
     height: 40px;
@@ -74,24 +201,24 @@
     cursor: pointer;
 }
 
-.user-login{
+.user-login {
     display: flex;
     justify-content: flex-end;
-    
+
 }
 
-.user-login p{
-    font-weight: bold; 
+.user-login p {
+    font-weight: bold;
     margin: 5px;
     font-size: 24px;
 }
 
-.dropdown-menu{
-    size: 2rem; 
+.dropdown-menu {
+    size: 2rem;
 }
 
-.dropdown-menu:hover .user-dropdown{
-    display:block
+.dropdown-menu:hover .user-dropdown {
+    display: block
 }
 
 .dropdown-btn {
@@ -102,9 +229,10 @@
     border: none;
     padding-bottom: 1px;
     // margin-bottom: 2px;
-    
+
 }
-.user-dropdown{
+
+.user-dropdown {
 
     list-style: none;
     display: none;
@@ -125,26 +253,27 @@
     // transition:opacity 200ms ease-in-out;
     cursor: pointer;
 
-   
+
 }
 
-.dropdown-res{
+.dropdown-res {
     color: #247f9e;
     font-size: 16px;
     text-decoration: none;
     padding-bottom: 1rem;
 }
 
-.dropdown-res:hover{
-    background-color:antiquewhite; 
+.dropdown-res:hover {
+    background-color: antiquewhite;
 }
 
-.dropdown-faves{
+.dropdown-faves {
     color: #247f9e;
     font-size: 16px;
     text-decoration: none;
     padding-bottom: 1rem;
 }
+
 .dropdown-faves:hover {
     background-color: antiquewhite;
 
@@ -161,12 +290,13 @@ a:link {
 //     font-size: 16px;
 // }
 
-.dropdown-btn:hover + .user-dropdown{
+.dropdown-btn:hover+.user-dropdown {
     // visibility: visible;
     opacity: 1;
     display: block;
 }
-.user-dropdown  li:hover{
+
+.user-dropdown li:hover {
     list-style: none;
     visibility: visible;
     // transition:ease-in-out 200ms;

@@ -7,22 +7,20 @@
 // }
 
 .main-page{
-    display: grid;
-    grid-template-rows: 3fr;
+
     background-color: whitesmoke;
-    // height:100%;
+    height:100%;
 
 }
 
 .main{
     // background-color: black;
     background-image: image-url('rhrooftop.jpg');
-    box-shadow: 0px 0px 4px 4px white inset;
-
+    box-shadow: 0px 0px 4px 4px #7c7a7a;
     display: grid;
     background-size: cover;
     background-position: center;
-    margin-top: 1rem;
+    // margin-top: -5%;
     height: 400px;
     font-family: Arial, Helvetica, sans-serif;
     // margin-top: 200px;
@@ -144,7 +142,7 @@
 }
 
 .res-index-img{
-    width:142%; 
+    width:141%; 
     height: 141%; 
     margin-top: -32px;
     margin-left: -32px;
@@ -153,15 +151,15 @@
 
 }
 
-.res-index-img:hover{
-    transform: scale(1.00);
-    transition: .2s; 
+// .res-index-img:hover{
+//     zoom: scale(108);
+//     transition: .2s; 
     
-}
+// }
 
 .res-photo-row-1{
     height: 5rem;
-    max-width: 100%;
+    width: 101%;
     object-fit: cover;
     
 }
@@ -199,7 +197,6 @@
     padding: 10px;
     margin-top: 25px;
     font-weight: bold;
-    word-wrap: break-word;
     font-size: 1rem;
     color: antiquewhite;
     border: 3px;
@@ -207,15 +204,12 @@
     background-color: #247f9e;
     border-color: #247f9e;
     border-radius: 5px;
-    max-width: 100%;
-    align-self: center;
 }
 
 .reserve-btn:hover{
     background-color: #0f4e63;
     border-color: #0f4e63;
     // border-radius: 5px;
-    font-style: none;
 }
 
 

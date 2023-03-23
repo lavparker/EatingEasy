@@ -1,11 +1,11 @@
 
 .link-header{
     display: flex;
-    font-size: 24px;
+    font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
     color: black;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     margin-top: 5px;
     padding-top: 20px;
     text-decoration: none;
@@ -17,34 +17,23 @@
                 purple 2px 0;
 
     text-shadow: black;
-    font-style: italic;
-}
-
-.footer{
-    display: grid;
-    margin-top: 100%;
-    
 }
 
 footer div {
-    display: grid;
-    // position: relative;
-    grid-template-columns: 25% 25% 25% 25%;
+    display: flex;
+    position: relative;
     background-color: #427492;
     align-items: center;
     justify-content: space-around;
-    // margin-top: 100%;
-    position: relative;
-
+    margin-top: 200%;
     padding: 70px;
-    // height: 20%;
-    // position: relative;
+    height: 20%;
+    position: relative;
 }
 
 
 footer div a{
     color: whitesmoke;
     font-size: 80px;
-    align-self: center;
     text-decoration: none;
 }

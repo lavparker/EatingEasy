@@ -1,6 +1,6 @@
 export const searchRestaurants = restaurantName =>{
     return $.ajax({
-        url: "api/restaurant/search", 
+        url: "api/restaurants", 
         method: 'GET', 
         data: { restaurantName }
     })
@@ -8,7 +8,7 @@ export const searchRestaurants = restaurantName =>{
 
 export const searchGuesses = () =>{
     return $.ajax({
-        url: "api/restaurants/res_search", 
+        url: "api/restaurants", 
         method: 'GET', 
     })
 }

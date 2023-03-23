@@ -6,8 +6,6 @@ import uiReducer from "./ui_reducer";
 import restaurantsReducer from "./restaurants_reducer";
 import reservationsReducer from "./reservations_reducer";
 
-
-
 const rootReducer = combineReducers({
   
     session: sessionReducer,
@@ -15,8 +13,7 @@ const rootReducer = combineReducers({
     entities: entitiesReducer,
     restaurants: restaurantsReducer,
     reservations: reservationsReducer, 
-    ui: uiReducer,
-
+    ui: uiReducer
 }); 
 
 export default rootReducer

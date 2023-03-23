@@ -20,7 +20,7 @@ export const removeSearches = ()=> ({
 
 })
 
-export const searchRestaurants = resName => dispatch =>(
+export const searchForRestaurants = resName => dispatch =>(
     APIUtil.searchRestaurants(resName)
     .then((restaurants) => {dispatch(receiveRestaurants(restaurants))
     dispatch(removeSearches())})
