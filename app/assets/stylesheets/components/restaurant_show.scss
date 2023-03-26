@@ -1,12 +1,12 @@
-.restaurant-show-page{
-    display:grid;
+.restaurant-show-page {
+    display: grid;
     flex-direction: row;
     // position: relative;
     width: 90%;
 
 }
 
-.show-page-res-img{
+.show-page-res-img {
     object-fit: cover;
     width: 111%;
     height: 300px;
@@ -16,14 +16,14 @@
     z-index: 5000;
 }
 
-.show-page-fave-btn{
+.show-page-fave-btn {
     // display: flex;
     // justify-content: flex-end;
     position: absolute;
     padding: 1rem;
     background-color: white;
     border-radius: 0.5rem;
-    width: 235px; 
+    width: 235px;
     margin-left: 78%;
     box-sizing: border-box;
     // margin-right: 100%;
@@ -32,7 +32,7 @@
     cursor: pointer;
 }
 
-.show-page-fave-btn:hover{
+.show-page-fave-btn:hover {
     border-color: aquamarine;
 }
 
@@ -40,38 +40,69 @@
 //     padding: 0px;
 // }
 
-.show-page-res-info-bar{
+.show-page-res-info-bar {
     border-bottom: 1px solid rgba(142, 23, 23, 0.3);
 
-  
+
 }
 
-.res-overview-btn{
+.res-overview-btn {
     background-color: whitesmoke;
+    text-decoration: none;
     border-style: none;
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;
 }
 
-.res-overview-btn:hover{
+.res-overview-btn:hover {
     color: #247f9e;
     // text-decoration: underline;
 }
 
-.res-reviews-btn{
-    background-color: whitesmoke;
-    border-style: none;
-    cursor: pointer;
+.res-reviews-btn {
+    // background-color: whitesmoke;
+    // color: black;
+    // border-style: none;
+    // cursor: pointer;
+    // font-size: 18px;
+    // font-weight: 700;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    // border-style: none; 
+    color:black;
+    text-decoration: none;
     font-size: 18px;
+    // border-style: none; 
     font-weight: 700;
+    // background-color: whitesmoke;
+    outline: none;
+
 }
 
 .res-reviews-btn:hover {
+    // color: #247f9e;
     color: #247f9e;
-    
+    // font-weight: 300;
     // text-decoration: underline;
-    
+
+}
+
+
+#reviews {
+    background-color: whitesmoke;
+    color: black;
+    border-style: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+#reviews:hover {
+    color: #247f9e;
+
+    // text-decoration: underline;
+
 }
 
 // .line-break{
@@ -79,9 +110,10 @@
 //     font-weight: 700;
 // }
 
-.show-page-gen-res{
+.show-page-gen-res {
     // display: inline-block;
     // background-color: aquamarine;
+    box-shadow: 0 2px 4px #2d333f33;
     background-color: whitesmoke;
     list-style: none;
     padding: 2rem;
@@ -111,26 +143,26 @@
 
 }
 
-.res-form{
+.res-form {
     display: grid;
     grid-template-rows: auto;
-    justify-content:flex-end;
+    justify-content: flex-end;
     margin-bottom: 30rem;
 
-    
+
 }
 
-.show-page-res-name{
+.show-page-res-name {
     padding-top: 3rem;
     padding-bottom: 3rem;
     font-size: 3rem;
     font-weight: bold;
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
     line-height: 1.15;
-    font-family:BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Hetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
-.res-over{
+.res-over {
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
     padding-top: 2rem;
     padding-bottom: 0.5rem;
@@ -140,11 +172,23 @@
     margin-bottom: 1rem;
 }
 
-.res-stars{
+
+.res-review {
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 1rem;
+}
+
+.res-stars {
     color: gray;
     font-size: 24px;
 }
-.res-cuisine{
+
+.res-cuisine {
     padding-top: 1rem;
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 1.15;
@@ -152,9 +196,9 @@
     font-weight: 200;
 }
 
-.res-details{
-    font-weight:200;
-    overflow-wrap:normal;
+.res-details {
+    font-weight: 200;
+    overflow-wrap: normal;
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: 18px;
@@ -163,70 +207,71 @@
 
 }
 
-.res-add-icon{
+.res-add-icon {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-add-word{
+.res-add-word {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 1.15;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-phone{
+.res-phone {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-addfea{
+.res-addfea {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-hours{
+.res-hours {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-dress{
+.res-dress {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-web-icon{
+.res-web-icon {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-web-link{
+.res-web-link {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
-    color:black;
+    color: black;
     text-decoration: none;
     font-size: 18px;
     font-weight: 200;
 }
 
-.res-web-link:hover{
-    color: #247f9e; 
+.res-web-link:hover {
+    color: #247f9e;
     font-weight: 300;
 }
 
-.res-dinsty{
+
+.res-dinsty {
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     line-height: 2;
     font-size: 18px;
