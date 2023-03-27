@@ -1,23 +1,22 @@
-.reservation-container{
-   
-    display: block;
+.reservation-container {
+
+    display: grid;
     // border-top: 3rem;
-    // margin-top: -770px;
+    margin-top: -770px;
     // align-items: center;
     height: 100%;
-    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 
-                 Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, 
-                 Segoe UI Symbol;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+        Segoe UI Symbol;
 
 }
 
-.reservation-main{
+.reservation-main {
     // display: block;
     // margin-top: -740px;
     // background-color: aquamarine;
     background-color: whitesmoke;
     // align-items: center;
-
     border-radius: 4px;
     box-shadow: 0 2px 4px #2d333f33;
     // height: 100%; 
@@ -27,8 +26,8 @@
 
 }
 
-.reservation-main h3{
-    padding-top:1rem;
+.reservation-main h3 {
+    padding-top: 1rem;
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
     line-height: 1.15;
     margin-bottom: 16px;
@@ -36,11 +35,42 @@
     padding-bottom: 1rem;
     padding-left: 6.5rem;
     font-weight: bold;
-    color:grayscale($color: #2d2b2b);
+    color: grayscale($color: #2d2b2b);
 
 }
 
-.party-size{
+.reservation-update-main {
+    // display: block;
+    display: grid;
+    margin-top: 75%;
+    // background-color: aquamarine;
+    background-color: whitesmoke;
+    // align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #2d333f33;
+    // height: 100%; 
+    line-height: 1.15;
+    // margin-left: -350px;
+    z-index: 9999;
+    max-width: 90%;
+
+}
+
+.reservation-update-main h3 {
+    padding-top: 1rem;
+    align-self: center;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    // padding-top: 0.4rem;
+    padding-bottom: 1rem;
+    padding-left: 6.5rem;
+    font-weight: bold;
+    color: grayscale($color: #2d2b2b);
+
+}
+
+.party-size {
     // padding-top: 2rem;
     margin-top: 10%;
     font-family: inherit;
@@ -50,7 +80,7 @@
     line-height: 1.15px;
 }
 
-.party{
+.party {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -65,7 +95,7 @@
     cursor: pointer;
 }
 
-.res-date{
+.res-date {
     // padding-top: 2rem;
     // margin-top: 3rem;
     font-family: inherit;
@@ -75,7 +105,7 @@
     line-height: 1.15px;
 }
 
-.date{
+.date {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -90,7 +120,7 @@
     cursor: pointer;
 }
 
-.res-time{
+.res-time {
     display: flex;
     // padding-top: 2rem;
     // margin-top: 3rem;
@@ -102,7 +132,7 @@
     line-height: 1.15px;
 }
 
-.times{
+.times {
     display: flex;
     border-top: none;
     border-left: none;
@@ -119,7 +149,7 @@
 }
 
 .res-button {
-    
+
     padding: 10px;
     // margin-top: 25px;
     margin-left: 11%;
@@ -132,7 +162,7 @@
     background-color: #247f9e;
     border-color: #247f9e;
     border-radius: 5px;
-    width:80%;
+    width: 80%;
     max-width: 80%;
 
 }
@@ -143,18 +173,18 @@
     // border-radius: 5px;
 }
 
-.res-confirmed{
+.res-confirmed {
     margin-left: 20%;
     margin-right: 15%;
     font-size: 16px;
     font-weight: 700;
 }
 
-.res-conf-icon{
-    color: green; 
+.res-conf-icon {
+    color: green;
 }
 
-.modify-btn{
+.modify-btn {
     background-color: whitesmoke;
     border-style: none;
     cursor: pointer;
@@ -163,7 +193,7 @@
     color: #247f9e;
 }
 
-.cancel-btn{
+.cancel-btn {
     background-color: whitesmoke;
     border-style: none;
     cursor: pointer;
@@ -172,25 +202,25 @@
     color: #247f9e;
 }
 
-.modify-cancel{
+.modify-cancel {
     margin-left: 30%;
     margin-right: 15%;
     font-size: 16px;
-    font-weight: 700; 
+    font-weight: 700;
     color: burlywood;
     background: none;
 }
 
-.modify-btn:hover{
+.modify-btn:hover {
     color: black;
 }
 
-.cancel-btn:hover{
+.cancel-btn:hover {
     color: black;
 }
 
 
-.reservation-main p{
+.reservation-main p {
     display: flex;
     padding-bottom: 3rem;
     margin-left: 25%;

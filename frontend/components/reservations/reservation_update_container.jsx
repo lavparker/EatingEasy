@@ -1,22 +1,32 @@
-// import { connect } from 'react-redux';
-// import { getReservation, updateReservation } from '../../actions/reservation_actions';
-// import { getRestaurants } from '../../actions/restaurant_actions';
-// import UpdateReservation from './update_reservation'; 
+import { connect } from "react-redux";
+import {
+  getReservation,
+  updateReservation,
+} from "../../actions/reservation_actions";
+import ReservationForm from "./reservation_form";
+import ReservationUpdateForm from "./reservation_update_form";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
-// const mapStateToProps = (state, ownProps) => {
-//     let current_user_id = state.session.id; 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    currentUser: Object.values(state.entities.users)[0],
+    //   reservation: state.entities.reservations[ownProps.reservationId],
+    reservation: state.reservations[ownProps.reservationId],
 
-//     return{
-//         currentUser: state.entities.users[current_user_id],
-//         reservation: state.entities.reservations[ownProps.match.params.reservationId],
-//         restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
-//     }
-// }
+    // restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
+    formHeader: "Update your reservation",
+  };
+};
 
-// const mapDispatchToProps = dispatch => ({
-//     getReservation: reservationId => dispatch(getReservation(reservationId)),
-//     updateReservation: reservation => dispatch(updateReservation(reservation)),
- 
-// })
+const mapDispatchToProps = (dispatch) => ({
+  // getReservation: reservationId => dispatch(getReservation(reservationId)),
+  // updateReservation: reservation => dispatch(updateReservation(reservation)),
+  handleSubmit: (reservation) => dispatch(updateReservation(reservation)), // console.log('ive been updated')
+  //dispatch appropriate action to update the reservation
+  closeModal: () => dispatch(closeModal()),
+});
 
-// export default connect(mapStateToProps, mapDispatchToProps)(ReservationUpdate); 
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReservationUpdateForm);
