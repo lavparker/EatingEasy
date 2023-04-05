@@ -6,17 +6,16 @@ import ReservationConfirmation from "./reservation_confirmation";
 class ReservationForm extends React.Component{
     constructor(props) {
         super(props);
-        // console.log(this.props.history);
+
         const tdyDate = new Date();
         let month = tdyDate.getMonth;
         let day = tdyDate.getDate();
         let year = tdyDate.getFullYear;
         let currentDate = `${month} / ${day} / ${year}`;
 
-        // let num = Math.floor(Math.random() * 250);
+ 
         this.state = {
-            // restaurant_id: restaurant.id,
-            // user_id: this.props.currentUser.id,
+
 
             partySize: "2 people",
             date: currentDate,
@@ -184,10 +183,14 @@ class ReservationForm extends React.Component{
     }
 
     // handleUpdate()
-
-    
+    getRandomInt(min, max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min);
+    }
 
     render(){
+       const num = this.getRandomInt(2, 1000);
       return(
         <div className="reservation-container">
             <form onSubmit={this.handleSubmit} className="reservation-main">
@@ -302,7 +305,7 @@ class ReservationForm extends React.Component{
 
                 <p> <FaChartLine
                         size={25}
-                        /> &nbsp; Booked 222 times today </p>   
+                        /> &nbsp; Booked {num} times today </p>   
 
             </form>
             

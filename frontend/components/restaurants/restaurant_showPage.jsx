@@ -13,6 +13,8 @@ import {
 } from "react-icons/fa";
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import { HashLink as Link } from "react-router-hash-link";
+import StarRatings from "react-star-ratings";
+
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -37,10 +39,18 @@ class RestaurantShow extends React.Component {
     window.scrollTo(0, 0);
   }
 
+  randStars(min, max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
   render() {
     if (!this.props.restaurant) {
       return <h1>Loading!</h1>;
     }
+
+    let stars = this.randStars(2, 5);
     return (
       <div className="restaurant-show-page">
         <div className="res-show-head">
@@ -62,14 +72,9 @@ class RestaurantShow extends React.Component {
                   Overview{" "}
                 </button>
                 {/* <p className="line-break">|</p> */}
-                <button className="res-reviews-btn"><a href="#reviews" >
-                      Reviews
-                    </a></button>
-
-                    {/* <button onClick={window.location.href='#reviews'}>Reviews</button> */}
-
-                    {/* <button onclick="window.location.href='location'">Button Name</button */}
-                {/* <Link to="#reviews">Reviews</Link> */}
+                <a href="#to-reviews">
+                  <button className="res-reviews-btn">Reviews</button>
+                </a>
               </li>
               {/* <li>
                                 <button className="res-reviews-btn">Reviews</button>
@@ -85,11 +90,17 @@ class RestaurantShow extends React.Component {
             <h1 className="res-over">Overview</h1>
             <ul className="res-info">
               <li className="res-stars">
-                <FaRegStar />
-                <FaRegStar />
-                <FaRegStar />
-                <FaRegStar />
-                <FaRegStar />
+                <StarRatings
+                  rating={stars}
+                  numberOfStars={5}
+                  changeRating={this.changeRating}
+                  starRatedColor="#247f9e"
+                  starEmptyColor="#b8bbbf"
+                  starHoverColor="#247f9e"
+                  starDimension="40px"
+                  starSpacing="1px"
+                  name="overall"
+                />
               </li>
               <li className="res-cuisine">
                 <FaApple /> &nbsp; {this.props.restaurant.cuisine}
@@ -172,7 +183,10 @@ class RestaurantShow extends React.Component {
                 {this.props.restaurant.dining_style}
               </div>
             </li>
-            <h1 className="res-review">Reviews</h1>
+            <div id="to-reviews">
+              <h1 className="res-review">Reviews</h1>
+            </div>
+
             {/* <h1 id="reviews-btn" className="res-review">
                   Reviews
                 </h1> */}

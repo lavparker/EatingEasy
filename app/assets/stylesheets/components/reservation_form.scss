@@ -1,10 +1,13 @@
 .reservation-container {
 
     display: grid;
+    position: -webkit-sticky;
+    position: fixed; 
+    // position: sticky; 
     // border-top: 3rem;
-    margin-top: -770px;
+    margin-top: -850px;
     // align-items: center;
-    height: 100%;
+    height: 75%;
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
         Segoe UI Symbol;
@@ -15,6 +18,7 @@
     // display: block;
     // margin-top: -740px;
     // background-color: aquamarine;
+
     background-color: whitesmoke;
     // align-items: center;
     border-radius: 4px;
