@@ -67,14 +67,15 @@
     // cursor: pointer;
     // font-size: 18px;
     // font-weight: 700;
-    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 
+    Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     // border-style: none; 
     color:black;
     text-decoration: none;
     font-size: 18px;
-    // border-style: none; 
+    border-style: none; 
     font-weight: 700;
-    // background-color: whitesmoke;
+    background-color: whitesmoke;
     outline: none;
 
 }
@@ -82,6 +83,7 @@
 .res-reviews-btn:hover {
     // color: #247f9e;
     color: #247f9e;
+    // color:black;
     // font-weight: 300;
     // text-decoration: underline;
 

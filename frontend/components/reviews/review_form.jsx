@@ -52,7 +52,7 @@ class ReviewForm extends React.Component {
 
     // })
 
-    this.props.handleSubmit(review);
+    // this.props.handleSubmit(review);
   }
 
   // changeStarRating(rating, name) {

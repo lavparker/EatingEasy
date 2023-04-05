@@ -62,7 +62,7 @@ class RestaurantShow extends React.Component {
                   Overview{" "}
                 </button>
                 {/* <p className="line-break">|</p> */}
-                <button><a href="#reviews" className="res-reviews-btn">
+                <button className="res-reviews-btn"><a href="#reviews" >
                       Reviews
                     </a></button>
 

@@ -710,7 +710,9 @@ rest30 = Restaurant.create!(
 
 #Reviews
 
-# review1 = Review.create(:user_id, :restaurant_id, :overall_rating, : )
+# review1 = Review.create(:user_id, :restaurant_id, :overall_rating, :food_rating, :ambiance_rating, :value_rating, :noise_level, :body )
+# review1 = Review.create(:user_id => 2, :restaurant_id => 101, :overall_rating => 5, :food_rating => 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
+
 
 #Demo User 
 

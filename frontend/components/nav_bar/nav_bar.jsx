@@ -150,7 +150,8 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
         <Link className="main-logo" to="/">
           <img
             id="eatingeasy-logo"
-            src="../../../easy_eating_logo.png"
+            // src="../../../easy_eating_logo.png"
+            src="/easy_eating_logo.png"
             alt="eating easy logo"
           />
         </Link>

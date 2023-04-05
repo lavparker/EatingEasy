@@ -10,6 +10,7 @@ const entitiesReducer = combineReducers({
     restaurants: restaurantsReducer,
     reservations: reservationsReducer,
     searches: searchReducer
+    
 });
 
 export default entitiesReducer;

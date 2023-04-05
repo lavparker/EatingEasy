@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaChartLine, FaCheckCircle } from "react-icons/fa";
 
 class ReservationUpdateForm extends React.Component {
@@ -10,6 +10,9 @@ class ReservationUpdateForm extends React.Component {
     let day = tdyDate.getDate();
     let year = tdyDate.getFullYear;
     let currentDate = `${month} / ${day} / ${year}`;
+
+  // const [open, setOpen] = useState(false); {open &&()}
+
 
     this.state = {
       partySize:
@@ -36,11 +39,14 @@ class ReservationUpdateForm extends React.Component {
       restaurantId: this.props.reservation.restaurant_id,
       userId: this.props.reservation.user_id,
       reservationId: this.props.reservation.id,
+      showing: true,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.handleCancel = this.handleCancel.bind(this);
   }
+
+
 
   componentWillUnmount() {
     // this.props.removeConfirmation();
@@ -54,6 +60,8 @@ class ReservationUpdateForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    
 
     const reservation = {
       party_size: this.state.partySize,
@@ -72,6 +80,7 @@ class ReservationUpdateForm extends React.Component {
     this.props.handleSubmit(reservation).then(() => resConfirmation());
     // .then(() => this.props.closeModal());
   }
+
 
   renderErrors() {
     return (
@@ -134,13 +143,18 @@ class ReservationUpdateForm extends React.Component {
   }
 
   render() {
+    const {showing} = this.state;
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-update-main">
-          <div onClick={this.props.closeModal} className="close-form">
+          <div
+            // onClick={() => this.setState({ showing: !showing})}
+            // onClick={(alert('i was clicked'))}
+            className="close-form"
+          >
             X
           </div>
-          <h3>{this.props.formHeader}</h3>
+          <h3 className="update-res">{this.props.formHeader}</h3>
 
           <div>
             <label className="party-size"> Party Size</label>
@@ -249,7 +263,10 @@ class ReservationUpdateForm extends React.Component {
           <br />
 
           {/* <Link to={`/users/${user_id}`}>apply to the button below</Link> */}
-          <button className="res-button" onClick={this.handleSubmit}>
+          <button
+            className="res-button"
+            onClick={this.handleSubmit} >
+
             Confirm Reservation
           </button>
           {/* {this.renderErrors()} */}

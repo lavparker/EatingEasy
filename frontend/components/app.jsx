@@ -25,7 +25,7 @@ const App = () => (
 
     <Route exact path="/users/:id" component={UsersShowContainer} />
     <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
-    <Route exact path="/restaurants/reviews/" component={ReviewFormContainer} />
+    <Route exact path="/restaurants/:id/reviews/" component={ReviewFormContainer} />
     
     {/* <Route exact path="/restaurants/:" */}
 
