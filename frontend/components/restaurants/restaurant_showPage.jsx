@@ -50,7 +50,7 @@ class RestaurantShow extends React.Component {
       return <h1>Loading!</h1>;
     }
 
-    let stars = this.randStars(2, 5);
+    let stars = this.randStars(1, 6);
     return (
       <div className="restaurant-show-page">
         <div className="res-show-head">
