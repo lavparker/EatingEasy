@@ -1,8 +1,8 @@
 .reservation-container {
 
     display: grid;
-    position: -webkit-sticky;
-    position: fixed; 
+    // position: -webkit-sticky;
+    position: absolute; 
     // position: sticky; 
     // border-top: 3rem;
     margin-top: -850px;

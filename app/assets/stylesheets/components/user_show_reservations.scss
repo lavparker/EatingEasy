@@ -119,20 +119,67 @@
     margin-bottom: 1rem;
 }
 
+.past-res{
+    background-color: #247f9e;
+        // color: bisque;
+        color: whitesmoke;
+        font-weight: 700;
+        height: 90px;
+        width: 120px;
+        // margin-bottom: ;
+        margin: 20%;
+        // margin-left: 50%;
+        border-radius: 4px;
+    
+        // font-weight: bold;
+        cursor: pointer;
+}
+
+.fave-res{
+    background-color: #247f9e;
+        // color: bisque;
+        color: whitesmoke;
+        font-weight: 700;
+        height: 90px;
+        width: 120px;
+        // margin-bottom: ;
+        margin: 20%;
+        // margin-left: 50%;
+        border-radius: 4px;
+    
+        // font-weight: bold;
+        cursor: pointer;
+}
+.make-res{
+    background-color: #247f9e;
+        // color: bisque;
+        color: whitesmoke;
+        font-weight: 700;
+        height: 90px;
+        width: 120px;
+        // margin-bottom: ;
+        margin: 20%;
+        // margin-left: 50%;
+        border-radius: 4px;
+    
+        // font-weight: bold;
+        cursor: pointer;
+}
+
 .make-res:hover {
     border-color: #247f9e;
     color: rgb(212, 180, 36);
-    font-style: italic;
-    font-size: 36px;
-    text-decoration: underline;
+    // font-style: italic;
+    // font-size: 36px;
+    // text-decoration: underline;
 }
 
 .past-res:hover {
     border-color: #247f9e;
     color: rgb(212, 180, 36);
-    font-style: italic;
-    font-size: 36px;
-    text-decoration: underline;
+    // font-style: italic;
+    // font-size: 36px;
+    // text-decoration: underline;
 
 
 }
@@ -140,9 +187,9 @@
 .fave-res:hover {
     border-color: #247f9e;
     color: rgb(212, 180, 36);
-    font-style: italic;
-    font-size: 36px;
-    text-decoration: underline;
+    // font-style: italic;
+    // font-size: 36px;
+    // text-decoration: underline;
 }
 
 .reservation-index-img {

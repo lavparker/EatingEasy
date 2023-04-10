@@ -14,6 +14,7 @@ import {
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import { HashLink as Link } from "react-router-hash-link";
 import StarRatings from "react-star-ratings";
+import ReviewIndex from "../reviews/review_index";
 
 
 class RestaurantShow extends React.Component {
@@ -185,6 +186,7 @@ class RestaurantShow extends React.Component {
             </li>
             <div id="to-reviews">
               <h1 className="res-review">Reviews</h1>
+              <ReviewIndex />
             </div>
 
             {/* <h1 id="reviews-btn" className="res-review">

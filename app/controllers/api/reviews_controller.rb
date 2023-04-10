@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
-    skip_before_action :verify_authenticity_token
-    before_action :require_logged_in!, only: [:index, :create, :show, :update, :destroy]
+    # skip_before_action :verify_authenticity_token
+    # before_action :require_logged_in!, only: [:index, :create, :show, :update, :destroy]
 
     def index
         @review = Review.all

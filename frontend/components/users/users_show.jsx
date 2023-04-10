@@ -25,13 +25,13 @@ class UsersShow extends React.Component {
             <div className="no-res-user-options">
               <ul>
                 <li>
-                  <h2 className="past-res">Past Reservations</h2>
+                  <button className="past-res">Past Reservations</button>
                   &nbsp;
-                  <h2 className="fave-res">Favorite Restaurants</h2>
+                  <button className="fave-res">Favorite Restaurants</button>
                   &nbsp;
                   <Link to="/">
-                    <button>
-                      <h2 className="make-res">Make a Reservation</h2>
+                    <button className="make-res">
+                      Make a Reservation
                     </button>
                   </Link>
                 </li>
@@ -47,11 +47,15 @@ class UsersShow extends React.Component {
         <div className="user-options">
           <ul>
             <li>
-              <h2 className="past-res">Past Reservations</h2>
+              <button className="past-res">Past Reservations</button>
               &nbsp;
-              <h2 className="fave-res">Favorite Restaurants</h2>
+              <button className="fave-res">Favorite Restaurants</button>
               &nbsp;
-              <h2 className="make-res">Make a Reservation</h2>
+              <Link to="/">
+                <button className="make-res">
+                  Make a Reservation
+                </button>
+              </Link>
             </li>
           </ul>
         </div>
