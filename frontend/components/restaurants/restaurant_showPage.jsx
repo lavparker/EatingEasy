@@ -186,7 +186,7 @@ class RestaurantShow extends React.Component {
             </li>
             <div id="to-reviews">
               <h1 className="res-review">Reviews</h1>
-              <ReviewIndex />
+              <ReviewIndex restaurant={this.props.restaurant} />
             </div>
 
             {/* <h1 id="reviews-btn" className="res-review">

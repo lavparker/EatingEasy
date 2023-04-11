@@ -8,26 +8,20 @@ class ReviewIndex extends React.Component{
     }
 
     // componentDidMount(){
-       
     //     this.props.getReviews(); 
     // }
 
     render(){
-        return(
-            <div className='reviews-index'>
-                <h2>What people are saying:</h2>
+        return (
+          <div className="reviews-index">
+            <h2>What people are saying:</h2>
 
-                <ul className='res-reviews'>
-                    {/* {
-                        this.props.reviews.map( review =>
-                            <ReviewIndexItem 
-                                review = {review}
-                                key = {review.id}
-                            />
-                        )
-                    } */}
-                </ul>
-            </div>
+            <ul className="res-reviews">
+              {/* {this.props.reviews.map((review) => (
+                <ReviewIndexItem reviews ={review} key={review.id} />
+              ))} */}
+            </ul>
+          </div>
         );
     }
 }
