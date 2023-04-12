@@ -115,15 +115,15 @@ class ReservationForm extends React.Component{
         // this.cancelConfirmation();
     }
 
-    resConfirmation(){
-            if(!this.props.resConfirmed) return null; 
+    // resConfirmation(){
+    //         if(!this.props.resConfirmed) return null; 
            
-            return(
-                <div>
-                    <h2 className="res-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; Reservation Confirmed</h2>
-                </div>
-            )
-    } 
+    //         return(
+    //             <div>
+    //                 <h2 className="res-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; Reservation Confirmed</h2>
+    //             </div>
+    //         )
+    // } 
 
     
     
@@ -308,7 +308,7 @@ class ReservationForm extends React.Component{
             <br />
             <br />
             <div className="res-confirmation">
-              {this.resConfirmation()}
+              {/* {this.resConfirmation()} */}
               <br />
               {/* {this.modifyCancel()} */}
               {/* {this.cancel()} */}

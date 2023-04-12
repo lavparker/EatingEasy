@@ -6,6 +6,7 @@ class Api::ReviewsController < ApplicationController
         @review = Review.all
         render :index
     end
+    
 
     def show
         @review = Review.find(params[:id])

@@ -12,7 +12,6 @@ import {
   FaRegStar,
 } from "react-icons/fa";
 import ReservationFormContainer from "../reservations/reservation_form_container";
-import { HashLink as Link } from "react-router-hash-link";
 import StarRatings from "react-star-ratings";
 import ReviewIndex from "../reviews/review_index";
 

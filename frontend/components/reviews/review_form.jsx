@@ -15,7 +15,7 @@ class ReviewForm extends React.Component {
       body: "",
       restaurantId: this.props.restaurant.restaurant_id,
       userId: this.props.currentUser.id,
-    };
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeRating = this.changeRating.bind(this);
@@ -37,7 +37,7 @@ class ReviewForm extends React.Component {
     e.preventDefault();
     const review = {
       name: this.state.name,
-      overallRating: this.state.overall_rating,
+      overall_rating: this.state.overall_rating,
       foodRating: this.state.food_rating,
       ambianceRating: this.state.ambiance_rating,
       valueRating: this.state.value_rating,
@@ -45,7 +45,7 @@ class ReviewForm extends React.Component {
       body: this.state.body,
       userId: this.state.userId,
       restaurantId: this.state.restaurantId,
-    };
+    }
 
     this.props.createReview(review);
     // .then((review) =>{
@@ -62,6 +62,7 @@ class ReviewForm extends React.Component {
   // }
 
   changeRating(newRating, name) {
+    // debugger
     this.setState({ [name]: newRating });
   }
 
@@ -95,13 +96,13 @@ class ReviewForm extends React.Component {
           <StarRatings
             rating={this.state.overall_rating}
             numberOfStars={5}
-            changeRating={this.changeRating}
             starRatedColor="#247f9e"
             starEmptyColor="#b8bbbf"
             starHoverColor="#247f9e"
             starDimension="40px"
             starSpacing="1px"
-            name="overall"
+            changeRating={this.changeRating}
+            name="overall_rating"
           />
           <br />
           <br />
@@ -115,7 +116,7 @@ class ReviewForm extends React.Component {
             starHoverColor="#247f9e"
             starDimension="40px"
             starSpacing="1px"
-            name="food"
+            name="food_rating"
           />
           <br />
           <br />
@@ -129,7 +130,7 @@ class ReviewForm extends React.Component {
             starHoverColor="#247f9e"
             starDimension="40px"
             starSpacing="1px"
-            name="ambiance"
+            name="ambiance_rating"
           />
           <br />
           <br />
@@ -143,7 +144,7 @@ class ReviewForm extends React.Component {
             starHoverColor="#247f9e"
             starDimension="40px"
             starSpacing="1px"
-            name="noise-level"
+            name="noise_level"
           />
           <br />
           <br />
@@ -158,7 +159,7 @@ class ReviewForm extends React.Component {
             starHoverColor="#247f9e"
             starDimension="40px"
             starSpacing="1px"
-            name="value"
+            name="value_rating"
           />
           <br />
           <br />

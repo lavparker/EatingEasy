@@ -47,7 +47,7 @@ class ReservationItem extends React.Component {
             </li>
           </ul>
           <div className="res-buttons">
-            <Link to={"/restaurants/create-review/"}>
+            <Link to={`/restaurants/${reservation.restaurant_id}/create-review/`}>
               <button className="review-res">
                 <FaCheckCircle className="review-btn" />
                  {" "} Leave a Review

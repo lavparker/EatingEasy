@@ -75,6 +75,7 @@ class ReservationUpdateForm extends React.Component {
       restaurant_id: this.state.restaurantId,
       user_id: this.state.userId,
       id: this.state.reservationId,
+      showing: false
     };
 
     this.props.handleSubmit(reservation).then(() => resConfirmation());
