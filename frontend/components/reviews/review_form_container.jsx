@@ -9,6 +9,7 @@ import ReviewForm from "./review_form";
 import { getRestaurants } from "../../actions/restaurant_actions";
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("STATE", state)
   let current_user_id = state.session.id;
   let current_user = state.entities.users[current_user_id];
 
@@ -17,7 +18,7 @@ const mapStateToProps = (state, ownProps) => {
   if (Object.values(state.reservations)[0]) {
     resId = Object.values(state.reservations)[0].id;
   }
-
+  debugger
   return {
     currentUser: {
       id: current_user.id,
@@ -26,7 +27,9 @@ const mapStateToProps = (state, ownProps) => {
       last_name: current_user.last_name,
       email: current_user.email,
     },
-    restaurant: Object.values(state.entities.restaurants),
+    // restaurant: Object.values(state.entities.restaurants),
+    restaurant: state.entities.restaurants[ownProps.match.params.id],
+
     // restaurantId: ownProps.restaurant.id,
     errors: state.errors.reviews,
     formType: "Create a Reservation",

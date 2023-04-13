@@ -4,16 +4,17 @@ import StarRatings from "react-star-ratings";
 
 class ReviewForm extends React.Component {
   constructor(props) {
+    console.log("REVIEW FORM PROPS", props);
     super(props);
     this.state = {
-      name: "",
+      // name: "",
       overall_rating: 0,
       food_rating: 0,
       ambiance_rating: 0,
       value_rating: 0,
       noise_level: 0,
       body: "",
-      restaurantId: this.props.restaurant.restaurant_id,
+      // restaurant_id: this.props.restaurant.id,
       userId: this.props.currentUser.id,
     }
 
@@ -35,16 +36,18 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     const review = {
-      name: this.state.name,
+      
+      // name: this.state.name,
       overall_rating: this.state.overall_rating,
-      foodRating: this.state.food_rating,
-      ambianceRating: this.state.ambiance_rating,
-      valueRating: this.state.value_rating,
-      noiseLevel: this.state.noise_level,
+      food_rating: this.state.food_rating,
+      ambiance_rating: this.state.ambiance_rating,
+      value_rating: this.state.value_rating,
+      noise_level: this.state.noise_level,
       body: this.state.body,
-      userId: this.state.userId,
-      restaurantId: this.state.restaurantId,
+      user_id: this.state.userId,
+      restaurant_id: this.props.match.params.id,
     }
 
     this.props.createReview(review);
@@ -84,13 +87,13 @@ class ReviewForm extends React.Component {
         <h1>Please review your experience</h1>
         <form onSubmit={this.handleSubmit} className="review-form-main">
           <br />
-          <p>Name</p>
+          {/* <p>Name</p>
           <input
             type="text"
             className="name"
             onChange={this.handleInput("name")}
             value={this.state.name}
-          />
+          /> */}
           <br />
           <p>Overall</p>
           <StarRatings
