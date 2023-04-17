@@ -13,7 +13,8 @@ import {
 } from "react-icons/fa";
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import StarRatings from "react-star-ratings";
-import ReviewIndex from "../reviews/review_index";
+import ReviewItem from "./review_item";
+// import ReviewIndex from "../reviews/review_index";
 
 
 class RestaurantShow extends React.Component {
@@ -36,6 +37,7 @@ class RestaurantShow extends React.Component {
 
   componentDidMount() {
     this.props.getRestaurant(this.props.match.params.id);
+
     window.scrollTo(0, 0);
   }
 
@@ -49,7 +51,7 @@ class RestaurantShow extends React.Component {
     if (!this.props.restaurant) {
       return <h1>Loading!</h1>;
     }
-
+    // let review;
     let stars = this.randStars(1, 6);
     return (
       <div className="restaurant-show-page">
@@ -185,7 +187,25 @@ class RestaurantShow extends React.Component {
             </li>
             <div id="to-reviews">
               <h1 className="res-review">Reviews</h1>
-              <ReviewIndex restaurant={this.props.restaurant} />
+              <p>See what others are saying:</p>
+              <ul>
+                {this.props.reviews?.map(review =>(
+                  <ReviewItem
+                    key={review.id}
+                    review={review}
+                    deleteReview={this.props.deleteReview}
+                  />
+                ))}
+              </ul>
+
+              {/* {this.props.reviews.map((review) =>( */}
+                {/* <ReviewItem 
+                  key={reviews.id}
+                  reviews={reviews}
+                  deleteReview={this.props.deleteReview}
+                /> */}
+              {/* // ))} */}
+              {/* <ReviewIndex restaurant={this.props.restaurant} /> */}
             </div>
 
             {/* <h1 id="reviews-btn" className="res-review">
@@ -195,8 +215,11 @@ class RestaurantShow extends React.Component {
         </div>
 
         <div className="res-form">
+
           <ReservationFormContainer restaurant={this.props.restaurant} />
         </div>
+
+        
       </div>
     );
   }

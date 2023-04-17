@@ -3,7 +3,7 @@ class Api::ReviewsController < ApplicationController
     # before_action :require_logged_in!, only: [:index, :create, :show, :update, :destroy]
 
     def index
-        @review = Review.all
+        @reviews = Review.all
         render :index
     end
     

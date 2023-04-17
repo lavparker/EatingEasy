@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { getRestaurant } from "../../actions/restaurant_actions";
 import RestaurantShow from "./restaurant_showPage";
+import { getReviews, getReview, updateReview, deleteReview } from '../../actions/review_actions'; 
 
 const mapStateToProps = (state, ownProps) => {
     if (!state.restaurants) {
@@ -9,12 +10,16 @@ const mapStateToProps = (state, ownProps) => {
 
     return({
         restaurant: state.restaurants[ownProps.match.params.id]
+        
 })
 }
 
 const mapDispatchToProps = dispatch =>({
 
-        getRestaurant: id => dispatch(getRestaurant(id))
+        getRestaurant: id => dispatch(getRestaurant(id)), 
+        getReviews: () => dispatch(getReviews()),
+        handleRevUpdate: review => dispatch(updateReview(review)),
+        deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
     
 })
 
