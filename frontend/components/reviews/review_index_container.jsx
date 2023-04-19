@@ -5,9 +5,10 @@ import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
   // debugger
-  ({
+  return({
     currentUser: state.entities.users[state.session.id],
-    reviews: state.entities.reviews,
+    reviews: Object.values(state.entities.reviews),
+    // turns reviews into an object array
     restaurants: state.entities.restaurants[ownProps.match.params.id],
 
   })

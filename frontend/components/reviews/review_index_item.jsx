@@ -16,6 +16,7 @@ class ReviewIndexItem extends React.Component{
         return (
           <div className="review-item-container">
             {/* <div> this is working {review.overall}</div> */}
+            
             <div> this is working</div>
 
             <FaRegTrashAlt />

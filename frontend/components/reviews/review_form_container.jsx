@@ -18,7 +18,7 @@ const mapStateToProps = (state, ownProps) => {
   if (Object.values(state.reservations)[0]) {
     resId = Object.values(state.reservations)[0].id;
   }
-  debugger
+  // debugger
   return {
     currentUser: {
       id: current_user.id,

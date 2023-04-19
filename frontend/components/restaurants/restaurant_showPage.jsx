@@ -20,7 +20,7 @@ import ReviewIndexContainer from "../reviews/review_index_container"
 
 class RestaurantShow extends React.Component {
   constructor(props) {
-        console.log("RESTAURANT SHOW PROPS", props);
+        // console.log("RESTAURANT SHOW PROPS", props);
 
     super(props);
 
@@ -190,7 +190,7 @@ class RestaurantShow extends React.Component {
             </li>
             <div id="to-reviews">
               <h1 className="res-review">Reviews</h1>
-              <p>See what others are saying:</p>
+              {/* <p>See what others are saying:</p> */}
               <ul>
                 {/* {this.props.reviews?.map(review =>(
                   console.log('we are inthe restaurant container')
