@@ -17,9 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch =>({
 
         getRestaurant: id => dispatch(getRestaurant(id)), 
-        getReviews: () => dispatch(getReviews()),
-        handleRevUpdate: review => dispatch(updateReview(review)),
-        deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
+       
     
 })
 

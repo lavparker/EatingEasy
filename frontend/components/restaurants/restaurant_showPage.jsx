@@ -13,12 +13,15 @@ import {
 } from "react-icons/fa";
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import StarRatings from "react-star-ratings";
-import ReviewItem from "./review_item";
-// import ReviewIndex from "../reviews/review_index";
+import ReviewIndexContainer from "../reviews/review_index_container"
+
+
 
 
 class RestaurantShow extends React.Component {
   constructor(props) {
+        console.log("RESTAURANT SHOW PROPS", props);
+
     super(props);
 
     this.state = {
@@ -189,13 +192,11 @@ class RestaurantShow extends React.Component {
               <h1 className="res-review">Reviews</h1>
               <p>See what others are saying:</p>
               <ul>
-                {this.props.reviews?.map(review =>(
-                  <ReviewItem
-                    key={review.id}
-                    review={review}
-                    deleteReview={this.props.deleteReview}
-                  />
-                ))}
+                {/* {this.props.reviews?.map(review =>(
+                  console.log('we are inthe restaurant container')
+
+                ))} */}
+                <ReviewIndexContainer/>
               </ul>
 
               {/* {this.props.reviews.map((review) =>( */}
