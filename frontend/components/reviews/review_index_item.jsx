@@ -6,17 +6,19 @@ import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
 
 class ReviewIndexItem extends React.Component{
     constructor(props){
-        console.log("REVIEW INDEX ITEM PROPS", props);
+        // console.log("REVIEW INDEX ITEM PROPS", props);
         super(props);
     }
 
     render(){
         const { reviews } = this.props; 
         const { reservation } = this.props;
+     
+       
         return (
           <div className="review-item-container">
             <ul className="review-details">
-              <li className="current-user">Name: </li>
+              <li className="current-user">Name: {reviews.restaurant_id}</li>
               {/* <li className="review-date">Dined on: {reservation.date}</li> */}
               <li className="review-overall">Overall: {reviews.over_all}</li>
               <li className="review-food">Food: {reviews.food_rating}</li>
