@@ -18,7 +18,9 @@ class ReviewIndexItem extends React.Component{
         return (
           <div className="review-item-container">
             <ul className="review-details">
-              <li className="current-user">Name: {reviews.restaurant_id}</li>
+              <li className="current-user">
+                Restaurant Id (for my reference): {reviews.restaurant_id}
+              </li>
               {/* <li className="review-date">Dined on: {reservation.date}</li> */}
               <li className="review-overall">Overall: {reviews.over_all}</li>
               <li className="review-food">Food: {reviews.food_rating}</li>
@@ -29,8 +31,13 @@ class ReviewIndexItem extends React.Component{
               <li className="review-value">Value: {reviews.value_rating}</li>
               <li className="review-body">{reviews.body}</li>
             </ul>
-
-            <FaRegTrashAlt />
+            <button
+              className="delete-res"
+              onClick={() => this.props.deleteReview(reviews.id)}
+            >
+              <FaRegTrashAlt className="trash-can-btn" /> Delete Review{" "}
+            </button>
+          
           </div>
         );
     }

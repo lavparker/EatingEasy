@@ -36,7 +36,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+    // debugger
     const review = {
       
       // name: this.state.name,
