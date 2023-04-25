@@ -10,7 +10,7 @@ import RestaurantShowContainer from "./restaurants/restaurant_showPage_container
 import { FaGithub, FaLinkedin, FaInstagram, FaAngellist } from "react-icons/fa";
 import UsersShowContainer from "./users/users_show_container";
 import ReviewFormContainer from "./reviews/review_form_container";
-// import SearchForm from './search/search_form';
+// import RestaurantsSearch from "./search/restaurants_search_form";
 
 const App = () => (
   <div className="main-page">

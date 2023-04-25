@@ -6,6 +6,7 @@ import uiReducer from "./ui_reducer";
 import restaurantsReducer from "./restaurants_reducer";
 import reservationsReducer from "./reservations_reducer";
 import reviewsReducer from "./reviews_reducer";
+import searchsReducer from "./search_reducer";
 
 const rootReducer = combineReducers({
   
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
     restaurants: restaurantsReducer,
     reservations: reservationsReducer, 
     reviews:reviewsReducer,
+    searches: searchsReducer,
     ui: uiReducer
 }); 
 
