@@ -12,12 +12,12 @@ import React from 'react';
 //     }
 // }
 
-function RestaurantsSearchIndexItem({ restaurant }){
-    return(
-        <li>
-            {restaurant.name}
-        </li>
-    )
-}
+// function RestaurantsSearchIndexItem({ restaurant }){
+//     return(
+//         <li>
+//             {restaurant.name}
+//         </li>
+//     )
+// }
 
-export default RestaurantsSearchIndexItem; 
+// export default RestaurantsSearchIndexItem; 
