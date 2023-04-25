@@ -1,4 +1,4 @@
-import React from 'react'; 
+// import React from 'react'; 
 
 // import RestaurantsSearchIndexItem from './restaurants_index_item';
 

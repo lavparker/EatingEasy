@@ -1,8 +1,8 @@
 import React from "react";
 import RestaurantIndexContainer from "../restaurant_index/restaurant_index_container";
-import SearchForm from "../search/search_form";
+// import SearchForm from "../search/search_form";
 // import RestaurantsSearch from '../search/restaurants_search_form'; 
-import SearchQuery from "../search/search_form";
+import SearchQuery from "../search/restaurants_search_container";
 
 
 const mainPage = () =>(
