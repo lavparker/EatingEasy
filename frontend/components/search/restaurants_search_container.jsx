@@ -6,7 +6,7 @@ import { getRestaurants } from "../../actions/restaurant_actions";
 import SearchQuery from "./search_form"; 
 
 const mapStateToProps = (state) => {
-    console.log('we are in the search container woohoo')
+    // console.log('we are in the search container woohoo')
   return {
     restaurants: Object.values(state.entities.restaurants),
   };
