@@ -16,7 +16,7 @@ function SearchQuery(){
       <div className="search-bar-div">
         <input className="search-bar" placeholder="Search..." type="text" onChange={(e) => setQuery(e.target.value)}/>
         <ul className="list">
-            {restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(query)).map(restaurant => (
+            {restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(query.toLowerCase())).map(restaurant => (
                 <li key={restaurant.id} className="res-restaruant">{restaurant.name}</li>
             ))}
             {/* {restaurants.filter((restaurant) => restaurant.name.toLowerCase().includes(query).map((restaurant) =>(
