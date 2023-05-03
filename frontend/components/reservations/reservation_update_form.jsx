@@ -80,7 +80,10 @@ class ReservationUpdateForm extends React.Component {
 
     };
 
-    this.props.handleSubmit(reservation).then(() => this.props.closeModal());
+    this.props
+      .handleSubmit(reservation)
+      .then(() => this.props.closeModal())
+      .then(() => this.props.toggleUpdateForm());
     // .then(() => this.props.closeModal());
   }
 
