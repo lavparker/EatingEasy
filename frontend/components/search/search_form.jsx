@@ -1,32 +1,64 @@
-import React from 'react'; 
-import { useState } from 'react';
-import {getRestaurants} from '../../actions/restaurant_actions'; 
+import React from "react";
+import { useState } from "react";
+import { getRestaurants } from "../../actions/restaurant_actions";
 import { useSelector, useDispatch } from "react-redux";
-import { useReducer } from 'react';
+import { useReducer } from "react";
+import RestaurantSearchIndex from "./restaurants_search_index";
+import { faWaterLadder, faWaveSquare } from "@fortawesome/free-solid-svg-icons";
+// import FaSearch from 'react-icons/fa';
 
+function SearchQuery({ placeholder, data }) {
+  const [filteredData, setFilteredData] = useState([]);
+  const [wordEntered, setWordEntered] = useState("");
 
+  const handleFilter = (event) => {
+    const searchWord = event.target.value;
+    setWordEntered(searchWord);
+    const newFilter = data.filter((value) => {
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
+    });
 
-function SearchQuery(){
-    const [query, setQuery] = useState("")
-    const restaurants = useSelector((state) => Object.values(state.entities.restaurants)); 
+    if (searchWord === "") {
+      setFilteredData([]);
+    } else {
+      setFilteredData(newFilter);
+    }
+  };
 
-    // console.log(restaurants.filter(restaurant => restaurant.name.toLowerCase().includes('ea') ))
+  const clearInput = () => {
+    setFilteredData([]);
+    setWordEntered("");
+  };
 
-    return (
-      <div className="search-bar-div">
-        <input className="search-bar" placeholder="Search..." type="text" onChange={(e) => setQuery(e.target.value)}/>
-        <ul className="list">
-            {restaurants.filter(restaurant => restaurant.name.toLowerCase().includes(query.toLowerCase())).map(restaurant => (
-                <li key={restaurant.id} className="res-restaruant">{restaurant.name}</li>
-            ))}
-            {/* {restaurants.filter((restaurant) => restaurant.name.toLowerCase().includes(query).map((restaurant) =>(
-                <li key={restaurant.id} className='res-restaurant'>{restaurant.name}</li>
-            ))}
-           */}
-        </ul>
+  return (
+    <div className="search">
+      <div className="searchInputs">
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={wordEntered}
+          onChange={handleFilter}
+        />
+        <div className="searchIcon">
+          {filteredData.length === 0 ? (
+            <FaWaveSquare />
+          ) : (
+            <FaWaterLadder id="clearBtn" onClick={clearInput} />
+          )}
+        </div>
       </div>
-    );
+      {filteredData.length != 0 && (
+        <div className="dataResult">
+          {filteredData.slice(0, 15).map((value, key) => {
+            return (
+            //   <a className="dataItem" href={value.link} target="_blank">
+                <p>{value.title} </p>
+            //   </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
 }
-
 export default SearchQuery;
-

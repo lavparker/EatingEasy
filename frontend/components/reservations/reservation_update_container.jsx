@@ -12,9 +12,10 @@ const mapStateToProps = (state, ownProps) => {
     currentUser: Object.values(state.entities.users)[0],
     //   reservation: state.entities.reservations[ownProps.reservationId],
     reservation: state.reservations[ownProps.reservationId],
-
+    
     // restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
     formHeader: "Update your reservation",
+    toggleUpdateForm: ownProps.toggleUpdateForm
   };
 };
 

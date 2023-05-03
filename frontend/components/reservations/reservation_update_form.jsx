@@ -39,10 +39,11 @@ class ReservationUpdateForm extends React.Component {
       restaurantId: this.props.reservation.restaurant_id,
       userId: this.props.reservation.user_id,
       reservationId: this.props.reservation.id,
-      showing: true,
+      // divShowing: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handledivShowing = this.handledivShowing.bind(this); 
     // this.handleCancel = this.handleCancel.bind(this);
   }
 
@@ -75,13 +76,15 @@ class ReservationUpdateForm extends React.Component {
       restaurant_id: this.state.restaurantId,
       user_id: this.state.userId,
       id: this.state.reservationId,
-      showing: false
+      
+
     };
 
-    this.props.handleSubmit(reservation).then(() => resConfirmation());
+    this.props.handleSubmit(reservation).then(() => this.props.closeModal());
     // .then(() => this.props.closeModal());
   }
 
+  
 
   renderErrors() {
     return (
@@ -92,6 +95,8 @@ class ReservationUpdateForm extends React.Component {
       </ul>
     );
   }
+
+  
 
   // handleCancel() {
   //   e.preventDefault();
@@ -144,16 +149,17 @@ class ReservationUpdateForm extends React.Component {
   }
 
   render() {
-    const {showing} = this.state;
+    // const {showing} = this.state;
+   
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-update-main">
-          <div
+          <div onClick={this.props.toggleUpdateForm} className="close-res-update"
             // onClick={() => this.setState({ showing: !showing})}
             // onClick={(alert('i was clicked'))}
-            className="close-form"
+            // className="close-form"
           >
-            X
+            x
           </div>
           <h3 className="update-res">{this.props.formHeader}</h3>
 

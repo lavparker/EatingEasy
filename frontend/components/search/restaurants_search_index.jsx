@@ -1,22 +1,31 @@
-// import React from 'react'; 
+// import React from "react";
+// import { useState } from "react";
+// import { getRestaurants } from "../../actions/restaurant_actions";
+// import { useSelector, useDispatch } from "react-redux";
+// import { useReducer } from "react";
+// import RestaurantSearchIndexItem from "./restaurants_index_item";
 
-// import RestaurantsSearchIndexItem from './restaurants_index_item';
+// function RestaurantSearchIndex() {
+//   const [query, setQuery] = useState("");
+//   const restaurants = useSelector((state) =>
+//     Object.values(state.entities.restaurants)
+//   );
 
-// function RestaurantsIndex({ restaurants }){
-//     debugger
+//   // console.log(restaurants.filter(restaurant => restaurant.name.toLowerCase().includes('ea') ))
 
-//     console.log(' YOU ARE IN RESTAURANT INDEX')
-//     console.log(restaurants[202])
-//     console.log('hello again');
-
-
-//     // console.log('AMT OF RESTAURANTS:' + restaurants.all)
-//     // debugger
-//     return(
-//         <ul>
-//             {restaurants.map(restaurant => <RestaurantsSearchIndexItem key={restaurant.id} restaurant={restaurant}/>)}
-//         </ul>
-//     )
+//   return (
+//     <div className="search-bar-div">
+//       <ul className="list">
+//         {restaurants
+//           .filter((restaurant) =>
+//             restaurant.name.toLowerCase().includes(query.toLowerCase())
+//           )
+//           .map((restaurant) => <RestaurantSearchIndexItem key={restaurant.id} restaruant={restaurant} />)}
+//       </ul>
+//     </div>
+//   );
 // }
 
-// export default RestaurantsIndex; 
+// export default RestaurantSearchIndex;
+
+

@@ -1,23 +1,25 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
+import { getRestaurants } from "../../actions/restaurant_actions";
+import { useSelector, useDispatch } from "react-redux";
+import { useReducer } from "react";
 
-// class RestaurantsSearchIndexItem extends React.Component{
-//     render(){
-//         return(
-//             <div>
-//                 <li>
-//                     <span></span>
-//                 </li>
-//             </div>
-//         )
-//     }
+// function RestaurantSearchIndexItem({restaurant}) {
+//   const [query, setQuery] = useState("");
+//   const restaurants = useSelector((state) =>
+//     Object.values(state.entities.restaurants)
+//   );
+  // console.log(restaurants.filter(restaurant => restaurant.name.toLowerCase().includes('ea') ))
+
+//   return (
+
+    //   <li className="restaurant-li">
+    //     {/* {restaurant.name} */}
+    //     null
+    //   </li>
+
+//   );
 // }
 
-// function RestaurantsSearchIndexItem({ restaurant }){
-//     return(
-//         <li>
-//             {restaurant.name}
-//         </li>
-//     )
-// }
+// export default RestaurantSearchIndexItem;
 
-// export default RestaurantsSearchIndexItem; 

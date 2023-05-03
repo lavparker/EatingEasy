@@ -11,10 +11,12 @@ class ReservationItem extends React.Component {
       should_show_update_form: false,
       // should_show_review_form: true,
     };
+
+    this.toggleUpdateForm = this.toggleUpdateForm.bind(this); 
   }
 
-  showUpdateForm() {
-    let newState = Object.assign({}, { should_show_update_form: true });
+  toggleUpdateForm() {
+    let newState = Object.assign({}, { should_show_update_form: !this.state.should_show_update_form});
     this.setState(newState);
   }
 
@@ -63,7 +65,7 @@ class ReservationItem extends React.Component {
 
             <button
               className="modify-res"
-              onClick={() => this.showUpdateForm()}
+              onClick={() => this.toggleUpdateForm()}
             >
               {/* {" "} */}
               <FaPencilAlt className="pencil-btn" /> Modify Reservation{" "}
@@ -80,7 +82,7 @@ class ReservationItem extends React.Component {
           }}
         >
           {this.state.should_show_update_form ? (
-            <ReservationUpdateContainer reservationId={reservation.id} />
+            <ReservationUpdateContainer toggleUpdateForm={this.toggleUpdateForm}  reservationId={reservation.id} />
           ) : null}
         </div>
       </div>
