@@ -5,7 +5,7 @@ import { getRestaurants } from "../../actions/restaurant_actions";
 import { useSelector } from "react-redux";
 import { useReducer } from "react";
 import RestaurantSearchIndex from "./restaurants_search_index";
-// import FaSearch from 'react-icons/fa';
+import FaSearch from 'react-icons/fa';
 
 function SearchQuery(){
   const [searchTerm, setSearchTerm] = useState(''); 
@@ -33,25 +33,26 @@ function SearchQuery(){
   return (
     <div>
       <input
+        className="search-bar-input"
         type="text"
         value={searchTerm}
         onChange={handleSearch}
         placeholder="Search..."
+       
       />
-      
+
       {searchTerm && (
         <>
-
-      {filteredRestaurants.map((restaurant) => (
-        <div
-          restaurant={restaurant}
-          key={restaurants.id}
-          onClick={() => handleRestaurantClick(restaurants.id)}
-        >
-          {restaurant.name}
-        </div>
-      ))}
-      </>
+          {filteredRestaurants.map((restaurant) => (
+            <div
+              restaurant={restaurant}
+              key={restaurants.id}
+              onClick={() => handleRestaurantClick(restaurants.id)}
+            >
+              {restaurant.name}
+            </div>
+          ))}
+        </>
       )}
     </div>
   );

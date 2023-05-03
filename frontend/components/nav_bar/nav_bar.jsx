@@ -82,14 +82,13 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
   return (
     <header className="nav-bar">
       <div className="left-side">
-        {/* <Link className="main-logo" to="/">
-          <img
-            id="eatingeasy-logo"
-            // src="../../../easy_eating_logo.png"
-            src="../../../app/assets/images/easy_eating_logo.png"
-            alt="eating easy logo"
-          />
-        </Link> */}
+        {/* <Link className="main-logo" to="/"> */}
+        <img
+          src="/../../../app/assets/images/easy_eating_logo.png"
+          alt="eating easy logo"
+          id="eatingeasy-logo"
+        />
+        {/* </Link> */}
       </div>
       {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
       {/* <h1 className="logo">EasyEating</h1> */}
