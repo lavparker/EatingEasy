@@ -11,8 +11,8 @@ function RestaurantSearchForm(){
     const searchFilter = (e) => {
         const queryWord = e.target.value; 
         setQuery(queryWord); 
-        const newFilter = restaurants.filter((value) =>{
-            return value.name.toLowerCase().includes(queryWord.toLowerCase())
+        const newFilter = restaurants.filter((queryWord) =>{
+            return queryWord.name.toLowerCase().includes(restaurants.toLowerCase())
         }); 
 
         if(queryWord === ""){

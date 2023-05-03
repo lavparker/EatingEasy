@@ -155,6 +155,7 @@ class ReservationUpdateForm extends React.Component {
     // const {showing} = this.state;
    
     return (
+    
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-update-main">
           <div onClick={this.props.toggleUpdateForm} className="close-res-update"
@@ -293,6 +294,7 @@ class ReservationUpdateForm extends React.Component {
           </p>
         </form>
       </div>
+
     );
   }
 }

@@ -4,6 +4,8 @@ import { withRouter } from 'react-router-dom';
 import { getRestaurants } from "../../actions/restaurant_actions";
 // import RestaurantsSearch from './restaurants_search_form'; 
 import SearchQuery from "./search_form"; 
+// import RestaurantSearchForm from './restaurant_search_form'; 
+
 
 const mapStateToProps = (state) => {
     // console.log('we are in the search container woohoo')
@@ -18,6 +20,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchQuery);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SearchQuery);
 
  

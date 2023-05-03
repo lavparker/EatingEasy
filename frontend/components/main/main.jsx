@@ -11,7 +11,7 @@ const mainPage = () =>(
 
             <h1 className="find-your-table">Find your table for any occasion</h1>
             {/* <RestaurantsSearch/> */}
-            {/* <SearchQuery/> */}
+            <SearchQuery/>
             {/* <RestaurantSearchForm/> */}
         </div>
         <div className="res-index-container">

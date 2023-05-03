@@ -1,64 +1,60 @@
 import React from "react";
 import { useState } from "react";
+import { useHistory } from 'react-router-dom'; 
 import { getRestaurants } from "../../actions/restaurant_actions";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useReducer } from "react";
 import RestaurantSearchIndex from "./restaurants_search_index";
-import { faWaterLadder, faWaveSquare } from "@fortawesome/free-solid-svg-icons";
 // import FaSearch from 'react-icons/fa';
 
-function SearchQuery({ placeholder, data }) {
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
+function SearchQuery(){
+  const [searchTerm, setSearchTerm] = useState(''); 
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]); 
+  const history = useHistory();
+  const restaurants = useSelector((state) =>
+      Object.values(state.entities.restaurants)
+    ); 
 
-  const handleFilter = (event) => {
-    const searchWord = event.target.value;
-    setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
-      return value.name.toLowerCase().includes(searchWord.toLowerCase());
-    });
+  const handleSearch = (e) =>{
+    const term = e.target.value; 
 
-    if (searchWord === "") {
-      setFilteredData([]);
-    } else {
-      setFilteredData(newFilter);
-    }
-  };
+    setSearchTerm(term)
+    const filtered = restaurants.filter((restaurant) => 
+    restaurant.name.toLowerCase().includes(term.toLowerCase())); 
+    setFilteredRestaurants(filtered); 
 
-  const clearInput = () => {
-    setFilteredData([]);
-    setWordEntered("");
-  };
+   
+  }
+
+  const handleRestaurantClick = ({restaurantsId}) => {
+    history.push(`/restaurants/${restaurantsId}`); 
+  }
 
   return (
-    <div className="search">
-      <div className="searchInputs">
-        <input
-          type="text"
-          placeholder={placeholder}
-          value={wordEntered}
-          onChange={handleFilter}
-        />
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (
-            <FaWaveSquare />
-          ) : (
-            <FaWaterLadder id="clearBtn" onClick={clearInput} />
-          )}
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleSearch}
+        placeholder="Search..."
+      />
+      
+      {searchTerm && (
+        <>
+
+      {filteredRestaurants.map((restaurant) => (
+        <div
+          restaurant={restaurant}
+          key={restaurants.id}
+          onClick={() => handleRestaurantClick(restaurants.id)}
+        >
+          {restaurant.name}
         </div>
-      </div>
-      {filteredData.length != 0 && (
-        <div className="dataResult">
-          {filteredData.slice(0, 15).map((value, key) => {
-            return (
-            //   <a className="dataItem" href={value.link} target="_blank">
-                <p>{value.title} </p>
-            //   </a>
-            );
-          })}
-        </div>
+      ))}
+      </>
       )}
     </div>
   );
 }
-export default SearchQuery;
+
+export default SearchQuery 
