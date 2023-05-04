@@ -1,10 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'; 
-import { getRestaurants } from "../../actions/restaurant_actions";
 import { useSelector } from "react-redux";
-import { useReducer } from "react";
-import RestaurantSearchIndex from "./restaurants_search_index";
 import FaSearch from 'react-icons/fa';
 
 function SearchQuery(){
@@ -39,7 +36,7 @@ function SearchQuery(){
         onChange={handleSearch}
         placeholder="Search..."
       />
-
+     
       {searchQuery && (
         <>
           {filteredRestaurants.map((restaurant) => (
