@@ -7,7 +7,7 @@ import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
 class ReviewIndexItem extends React.Component{
     constructor(props){
         // debugger
-        console.log("REVIEW INDEX ITEM PROPS", props);
+        // console.log("REVIEW INDEX ITEM PROPS", props);
         super(props);
     }
 

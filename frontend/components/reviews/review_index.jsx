@@ -3,7 +3,7 @@ import ReviewIndexItem from './review_index_item';
 
 class ReviewIndex extends React.Component{
     constructor(props){
-        console.log("REVIEW INDEX PROPS", props);
+        // console.log("REVIEW INDEX PROPS", props);
         super(props); 
         // this.props.getReviews = this.props.getReviews.bind(this)
     }

@@ -189,7 +189,7 @@ class RestaurantShow extends React.Component {
               </div>
             </li>
             <div id="to-reviews">
-              <h1 className="res-review">Reviews</h1>
+              <h1>Reviews</h1>
               {/* <p>See what others are saying:</p> */}
               <ul>
                 {/* {this.props.reviews?.map(review =>(

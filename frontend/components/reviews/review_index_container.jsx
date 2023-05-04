@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    console.log("I AM IN THE RESERVATION index CONTAINER");
+    // console.log("I AM IN THE REVIEW index CONTAINER");
 
   return{
   getReviews: () => dispatch(getReviews()),
