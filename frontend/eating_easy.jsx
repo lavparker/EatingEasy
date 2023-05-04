@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import Root from './components/root';
 import configureStore from './store/store';
 import { RECEIVE_SESSION_ERRORS, receiveSessionErrors } from './actions/session_actions';
@@ -23,6 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.dispatch = store.dispatch;
     
 
-    const root = document.getElementById('root');
-    ReactDOM.render(<Root store={store} />, root);
+    const root = document.getElementById("root");
+    ReactDOM.createRoot(root).render(<Root store={store} />);
 });
