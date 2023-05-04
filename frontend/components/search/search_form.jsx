@@ -8,7 +8,7 @@ import RestaurantSearchIndex from "./restaurants_search_index";
 import FaSearch from 'react-icons/fa';
 
 function SearchQuery(){
-  const [searchTerm, setSearchTerm] = useState(''); 
+  const [searchQuery, setSearchQuery] = useState(''); 
   const [filteredRestaurants, setFilteredRestaurants] = useState([]); 
   const history = useHistory();
   const restaurants = useSelector((state) =>
@@ -16,18 +16,18 @@ function SearchQuery(){
     ); 
 
   const handleSearch = (e) =>{
-    const term = e.target.value; 
+    const query = e.target.value; 
 
-    setSearchTerm(term)
+    setSearchQuery(query)
     const filtered = restaurants.filter((restaurant) => 
-    restaurant.name.toLowerCase().includes(term.toLowerCase())); 
+    restaurant.name.toLowerCase().includes(query.toLowerCase())); 
     setFilteredRestaurants(filtered); 
 
    
   }
 
-  const handleRestaurantClick = ({restaurantsId}) => {
-    history.push(`/restaurants/${restaurantsId}`); 
+  const handleRestaurantClick = ({restaurant}) => {
+    history.push(`/restaurants/${restaurant.id}`); 
   }
 
   return (
@@ -35,21 +35,25 @@ function SearchQuery(){
       <input
         className="search-bar-input"
         type="text"
-        value={searchTerm}
+        value={searchQuery}
         onChange={handleSearch}
         placeholder="Search..."
-       
       />
 
-      {searchTerm && (
+      {searchQuery && (
         <>
           {filteredRestaurants.map((restaurant) => (
             <div
+              className="restaurant-search-index"
               restaurant={restaurant}
-              key={restaurants.id}
-              onClick={() => handleRestaurantClick(restaurants.id)}
+              key={restaurant.id}
             >
-              {restaurant.name}
+              <div
+                className="restaurant-search-name"
+                onClick={() => handleRestaurantClick({restaurant})}
+              >
+                {restaurant.name}
+              </div>
             </div>
           ))}
         </>

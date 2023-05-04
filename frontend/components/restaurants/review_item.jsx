@@ -1,9 +1,11 @@
 import React from 'react'; 
 
 class ReviewItem extends React.Component{
-    // constructor(props){
-    //     super()
-    // }
+    constructor(props){
+        super(props)
+    }
+
+
 
     componentDidMount(){
         // debugger
