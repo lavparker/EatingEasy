@@ -19,13 +19,16 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => {
+    console.log("I AM IN THE RESERVATION UPDATE FORM CONTAINER");
+  return{
+  
   // getReservation: reservationId => dispatch(getReservation(reservationId)),
   // updateReservation: reservation => dispatch(updateReservation(reservation)),
   handleSubmit: (reservation) => dispatch(updateReservation(reservation)), // console.log('ive been updated')
   //dispatch appropriate action to update the reservation
   closeModal: () => dispatch(closeModal()),
-});
+}};
 
 export default connect(
   mapStateToProps,

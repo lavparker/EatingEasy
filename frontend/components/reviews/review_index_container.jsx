@@ -14,13 +14,16 @@ const mapStateToProps = (state, ownProps) => {
   })
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => {
+    console.log("I AM IN THE RESERVATION index CONTAINER");
+
+  return{
   getReviews: () => dispatch(getReviews()),
   deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
   updateReview: (review) => dispatch(updateReview(review)), 
 
 
-});
+}};
 
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReviewIndex));

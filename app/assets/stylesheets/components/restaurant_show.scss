@@ -308,3 +308,24 @@
         border-radius: 2px;
         cursor: pointer;
 }
+
+.modify-rev{
+    background-color: #247f9e;
+    // color: bisque;
+    color: whitesmoke;
+    font-weight: 700;
+    height: 40px;
+    width: 90px;
+    // margin-bottom: ;
+    // margin-left: 50%;
+    margin: 25%;
+    align-items: center;
+    border-radius: 4px;
+
+    // font-weight: bold;
+    cursor: pointer;
+}
+
+.modify-rev:hover {
+    background-color: #0f4e63;
+}

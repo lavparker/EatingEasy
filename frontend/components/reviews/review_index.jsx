@@ -34,7 +34,7 @@ class ReviewIndex extends React.Component{
              
               {this.props.reviews.map((review) => (
                 review.restaurant_id === restaurants.id ?
-                <ReviewIndexItem reviews ={review} key={review.id} updateReview={this.props.updateReview} deleteReview={this.props.deleteReview}/> : null
+                <ReviewIndexItem reviews ={review} key={review.id} updateReview={this.props.updateReview} deleteReview={this.props.deleteReview} currentUser={this.props.currentUser}/> : null
               ))}
             
             </ul>

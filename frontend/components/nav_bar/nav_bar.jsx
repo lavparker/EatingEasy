@@ -82,15 +82,14 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
   return (
     <header className="nav-bar">
       <div className="left-side">
-        {/* <Link className="main-logo" to="/"> */}
-        <img
-          src={window.logo}
-          alt="eating easy logo"
-          id="eatingeasy-logo"
-        />
-
-
-        {/* </Link> */}
+        <Link className="main-logo" to="/">
+          <img
+            src={window.logo}
+            alt="eating easy logo"
+            id="eatingeasy-logo"
+            className="eatingeasy-logo"
+          />
+        </Link>
       </div>
       {/* <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon> */}
       {/* <h1 className="logo">EasyEating</h1> */}

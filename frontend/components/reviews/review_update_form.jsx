@@ -1,89 +1,61 @@
-import React from "react";
-import { FaPencilAlt } from "react-icons/fa";
-import StarRatings from "react-star-ratings";
+import React from 'react'; 
 
-class ReviewForm extends React.Component {
-  constructor(props) {
-    // console.log("REVIEW FORM PROPS", props);
-    super(props);
-    this.state = {
-      // name: "",
-      overall_rating: 0,
-      food_rating: 0,
-      ambiance_rating: 0,
-      value_rating: 0,
-      noise_level: 0,
-      body: "",
-      // restaurant_id: this.props.restaurant.id,
-      userId: this.props.currentUser.id,
+class ReviewUpdateForm extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            overall_rating: this.props.review.overall_rating,
+            food_rating: this.props.review.food_rating,
+            ambiance_rating: this.props.review.ambiance_rating,
+            value_rating: this.props.review.value_rating,
+            noise_level: this.props.review.noise_level,
+            body: this.props.review.body,
+            user_id: this.props.currentUser.id,
+            restaurant_id: this.props.restaurant.id,
+            id: this.props.review.id,
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.changeRating = this.changeRating.bind(this);
+
     }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.changeRating = this.changeRating.bind(this);
-  }
-
-  componentDidMount() {
-    if (!this.props.restaurant) {
-      this.props.getRestaurants();
-    }
-  }
-
-  handleInput(field) {
-    return (e) => {
-      this.setState({ [field]: e.currentTarget.value });
-    };
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    // debugger
-    const review = {
-      
-      // name: this.state.name,
-      overall_rating: this.state.overall_rating,
-      food_rating: this.state.food_rating,
-      ambiance_rating: this.state.ambiance_rating,
-      value_rating: this.state.value_rating,
-      noise_level: this.state.noise_level,
-      body: this.state.body,
-      user_id: this.state.userId,
-      restaurant_id: this.props.match.params.id,
+    handleInputChange(field) {
+        return (e) => {
+            this.setState({ [field]: e.currentTarget.value });
+        };
     }
 
-    this.props.createReview(review);
-    // .then((review) =>{
+    handleSubmit(e) {
+        e.preventDefault();
+        const review = {
+            overall_rating: this.state.overall_rating,
+            food_rating: this.state.food_rating,
+            ambiance_rating: this.state.ambiance_rating,
+            value_rating: this.state.value_rating,
+            noise_level: this.state.noise_level,
+            body: this.state.body,
+            user_id: this.state.user_id,
+            restaurant_id: this.state.restaurant_id,
+            id: this.state.id,
+        }
 
-    // })
+        this.props.updateReview(review);
+    }
 
-    // this.props.handleSubmit(review);
-  }
+    changeRating(newRating, name) {
+        this.setState({
+            [name]: newRating,
+        });
 
-  // changeStarRating(rating, name) {
-  //   this.setState({
-  //     [name]: rating,
-  //   });
-  // }
+    }
+    
+    render(){
 
-  changeRating(newRating, name) {
-    // debugger
-    this.setState({ [name]: newRating });
-  }
+        return(
 
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {this.props.errors.map((error, idx) => (
-  //         <li key={`error-${idx}`}>{error}</li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
-
-  render() {
-    if (!this.props.restaurant) return null;
-
-    return (
-      <div className="review-form">
+      <div className="review-update-form">
         <h1>Please review your experience</h1>
         <form onSubmit={this.handleSubmit} className="review-form-main">
           <br />
@@ -182,13 +154,12 @@ class ReviewForm extends React.Component {
           <br />
           <button className="submit-review-btn">
             <FaPencilAlt className="pencil-btn" />
-            Submit Review
+            Submit Updated Review
           </button>
         </form>
       </div>
-    );
-  }
+      );
+    }
 }
 
-export default ReviewForm;
-
+export default ReviewUpdateForm;

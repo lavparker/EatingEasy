@@ -1,12 +1,15 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import {
-  createReview,
+  getReview,
+  updateReview,
   receiveErrors,
   removeErrors,
 } from "../../actions/review_actions";
 import ReviewForm from "./review_form";
+import ReviewUpdateForm from "./review_update_form";
 import { getRestaurants } from "../../actions/restaurant_actions";
+
 
 const mapStateToProps = (state, ownProps) => {
   // console.log("STATE", state)
@@ -27,22 +30,21 @@ const mapStateToProps = (state, ownProps) => {
       last_name: current_user.last_name,
       email: current_user.email,
     },
-    // restaurant: Object.values(state.entities.restaurants),
-    restaurant: state.entities.restaurants[ownProps.match.params.id],
 
-    // restaurantId: ownProps.restaurant.id,
+    restaurant: state.entities.restaurants[ownProps.match.params.id],
+    review: state.entities.reviews[ownProps.match.params.reviewId],
+
     errors: state.errors.reviews,
-    formType: "Create a Reservation",
+    formType: "Edit your Review",
     formHeader: "Leave Us a Review!",
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  createReview: (review) => dispatch(createReview(review)),
+  updateReview: (review) => dispatch(updateReview(review)),
   getRestaurants: () => dispatch(getRestaurants()),
-  // handleSubmit: (review) => dispatch(createReview(review)),
   receiveErrors: (errors) => dispatch(receiveErrors(errors)),
   removeErrors: () => dispatch(removeErrors()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);
+export default connect(mapStateToProps, mapDispatchToProps)(ReviewUpdateForm);
