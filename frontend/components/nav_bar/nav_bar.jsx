@@ -12,6 +12,30 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
   const helloWords = [
     "Hello",
     "Guten tag",
+    "Oi",
+    "Salam",
+    "Ni hao",
+    "Hei",
+    "Aloha",
+    "Tere",
+    "Szia",
+    "Labas",
+    "Ahoj",
+    "Bok",
+    "Zdravo",
+    "Aluu",
+    "Dydh da",
+    "Ciao",
+    "Adiu",
+    "Bonghjornu",
+    "Allegra",
+    "Mandi",
+    "Iska warran",
+    "Sawubona",
+    "Molo",
+    "Maakye",
+    "Senga",
+    "Bawo ni",
     "Salve",
     "Nǐn hǎo",
     "Olá",
@@ -87,7 +111,7 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
             src={window.logo}
             alt="eating easy logo"
             id="eatingeasy-logo"
-            className="eatingeasy-logo"
+            className="eating-easy-logo"
           />
         </Link>
       </div>

@@ -1,20 +1,25 @@
 import React from 'react'; 
+import StarRatings from "react-star-ratings";
+import { FaPencilAlt } from "react-icons/fa";
+
+
 
 class ReviewUpdateForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            overall_rating: this.props.review.overall_rating,
-            food_rating: this.props.review.food_rating,
-            ambiance_rating: this.props.review.ambiance_rating,
-            value_rating: this.props.review.value_rating,
-            noise_level: this.props.review.noise_level,
-            body: this.props.review.body,
-            user_id: this.props.currentUser.id,
-            restaurant_id: this.props.restaurant.id,
-            id: this.props.review.id,
+          overall_rating: props.review ? props.review.overall_rating : 0,
+          food_rating: props.review ? props.review.food_rating : 0,
+          ambiance_rating: props.review ? props.review.ambiance_rating : 0,
+          value_rating: props.review ? props.review.value_rating : 0,
+          noise_level: props.review ? props.review.noise_level : 0,
+          body: props.review ? props.review.body : "",
+          user_id: props.review ? props.review.user_id : "",
+          restaurant_id: props.review ? props.review.restaurant_id : "",
+          id: props.review ? props.review.id : "",
         };
+
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.changeRating = this.changeRating.bind(this);
@@ -29,6 +34,9 @@ class ReviewUpdateForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+
+        console.log("PROPS", this.props)
+
         const review = {
             overall_rating: this.state.overall_rating,
             food_rating: this.state.food_rating,
@@ -52,113 +60,107 @@ class ReviewUpdateForm extends React.Component {
     }
     
     render(){
+       const { review } = this.props;
 
-        return(
+        return (
+          <div className="review-update-form">
+            <h1>Please review your experience</h1>
+            <form onSubmit={this.handleSubmit} className="review-form-main">
+              <br />
 
-      <div className="review-update-form">
-        <h1>Please review your experience</h1>
-        <form onSubmit={this.handleSubmit} className="review-form-main">
-          <br />
-          {/* <p>Name</p>
-          <input
-            type="text"
-            className="name"
-            onChange={this.handleInput("name")}
-            value={this.state.name}
-          /> */}
-          <br />
-          <p>Overall</p>
-          <StarRatings
-            rating={this.state.overall_rating}
-            numberOfStars={5}
-            starRatedColor="#247f9e"
-            starEmptyColor="#b8bbbf"
-            starHoverColor="#247f9e"
-            starDimension="40px"
-            starSpacing="1px"
-            changeRating={this.changeRating}
-            name="overall_rating"
-          />
-          <br />
-          <br />
-          <p>Food</p>
-          <StarRatings
-            rating={this.state.food_rating}
-            numberOfStars={5}
-            changeRating={this.changeRating}
-            starRatedColor="#247f9e"
-            starEmptyColor="#b8bbbf"
-            starHoverColor="#247f9e"
-            starDimension="40px"
-            starSpacing="1px"
-            name="food_rating"
-          />
-          <br />
-          <br />
-          <p>Ambiance</p>
-          <StarRatings
-            rating={this.state.ambiance_rating}
-            numberOfStars={5}
-            changeRating={this.changeRating}
-            starRatedColor="#247f9e"
-            starEmptyColor="#b8bbbf"
-            starHoverColor="#247f9e"
-            starDimension="40px"
-            starSpacing="1px"
-            name="ambiance_rating"
-          />
-          <br />
-          <br />
-          <p>Noise Level</p>
-          <StarRatings
-            rating={this.state.noise_level}
-            numberOfStars={5}
-            changeRating={this.changeRating}
-            starRatedColor="#247f9e"
-            starEmptyColor="#b8bbbf"
-            starHoverColor="#247f9e"
-            starDimension="40px"
-            starSpacing="1px"
-            name="noise_level"
-          />
-          <br />
-          <br />
-          <p>Value</p>
+              <br />
+              <p>Overall update</p>
+              <StarRatings
+                rating={this.state.overall_rating}
+                numberOfStars={5}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#247f9e"
+                starDimension="40px"
+                starSpacing="1px"
+                changeRating={this.changeRating}
+                name="overall_rating"
+              />
+              <br />
+              <br />
+              <p>Food</p>
+              <StarRatings
+                rating={this.state.food_rating}
+                numberOfStars={5}
+                changeRating={this.changeRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#247f9e"
+                starDimension="40px"
+                starSpacing="1px"
+                name="food_rating"
+              />
+              <br />
+              <br />
+              <p>Ambiance</p>
+              <StarRatings
+                rating={this.state.ambiance_rating}
+                numberOfStars={5}
+                changeRating={this.changeRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#247f9e"
+                starDimension="40px"
+                starSpacing="1px"
+                name="ambiance_rating"
+              />
+              <br />
+              <br />
+              <p>Noise Level</p>
+              <StarRatings
+                rating={this.state.noise_level}
+                numberOfStars={5}
+                changeRating={this.changeRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#247f9e"
+                starDimension="40px"
+                starSpacing="1px"
+                name="noise_level"
+              />
+              <br />
+              <br />
+              <p>Value</p>
 
-          <StarRatings
-            rating={this.state.value_rating}
-            numberOfStars={5}
-            changeRating={this.changeRating}
-            starRatedColor="#247f9e"
-            starEmptyColor="#b8bbbf"
-            starHoverColor="#247f9e"
-            starDimension="40px"
-            starSpacing="1px"
-            name="value_rating"
-          />
-          <br />
-          <br />
-          <h2>Please leave a detailed review</h2>
-          <br />
-          <br />
-          <br />
-          <div className="rev-body">
-            <textarea
-              placeholder="Write review here"
-              cols="70"
-              rows="10"
-              onChange={this.handleInput("body")}
-            ></textarea>
+              <StarRatings
+                rating={this.state.value_rating}
+                numberOfStars={5}
+                changeRating={this.changeRating}
+                starRatedColor="#247f9e"
+                starEmptyColor="#b8bbbf"
+                starHoverColor="#247f9e"
+                starDimension="40px"
+                starSpacing="1px"
+                name="value_rating"
+              />
+              <br />
+              <br />
+              <h2>Please leave a detailed review</h2>
+              <br />
+              <br />
+              <br />
+              <div className="rev-body">
+                <textarea
+                  placeholder="Write review here"
+                  cols="70"
+                  rows="10"
+                  onChange={this.handleInputChange("body")}
+                ></textarea>
+              </div>
+              <br />
+              <br />
+              <button className="submit-review-btn">
+                <FaPencilAlt className="pencil-btn" />
+                Submit Updated Review
+              </button>
+            </form>
           </div>
-          <br />
-          <br />
-          <button className="submit-review-btn">
-            <FaPencilAlt className="pencil-btn" />
-            Submit Updated Review
-          </button>
-        </form>
-      </div>
-      );
+        );
     }
 }
 

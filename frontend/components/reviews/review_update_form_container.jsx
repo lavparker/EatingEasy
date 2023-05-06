@@ -18,10 +18,6 @@ const mapStateToProps = (state, ownProps) => {
 
   let resId = null;
 
-  if (Object.values(state.reservations)[0]) {
-    resId = Object.values(state.reservations)[0].id;
-  }
-  // debugger
   return {
     currentUser: {
       id: current_user.id,
@@ -32,7 +28,7 @@ const mapStateToProps = (state, ownProps) => {
     },
 
     restaurant: state.entities.restaurants[ownProps.match.params.id],
-    review: state.entities.reviews[ownProps.match.params.reviewId],
+    review: state.entities.reviews[ownProps.match.params.id],
 
     errors: state.errors.reviews,
     formType: "Edit your Review",
@@ -41,6 +37,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
+  getReview: (reviewId) => dispatch(getReview(reviewId)),
   updateReview: (review) => dispatch(updateReview(review)),
   getRestaurants: () => dispatch(getRestaurants()),
   receiveErrors: (errors) => dispatch(receiveErrors(errors)),

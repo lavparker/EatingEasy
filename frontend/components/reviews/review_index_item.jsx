@@ -9,7 +9,14 @@ class ReviewIndexItem extends React.Component{
         // debugger
         // console.log("REVIEW INDEX ITEM PROPS", props);
         super(props);
+
+        // this.state = {
+        //   editingReview: false,
+        // };
     }
+
+
+    
 
     render(){
         const { reviews } = this.props; 
@@ -48,10 +55,14 @@ class ReviewIndexItem extends React.Component{
                   >
                     <FaRegTrashAlt className="trash-can-btn" /> Delete Review{" "}
                   </button>
-                  <button className="modify-rev">
-                    <FaPencilAlt className="pencil-btn" />
-                    Modify Review{" "}
-                  </button>
+                  <Link
+                    to={`/restaurants/${reviews.restaurant_id}/edit-review/${reviews.id}`}
+                  >
+                    <button className="modify-rev">
+                      <FaPencilAlt className="pencil-btn" />
+                      Modify Review{" "}
+                    </button>
+                  </Link>
                 </div>
               )}
             </div>
