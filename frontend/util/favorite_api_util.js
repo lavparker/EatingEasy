@@ -26,7 +26,7 @@ export const createFavorite = favorite => {
     )
 }
 
-export const deleteReservation = favoriteId => {
+export const deleteFavorite = favoriteId => {
     return (
         $.ajax({
             url: `/api/favorites/${favoriteId}`,
