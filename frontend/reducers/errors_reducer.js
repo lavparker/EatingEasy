@@ -7,7 +7,7 @@ const errorsReducer = combineReducers({
     session: sessionErrorsReducer,
     reservation: reservationErrorsReducer,
     reviews: reviewsErrorsReducer
-    
+  
 });
 
 export default errorsReducer; 
