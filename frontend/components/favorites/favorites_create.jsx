@@ -30,20 +30,20 @@ class FavoritesCreate extends Component {
 
     }
 
-    componentDidUpdate(prevProps){
-        if(this.props.currentUser !== prevProps.currentUser){
-            this.props.getFavorites()
-            .then(() => {
-                if(this.props.favorites.restaurant_id === this.props.restaurant.id){
-                    this.setState({isFavorited: true})
-                } else{
-                    this.setState({isFavorited: false})
-                }
-            })
-        }
+    // componentDidUpdate(prevProps){
+    //     if(this.props.currentUser !== prevProps.currentUser){
+    //         this.props.getFavorites()
+    //         .then(() => {
+    //             if(this.props.favorites.restaurant_id === this.props.restaurant.id){
+    //                 this.setState({isFavorited: true})
+    //             } else{
+    //                 this.setState({isFavorited: false})
+    //             }
+    //         })
+    //     }
 
         
-    }
+    // }
 
 
     handleFavorite(e){
@@ -62,6 +62,7 @@ class FavoritesCreate extends Component {
             });
         }
      };
+
 
     render() {
         const { isFavorited } = this.state;
@@ -95,7 +96,6 @@ const mapStateToProps = (state, ownProps) => {
       },
       //   currentUser: state.session.currentUser,
       user_id: current_user.id,
-      favorites: state.entities.favorites,
       restaurants: Object.values(state.entities.restaurants),
       restaurant_id: ownProps.restaurant.id,
       favorites: Object.values(state.entities.favorites),
