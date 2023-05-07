@@ -1,4 +1,4 @@
-import { RECEIVE_FAVORITES, RECEIVE_FAVORITE, REMOVE_FAVORITE } from '../actions/favorite_actions';
+import { RECEIVE_ALL_FAVORITES, RECEIVE_FAVORITE, REMOVE_FAVORITE } from '../actions/favorite_actions';
 
 const favoritesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -6,7 +6,7 @@ const favoritesReducer = (oldState = {}, action) => {
     let nextState = Object.assign({}, oldState);
 
     switch (action.type) {
-        case RECEIVE_FAVORITES:
+        case RECEIVE_ALL_FAVORITES:
             return action.favorites;
         case RECEIVE_FAVORITE:
             nextState[action.favorite.id] = action.favorite;

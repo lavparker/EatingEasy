@@ -14,7 +14,7 @@ import {
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import StarRatings from "react-star-ratings";
 import ReviewIndexContainer from "../reviews/review_index_container"
-
+import FavoritesCreate from "../favorites/favorites_create";
 
 
 
@@ -64,9 +64,10 @@ class RestaurantShow extends React.Component {
             src={this.props.restaurant.photoUrl}
             alt="restaurant image"
           />
-          <button className="show-page-fave-btn">
+          {/* <button className="show-page-fave-btn">
             <FaHeart /> favorite this restaurant{" "}
-          </button>
+          </button> */}
+          <FavoritesCreate restaurant={this.props.restaurant}/>
         </div>
 
         <div className="show-page-gen-res">

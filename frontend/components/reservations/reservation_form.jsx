@@ -12,7 +12,7 @@ class ReservationForm extends React.Component{
         let day = tdyDate.getDate();
         let year = tdyDate.getFullYear;
         let currentDate = `${month} / ${day} / ${year}`;
-
+        // const dateString = date.toISOString().slice(0, 10);
  
         this.state = {
 
