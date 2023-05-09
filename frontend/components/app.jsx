@@ -10,7 +10,7 @@ import RestaurantShowContainer from "./restaurants/restaurant_showPage_container
 import { FaGithub, FaLinkedin, FaInstagram, FaAngellist } from "react-icons/fa";
 import UsersShowContainer from "./users/users_show_container";
 import ReviewFormContainer from "./reviews/review_form_container";
-import ReviewUpdateForm from "./reviews/review_update_form";
+import ReviewUpdateFormContainer from "./reviews/review_update_form_container";
 // import RestaurantsSearch from "./search/restaurants_search_form";
 
 
@@ -28,7 +28,7 @@ const App = () => (
     <Route exact path="/users/:id" component={UsersShowContainer} />
     <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
     <Route exact path="/restaurants/:id/create-review/" component={ReviewFormContainer} />
-    <Route exact path="/restaurants/:id/edit-review/:id" component={ReviewUpdateForm} />
+    <Route exact path="/restaurants/:id/edit-review/:id" component={ReviewUpdateFormContainer} />
     <Route/>
     {/* <Route exact path="/users/:id/favorites" component={FavoriteRestaurantContainer}/> */}
 
