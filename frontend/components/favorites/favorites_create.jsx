@@ -4,81 +4,114 @@ import { withRouter } from 'react-router-dom';
 import { createFavorite, deleteFavorite, getFavorite, getFavorites } from '../../actions/favorite_actions';
 import { getRestaurant } from '../../actions/restaurant_actions';
 class FavoritesCreate extends Component {
-    constructor(props){
-        console.log('FAVORITES CREATE PROPS', props)
-        super(props)    
-        this.state = {
-            // currentUser: this.props.currentUser,
-            isFavorited: false,
-            user_id: this.props.favorite ? this.props.favorite.user_id : this.props.currentUser.id,
-            restaurant_id: this.props.favorite ? this.props.favorite.restaurant_id : this.props.restaurant.id, 
+  constructor(props) {
+    console.log("FAVORITES CREATE PROPS", props);
+    super(props);
+    const { favorite, currentUser, restaurant } = this.props;
+    this.state = {
+      // currentUser: this.props.currentUser,
+      isFavorited: false,
+      user_id: favorite ? favorite.user_id : currentUser.id,
+      restaurant_id: favorite ? favorite.restaurant_id : restaurant.id,
+      // user_id: this.props.favorite ? this.props.favorite.user_id : this.props.currentUser.id,
+      // restaurant_id: this.props.favorite ? this.props.favorite.restaurant_id : this.props.restaurant.id,
+    };
+    this.handleFavorite = this.handleFavorite.bind(this);
+  }
+
+  componentDidMount() {
+    if (this.props.currentUser) {
+      this.props.getFavorites().then(() => {
+        const { favorites, restaurant } = this.props;
+        let isFavorited = false;
+        if (Array.isArray(favorites)) {
+          for (let i = 0; i < favorites.length; i++) {
+            if (favorites[i].restaurant_id === restaurant.id) {
+              isFavorited = true;
+              break;
+            }
+          }
+        } else if (favorites && favorites.restaurant_id === restaurant.id) {
+          isFavorited = true;
         }
-        this.handleFavorite = this.handleFavorite.bind(this);
+        this.setState({ isFavorited });
+
+        // if(this.props.favorites.restaurant_id === this.props.restaurant.id){
+        //     this.setState({isFavorited: true})
+        // } else{
+        //     this.setState({isFavorited: false})
+        // }
+      });
     }
+  }
 
-    componentDidMount(){
-        if(this.props.currentUser){
-            this.props.getFavorites()
-            .then(() => {
-                if(this.props.favorites.restaurant_id === this.props.restaurant.id){
-                    this.setState({isFavorited: true})
-                } else{
-                    this.setState({isFavorited: false})
-                }
-            })
-        }
+  // componentDidUpdate(prevProps){
+  //     if(this.props.currentUser !== prevProps.currentUser){
+  //         this.props.getFavorites()
+  //         .then(() => {
+  //             if(this.props.favorites.restaurant_id === this.props.restaurant.id){
+  //                 this.setState({isFavorited: true})
+  //             } else{
+  //                 this.setState({isFavorited: false})
+  //             }
+  //         })
+  //     }
 
+  // }
+
+  // handleFavorite(e){
+  //     e.preventDefault();
+  //     const { restaurant, favorites } = this.props;
+  //     const favoriteId = favorites ? favorites.id : null;
+  //     if(this.state.isFavorited){
+  //         this.props.deleteFavorite(favoriteId).then(() => {
+  //             this.setState({isFavorited: false})
+  //         });
+  //     } else {
+  //         this.props.createFavorite({
+  //             user_id: this.props.currentUser.id,
+  //             restaurant_id: this.props.restaurant.id,
+  //         }).then(() => {
+  //             this.setState({isFavorited: true})
+  //         });
+  //     }
+  //  };
+
+  handleFavorite(e) {
+    e.preventDefault();
+    const { restaurant, favorites } = this.props;
+    const favoriteId = favorites ? favorites.id : null;
+    if (this.state.isFavorited) {
+      if (favoriteId) {
+        this.props.deleteFavorite(favoriteId).then(() => {
+          this.setState({ isFavorited: false });
+        });
+      }
+    } else {
+      this.props
+        .createFavorite({
+          user_id: this.props.currentUser.id,
+          restaurant_id: this.props.restaurant.id,
+        })
+        .then(() => {
+          this.setState({ isFavorited: true });
+        });
     }
+  }
 
-    // componentDidUpdate(prevProps){
-    //     if(this.props.currentUser !== prevProps.currentUser){
-    //         this.props.getFavorites()
-    //         .then(() => {
-    //             if(this.props.favorites.restaurant_id === this.props.restaurant.id){
-    //                 this.setState({isFavorited: true})
-    //             } else{
-    //                 this.setState({isFavorited: false})
-    //             }
-    //         })
-    //     }
-
-        
-    // }
-
-
-    handleFavorite(e){
-        e.preventDefault(); 
-        const { restaurant } = this.props;
-        if(this.state.isFavorited){
-            this.props.deleteFavorite(this.props.favorite.id).then(() => {
-                this.setState({isFavorited: false})
-            });
-        } else {
-            this.props.createFavorite({
-                user_id: this.props.currentUser.id,
-                restaurant_id: this.props.restaurant.id,
-            }).then(() => {
-                this.setState({isFavorited: true})
-            });
-        }
-     };
-
-
-    render() {
-        const { isFavorited } = this.state;
-        return(
-            <div className='show-page-fave-btn'>
-                <button onClick={this.handleFavorite} className={isFavorited ? 'favorited' : 'not-favorited'}>
-                   {isFavorited ? 'Remove from Favorites' : 'Add to Favorites'}
-                </button>
-
-            </div>
-               
-        )
-    }
-
-        
-    
+  render() {
+    const { isFavorited } = this.state;
+    return (
+      <div className="show-page-fave-btn">
+        <button
+          onClick={this.handleFavorite}
+          className={isFavorited ? "favorited" : "not-favorited"}
+        >
+          {isFavorited ? "Remove from Favorites" : "Add to Favorites"}
+        </button>
+      </div>
+    );
+  }
 }
 
 const mapStateToProps = (state, ownProps) => {
