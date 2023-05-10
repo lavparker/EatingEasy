@@ -41,7 +41,7 @@ function SearchQuery(){
       
 
       {searchQuery && (
-        <>
+        <div className="search-list">
           {filteredRestaurants.map((restaurant) => (
             <div
               className="restaurant-search-index"
@@ -56,7 +56,7 @@ function SearchQuery(){
               </div>
             </div>
           ))}
-        </>
+        </div>
       )}
     </div>
   );

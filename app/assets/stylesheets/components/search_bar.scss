@@ -3,25 +3,50 @@
     margin-right: 49%;
     margin-top: 5%;
     // height: 20%; 
-    font-size: 40px;
-    width: 40%;
+    font-size: 26px;
+    width: 52%;
     border-radius: 4px; 
     border-style: none;
+    padding: 4px; 
 
     // background-color: aqua;
 }
 
+.search-list{
+    // background-color: aqua;
+    z-index: 9999;
+    height: 300px;
+    overflow-y: auto;
+}
 
 .restaurant-search-index{
-    background-color: white;
+    // background-color: blue;
     margin-left: 30%;
     margin-right: 49%;
-    z-index: 20; 
+    // z-index: 9999; 
     // color: black; 
-    width: 40%; 
+    width: 53%; 
+    opacity: 1;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #a4a3a3;
+  
+}
+
+.restaurant-search-name{
+    font-size: 20px;
+    font-weight: 700;
+    color: grayscale($color: #a4a3a3);
+    background-color: whitesmoke;
+    
+    cursor: pointer;
+    line-height: 4rem;
+    // margin-left: 1rem;
+
+
 }
 
 .restaurant-search-name:hover{
-    color: blue;
-    background-color: aqua;
+    color:bisque;
+    background-color: #247f9e;
 }

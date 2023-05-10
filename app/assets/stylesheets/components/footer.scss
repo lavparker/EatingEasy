@@ -31,29 +31,10 @@
 
 }
 
-// .instagram:hover{
-//     animation: shake 2s;
-//     background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
- 
-// }
-
-// .instagram{
-//     background-size: cover;
-//     display: inline-block;
-// }
 
 .instagram:hover {
     animation: shake 2s;
-    background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
-//     background-size: cover;
-//     // display: inline-block;
-    height: 69.04px;
-    width: 69px;
-//     border-top: 10%;
-    border-top-left-radius: 55%;
-    border-bottom-left-radius:55%;
-//     border-bottom-right-radius: -40%;
-    border-top-right-radius: 50%;
+    color: rgb(157, 60, 60);
 }
 
 .email:hover{
@@ -61,17 +42,31 @@
     color: antiquewhite;
 }
 
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials a{
+    margin: 30px 20px;
+}
+
+.socials p{
+    margin: 0 20px;
+}
+
 .connect-footer{
     color: whitesmoke;
     margin-top: 4px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 .pic-of-me{
     cursor: pointer;
-    max-height: 200px;
+    max-height: 100px;
     border-radius: 50%
     
 }

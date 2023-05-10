@@ -49,7 +49,7 @@ const App = () => (
 
     <footer className="footer">
       {/* <div className="outer-socials"> */}
-      {/* <div className="socials"> */}
+      <div className="socials">
         <p className="connect-footer">Connect with me! </p>
 
         <img
@@ -88,7 +88,7 @@ const App = () => (
         <a href="" className="email" target="">
           <FaEnvelope />
         </a>
-      {/* </div> */}
+      </div>
       {/* </div> */}
     </footer>
   </div>
