@@ -3,14 +3,19 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { createFavorite, deleteFavorite, getFavorite, getFavorites } from '../../actions/favorite_actions';
 import { getRestaurant } from '../../actions/restaurant_actions';
+import {FaHeart} from 'react-icons/fa';
+
 class FavoritesCreate extends Component {
   constructor(props) {
     console.log("FAVORITES CREATE PROPS", props);
+
     super(props);
     const { favorite, currentUser, restaurant } = this.props;
+    const isFavorited = localStorage.getItem(restaurant.id) === "true";
     this.state = {
-      // currentUser: this.props.currentUser,
-      isFavorited: false,
+   
+      // isFavorited: false,
+      isFavorited,
       user_id: favorite ? favorite.user_id : currentUser.id,
       restaurant_id: favorite ? favorite.restaurant_id : restaurant.id,
       // user_id: this.props.favorite ? this.props.favorite.user_id : this.props.currentUser.id,
@@ -19,33 +24,30 @@ class FavoritesCreate extends Component {
     this.handleFavorite = this.handleFavorite.bind(this);
   }
 
-  componentDidMount() {
-    if (this.props.currentUser) {
-      this.props.getFavorites().then(() => {
-        const { favorites, restaurant } = this.props;
-        let isFavorited = false;
-        if (Array.isArray(favorites)) {
-          for (let i = 0; i < favorites.length; i++) {
-            if (favorites[i].restaurant_id === restaurant.id) {
-              isFavorited = true;
-              break;
-            }
-          }
-        } else if (favorites && favorites.restaurant_id === restaurant.id) {
-          isFavorited = true;
-        }
-        this.setState({ isFavorited });
+  // componentDidMount() {
+  //   const storedFavorite = localStorage.getItem("favorites");
+  //   if (this.props.currentUser) {
+  //     this.props.getFavorites().then(() => {
+  //       const { favorites, restaurant } = this.props;
+  //       let isFavorited = false;
+  //       if (Array.isArray(favorites)) {
+  //         for (let i = 0; i < favorites.length; i++) {
+  //           if (favorites[i].restaurant_id === restaurant.id) {
+  //             isFavorited = true;
+  //             break;
+  //           }
+  //         }
+  //       } else if (favorites && favorites.restaurant_id === restaurant.id) {
+  //         isFavorited = true;
+  //       }
+  //       this.setState({ isFavorited });
 
-        // if(this.props.favorites.restaurant_id === this.props.restaurant.id){
-        //     this.setState({isFavorited: true})
-        // } else{
-        //     this.setState({isFavorited: false})
-        // }
-      });
-    }
-  }
+  
+  //     });
+  //   }
+  // }
 
-  // componentDidUpdate(prevProps){
+  // componentDidUpdate(prevProps, prevState){
   //     if(this.props.currentUser !== prevProps.currentUser){
   //         this.props.getFavorites()
   //         .then(() => {
@@ -58,6 +60,7 @@ class FavoritesCreate extends Component {
   //     }
 
   // }
+
 
   // handleFavorite(e){
   //     e.preventDefault();
@@ -84,6 +87,7 @@ class FavoritesCreate extends Component {
     if (this.state.isFavorited) {
       if (favoriteId) {
         this.props.deleteFavorite(favoriteId).then(() => {
+          localStorage.setItem(restaurant.id, false);
           this.setState({ isFavorited: false });
         });
       }
@@ -94,6 +98,7 @@ class FavoritesCreate extends Component {
           restaurant_id: this.props.restaurant.id,
         })
         .then(() => {
+          localStorage.setItem(restaurant.id, true);
           this.setState({ isFavorited: true });
         });
     }
@@ -101,6 +106,7 @@ class FavoritesCreate extends Component {
 
   render() {
     const { isFavorited } = this.state;
+    console.log("favorited?", this.state.isFavorited);
     return (
       <div className="show-page-fave-btn">
         <button
@@ -108,6 +114,10 @@ class FavoritesCreate extends Component {
           className={isFavorited ? "favorited" : "not-favorited"}
         >
           {isFavorited ? "Remove from Favorites" : "Add to Favorites"}
+          &nbsp;{" "}
+          <FaHeart
+            className={isFavorited ? "favorited-heart" : "not-favorited-heart"}
+          />
         </button>
       </div>
     );

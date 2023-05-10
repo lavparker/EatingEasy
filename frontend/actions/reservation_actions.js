@@ -4,8 +4,8 @@ export const RECEIVE_ALL_RESERVATIONS = "RECEIVE_ALL_RESERVATIONS";
 export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const UPDATE_RESERVATION = "UPDATE_RESERVATION";
 export const REMOVE_RESERVATION = "REMOVE_RESERVATION"; 
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS"; 
-export const REMOVE_ERRORS = "REMOVE_ERRORS";
+export const RECEIVE_RESERVATION_ERRORS = "RECEIVE_RESERVATION_ERRORS"; 
+export const CLEAR_RESERVATION_ERRORS = "CLEAR_RESERVATION_ERRORS";
 export const RECEIVE_CONFIRMATION = "RECEIVE_CONFIRMATION"; 
 export const REMOVE_CONFIRMATION = "REMOVE_CONFIRMATION"; 
 
@@ -28,6 +28,15 @@ const receiveConfirmation = () => ({
     type: RECEIVE_CONFIRMATION
 })
 
+const receiveReservationErrors = errors =>({
+    type: RECEIVE_RESERVATION_ERRORS,
+    errors
+})
+
+export const clearReservationErrors = () =>({
+    type: CLEAR_RESERVATION_ERRORS
+
+})
 
 
 const removeReservation = reservationId =>({
@@ -39,9 +48,6 @@ export const removeConfirmation = () =>({
     type: REMOVE_CONFIRMATION
 })
 
-export const removeErrors = () =>({
-    type: REMOVE_ERRORS
-})
 
 export const getReservations = () => dispatch =>(
     APIUtil.getReservations()
@@ -60,7 +66,8 @@ export const createReservation = reservation => dispatch =>{
         APIUtil.createReservation(reservation)
         .then(reservation => {
             // dispatch(receiveConfirmation());
-            dispatch(receiveReservation(reservation));
+            dispatch(receiveReservation(reservation)), 
+            err => (dispatch(receiveReservationErrors(err.responseJSON)));
         })
     )
 }

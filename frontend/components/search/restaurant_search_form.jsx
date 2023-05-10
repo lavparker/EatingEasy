@@ -1,5 +1,6 @@
 import { React, useState} from 'react'; 
 import { useSelector, useDispatch } from "react-redux";
+import HiMagnifyingGlass from 'react-icons/hi';
 
 function RestaurantSearchForm(){
     const [restaurantNames, setRestaurantNames] = useState([]); 
@@ -27,31 +28,38 @@ function RestaurantSearchForm(){
         setQuery(""); 
     }
 
-    return(
-        <div className='search-bar'>
-            <div className='input-search'>
-                <input 
-                    type="text"
-                    placeholder='Search...'
-                    value={query}
-                    onchange={searchFilter} 
-                />
-            </div>
-
-            {restaurantNames.length != 0 && (
-                <div className='search-results'>
-                    { restaurantNames.slice(0, 15).map((value, key) =>{
-                        return(
-                            <a className="restaurant-search-item" href={value.id} target="_blank">
-                                {value.name}
-                            </a>
-                        )
-                    })}
-                </div>
-            ) }
-
+    return (
+      <div className="search-bar">
+        <div className="input-search">
+          <input
+            type="text"
+            placeholder="SearchRestaurants..."
+            value={query}
+            onchange={searchFilter}
+            
+          />
+          <div className="search-icon">
+            <HiMagnifyingGlass />
+          </div>
         </div>
-    )
+
+        {restaurantNames.length != 0 && (
+          <div className="search-results">
+            {restaurantNames.slice(0, 15).map((value, key) => {
+              return (
+                <a
+                  className="restaurant-search-item"
+                  href={value.id}
+                  target="_blank"
+                >
+                  {value.name}
+                </a>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
 
 }
 

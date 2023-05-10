@@ -67,7 +67,7 @@ class RestaurantShow extends React.Component {
           {/* <button className="show-page-fave-btn">
             <FaHeart /> favorite this restaurant{" "}
           </button> */}
-          <FavoritesCreate restaurant={this.props.restaurant}/>
+          <FavoritesCreate restaurant={this.props.restaurant} />
         </div>
 
         <div className="show-page-gen-res">
@@ -82,9 +82,6 @@ class RestaurantShow extends React.Component {
                   <button className="res-reviews-btn">Reviews</button>
                 </a>
               </li>
-              {/* <li>
-                                <button className="res-reviews-btn">Reviews</button>
-                            </li> */}
             </ul>
             {/* <p>Overview reviews</p> */}
           </div>
@@ -93,6 +90,7 @@ class RestaurantShow extends React.Component {
             <header className="show-page-res-name">
               {this.props.restaurant.name}
             </header>
+
             <h1 className="res-over">Overview</h1>
             <ul className="res-info">
               <li className="res-stars">
@@ -189,39 +187,20 @@ class RestaurantShow extends React.Component {
                 {this.props.restaurant.dining_style}
               </div>
             </li>
-            <div id="to-reviews">
+
+            <div id="to-reviews" className="show-page-res-reviews">
               <h1>Reviews</h1>
-              {/* <p>See what others are saying:</p> */}
-              <ul>
-                {/* {this.props.reviews?.map(review =>(
-                  console.log('we are inthe restaurant container')
-
-                ))} */}
-                <ReviewIndexContainer/>
-              </ul>
-
-              {/* {this.props.reviews.map((review) =>( */}
-                {/* <ReviewItem 
-                  key={reviews.id}
-                  reviews={reviews}
-                  deleteReview={this.props.deleteReview}
-                /> */}
-              {/* // ))} */}
-              {/* <ReviewIndex restaurant={this.props.restaurant} /> */}
+              <div>
+                <ReviewIndexContainer />
+              </div>
             </div>
-
-            {/* <h1 id="reviews-btn" className="res-review">
-                  Reviews
-                </h1> */}
           </div>
         </div>
-
+        
         <div className="res-form">
-
           <ReservationFormContainer restaurant={this.props.restaurant} />
         </div>
 
-        
       </div>
     );
   }

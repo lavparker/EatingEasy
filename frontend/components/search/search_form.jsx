@@ -2,7 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from 'react-router-dom'; 
 import { useSelector } from "react-redux";
-import FaSearch from 'react-icons/fa';
+import {FaSearch} from 'react-icons/fa';
+// import HiMagnifyingGlass from "react-icons/hi";
+
 
 function SearchQuery(){
   const [searchQuery, setSearchQuery] = useState(''); 
@@ -34,9 +36,10 @@ function SearchQuery(){
         type="text"
         value={searchQuery}
         onChange={handleSearch}
-        placeholder="Search..."
+        placeholder="Search Restaurants..."
       />
-     
+      
+
       {searchQuery && (
         <>
           {filteredRestaurants.map((restaurant) => (
@@ -47,7 +50,7 @@ function SearchQuery(){
             >
               <div
                 className="restaurant-search-name"
-                onClick={() => handleRestaurantClick({restaurant})}
+                onClick={() => handleRestaurantClick({ restaurant })}
               >
                 {restaurant.name}
               </div>
