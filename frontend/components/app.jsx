@@ -65,7 +65,7 @@ const App = () => (
           <FaGithub />
         </a>
         <a
-          href="www.linkedin.com/in/laviniaparker"
+          href="https://www.linkedin.com/in/laviniaparker"
           className="linkedin"
           target="_blank"
         >
@@ -85,7 +85,7 @@ const App = () => (
         >
           <FaInstagram />
         </a>
-        <a href="" className="email" target="">
+        <a href="mailto:lavinia.parker@outlook.com?subject=Job Interview for {insert position and company here} &body=Hi La Vinia,%0D%0A%0D%0AI saw your project and would like to request a call with you for the {position} at {Company Name}. Please let me know if there is availability in your schedule to discuss your qualifications further.%0D%0A%0D%0AThank you, %0D%0A%0D%0A%0D%0AYour Name" className="email" target="">
           <FaEnvelope />
         </a>
       </div>
