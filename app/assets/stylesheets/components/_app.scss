@@ -19,16 +19,37 @@
     text-shadow: black;
 }
 
-footer div {
+// footer div {
+//     display: flex;
+//     position: relative;
+//     background-color: #427492;
+//     align-items: center;
+//     justify-content: space-around;
+//     // margin-top: 200%;
+//     padding: 70px;
+//     height: 20%;
+//     position: relative;
+// }
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+footer{
     display: flex;
-    position: relative;
+    // position: absolute; 
+    width: 100%;
+    // position: absolute;
+    // margin-top: 200%;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #427492;
-    align-items: center;
     justify-content: space-around;
-    margin-top: 200%;
-    padding: 70px;
-    height: 20%;
-    position: relative;
+    align-items: center;
 }
 
 

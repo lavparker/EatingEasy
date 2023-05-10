@@ -12,10 +12,10 @@ const mainPage = () =>(
             <SearchQuery/>
           
         </div>
-        <div className="res-index-container">
+        {/* <div className="res-index-container">
             <RestaurantIndexContainer/>
             
-        </div>       
+        </div>        */}
        
     </div>
          
