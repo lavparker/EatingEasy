@@ -31,14 +31,37 @@
 
 }
 
-.instagram:hover{
+// .instagram:hover{
+//     animation: shake 2s;
+//     background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
+ 
+// }
+
+// .instagram{
+//     background-size: cover;
+//     display: inline-block;
+// }
+
+.instagram:hover {
     animation: shake 2s;
     background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
-    // border-bottom-left-radius:100%;
-    // border-bottom-right-radius: -100%;
-    // border-top-left-radius: 100%;
-    // border-top-right-radius: 100%;
+//     background-size: cover;
+//     // display: inline-block;
+    height: 69.04px;
+    width: 69px;
+//     border-top: 10%;
+    border-top-left-radius: 55%;
+    border-bottom-left-radius:55%;
+//     border-bottom-right-radius: -40%;
+    border-top-right-radius: 50%;
 }
+
+// .instagram:hover {
+//     background-clip: content-box;
+//     background-image: linear-gradient(to bottom right, purple, red, orange, yellow);
+//     -webkit-background-clip: content-box;
+//     -webkit-text-fill-color: transparent;
+// }
 
 @keyframes shake {
     10%{
