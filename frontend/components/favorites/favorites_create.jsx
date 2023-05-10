@@ -13,7 +13,6 @@ class FavoritesCreate extends Component {
     const { favorite, currentUser, restaurant } = this.props;
     const isFavorited = localStorage.getItem(restaurant.id) === "true";
     this.state = {
-   
       // isFavorited: false,
       isFavorited,
       user_id: favorite ? favorite.user_id : currentUser.id,
@@ -22,6 +21,27 @@ class FavoritesCreate extends Component {
       // restaurant_id: this.props.favorite ? this.props.favorite.restaurant_id : this.props.restaurant.id,
     };
     this.handleFavorite = this.handleFavorite.bind(this);
+  }
+
+  componentDidMount() {
+    const storedFavorite = localStorage.getItem("favorites");
+    if (this.props.currentUser) {
+      this.props.getFavorites().then(() => {
+        const { favorites, restaurant } = this.props;
+        let isFavorited = false;
+        if (Array.isArray(favorites)) {
+          for (let i = 0; i < favorites.length; i++) {
+            if (favorites[i].restaurant_id === restaurant.id) {
+              isFavorited = true;
+              break;
+            }
+          }
+        } else if (favorites && favorites.restaurant_id === restaurant.id) {
+          isFavorited = true;
+        }
+        this.setState({ isFavorited });
+      });
+    }
   }
 
   // componentDidMount() {
@@ -42,48 +62,20 @@ class FavoritesCreate extends Component {
   //       }
   //       this.setState({ isFavorited });
 
-  
   //     });
   //   }
   // }
-
-  // componentDidUpdate(prevProps, prevState){
-  //     if(this.props.currentUser !== prevProps.currentUser){
-  //         this.props.getFavorites()
-  //         .then(() => {
-  //             if(this.props.favorites.restaurant_id === this.props.restaurant.id){
-  //                 this.setState({isFavorited: true})
-  //             } else{
-  //                 this.setState({isFavorited: false})
-  //             }
-  //         })
-  //     }
-
-  // }
-
-
-  // handleFavorite(e){
-  //     e.preventDefault();
-  //     const { restaurant, favorites } = this.props;
-  //     const favoriteId = favorites ? favorites.id : null;
-  //     if(this.state.isFavorited){
-  //         this.props.deleteFavorite(favoriteId).then(() => {
-  //             this.setState({isFavorited: false})
-  //         });
-  //     } else {
-  //         this.props.createFavorite({
-  //             user_id: this.props.currentUser.id,
-  //             restaurant_id: this.props.restaurant.id,
-  //         }).then(() => {
-  //             this.setState({isFavorited: true})
-  //         });
-  //     }
-  //  };
-
   handleFavorite(e) {
     e.preventDefault();
-    const { restaurant, favorites } = this.props;
-    const favoriteId = favorites ? favorites.id : null;
+    const { restaurant, favorite } = this.props;
+    const favoriteId = favorite ? favorite.id : null;
+    // console.log("THE FAVORITEID IS", favoriteId);
+    console.log("THE FAVORITE IS", this.props.favorites.id);
+    console.log("THE FAVORITE IS", this.props.favorite);
+
+    console.log("THE RESTAURANT IS", restaurant);
+    console.log("IS FAVORITED", this.state.isFavorited)
+    console.log("FAVORITE ID", favoriteId)
     if (this.state.isFavorited) {
       if (favoriteId) {
         this.props.deleteFavorite(favoriteId).then(() => {
@@ -103,6 +95,33 @@ class FavoritesCreate extends Component {
         });
     }
   }
+
+  // handleFavorite(e) {
+  //   e.preventDefault();
+  //   const { restaurant, favorite } = this.props;
+  //   const favoriteId = favorite ? favorite.id : null;
+  //   // console.log("THE FAVORITEID IS", favoriteId);
+  //   console.log("THE FAVORITE IS", this.props.favorites.id);
+  //   console.log("THE RESTAURANT IS", restaurant);
+  //   if (this.state.isFavorited) {
+  //     if (favoriteId) {
+  //       this.props.deleteFavorite(favoriteId).then(() => {
+  //         localStorage.setItem(restaurant.id, false);
+  //         this.setState({ isFavorited: false });
+  //       });
+  //     }
+  //   } else {
+  //     this.props
+  //       .createFavorite({
+  //         user_id: this.props.currentUser.id,
+  //         restaurant_id: this.props.restaurant.id,
+  //       })
+  //       .then(() => {
+  //         localStorage.setItem(restaurant.id, true);
+  //         this.setState({ isFavorited: true });
+  //       });
+  //   }
+  // }
 
   render() {
     const { isFavorited } = this.state;
@@ -147,13 +166,15 @@ const mapStateToProps = (state, ownProps) => {
 
 }
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => (
+  console.log("I AM IN THE FAVORITES CREATE CONTAINER"),
+  {
     getFavorite: (favoriteId) => dispatch(getFavorite(favoriteId)),
     getFavorites: () => dispatch(getFavorites()),
     getRestaurant: (restaurantId) => dispatch(getRestaurant(restaurantId)),
     createFavorite: (favorite) => dispatch(createFavorite(favorite)),
     deleteFavorite: (favoriteId) => dispatch(deleteFavorite(favoriteId)),
-
-})
+  }
+);
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FavoritesCreate));

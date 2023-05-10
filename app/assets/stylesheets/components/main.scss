@@ -216,15 +216,20 @@
 }
 
 .num-res{
-    font-size: 10px;
+    font-size: .750rem;
     color: black;
+}
+
+.res-stars {
+    color: gray;
+    font-size: 10px;
 }
 
 .chart-line{
     // size: 8px;
     color: black;
-    height: 10px;
-    width: 10px;
+    height: 12px;
+    width: 12px;
 }
 .main-header{
     // display: flex;
