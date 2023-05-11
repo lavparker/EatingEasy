@@ -19,10 +19,12 @@ class ReviewIndexItem extends React.Component{
     
 
     render(){
-        const { reviews } = this.props; 
+        const { review } = this.props; 
         const { reservation } = this.props;
         const { currentUser } = this.props;
-  
+        console.log("THESE ARE THE REVIEW PROPS", review); 
+
+        if (!review) return null;
 
         // let currentUserId = session.id;
       
@@ -47,7 +49,7 @@ class ReviewIndexItem extends React.Component{
                 <li className="review-value">Value: {reviews.value_rating}</li>
                 <li className="review-body">{reviews.body}</li>
               </ul>
-              {reviews.user_id === currentUser.id && (
+              {reviews && reviews.user_id === currentUser.id && (
                 <div className="review-res-buttons">
                   <button
                     className="delete-res"

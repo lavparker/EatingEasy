@@ -16,8 +16,10 @@ import ReservationForm from './reservation_form';
 const mapStateToProps = (state, ownProps) =>{
     //mapStateToProps, takes state and makes those parts available as props in the form 
     // debugger
-    let current_user_id = state.session.id
-    let current_user = state.entities.users[current_user_id]
+    let current_user_id = state.session?.id
+    // let current_user = state.entities.users[current_user_id]
+
+    let current_user = current_user_id ? state.entities.users[current_user_id] : null;
 
 
     let resId = null 
@@ -27,13 +29,13 @@ const mapStateToProps = (state, ownProps) =>{
     }
 
     return({
-        currentUser: {
+        currentUser: current_user ? {
             id: current_user.id,
             phone_number: "2002000200",
             first_name: current_user.first_name,
             last_name: current_user.last_name,
             email: current_user.email
-        },
+        }: null,
         
         restaurant_id: ownProps.restaurant.id,
         reservation_id: state.entities.reservations.id,

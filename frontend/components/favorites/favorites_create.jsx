@@ -6,26 +6,40 @@ import { getRestaurant } from '../../actions/restaurant_actions';
 import {FaHeart} from 'react-icons/fa';
 
 class FavoritesCreate extends Component {
-  constructor(props) {
-    console.log("FAVORITES CREATE PROPS", props);
+  // constructor(props) {
+  //   console.log("FAVORITES CREATE PROPS", props);
 
+  //   super(props);
+  //   const { favorite, currentUser, restaurant } = this.props;
+  //   const isFavorited = restaurant && localStorage.getItem(restaurant.id) === "true";
+  //   this.state = {
+  //     // isFavorited: false,
+  //     isFavorited,
+  //     user_id: favorite ? favorite.user_id : currentUser.id,
+  //     restaurant_id: favorite ? favorite.restaurant_id : restaurant && restaurant.id,
+  //     // user_id: this.props.favorite ? this.props.favorite.user_id : this.props.currentUser.id,
+  //     // restaurant_id: this.props.favorite ? this.props.favorite.restaurant_id : this.props.restaurant.id,
+  //   };
+  //   this.handleFavorite = this.handleFavorite.bind(this);
+  // }
+  constructor(props) {
     super(props);
     const { favorite, currentUser, restaurant } = this.props;
-    const isFavorited = localStorage.getItem(restaurant.id) === "true";
+    const isFavorited = restaurant && localStorage.getItem(restaurant.id) === "true";
+
     this.state = {
-      // isFavorited: false,
       isFavorited,
-      user_id: favorite ? favorite.user_id : currentUser.id,
-      restaurant_id: favorite ? favorite.restaurant_id : restaurant.id,
-      // user_id: this.props.favorite ? this.props.favorite.user_id : this.props.currentUser.id,
-      // restaurant_id: this.props.favorite ? this.props.favorite.restaurant_id : this.props.restaurant.id,
+      user_id: favorite ? favorite.user_id : (currentUser && currentUser.id ? currentUser.id : null),
+      restaurant_id: favorite
+        ? favorite.restaurant_id
+        : restaurant && restaurant.id,
     };
     this.handleFavorite = this.handleFavorite.bind(this);
   }
 
   componentDidMount() {
     const storedFavorite = localStorage.getItem("favorites");
-    if (this.props.currentUser) {
+    if (this.props.currentUser && this.props.restaurant) {
       this.props.getFavorites().then(() => {
         const { favorites, restaurant } = this.props;
         let isFavorited = false;
@@ -67,16 +81,19 @@ class FavoritesCreate extends Component {
   // }
   handleFavorite(e) {
     e.preventDefault();
-    const { restaurant, favorite } = this.props;
+    const { restaurant, favorite, currentUser } = this.props;
+    if(!restaurant){
+      return;
+    }
     const favoriteId = favorite ? favorite.id : null;
     // console.log("THE FAVORITEID IS", favoriteId);
     console.log("THE FAVORITE IS", this.props.favorites.id);
     console.log("THE FAVORITE IS", this.props.favorite);
 
     console.log("THE RESTAURANT IS", restaurant);
-    console.log("IS FAVORITED", this.state.isFavorited)
-    console.log("FAVORITE ID", favoriteId)
-    if (this.state.isFavorited) {
+    console.log("IS FAVORITED", this.state.isFavorited);
+    console.log("FAVORITE ID", favoriteId);
+    if (favorite && this.state.isFavorited) {
       if (favoriteId) {
         this.props.deleteFavorite(favoriteId).then(() => {
           localStorage.setItem(restaurant.id, false);
@@ -86,8 +103,8 @@ class FavoritesCreate extends Component {
     } else {
       this.props
         .createFavorite({
-          user_id: this.props.currentUser.id,
-          restaurant_id: this.props.restaurant.id,
+          user_id: currentUser.id,
+          restaurant_id: restaurant.id,
         })
         .then(() => {
           localStorage.setItem(restaurant.id, true);
@@ -144,24 +161,29 @@ class FavoritesCreate extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    let current_user_id = state.session.id
-    let current_user = state.entities.users[current_user_id]
+    let current_user_id = state.session?.id
+    // let current_user = state.entities.users[current_user_id]
+    let current_user = current_user_id
+      ? state.entities.users[current_user_id]
+      : null;
+
     // let user_id = state.entities.users.id
     // let user = state.entities.users[user_id]
     return {
-      currentUser: {
-        id: current_user.id,
-        phone_number: "2002000200",
-        first_name: current_user.first_name,
-        last_name: current_user.last_name,
-        email: current_user.email,
-      },
+      currentUser: current_user
+        ? {
+            id: current_user.id,
+            phone_number: "2002000200",
+            first_name: current_user.first_name,
+            last_name: current_user.last_name,
+            email: current_user.email,
+          }
+        : null,
       //   currentUser: state.session.currentUser,
-      user_id: current_user.id,
+      // user_id: current_user.id,
       restaurants: Object.values(state.entities.restaurants),
       restaurant_id: ownProps.restaurant.id,
       favorites: Object.values(state.entities.favorites),
-
     };
 
 }
