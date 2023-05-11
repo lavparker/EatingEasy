@@ -65,7 +65,7 @@ class Login extends React.Component{
                   <br />
                   <h2 className="sign-up">Login Here!</h2>
                   <br />
-                  <p>{this.renderErrors()}</p>
+                  <div className="render-errors">{this.renderErrors()}</div>
                 <br />
                 <br />
                 <label> 

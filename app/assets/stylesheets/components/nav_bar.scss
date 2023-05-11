@@ -36,6 +36,11 @@
     cursor: pointer;
 }
 
+.signin-btn:hover{
+    background-color: rgb(214, 194, 168);
+    border-color: rgb(214, 194, 168);
+}
+
 .signup-btn {
     background-color: #247f9e;
     color: antiquewhite;
@@ -47,10 +52,12 @@
     cursor: pointer;
 }
 
-// .signin-btn:hover{
-//     background-color: #247f9e;
-// color: antiquewhite;
-// }
+
+
+.signup-btn:hover{
+    background-color: #0f4e63;
+    border-color: #0f4e63;
+}
 
 // .signup-btn:hover{
 //     // background-color: antiquewhite;
@@ -70,6 +77,12 @@
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #0f4e63;
+    border-color: #0f4e63;
+
 }
 
 .signup-btn-mod {

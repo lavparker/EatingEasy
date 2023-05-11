@@ -72,92 +72,87 @@ class Signup extends React.Component{
     };
 
     render() {
-        return(
+        return (
+          <div className="signup-box">
+            <form onSubmit={this.handleSubmit} className="session-form">
+              <div onClick={this.props.closeModal} className="close-modal">
+                X
+              </div>
+              <h2 className="modal-welcome">Welcome to Eating Easy!</h2>
 
-            <div className='signup-box'>
-                
-                <form onSubmit={this.handleSubmit} className="session-form">
-                    <div onClick={this.props.closeModal} className="close-modal">X</div>
-                    <h2 className="modal-welcome">Welcome to Eating Easy!</h2>
-                    
-                    <br />
-                    <br />
-                    <h2 className="sign-up">Sign up below!</h2>
-                    <br />
-                    <p>{this.renderErrors()}</p>
-                    
-                    <br />
+              <br />
+              <br />
+              <h2 className="sign-up">Sign up below!</h2>
+              <br />
+              <div className="render-errors">{this.renderErrors()}</div>
 
-                        <input 
-                            className="input-signinup"
-                            type="text"
-                            placeholder = "First Name"
-                            value= {this.state.firstName}
-                            onChange={this.handleInput('firstName')}
-                            
-                             />
-                    <br />
-                    <br />
-                        <input
-                            className="input-signinup"
-                            type="text"
-                            placeholder= "Last Name"
-                            value={this.state.lastName}
-                            onChange={this.handleInput('lastName')}
-                            
-                        />
-                    <br />
-                    <br />
-                        <input
-                            className="input-signinup"
-                            type="text"
-                            placeholder="Username"
-                            value={this.state.username}
-                            onChange={this.handleInput('username')}
-                            
-                        />
-                    <br />
-                    <br />
-                        <input
-                            className="input-signinup"
-                            type="phoneNumber"
-                            placeholder="Phone Number"
-                            value={this.state.phoneNumber}
-                            onChange={this.handleInput('phoneNumber')}
-                            
-                        />
-                    <br />
-                    <br />
-                        <input
-                            className="input-signinup"
-                            type="text"
-                            placeholder="Email"
-                            value={this.state.email}
-                            onChange=  {this.handleInput('email')}
-                            
-                        />
-                    <br />
-                    <br />
-                        <input
-                            className="input-signinup"
-                            type="password"
-                            placeholder="Password"
-                            value={this.state.password}
-                            onChange={this.handleInput('password')}
-                            
-                        />
-                    <br />
-                    
-                    {/* <br /> */}
+              <br />
 
-                   <button className="session-btn-mod" onClick={this.handleSubmit}> Sign Up Here!</button>
-                    <br />
-                    {/* {this.renderErrors()} */}
+              <input
+                className="input-signinup"
+                type="text"
+                placeholder="First Name"
+                value={this.state.firstName}
+                onChange={this.handleInput("firstName")}
+              />
+              <br />
+              <br />
+              <input
+                className="input-signinup"
+                type="text"
+                placeholder="Last Name"
+                value={this.state.lastName}
+                onChange={this.handleInput("lastName")}
+              />
+              <br />
+              <br />
+              <input
+                className="input-signinup"
+                type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.handleInput("username")}
+              />
+              <br />
+              <br />
+              <input
+                className="input-signinup"
+                type="phoneNumber"
+                placeholder="Phone Number"
+                value={this.state.phoneNumber}
+                onChange={this.handleInput("phoneNumber")}
+              />
+              <br />
+              <br />
+              <input
+                className="input-signinup"
+                type="text"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.handleInput("email")}
+              />
+              <br />
+              <br />
+              <input
+                className="input-signinup"
+                type="password"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.handleInput("password")}
+              />
+              <br />
 
-                </form>
+              {/* <br /> */}
 
-            </div>
-        )
+              <button className="session-btn-mod" onClick={this.handleSubmit}>
+                {" "}
+                Sign Up Here!
+              </button>
+              <br />
+              {/* {this.renderErrors()} */}
+            </form>
+          </div>
+        );
     }
 };
 
