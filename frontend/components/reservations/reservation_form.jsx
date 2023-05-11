@@ -170,6 +170,9 @@ class ReservationForm extends React.Component {
 
   render() {
     const num = this.getRandomInt(2, 1000);
+    const { restaurant } = this.props;
+    const { reservation } = this.props;
+    
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-main">
