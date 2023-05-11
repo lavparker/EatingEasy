@@ -13,9 +13,9 @@ import {
 } from "react-icons/fa";
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import StarRatings from "react-star-ratings";
-import ReviewIndexContainer from "../reviews/review_index_container"
+import ReviewIndexContainer from "../reviews/review_index_container"; 
 import FavoritesCreate from "../favorites/favorites_create";
-
+import { HashLink} from 'react-router-hash-link';
 
 
 class RestaurantShow extends React.Component {
@@ -52,7 +52,7 @@ class RestaurantShow extends React.Component {
 
   render() {
     if (!this.props.restaurant) {
-      return <h1>Loading!</h1>;
+      return <h1 className="res-loadng">Loading!</h1>;
     }
     // let review;
     let stars = this.randStars(1, 6);
@@ -74,13 +74,17 @@ class RestaurantShow extends React.Component {
           <div className="show-page-res-info-bar">
             <ul>
               <li>
-                <button id="overview" className="res-overview-btn">
-                  Overview{" "}
-                </button>
+                <HashLink to="#res-over">
+                  <button id="overview" className="res-overview-btn">
+                    Overview{" "}
+                  </button>
+                </HashLink>
                 {/* <p className="line-break">|</p> */}
-                <a href="#to-reviews">
+                {/* <a href="#to-reviews"> */}
+                <HashLink to="#reviews-index">
                   <button className="res-reviews-btn">Reviews</button>
-                </a>
+                </HashLink>
+                {/* </a> */}
               </li>
             </ul>
             {/* <p>Overview reviews</p> */}
@@ -91,7 +95,7 @@ class RestaurantShow extends React.Component {
               {this.props.restaurant.name}
             </header>
 
-            <h1 className="res-over">Overview</h1>
+            <h1 id="res-over" className="res-over">Overview</h1>
             <ul className="res-info">
               <li className="res-stars">
                 <StarRatings
@@ -189,18 +193,17 @@ class RestaurantShow extends React.Component {
             </li>
 
             <div id="to-reviews" className="show-page-res-reviews">
-              <h1>Reviews</h1>
+              {/* <h1>Reviews</h1> */}
               <div>
-                <ReviewIndexContainer />
+                <ReviewIndexContainer restaurant={this.props.restaurant} />
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="res-form">
           <ReservationFormContainer restaurant={this.props.restaurant} />
         </div>
-
       </div>
     );
   }

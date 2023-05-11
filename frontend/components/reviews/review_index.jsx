@@ -21,16 +21,21 @@ class ReviewIndex extends React.Component{
       const { reviews } = this.props;
 
         return (
-          <div className="reviews-index">
+          <div id="reviews-index" className="reviews-index">
             <h2>What people are saying:</h2>
-          
+
             <ul className="res-reviews">
-             
-              {this.props.reviews.map((review) => (
-                review.restaurant_id === restaurants.id ?
-                <ReviewIndexItem reviews ={review} key={review.id} updateReview={this.props.updateReview} deleteReview={this.props.deleteReview} currentUser={this.props.currentUser}/> : null
-              ))}
-            
+              {this.props.reviews.map((review) =>
+                review.restaurant_id === restaurants.id ? (
+                  <ReviewIndexItem
+                    reviews={review}
+                    key={review.id}
+                    updateReview={this.props.updateReview}
+                    deleteReview={this.props.deleteReview}
+                    currentUser={this.props.currentUser}
+                  />
+                ) : null
+              )}
             </ul>
           </div>
         );
