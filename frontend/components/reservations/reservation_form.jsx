@@ -13,11 +13,11 @@ class ReservationForm extends React.Component {
     let year = tdyDate.getFullYear();
     let currentDate = `${month} / ${day} / ${year}`;
     // let currentDate = `${year}-${month}-${day}`;
-
+    let currentTime = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
     this.state = {
       partySize: "2 people",
       date: currentDate,
-      time: "5:00 PM",
+      time: currentTime,
       phoneNumber: this.props.currentUser
         ? this.props.currentUser.phone_number
         : "",
@@ -30,6 +30,7 @@ class ReservationForm extends React.Component {
       restaurantId: this.props.restaurant_id,
       userId: this.props.currentUser ? this.props.currentUser.id : "",
       reservationId: this.props.reservation_id,
+      showConfirmation: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -65,7 +66,9 @@ class ReservationForm extends React.Component {
     };
 
     // const restaurant = this.props.restaurant;
-    this.props.createReservation(reservation);
+    this.props.createReservation(reservation).then(() => {  
+      this.setState({ showConfirmation: true });
+    });
 
     // console.log(this);
 
@@ -172,7 +175,8 @@ class ReservationForm extends React.Component {
     const num = this.getRandomInt(2, 1000);
     const { restaurant } = this.props;
     const { reservation } = this.props;
-    
+    const { showConfirmation } = this.props;
+
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-main">
@@ -289,12 +293,11 @@ class ReservationForm extends React.Component {
           </button>
           <br />
           <br />
-          <div className="res-confirmation">
-            {/* {this.resConfirmation()} */}
-            <br />
-            {/* {this.modifyCancel()} */}
-            {/* {this.cancel()} */}
-          </div>
+          {showConfirmation ? (
+            <div className="reservation-confirmation">
+              Your reservation has been successfully created!
+            </div>
+          ) : null}
 
           <br />
 

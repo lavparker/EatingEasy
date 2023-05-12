@@ -69,6 +69,9 @@ class RestaurantShow extends React.Component {
           </button> */}
           <FavoritesCreate restaurant={this.props.restaurant} />
         </div>
+        <div className="res-form">
+          <ReservationFormContainer restaurant={this.props.restaurant} />
+        </div>
 
         <div className="show-page-gen-res">
           <div className="show-page-res-info-bar">
@@ -95,7 +98,9 @@ class RestaurantShow extends React.Component {
               {this.props.restaurant.name}
             </header>
 
-            <h1 id="res-over" className="res-over">Overview</h1>
+            <h1 id="res-over" className="res-over">
+              Overview
+            </h1>
             <ul className="res-info">
               <li className="res-stars">
                 <StarRatings
@@ -201,9 +206,9 @@ class RestaurantShow extends React.Component {
           </div>
         </div>
 
-        <div className="res-form">
+        {/* <div className="res-form">
           <ReservationFormContainer restaurant={this.props.restaurant} />
-        </div>
+        </div> */}
       </div>
     );
   }

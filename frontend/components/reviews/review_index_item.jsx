@@ -52,7 +52,7 @@ class ReviewIndexItem extends React.Component{
               {reviews && reviews.user_id === currentUser.id && (
                 <div className="review-res-buttons">
                   <button
-                    className="delete-res"
+                    className="delete-rev"
                     onClick={() => this.props.deleteReview(reviews.id)}
                   >
                     <FaRegTrashAlt className="trash-can-btn" /> Delete Review{" "}
