@@ -81,21 +81,22 @@ class FavoritesCreate extends Component {
   // }
   handleFavorite(e) {
     e.preventDefault();
-    const { restaurant, favorite, currentUser } = this.props;
+    const { restaurant, favorite, favorites, currentUser } = this.props;
     if(!restaurant){
       return;
     }
-    const favoriteId = favorite ? favorite.id : null;
+    const favoriteId = favorites ? favorites.id : null;
     // console.log("THE FAVORITEID IS", favoriteId);
-    console.log("THE FAVORITE IS", this.props.favorites.id);
-    console.log("THE FAVORITE IS", this.props.favorite);
+    // console.log("THE FAVORITE id IS", this.props.favorites.id);
+    // console.log("THE FAVORITE IS", this.props.favorite);
 
     console.log("THE RESTAURANT IS", restaurant);
     console.log("IS FAVORITED", this.state.isFavorited);
-    console.log("FAVORITE ID", favoriteId);
+    // console.log("FAVORITE ID", favoriteId);
     if (favorite && this.state.isFavorited) {
       if (favoriteId) {
         this.props.deleteFavorite(favoriteId).then(() => {
+          console.log("FAVORITE DELETED")
           localStorage.setItem(restaurant.id, false);
           this.setState({ isFavorited: false });
         });
@@ -106,7 +107,13 @@ class FavoritesCreate extends Component {
           user_id: currentUser.id,
           restaurant_id: restaurant.id,
         })
-        .then(() => {
+        .then((createdFavorite) => {
+          console.log("CREATED FAVORITE", createdFavorite);
+          //  console.log("THE FAVORITE id IS", this.props.favorite.id);
+           console.log("THE FAVORITE IS", favorite);
+          console.log("FAVORITE ID", favoriteId);
+
+
           localStorage.setItem(restaurant.id, true);
           this.setState({ isFavorited: true });
         });

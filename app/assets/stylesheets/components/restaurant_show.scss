@@ -372,20 +372,23 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
-        gap: 2rem;
-        justify-content: center;
-        box-shadow: 0 1px 1px;
-        // margin: 5px 5px 5px 5px;
+    gap: 2rem;
+    justify-content: center;
+    // box-shadow: 0 1px 1px;
+    // margin: 5px 5px 5px 5px;
         margin-top: 2rem;
         // padding: 7px;
         font-size: 16px;
         flex-direction: row;
-        border-color: gray;
+        // border-color: gray;
         width: 100%;
         height: auto;
         color: black;
-        border-width: 2px;
-        border-radius: 2px;
+        // border-bottom: gray;
+    border-bottom: 1px solid rgba(14, 12, 62, 0.3);
+        // border-style: solid;
+        // border-width: 2px;
+        // border-radius: 2px;
         cursor: pointer;
 }
 
