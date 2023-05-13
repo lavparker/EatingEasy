@@ -16,3 +16,32 @@
     font-weight: 200;
 }
 
+.review-update-form{
+    margin-left: 35%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+    font-size: 20px;
+    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+
+.rev-body{
+    margin-left: -30%;
+    margin-right: 70%;
+    // background-color:aqua;
+}
+
+.submit-review-btn{
+    margin-left: 20%;
+    margin-right: 49%;
+    height: 90px;
+    width: 150px;
+}
+
+.submit-review-btn:hover{
+   
+    color: antiquewhite;
+    background-color: #0f4e63;
+    border-color: #0f4e63;
+    cursor: pointer;
+}

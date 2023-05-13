@@ -23,7 +23,7 @@ class ReviewIndexItem extends React.Component{
         const { reservation } = this.props;
         const { currentUser } = this.props;
         // console.log("THESE ARE THE REVIEW PROPS", reviews); 
-
+        // console.log("THE USER IS", currentUser)
         if (!reviews) return null;
 
         // let currentUserId = session.id;
@@ -34,9 +34,10 @@ class ReviewIndexItem extends React.Component{
           <div className="review-item-container">
             <div className="review-index-item">
               <ul className="review-details">
-                <li className="current-user">
-                  Restaurant Id (for my reference): {reviews.restaurant_id}
+                <li className="review-firstname">
+                  User initial: {currentUser.first_name[0]}
                 </li>
+                <li className="current-user">Restaurant Id (for my reference): {reviews.restaurant_id}</li>
                 <li className="review-userId">User Id: {reviews.user_id}</li>
                 <li className="review-id">Review Id: {reviews.id}</li>
                 {/* <li className="review-date">Dined on: {reservation.date}</li> */}
