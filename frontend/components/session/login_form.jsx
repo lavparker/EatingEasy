@@ -3,6 +3,8 @@ import React from "react";
 
 class Login extends React.Component{
     constructor(props){
+        console.log("LOGIN PROPS", props)
+        console.log("LOGIN ERRORS", props.errors)
         super(props);
 
         this.state = {

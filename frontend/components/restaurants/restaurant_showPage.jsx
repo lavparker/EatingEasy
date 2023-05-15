@@ -70,7 +70,10 @@ class RestaurantShow extends React.Component {
           <FavoritesCreate restaurant={this.props.restaurant} />
         </div>
         <div className="res-form">
-          <ReservationFormContainer restaurant={this.props.restaurant} />
+          <ReservationFormContainer
+            restaurant={this.props.restaurant}
+            errors={this.props.errors}
+          />
         </div>
 
         <div className="show-page-gen-res">

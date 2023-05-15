@@ -1,15 +1,13 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { withRouter } from 'react-router';
-import { 
-    getReservation, 
-    createReservation,  
-    removeConfirmation, 
-    deleteReservation, 
-    // receiveReservationErrors,
-    clearReservationErrors 
-} 
-    from '../../actions/reservation_actions';
+import {
+  getReservation,
+  createReservation,
+  removeConfirmation,
+  deleteReservation,
+  clearReservationErrors,
+} from "../../actions/reservation_actions";
 import { getRestaurant } from '../../actions/restaurant_actions';
 import ReservationForm from './reservation_form';
 
@@ -40,7 +38,7 @@ const mapStateToProps = (state, ownProps) =>{
         restaurant_id: ownProps.restaurant.id,
         reservation_id: state.entities.reservations.id,
         // resConfirmed: state.ui.reservation.confirmation,
-        errors: state.errors.reservation,
+        errors: state.errors.reservations,
         formType: "New Reservation"
 
     })
@@ -51,9 +49,8 @@ const mapDispatchToProps = dispatch =>({
 
     getReservation: reservationId => dispatch(getReservation(reservationId)),
     createReservation: reservation => dispatch(createReservation(reservation)),
-    deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId)), 
+    deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId)),
     removeConfirmation: () => dispatch(removeConfirmation()),
-    receiveReservationErrors: (errors) => dispatch(receiveReservationErrors(errors)),
     clearReservationErrors: () => dispatch(clearReservationErrors()),
 })
 

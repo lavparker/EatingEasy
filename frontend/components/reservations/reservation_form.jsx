@@ -5,6 +5,9 @@ import ReservationConfirmation from "./reservation_confirmation";
 
 class ReservationForm extends React.Component {
   constructor(props) {
+    console.log("ERRORS", props.errors);
+    console.log("RESERVATION FORM PROPS", props); 
+
     super(props);
 
     const tdyDate = new Date();
@@ -34,12 +37,17 @@ class ReservationForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
     // this.handleCancel = this.handleCancel.bind(this);
   }
 
   // componentWillUnmount() {
   //   this.props.removeConfirmation();
   // }
+
+  componentDidMount() {
+    this.props.clearReservationErrors();
+  }
 
   handleInput(field) {
     return (e) => {
@@ -70,91 +78,12 @@ class ReservationForm extends React.Component {
       this.setState({ showConfirmation: true });
     });
 
-    // console.log(this);
 
-    // this.props.createReservation(reservation)
-    // .then(resy =>{
-    // this.props.history.push({
-    //     pathname: `/reservations/${resy.reservation.reservationId}`,
-    //     state:{
-    //         restaruant: restaurant,
-    //         reservation: resy.reservation
-    //     }
-    // })
-    // console.log(history)
-
-    // })
   }
 
-  // handleModify(){
-
-  // }
-
-  // handleCancel() {
-  //   e.preventDefault();
-  //   e.stopPropagation();
 
 
-  //   this.props
-  //     .deleteReservation(this.props.reservation_id)
-  //     .then((res) => this.cancelConfirmation(res));
-  //   // this.cancelConfirmation();
-  // }
 
-  // resConfirmation(){
-  //         if(!this.props.resConfirmed) return null;
-
-  //         return(
-  //             <div>
-  //                 <h2 className="res-confirmed"> <FaCheckCircle className="res-conf-icon"/> &nbsp; Reservation Confirmed</h2>
-  //             </div>
-  //         )
-  // }
-
-  // cancelConfirmation() {
-  //   if (this.props.reservation === undefined) return null;
-  //   return (
-  //     <div>
-  //       <h2 className="del-confirmed">
-  //         {" "}
-  //         <FaCheckCircle className="res-conf-icon" /> &nbsp; This reservation
-  //         has been cancelled{" "}
-  //       </h2>
-  //     </div>
-  //   );
-  // }
-
-  // modify(){
-  //     if(!this.props.resConfirmed) return null;
-  //     return(
-  //         <div>
-  //             <button className="modify-btn">
-  //                 Modify
-  //             </button>
-  //         </div>
-  //     )
-  // }
-
-
- 
-
-  // modifyCancel() {
-  //   // debugger
-  //   if (!this.props.reservation_id) return null;
-
-  //   return (
-  //     <div className="modify-cancel">
-  //       <button className="modify-btn"> Modify </button> |{" "}
-  //       <button onClick={this.handleCancel} className="cancel-btn">
-  //         {" "}
-  //         Cancel{" "}
-  //       </button>
-  //       {/* {this.cancelConfirmation()} */}
-  //     </div>
-  //   );
-  // }
-
-  // handleUpdate()
   getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -162,10 +91,16 @@ class ReservationForm extends React.Component {
   }
 
   renderErrors() {
+    if(!this.props.errors){
+      return null;
+    }
+    console.log("PROPS", this.props);
+    console.log("ERRORS", this.props.errors)
     return (
+       
       <ul className="res-errors">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}> {error} </li>
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`}> {error} </li>
         ))}
       </ul>
     );
@@ -176,7 +111,7 @@ class ReservationForm extends React.Component {
     const { restaurant } = this.props;
     const { reservation } = this.props;
     const { showConfirmation } = this.props;
-
+    const { errors } = this.props;
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-main">
@@ -306,7 +241,7 @@ class ReservationForm extends React.Component {
             <FaChartLine size={25} /> &nbsp; Booked {num} times today{" "}
           </p>
 
-          {this.renderErrors()}
+          <div>{this.renderErrors()}</div>
         </form>
       </div>
     );

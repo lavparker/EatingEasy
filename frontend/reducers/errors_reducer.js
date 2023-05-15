@@ -5,7 +5,7 @@ import reviewsErrorsReducer from "./reviews_errors_reducer";
 
 const errorsReducer = combineReducers({
     session: sessionErrorsReducer,
-    reservation: reservationErrorsReducer,
+    reservations: reservationErrorsReducer,
     reviews: reviewsErrorsReducer
   
 });

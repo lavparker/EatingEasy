@@ -12,6 +12,7 @@ export const getReservation = id =>{
         $.ajax({
             url: `/api/reservations/${id}`,
             method: 'GET'
+           
         })
     )
 }

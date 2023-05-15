@@ -66,9 +66,13 @@ export const createReservation = reservation => dispatch =>{
         APIUtil.createReservation(reservation)
         .then(reservation => {
             // dispatch(receiveConfirmation());
-            dispatch(receiveReservation(reservation)), 
-            err => (dispatch(receiveReservationErrors(err.responseJSON)));
-        })
+            // err => (dispatch(receiveReservationErrors(err.responseJSON)));
+            dispatch(receiveReservation(reservation))
+            // err => (dispatch(receiveReservationErrors(err.responseJSON)));
+            // err => (dispatch(receiveReservationErrors(err.responseJSON)));
+
+            
+        }).fail(err => (dispatch(receiveReservationErrors(err.responseJSON)))) 
     )
 }
 

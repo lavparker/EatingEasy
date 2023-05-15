@@ -22,8 +22,13 @@ class Api::ReservationsController < ApplicationController
         @reservation = Reservation.new(reservation_params)
         @reservation.user = @user
         if @reservation.save
+            # console.log("in the create reservation non error controller")
+
             render :show
         else
+            # console.log("in the create reservation controller")
+            # console.log(@reservation.errors.full_messages);
+            # debugger
             render json: @reservation.errors.full_messages, status: 422
         end
     end
@@ -34,7 +39,8 @@ class Api::ReservationsController < ApplicationController
         if @reservation && @reservation.update(reservation_params)
             render :show
         else
-            render json: @reservation.errors.full_messages, status: 422
+            # render json: @reservation.errors.full_messages, status: 422
+            render json: ['Error: This update request could not be completed'] , status: 422
         end
     end
 
