@@ -3,8 +3,7 @@ import { withRouter } from "react-router";
 import {
   getReview,
   updateReview,
-  receiveErrors,
-  removeErrors,
+  clearReviewErrors,
 } from "../../actions/review_actions";
 import ReviewForm from "./review_form";
 import ReviewUpdateForm from "./review_update_form";
@@ -40,8 +39,7 @@ const mapDispatchToProps = (dispatch) => ({
   getReview: (reviewId) => dispatch(getReview(reviewId)),
   updateReview: (review) => dispatch(updateReview(review)),
   getRestaurants: () => dispatch(getRestaurants()),
-  receiveErrors: (errors) => dispatch(receiveErrors(errors)),
-  removeErrors: () => dispatch(removeErrors()),
+  clearReviewErrors: () => dispatch(clearReviewErrors()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewUpdateForm);

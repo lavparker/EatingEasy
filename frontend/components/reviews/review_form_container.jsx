@@ -2,8 +2,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import {
   createReview,
-  receiveErrors,
-  removeErrors,
+  clearReviewErrors,
 } from "../../actions/review_actions";
 import ReviewForm from "./review_form";
 import { getRestaurants } from "../../actions/restaurant_actions";
@@ -41,8 +40,7 @@ const mapDispatchToProps = (dispatch) => ({
   createReview: (review) => dispatch(createReview(review)),
   getRestaurants: () => dispatch(getRestaurants()),
   // handleSubmit: (review) => dispatch(createReview(review)),
-  receiveErrors: (errors) => dispatch(receiveErrors(errors)),
-  removeErrors: () => dispatch(removeErrors()),
+  clearReviewErrors: () => dispatch(clearReviewErrors()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);

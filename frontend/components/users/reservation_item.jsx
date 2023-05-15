@@ -49,10 +49,11 @@ class ReservationItem extends React.Component {
             </li>
           </ul>
           <div className="res-buttons">
-            <Link to={`/restaurants/${reservation.restaurant_id}/create-review/`}>
+            <Link
+              to={`/restaurants/${reservation.restaurant_id}/create-review/`}
+            >
               <button className="review-res">
-                <FaCheckCircle className="review-btn" />
-                 {" "} Leave a Review
+                <FaCheckCircle className="review-btn" /> Leave a Review
               </button>
             </Link>
 
@@ -74,15 +75,14 @@ class ReservationItem extends React.Component {
         </div>
         {/* </div> */}
         <div
-          style={{
-            zIndex: 9999,
-            float: "right",
-            height: "300px",
-            width: "400px",
-          }}
+          className="toggle-update-form"
+          
         >
           {this.state.should_show_update_form ? (
-            <ReservationUpdateContainer toggleUpdateForm={this.toggleUpdateForm}  reservationId={reservation.id} />
+            <ReservationUpdateContainer
+              toggleUpdateForm={this.toggleUpdateForm}
+              reservationId={reservation.id}
+            />
           ) : null}
         </div>
       </div>

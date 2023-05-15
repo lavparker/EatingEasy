@@ -39,7 +39,7 @@
     // height: 100%; 
     line-height: 1.15;
     // margin-left: -350px;
-    z-index: 9999;
+    // z-index: 9999;
 
 }
 
@@ -71,7 +71,7 @@
     // height: 100%; 
     line-height: 1.15;
     // margin-left: -350px;
-    z-index: 9999;
+    // z-index: 9999;
     max-width: 90%;
 
 }
@@ -265,4 +265,11 @@
     font-size: .875rem;
     line-height: 1.25rem;
 
+}
+
+.toggle-update-form{
+    z-index: 9999;
+    // float: right;
+    height: 1000px;
+    width: 1000px;
 }

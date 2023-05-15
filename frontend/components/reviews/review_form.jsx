@@ -20,6 +20,7 @@ class ReviewForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeRating = this.changeRating.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount() {
@@ -69,15 +70,19 @@ class ReviewForm extends React.Component {
     this.setState({ [name]: newRating });
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {this.props.errors.map((error, idx) => (
-  //         <li key={`error-${idx}`}>{error}</li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
+  renderErrors() {
+    // console.log("REVIEW FORM ERRORS", this.props.errors)
+    if(!this.props.errors){ 
+      return null
+    };
+    return (
+      <ul className="rev-errors">
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     if (!this.props.restaurant) return null;
@@ -184,6 +189,7 @@ class ReviewForm extends React.Component {
             <FaPencilAlt className="pencil-btn" />
             Submit Review
           </button>
+          <div>{this.renderErrors()}</div>
         </form>
       </div>
     );
