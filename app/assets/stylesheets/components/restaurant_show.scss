@@ -373,7 +373,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 16rem));
     gap: 2rem;
-    justify-content: center;
+    // justify-content: center;
     // box-shadow: 0 1px 1px;
     // margin: 5px 5px 5px 5px;
         margin-top: 2rem;
@@ -443,8 +443,15 @@
 .review-firstname{
     color: antiquewhite; 
     background-color: #247f9e;
-    background-size: 1rem;
-    border-radius: 50%;
+    font-weight: 200;
+    height: 60px; 
+    width: 60px;
+    line-height: 60px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2em;
+    float: left;
     
 
 }

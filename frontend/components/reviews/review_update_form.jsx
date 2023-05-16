@@ -23,6 +23,7 @@ class ReviewUpdateForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.changeRating = this.changeRating.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
 
     }
 
@@ -58,6 +59,20 @@ class ReviewUpdateForm extends React.Component {
         });
 
     }
+
+    renderErrors() {
+      console.log("REVIEW FORM ERRORS", this.props.errors)
+      // if (!this.props.errors) {
+      //   return null;
+      // }
+      return (
+        <ul className="review-errors">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>{error}</li>
+          ))}
+        </ul>
+      );
+    }
     
     render(){
        const { review } = this.props;
@@ -67,7 +82,7 @@ class ReviewUpdateForm extends React.Component {
             <h1>Please review your experience</h1>
             <form onSubmit={this.handleSubmit} className="review-form-main">
               <br />
-
+              <div>{this.renderErrors()}</div>
               <br />
               <p>Overall update</p>
               <StarRatings

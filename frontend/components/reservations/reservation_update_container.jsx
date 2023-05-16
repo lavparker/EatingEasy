@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import {
   getReservation,
+  clearReservationErrors,
   updateReservation,
 } from "../../actions/reservation_actions";
 import ReservationForm from "./reservation_form";
@@ -12,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
     currentUser: Object.values(state.entities.users)[0],
     //   reservation: state.entities.reservations[ownProps.reservationId],
     reservation: state.reservations[ownProps.reservationId],
-    
+    errors: state.errors.reservations,
     // restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
     formHeader: "Update your reservation",
     toggleUpdateForm: ownProps.toggleUpdateForm
@@ -27,6 +28,7 @@ const mapDispatchToProps = (dispatch) => {
   // updateReservation: reservation => dispatch(updateReservation(reservation)),
   handleSubmit: (reservation) => dispatch(updateReservation(reservation)), // console.log('ive been updated')
   //dispatch appropriate action to update the reservation
+  clearReservationErrors: () => dispatch(clearReservationErrors()),
   closeModal: () => dispatch(closeModal()),
 }};
 

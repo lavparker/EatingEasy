@@ -43,6 +43,7 @@ class ReservationUpdateForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
     // this.handledivShowing = this.handledivShowing.bind(this); 
     // this.handleCancel = this.handleCancel.bind(this);
   }
@@ -90,6 +91,7 @@ class ReservationUpdateForm extends React.Component {
   
 
   renderErrors() {
+    if(!this.props.errors) return null;
     return (
       <ul>
         {this.props.errors.map((error, idx) => (
@@ -155,10 +157,15 @@ class ReservationUpdateForm extends React.Component {
     // const {showing} = this.state;
    
     return (
-    
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-update-main">
-          <div onClick={this.props.toggleUpdateForm} className="close-res-update"
+          <div>{this.renderErrors()}</div>
+          <button className="res-button" onClick={this.handleSubmit}>
+            Confirm Reservation
+          </button>
+          <div
+            onClick={this.props.toggleUpdateForm}
+            className="close-res-update"
             // onClick={() => this.setState({ showing: !showing})}
             // onClick={(alert('i was clicked'))}
             // className="close-form"
@@ -274,12 +281,12 @@ class ReservationUpdateForm extends React.Component {
           <br />
 
           {/* <Link to={`/users/${user_id}`}>apply to the button below</Link> */}
-          <button
+          {/* <button
             className="res-button"
             onClick={this.handleSubmit} >
 
             Confirm Reservation
-          </button>
+          </button> */}
           {/* {this.renderErrors()} */}
 
           <br />
@@ -294,7 +301,6 @@ class ReservationUpdateForm extends React.Component {
           </p>
         </form>
       </div>
-
     );
   }
 }
