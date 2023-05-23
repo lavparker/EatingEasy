@@ -1,62 +1,57 @@
+.reservation-items {
+    display: grid;
+    padding: 2rem;
+    margin-top: 1rem;
+    max-width: 50%;
+    float: right; 
+
+}
 .current-reservations {
-    font-size: 36px;
-    align-self: center;
-    font-weight: 700;
-    font-style: italic;
+    font-size: 26px;
+    align-items: center;
+    font-weight: 550;
+    // font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     color: #0f4e63;
-    margin-left: 15%;
+    margin-left: 25%;
     margin-bottom: 1rem;
     text-decoration: underline;
 
 }
-
-.reservation-items {
-    display: grid;
-    padding: 2rem;
-    margin-left: 25%;
-    margin-top: 1rem;
-    max-width: 50%;
-
-}
-
-.reservation-boxes {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 70% 30%;
+.reservation-boxes{
     box-shadow: 0 2px 10px;
     border-radius: 4px;
     background-color: bisque;
     color: #0f4e63;
-    padding-left: 1rem;
-    max-width: 100%;
-    height: 75%;
     font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #0f4e63;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.reservation-boxes:hover{
+    background-color:wheat;
+    border: 1px solid bisque;
 }
 
 .res-buttons {
-    // display:grid;
     display: grid;
-    // background-color:red;
     justify-content: space-between;
-    width: 200%;
+    max-width: 100%;
     grid-template-columns: 33% 33% 33%;
 
 }
 
-
 .delete-res {
     background-color: #247f9e;
-    // color: bisque;
     color: whitesmoke;
     font-weight: 700;
     height: 40px;
-    width: 90px;
-    margin: 25%;
-    // margin-left: 50%;
+    max-width: 65%;
+    // margin: 25%;
     border-radius: 4px;
     align-items: center;
-    // font-weight: bold;
     cursor: pointer;
 }
 
@@ -65,21 +60,15 @@
     cursor: pointer;
 }
 
-
 .modify-res {
     background-color: #247f9e;
-    // color: bisque;
     color: whitesmoke;
     font-weight: 700;
     height: 40px;
-    width: 90px;
-    // margin-bottom: ;
-    // margin-left: 50%;
-    margin: 25%;
+    max-width: 65%;
+    // margin: 25%;
     align-items: center;
     border-radius: 4px;
-
-    // font-weight: bold;
     cursor: pointer;
 }
 
@@ -87,16 +76,30 @@
     background-color: #0f4e63;
 }
 
+.review-res {
+    background-color: #247f9e;
+    color: whitesmoke;
+    font-weight: 700;
+    height: 40px;
+    max-width: 65%;
+    // margin: 25%;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-.reservations-index {
-    display: grid;
-    grid-template-columns: 20% 80%;
-
+.review-res:hover {
+    background-color: #0f4e63;
 }
 
 .no-res-opts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: bisque;
+    color: #0f4e63;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 
 .no-res-user-options {
@@ -114,185 +117,7 @@
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     color: #0f4e63;
-    margin-top: 35%;
+    // margin-top: 35%;
     margin-left: 15%;
     margin-bottom: 1rem;
 }
-
-.past-res{
-    background-color: #247f9e;
-        // color: bisque;
-        color: whitesmoke;
-        font-weight: 700;
-        height: 90px;
-        width: 120px;
-        // margin-bottom: ;
-        margin: 20%;
-        // margin-left: 50%;
-        border-radius: 4px;
-    
-        // font-weight: bold;
-        cursor: pointer;
-}
-
-.fave-res{
-    background-color: #247f9e;
-        // color: bisque;
-        color: whitesmoke;
-        font-weight: 700;
-        height: 90px;
-        width: 120px;
-        // margin-bottom: ;
-        margin: 20%;
-        // margin-left: 50%;
-        border-radius: 4px;
-    
-        // font-weight: bold;
-        cursor: pointer;
-}
-.make-res{
-    background-color: #247f9e;
-        // color: bisque;
-        color: whitesmoke;
-        font-weight: 700;
-        height: 90px;
-        width: 120px;
-        // margin-bottom: ;
-        margin: 20%;
-        // margin-left: 50%;
-        border-radius: 4px;
-    
-        // font-weight: bold;
-        cursor: pointer;
-}
-
-.make-res:hover {
-    border-color: #247f9e;
-    color: rgb(212, 180, 36);
-    // font-style: italic;
-    // font-size: 36px;
-    // text-decoration: underline;
-}
-
-.past-res:hover {
-    border-color: #247f9e;
-    color: rgb(212, 180, 36);
-    // font-style: italic;
-    // font-size: 36px;
-    // text-decoration: underline;
-
-
-}
-
-.fave-res:hover {
-    border-color: #247f9e;
-    color: rgb(212, 180, 36);
-    // font-style: italic;
-    // font-size: 36px;
-    // text-decoration: underline;
-}
-
-.reservation-index-img {
-    box-shadow: 0 2px 10px;
-    max-width: 90%;
-    height: 90%;
-    margin-left: 1px;
-    margin-top: 1rem;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-radius: 2px;
-    object-fit: cover;
-    z-index: 100;
-}
-
-.trash-can-btn {
-    size: 20px;
-    // color: bisque;
-    color: whitesmoke;
-}
-
-.reservation-details {
-    // margin-right: -72.148;
-    display: grid;
-    background-color: rgb(255, 241, 162);
-    // position: absolute;
-    // flex-direction: column;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-top: 5px;
-    border-radius: 8px;
-    padding-left: 4px;
-    padding-right: 4px;
-    max-width: 100%;
-    // z-index: 1000;
-
-
-}
-
-.reservation-name {
-    // margin-left: 0%;
-    margin-top: 1rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    align-self: center;
-    // word-wrap: normal;
-    font-style: oblique;
-}
-
-.reservation-date {
-    margin-top: 0.5rem;
-
-
-}
-
-.reservation-phone {
-    margin-top: 0.5rem;
-
-}
-
-.reservation-party {
-    margin-top: 0.5rem;
-
-}
-
-.reservation-time {
-    margin-top: 0.5rem;
-}
-
-.review-res {
-    background-color: #247f9e;
-    // color: bisque;
-    color: whitesmoke;
-    font-weight: 700;
-    height: 40px;
-    width: 90px;
-    // margin-bottom: ;
-    margin: 25%;
-    // margin-left: 50%;
-    border-radius: 4px;
-
-    // font-weight: bold;
-    cursor: pointer;
-}
-
-.review-res:hover {
-    background-color: #0f4e63;
-}
-
-.review-btn {
-    size: 20px;
-    // color: bisque;
-    color: whitesmoke;
-}
-
-// .delete-res{
-//     margin-left: 50%;
-// }
-
-// .close-form{
-//     cursor: pointer; 
-//     margin-top: 3%;
-//     margin-left: 3%;
-// }
-

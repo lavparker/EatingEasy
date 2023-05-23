@@ -17,35 +17,40 @@ import RestaurantIndexContainer from "./restaurant_index/restaurant_index_contai
 
 
 const App = () => (
-  <div className="main-page">
-    <Modal />
+  <div>
+    <div className="main-page">
+      <Modal />
 
-    <header>
-      <NavBarContainer />
-    </header>
+      <header>
+        <NavBarContainer />
+      </header>
 
-    <Route exact path="/" component={mainPage} />
-    <Route exact path="/" component={RestaurantIndexContainer} />
+      <Route exact path="/" component={mainPage} />
+      <Route exact path="/" component={RestaurantIndexContainer} />
 
+      <Route exact path="/users/:id" component={UsersShowContainer} />
+      <Route
+        exact
+        path="/restaurants/:id"
+        component={RestaurantShowContainer}
+      />
+      <Route
+        exact
+        path="/restaurants/:id/create-review/"
+        component={ReviewFormContainer}
+      />
+      <Route
+        exact
+        path="/restaurants/:id/edit-review/:id"
+        component={ReviewUpdateFormContainer}
+      />
+      <Route />
+      {/* <Route exact path="/users/:id/favorites" component={FavoriteRestaurantContainer}/> */}
 
-    <Route exact path="/users/:id" component={UsersShowContainer} />
-    <Route exact path="/restaurants/:id" component={RestaurantShowContainer} />
-    <Route
-      exact
-      path="/restaurants/:id/create-review/"
-      component={ReviewFormContainer}
-    />
-    <Route
-      exact
-      path="/restaurants/:id/edit-review/:id"
-      component={ReviewUpdateFormContainer}
-    />
-    <Route />
-    {/* <Route exact path="/users/:id/favorites" component={FavoriteRestaurantContainer}/> */}
+      {/* <Route exact path="/restaurants/:" */}
 
-    {/* <Route exact path="/restaurants/:" */}
-
-    {/* </Switch> */}
+      {/* </Switch> */}
+    </div>
 
     <footer className="footer">
       {/* <div className="outer-socials"> */}
@@ -85,7 +90,11 @@ const App = () => (
         >
           <FaInstagram />
         </a>
-        <a href="mailto:lavinia.parker@outlook.com?subject=Job Interview for {insert position and company here} &body=Hi La Vinia,%0D%0A%0D%0AI saw your project and would like to request a call with you for the {position} at {Company Name}. Please let me know if there is availability in your schedule to discuss your qualifications further.%0D%0A%0D%0AThank you, %0D%0A%0D%0A%0D%0AYour Name" className="email" target="">
+        <a
+          href="mailto:lavinia.parker@outlook.com?subject=Job Interview for {insert position and company here} &body=Hi La Vinia,%0D%0A%0D%0AI saw your project and would like to request a call with you for the {position} at {Company Name}. Please let me know if there is availability in your schedule to discuss your qualifications further.%0D%0A%0D%0AThank you, %0D%0A%0D%0A%0D%0AYour Name"
+          className="email"
+          target=""
+        >
           <FaEnvelope />
         </a>
       </div>

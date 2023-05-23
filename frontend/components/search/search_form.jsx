@@ -38,7 +38,6 @@ function SearchQuery(){
         onChange={handleSearch}
         placeholder="Search Restaurants..."
       />
-      
 
       {searchQuery && (
         <div className="search-list">
@@ -52,7 +51,7 @@ function SearchQuery(){
                 className="restaurant-search-name"
                 onClick={() => handleRestaurantClick({ restaurant })}
               >
-                {restaurant.name}
+                &nbsp; &nbsp; &nbsp; {restaurant.name}
               </div>
             </div>
           ))}

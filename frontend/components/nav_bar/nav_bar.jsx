@@ -75,9 +75,14 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
         </button>
         <ul className="user-dropdown">
           <Link to={`/users/${currentUser.id}`}>
-            <li className="dropdown-res"> My Reservations </li>
+            <li className="dropdown-res">
+              {" "}
+              &nbsp; &nbsp; My Reservations &nbsp; &nbsp;{" "}
+            </li>
           </Link>
-          <li className="dropdown-faves"> My Favorites </li>
+          <li className="dropdown-faves">
+            {" "}
+            &nbsp; &nbsp; My Favorites &nbsp; &nbsp; </li>
         </ul>
       </div>
 
