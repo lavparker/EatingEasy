@@ -26,15 +26,15 @@ class ReservationItem extends React.Component {
   // }
 
   render() {
-    let reservation = this.props.reservation;
-    const { restaurant } = this.props;
+
+    const { restaurant, reservation } = this.props;
     // let newTime = reservaton.time
-    const date = new Date(reservation.time);
-    const options = { hour12: true}; 
-    const newTime = date
-      .toLocaleTimeString(undefined, options)
-      .replace(/:\d{2}\s/, " "); 
-    reservation.time = newTime;
+    const formattedTime = new Date(reservation.time).toLocaleTimeString(undefined, {hour12: true}).replace(/:\d{2}\s/, " ");
+    // const options = { hour12: true}; 
+    // const newTime = date
+    //   .toLocaleTimeString(undefined, options)
+    //   .replace(/:\d{2}\s/, " "); 
+    // reservation.time = newTime;
     return (
       <div>
         {/* <div className="reservation-index-container"> */}
@@ -47,7 +47,7 @@ class ReservationItem extends React.Component {
           <ul className="reservation-details">
             <li className="reservation-name">{reservation.resName}</li>
             <li className="reservation-date">Date: {reservation.date}</li>
-            <li className="reservation-time">Time: {reservation.time}</li>
+            <li className="reservation-time">Time: {formattedTime}</li>
             <li className="reservation-phone">
               Phone Number: {reservation.phone_number}
             </li>

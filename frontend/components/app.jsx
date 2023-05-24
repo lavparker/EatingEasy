@@ -55,13 +55,14 @@ const App = () => (
     <footer className="footer">
       {/* <div className="outer-socials"> */}
       <div className="socials">
-        <p className="connect-footer">Connect with me! </p>
-
         <img
           src={window.footer}
           alt="picture of La Vinia"
           className="pic-of-me"
         />
+        
+        <p className="connect-footer">Connect with me! </p>
+
         <a
           href="https://github.com/lavparker/"
           className="github"
