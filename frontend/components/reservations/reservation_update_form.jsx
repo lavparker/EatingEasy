@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaChartLine, FaCheckCircle } from "react-icons/fa";
 
 class ReservationUpdateForm extends React.Component {
@@ -6,9 +6,9 @@ class ReservationUpdateForm extends React.Component {
     super(props);
 
     const tdyDate = new Date();
-    let month = tdyDate.getMonth;
+    let month = tdyDate.getMonth();
     let day = tdyDate.getDate();
-    let year = tdyDate.getFullYear;
+    let year = tdyDate.getFullYear();
     let currentDate = `${month} / ${day} / ${year}`;
 
   // const [open, setOpen] = useState(false); {open &&()}
@@ -44,6 +44,7 @@ class ReservationUpdateForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
     // this.handledivShowing = this.handledivShowing.bind(this); 
     // this.handleCancel = this.handleCancel.bind(this);
   }
@@ -86,6 +87,8 @@ class ReservationUpdateForm extends React.Component {
       .then(() => this.props.closeModal())
       .then(() => this.props.toggleUpdateForm());
     // .then(() => this.props.closeModal());
+
+    
   }
 
   
@@ -112,59 +115,58 @@ class ReservationUpdateForm extends React.Component {
   //     .then((res) => this.cancelConfirmation(res));
   // }
 
-  resConfirmation() {
-    if (!this.props.reservation) return null;
+  // resConfirmation() {
+  //   if (!this.props.reservation) return null;
 
-    return (
-      <div>
-        <h2 className="res-confirmed">
-          {" "}
-          <FaCheckCircle className="res-conf-icon" /> &nbsp; Reservation
-          Confirmed
-        </h2>
-      </div>
-    );
-  }
+  //   return (
+  //     <div>
+  //       <h2 className="res-confirmed">
+  //         {" "}
+  //         <FaCheckCircle className="res-conf-icon" /> &nbsp; Reservation
+  //         Confirmed
+  //       </h2>
+  //     </div>
+  //   );
+  // }
 
-  cancelConfirmation() {
-    if (this.props.reservation === undefined) return null;
-    return (
-      <div>
-        <h2 className="del-confirmed">
-          {" "}
-          <FaCheckCircle className="res-conf-icon" /> &nbsp; This reservation
-          has been cancelled{" "}
-        </h2>
-      </div>
-    );
-  }
+  // cancelConfirmation() {
+  //   if (this.props.reservation === undefined) return null;
+  //   return (
+  //     <div>
+  //       <h2 className="del-confirmed">
+  //         {" "}
+  //         <FaCheckCircle className="res-conf-icon" /> &nbsp; This reservation
+  //         has been cancelled{" "}
+  //       </h2>
+  //     </div>
+  //   );
+  // }
 
-  modifyCancel() {
-    if (!this.props.reservation_id) return null;
+  // modifyCancel() {
+  //   if (!this.props.reservation_id) return null;
 
-    return (
-      <div className="modify-cancel">
-        <button className="modify-btn"> Modify </button> |{" "}
-        <button onClick={this.handleCancel()} className="cancel-btn">
-          {" "}
-          Cancel{" "}
-        </button>
-      </div>
-    );
-  }
+  //   return (
+  //     <div className="modify-cancel">
+  //       <button className="modify-btn"> Modify </button> |{" "}
+  //       <button onClick={this.handleCancel()} className="cancel-btn">
+  //         {" "}
+  //         Cancel{" "}
+  //       </button>
+  //     </div>
+  //   );
+  // }
 
   render() {
     // const {showing} = this.state;
-   
+    // const { toggleUpdateForm } = this.props;
+    // console.log("toggleUpdateForm",toggleUpdateForm);
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-update-main">
           <div>{this.renderErrors()}</div>
-          <button className="res-button" onClick={this.handleSubmit}>
-            Confirm Reservation
-          </button>
+
           <div
-            onClick={this.props.toggleUpdateForm}
+            // onClick={toggleUpdateForm}
             className="close-res-update"
             // onClick={() => this.setState({ showing: !showing})}
             // onClick={(alert('i was clicked'))}
@@ -190,7 +192,7 @@ class ReservationUpdateForm extends React.Component {
               <option value="3 people">3 people</option>
               <option value="4 people">4 people</option>
               <option value="5 people">5 people</option>
-              <option valuze="6 people">6 people</option>
+              <option value="6 people">6 people</option>
               <option value="7 people">7 people</option>
               <option value="8 people">8 people</option>
               <option value="9 people">9 people</option>
@@ -294,11 +296,13 @@ class ReservationUpdateForm extends React.Component {
           {/* <div className="res-confirmation">{this.resConfirmation()}</div> */}
 
           <br />
-
-          <p>
+          <button className="res-button" onClick={this.handleSubmit}>
+            Confirm Reservation
+          </button>
+          {/* <p>
             {" "}
             <FaChartLine size={25} /> &nbsp; Booked 222 times today{" "}
-          </p>
+          </p> */}
         </form>
       </div>
     );

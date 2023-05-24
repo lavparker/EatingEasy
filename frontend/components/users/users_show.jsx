@@ -9,6 +9,7 @@ class UsersShow extends React.Component {
   }
 
   render() {
+    const { user } = this.props;
     if (!this.props.reservations) {
       return <h1>Loading!</h1>;
     }
@@ -47,7 +48,9 @@ class UsersShow extends React.Component {
         <div className="user-options">
           <ul>
             <li>
+              <Link to={`/users/${user.id}/past-reservations`}>
               <button className="past-res">Past Reservations</button>
+              </Link>
               &nbsp;
               <button className="fave-res">Favorite Restaurants</button>
               &nbsp;

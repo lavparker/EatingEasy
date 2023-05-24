@@ -13,7 +13,7 @@ import ReviewFormContainer from "./reviews/review_form_container";
 import ReviewUpdateFormContainer from "./reviews/review_update_form_container";
 // import RestaurantsSearch from "./search/restaurants_search_form";
 import RestaurantIndexContainer from "./restaurant_index/restaurant_index_container";
-
+import PastReservationsContainer from "./users/past_reservations_container";
 
 
 const App = () => (
@@ -29,6 +29,7 @@ const App = () => (
       <Route exact path="/" component={RestaurantIndexContainer} />
 
       <Route exact path="/users/:id" component={UsersShowContainer} />
+      <Route exact path="/users/:id/past-reservations" component={PastReservationsContainer} />
       <Route
         exact
         path="/restaurants/:id"
@@ -60,7 +61,7 @@ const App = () => (
           alt="picture of La Vinia"
           className="pic-of-me"
         />
-        
+
         <p className="connect-footer">Connect with me! </p>
 
         <a

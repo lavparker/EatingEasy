@@ -9,6 +9,7 @@ import ReservationUpdateForm from "./reservation_update_form";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => {
+  
   return {
     currentUser: Object.values(state.entities.users)[0],
     //   reservation: state.entities.reservations[ownProps.reservationId],

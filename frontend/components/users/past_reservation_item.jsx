@@ -1,9 +1,9 @@
 import React from "react";
 import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import ReservationUpdateContainer from "../reservations/reservation_update_container";
+import PastReservationsContainer from "./past_reservations_container";
 
-class ReservationItem extends React.Component {
+class PastReservationItem extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,23 +16,21 @@ class ReservationItem extends React.Component {
     // this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
-  toggleUpdateForm(e=null) {
+  toggleUpdateForm(e = null) {
     let newState = Object.assign(
       {},
       { should_show_update_form: !this.state.should_show_update_form }
     );
-    
+
     if (e && e.target && e.target.closest(".reservation-update-main")) {
       newState.should_show_update_form = true;
     }
-    if(e && e.target && e.target.closest(".close-res-update")) {
+    if (e && e.target && e.target.closest(".close-res-update")) {
       newState.should_show_update_form = false;
     }
 
     this.setState(newState);
-  
   }
-
 
   render() {
     const { restaurant, reservation } = this.props;
@@ -41,30 +39,31 @@ class ReservationItem extends React.Component {
       .toLocaleTimeString(undefined, { hour12: true })
       .replace(/:\d{2}\s/, " ");
 
-      const currentDate = new Date();
-      const reservationDate = new Date(reservation.date);
+    const currentDate = new Date();
+    const reservationDate = new Date(reservation.date);
 
-      const isPastReservation = reservationDate < currentDate;
+    const isPastReservation = reservationDate > currentDate;
 
-      if (isPastReservation) {
-        return null; // Don't render the reservation item if it's in the past
-      }
+    if (isPastReservation) {
+      return null; // Don't render the reservation item if it's in the past
+    }
 
-      // console.log("time", formattedTime)
-  
+    // console.log("time", formattedTime)
+
     return (
       <div>
         {/* <div className="reservation-index-container"> */}
         <div className="reservation-boxes">
-          <img
+          {/* <img
             className="reservation-index-img"
             src={reservation.photoUrl}
             alt="restaurant image"
-          />
+          /> */}
           <ul className="reservation-details">
             <li className="reservation-name">{reservation.resName}</li>
             <li className="reservation-date">Date: {reservation.date}</li>
             <li className="reservation-time">Time: {formattedTime}</li>
+            <li>hello</li>
             <li className="reservation-phone">
               Phone Number: {reservation.phone_number}
             </li>
@@ -117,4 +116,4 @@ class ReservationItem extends React.Component {
   }
 }
 
-export default ReservationItem;
+export default PastReservationItem;

@@ -2,8 +2,9 @@ import { connect } from "react-redux";
 import UsersShow from "./users_show";
 import {
   getReservations,
-  deleteReservation,
 } from "../../actions/reservation_actions";
+import PastReservations from "./past_reservations";
+
 
 const mapStateToProps = (state) => {
   // console.log('logging reservations', state.entities.reservations)
@@ -11,16 +12,14 @@ const mapStateToProps = (state) => {
   return {
     reservations: Object.values(state.entities.reservations),
     user: state.entities.users[state.session.id],
-    user_id: state.session.id,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getReservations: () => dispatch(getReservations()),
-    deleteReservation: (reservationId) =>
-      dispatch(deleteReservation(reservationId)),
+  
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersShow);
+export default connect(mapStateToProps, mapDispatchToProps)(PastReservations);
