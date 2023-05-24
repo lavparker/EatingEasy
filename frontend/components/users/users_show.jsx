@@ -24,7 +24,7 @@ class UsersShow extends React.Component {
           <div className="reservations-index">
             <div className="no-res-user-options">
               <ul>
-                <li>
+                <li >
                   <button className="past-res">Past Reservations</button>
                   &nbsp;
                   <button className="fave-res">Favorite Restaurants</button>
@@ -57,7 +57,6 @@ class UsersShow extends React.Component {
             </li>
           </ul>
         </div>
-
         <ul className="reservation-items">
           <h2 className="current-reservations">Current Reservations</h2>
 

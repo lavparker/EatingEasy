@@ -1,9 +1,19 @@
+.reservation-index{
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 .reservation-items {
     display: grid;
+    background-color: antiquewhite;
+    border-radius: 4px;
     padding: 2rem;
+    margin-left: 25%;
+    margin-right: 25%;
     margin-top: 1rem;
-    max-width: 50%;
-    float: right; 
+    margin-bottom: 1rem;
+    max-width: 70%;
+    float: center; 
 
 }
 .current-reservations {
@@ -13,7 +23,7 @@
     // font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
     color: #0f4e63;
-    margin-left: 25%;
+    margin-left: 35%;
     margin-bottom: 1rem;
     text-decoration: underline;
 
@@ -21,18 +31,83 @@
 .reservation-boxes{
     box-shadow: 0 2px 10px;
     border-radius: 4px;
+    height: 12rem;
+    width: 80%;
     background-color: bisque;
     color: #0f4e63;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid #0f4e63;
     margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 1rem;
     padding: 1rem;
 }
 
 .reservation-boxes:hover{
-    background-color:wheat;
+    // background-color:rgb(238, 221, 189);
     border: 1px solid bisque;
+}
+
+.reservation-index-img {
+    box-shadow: 0 2px 10px;
+    max-width: 90%;
+    height: 90%;
+    margin-left: 1px;
+    margin-top: 1rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-radius: 2px;
+    object-fit: cover;
+    z-index: 100;
+}
+
+.reservation-details {
+    // margin-right: -72.148;
+    display: grid;
+    // background-color: wheat;
+    // position: absolute;
+    // flex-direction: column;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 5px;
+    border-radius: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    max-width: 100%;
+    float: right;
+    // z-index: 1000;
+
+
+}
+
+.reservation-name {
+    // margin-left: 0%;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-self: center;
+    // word-wrap: normal;
+    font-style: oblique;
+}
+
+.reservation-date {
+    margin-top: 1rem;
+
+}
+
+.reservation-phone {
+    margin-top: 1rem;
+
+}
+
+.reservation-party {
+    margin-top: 1rem;
+
+}
+
+.reservation-time {
+    margin-top: 1rem;
 }
 
 .res-buttons {
@@ -40,6 +115,7 @@
     justify-content: space-between;
     max-width: 100%;
     grid-template-columns: 33% 33% 33%;
+    margin-top: 3rem;
 
 }
 
@@ -92,12 +168,13 @@
     background-color: #0f4e63;
 }
 
+
 .no-res-opts {
     background-color: bisque;
     color: #0f4e63;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 36px;
-    margin-left: 2rem;
+    margin-left: 49%;
     margin-top: 1rem;
     padding: 1rem;
 }
@@ -108,16 +185,94 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #0f4e63;
     margin-top: 35%;
-    margin-left: 15%;
+    // margin-left: 15%;
     margin-bottom: 1rem;
 }
 
 .user-options {
+    // display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     font-size: 30px;
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     color: #0f4e63;
-    // margin-top: 35%;
-    margin-left: 15%;
+    margin-top: 1%;
+    margin-left: 40%;
     margin-bottom: 1rem;
+    // float: left;
+}
+
+.past-res {
+    background-color: #247f9e;
+    // color: bisque;
+    color: whitesmoke;
+    font-weight: 700;
+    height: 90px;
+    width: 120px;
+    // margin-bottom: ;
+    // margin: 20%;
+    // margin-left: 50%;
+    border-radius: 4px;
+
+    // font-weight: bold;
+    cursor: pointer;
+}
+
+.fave-res {
+    background-color: #247f9e;
+    // color: bisque;
+    color: whitesmoke;
+    font-weight: 700;
+    height: 90px;
+    width: 120px;
+    // margin-bottom: ;
+    // margin: 20%;
+    // margin-left: 50%;
+    border-radius: 4px;
+
+    // font-weight: bold;
+    cursor: pointer;
+}
+
+.make-res {
+    background-color: #247f9e;
+    // color: bisque;
+    color: whitesmoke;
+    font-weight: 700;
+    height: 90px;
+    width: 120px;
+    // margin-bottom: ;
+    // margin: 20%;
+    // margin-left: 50%;
+    border-radius: 4px;
+
+    // font-weight: bold;
+    cursor: pointer;
+}
+
+.make-res:hover {
+    border-color: #247f9e;
+    color: rgb(212, 180, 36);
+    // font-style: italic;
+    // font-size: 36px;
+    // text-decoration: underline;
+}
+
+.past-res:hover {
+    border-color: #247f9e;
+    color: rgb(212, 180, 36);
+    // font-style: italic;
+    // font-size: 36px;
+    // text-decoration: underline;
+
+
+}
+
+.fave-res:hover {
+    border-color: #247f9e;
+    color: rgb(212, 180, 36);
+    // font-style: italic;
+    // font-size: 36px;
+    // text-decoration: underline;
 }

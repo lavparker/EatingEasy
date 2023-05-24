@@ -28,6 +28,13 @@ class ReservationItem extends React.Component {
   render() {
     let reservation = this.props.reservation;
     const { restaurant } = this.props;
+    // let newTime = reservaton.time
+    const date = new Date(reservation.time);
+    const options = { hour12: true}; 
+    const newTime = date
+      .toLocaleTimeString(undefined, options)
+      .replace(/:\d{2}\s/, " "); 
+    reservation.time = newTime;
     return (
       <div>
         {/* <div className="reservation-index-container"> */}
@@ -53,7 +60,7 @@ class ReservationItem extends React.Component {
               to={`/restaurants/${reservation.restaurant_id}/create-review/`}
             >
               <button className="review-res">
-                <FaCheckCircle className="review-btn" /> Leave a Review
+                <FaCheckCircle className="review-btn" /> &nbsp; Leave a Review
               </button>
             </Link>
 
@@ -61,7 +68,8 @@ class ReservationItem extends React.Component {
               className="delete-res"
               onClick={() => this.props.deleteReservation(reservation.id)}
             >
-              <FaRegTrashAlt className="trash-can-btn" /> Cancel Reservation{" "}
+              <FaRegTrashAlt className="trash-can-btn" />
+              &nbsp; Cancel Reservation{" "}
             </button>
 
             <button
@@ -69,15 +77,12 @@ class ReservationItem extends React.Component {
               onClick={() => this.toggleUpdateForm()}
             >
               {/* {" "} */}
-              <FaPencilAlt className="pencil-btn" /> Modify Reservation{" "}
+              <FaPencilAlt className="pencil-btn" /> &nbsp; Modify Reservation{" "}
             </button>
           </div>
         </div>
         {/* </div> */}
-        <div
-          className="toggle-update-form"
-          
-        >
+        <div className="toggle-update-form">
           {this.state.should_show_update_form ? (
             <ReservationUpdateContainer
               toggleUpdateForm={this.toggleUpdateForm}
