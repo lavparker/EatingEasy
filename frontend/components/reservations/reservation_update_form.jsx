@@ -27,9 +27,9 @@ class ReservationUpdateForm extends React.Component {
         props.reservation && props.reservation.time
           ? props.reservation.time
           : "7:00 PM",
-      phoneNumber: this.props.currentUser
-        ? this.props.reservation.phone_number
-        : "",
+      phoneNumber: this.props.currentUser ? this.props.currentUser.phone_number 
+      : "2002000200",
+
       firstName: this.props.currentUser
         ? this.props.currentUser.first_name
         : "",

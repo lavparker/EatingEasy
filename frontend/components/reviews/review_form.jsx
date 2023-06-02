@@ -85,11 +85,12 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    const { restaurant } = this.props;
     if (!this.props.restaurant) return null;
 
     return (
       <div className="review-form">
-        <h1>Please review your experience</h1>
+        <h1>Please review your experience at {restaurant.name}</h1>
         <form onSubmit={this.handleSubmit} className="review-form-main">
           <br />
           {/* <p>Name</p>
@@ -187,7 +188,8 @@ class ReviewForm extends React.Component {
           <br />
           <button className="submit-review-btn">
             <FaPencilAlt className="pencil-btn" />
-            Submit Review
+            &nbsp; 
+            Submit Your Review
           </button>
           <div>{this.renderErrors()}</div>
         </form>

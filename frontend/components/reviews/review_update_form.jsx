@@ -18,6 +18,7 @@ class ReviewUpdateForm extends React.Component {
           user_id: props.review ? props.review.user_id : "",
           restaurant_id: props.review ? props.review.restaurant_id : "",
           id: props.review ? props.review.id : "",
+         
         };
 
 
@@ -75,11 +76,11 @@ class ReviewUpdateForm extends React.Component {
     }
     
     render(){
-       const { review } = this.props;
+       const { review, restaurant } = this.props;
 
         return (
           <div className="review-update-form">
-            <h1>Please review your experience</h1>
+            <h1>Please review your experience </h1>
             <form onSubmit={this.handleSubmit} className="review-form-main">
               <br />
               <div>{this.renderErrors()}</div>
@@ -171,7 +172,8 @@ class ReviewUpdateForm extends React.Component {
               <br />
               <button className="submit-review-btn">
                 <FaPencilAlt className="pencil-btn" />
-                Submit Updated Review
+                &nbsp;
+                Submit Your Updated Review
               </button>
             </form>
           </div>
