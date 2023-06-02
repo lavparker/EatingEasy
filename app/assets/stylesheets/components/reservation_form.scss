@@ -125,7 +125,7 @@
 
 .party-size {
     // padding-top: 2rem;
-    margin-top: 10%;
+    margin-top: 15%;
     font-family: inherit;
     font-weight: 500;
     margin-left: 16px;
@@ -290,4 +290,13 @@
     // float: right;
     // height: 1000px;
     // width: 1000px;
+}
+
+.res-errors{
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 32%;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
