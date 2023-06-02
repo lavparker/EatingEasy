@@ -9,12 +9,50 @@
     cursor: pointer;
 }
 
-.review-details{
-    font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    line-height: 1.25;
-    font-size: 14px;
-    font-weight: 200;
+
+// .review-details{
+//     display: grid;
+//     // grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 10px;
+//     font-family: BrandonText, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+//     line-height: 1.25;
+//     font-size: 14px;
+//     font-weight: 200;
+//     grid-template-columns: 50% 50%;
+// }
+.review-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* First column auto-sized, second column takes the remaining space */
+    gap: 10px;
+    /* Gap between the columns */
 }
+// .review-index-item{
+//     width: 100%;
+// }
+.review-firstname {
+    grid-column: 1;
+    /* Place the review-firstname in the first column */
+}
+
+.review-details li {
+    list-style: none;
+    /* Remove the default bullet points */
+}
+
+.column-1 {
+    display: block;
+    /* Ensures the review-firstname takes up the full width of the first column */
+}
+
+.column-2 {
+    display: block;
+    overflow:visible;
+    flex-wrap: nowrap;
+    // text-align: right;
+    /* Ensures the review-lastname takes up the full width of the second column */
+}
+
 
 .review-update-form{
     margin-left: 35%;

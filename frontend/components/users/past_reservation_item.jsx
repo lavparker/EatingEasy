@@ -54,11 +54,11 @@ class PastReservationItem extends React.Component {
       <div>
         {/* <div className="reservation-index-container"> */}
         <div className="reservation-boxes">
-          {/* <img
+          <img
             className="reservation-index-img"
             src={reservation.photoUrl}
             alt="restaurant image"
-          /> */}
+          />
           <ul className="reservation-details">
             <li className="reservation-name">{reservation.resName}</li>
             <li className="reservation-date">Date: {reservation.date}</li>
@@ -79,22 +79,6 @@ class PastReservationItem extends React.Component {
                 <FaCheckCircle className="review-btn" /> &nbsp; Leave a Review
               </button>
             </Link>
-
-            <button
-              className="delete-res"
-              onClick={() => this.props.deleteReservation(reservation.id)}
-            >
-              <FaRegTrashAlt className="trash-can-btn" />
-              &nbsp; Cancel Reservation{" "}
-            </button>
-
-            <button
-              className="modify-res"
-              onClick={() => this.toggleUpdateForm()}
-            >
-              {/* {" "} */}
-              <FaPencilAlt className="pencil-btn" /> &nbsp; Modify Reservation{" "}
-            </button>
           </div>
         </div>
         {/* </div> */}

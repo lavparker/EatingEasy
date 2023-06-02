@@ -49,7 +49,7 @@ class UsersShow extends React.Component {
           <ul>
             <li>
               <Link to={`/users/${user.id}/past-reservations`}>
-              <button className="past-res">Past Reservations</button>
+                <button className="past-res">Past Reservations</button>
               </Link>
               &nbsp;
               <button className="fave-res">Favorite Restaurants</button>
@@ -60,6 +60,7 @@ class UsersShow extends React.Component {
             </li>
           </ul>
         </div>
+    
         <ul className="reservation-items">
           <h2 className="current-reservations">Current Reservations</h2>
 

@@ -64,7 +64,7 @@ class ReservationUpdateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    
+    debugger
 
     const reservation = {
       party_size: this.state.partySize,
