@@ -37,9 +37,19 @@ class ReservationItem extends React.Component {
   render() {
     const { restaurant, reservation } = this.props;
     // let newTime = reservaton.time
-    const formattedTime = new Date(reservation.time)
-      .toLocaleTimeString(undefined, { hour12: true })
-      .replace(/:\d{2}\s/, " ");
+
+    // const formattedTime = new Date(reservation.time)
+    //   .toLocaleTimeString(undefined, { hour12: true })
+    //   .replace(/:\d{2}\s/, " ");
+
+    const dateTimeString = `${reservation.time}`; // 2020-08-24T14:00
+    const dateObj = new Date(dateTimeString);
+    const hours = dateObj.getHours() + 5;
+    const minutes = dateObj.getMinutes();
+
+    const period = hours >= 12 ? "PM" : "AM";
+    const standardHours = hours % 12 === 0 ? 12 : hours % 12;
+    const formattedTime = `${standardHours}:${minutes.toString().padStart(2, "0")} ${period}`;
 
       const currentDate = new Date();
       const reservationDate = new Date(reservation.date);

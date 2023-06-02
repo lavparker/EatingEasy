@@ -9,7 +9,7 @@ class ReservationUpdateForm extends React.Component {
     let month = tdyDate.getMonth();
     let day = tdyDate.getDate();
     let year = tdyDate.getFullYear();
-    let currentDate = `${month} / ${day} / ${year}`;
+    let currentDate = `${month}/${day}/${year}`;
 
   // const [open, setOpen] = useState(false); {open &&()}
 
@@ -64,7 +64,7 @@ class ReservationUpdateForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    debugger
+    // debugger
 
     const reservation = {
       party_size: this.state.partySize,
