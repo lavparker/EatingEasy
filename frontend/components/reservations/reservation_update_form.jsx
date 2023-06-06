@@ -27,8 +27,9 @@ class ReservationUpdateForm extends React.Component {
         props.reservation && props.reservation.time
           ? props.reservation.time
           : "7:00 PM",
-      phoneNumber: this.props.currentUser ? this.props.currentUser.phone_number 
-      : "2002000200",
+      phoneNumber: this.props.currentUser
+        ? this.props.currentUser.phone_number
+        : "2002000200",
 
       firstName: this.props.currentUser
         ? this.props.currentUser.first_name
@@ -39,6 +40,8 @@ class ReservationUpdateForm extends React.Component {
       restaurantId: this.props.reservation.restaurant_id,
       userId: this.props.reservation.user_id,
       reservationId: this.props.reservation.id,
+      reviewSubmitted: false,
+
       // divShowing: false,
     };
 
@@ -82,14 +85,23 @@ class ReservationUpdateForm extends React.Component {
 
     };
 
-    this.props
-      .handleSubmit(reservation)
-      .then(() => this.props.closeModal())
-      .then(() => this.props.toggleUpdateForm());
-    // .then(() => this.props.closeModal());
+    // this.props
+    //   .handleSubmit(reservation)
+    //   .then(() => this.props.closeModal())
+    //   .then(() => this.props.toggleUpdateForm())
+      
 
+    this.props
+      .updateReservation(reservation)
+      .then(() => this.props.closeModal())
+      .then(() => this.props.toggleUpdateForm())
+
+  // this.props.createReview(review).then(() => {
+  //   this.setState({ reviewSubmitted: true });
+  // });
     
   }
+
 
   
 
@@ -160,6 +172,10 @@ class ReservationUpdateForm extends React.Component {
     // const {showing} = this.state;
     // const { toggleUpdateForm } = this.props;
     // console.log("toggleUpdateForm",toggleUpdateForm);
+    const successMessage = this.state.reviewSubmitted ? (
+      <div>Review Submitted!</div>
+    ) : null;
+
     return (
       <div className="reservation-container">
         <form onSubmit={this.handleSubmit} className="reservation-update-main">
@@ -303,6 +319,7 @@ class ReservationUpdateForm extends React.Component {
             {" "}
             <FaChartLine size={25} /> &nbsp; Booked 222 times today{" "}
           </p> */}
+          <p>{successMessage}</p>
         </form>
       </div>
     );

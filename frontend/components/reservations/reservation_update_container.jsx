@@ -28,7 +28,8 @@ const mapDispatchToProps = (dispatch) => {
   
   // getReservation: reservationId => dispatch(getReservation(reservationId)),
   // updateReservation: reservation => dispatch(updateReservation(reservation)),
-  handleSubmit: (reservation) => dispatch(updateReservation(reservation)), // console.log('ive been updated')
+  // handleSubmit: (reservation) => dispatch(updateReservation(reservation)), // console.log('ive been updated')
+  updateReservation: (reservation) => dispatch(updateReservation(reservation)),
   //dispatch appropriate action to update the reservation
   clearReservationErrors: () => dispatch(clearReservationErrors()),
   closeModal: () => dispatch(closeModal()),
