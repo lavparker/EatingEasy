@@ -16,7 +16,8 @@ class ReviewForm extends React.Component {
       body: "",
       // restaurant_id: this.props.restaurant.id,
       userId: this.props.currentUser.id,
-    }
+      reviewSubmitted: false,
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.changeRating = this.changeRating.bind(this);
@@ -51,7 +52,9 @@ class ReviewForm extends React.Component {
       restaurant_id: this.props.match.params.id,
     }
 
-    this.props.createReview(review);
+    this.props.createReview(review).then(() => {
+      this.setState({ reviewSubmitted: true }); 
+    });
     // .then((review) =>{
 
     // })
@@ -78,7 +81,7 @@ class ReviewForm extends React.Component {
     return (
       <ul className="rev-errors">
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>{error}</li>
+          <li key={`error-${idx}`}>* {error}</li>
         ))}
       </ul>
     );
@@ -88,9 +91,15 @@ class ReviewForm extends React.Component {
     const { restaurant } = this.props;
     if (!this.props.restaurant) return null;
 
+    const successMessage = this.state.reviewSubmitted ? (
+      <div>Review Submitted!</div>
+    ) : null;
+
     return (
       <div className="review-form">
         <h1>Please review your experience at {restaurant.name}</h1>
+        <div className="rev-errors">{this.renderErrors()}</div>
+        <br />
         <form onSubmit={this.handleSubmit} className="review-form-main">
           <br />
           {/* <p>Name</p>
@@ -188,10 +197,9 @@ class ReviewForm extends React.Component {
           <br />
           <button className="submit-review-btn">
             <FaPencilAlt className="pencil-btn" />
-            &nbsp; 
-            Submit Your Review
+            &nbsp; Submit Review
           </button>
-          <div>{this.renderErrors()}</div>
+          <p className="success-message">{successMessage}</p>
         </form>
       </div>
     );

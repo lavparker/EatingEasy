@@ -88,7 +88,7 @@
 }
 
 .submit-review-btn{
-    margin-left: 20%;
+    margin-left: 7%;
     margin-right: 49%;
     height: 90px;
     width: 150px;
@@ -100,4 +100,24 @@
     background-color: #0f4e63;
     border-color: #0f4e63;
     cursor: pointer;
+}
+
+.rev-errors{
+    color: red;
+    font-size: 14px;
+    font-weight: 200;
+    margin-left: -5%;
+    // margin-right: 49%;
+    margin-top: 1%;
+    margin-bottom: 4px;
+}
+
+.success-message{
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 5%;
+    // margin-right: 49%;
+    margin-top: 4%;
+    margin-bottom: 4px;
 }

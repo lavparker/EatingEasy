@@ -1,209 +1,195 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { createFavorite, deleteFavorite, getFavorite, getFavorites } from '../../actions/favorite_actions';
-import { getRestaurant } from '../../actions/restaurant_actions';
-import {FaHeart} from 'react-icons/fa';
+// import React, { Component } from 'react';
+// import { connect } from 'react-redux';
+// import { withRouter } from 'react-router-dom';
+// // import { createFavorite, deleteFavorite, getFavorite, getFavorites } from '../../actions/favorite_actions';
+// import { getRestaurant } from '../../actions/restaurant_actions';
+// import {FaHeart} from 'react-icons/fa';
 
-class FavoritesCreate extends Component {
-  // constructor(props) {
-  //   console.log("FAVORITES CREATE PROPS", props);
+// class FavoritesCreate extends React.Component {
+//   constructor(props) {
+//     super(props);
 
-  //   super(props);
-  //   const { favorite, currentUser, restaurant } = this.props;
-  //   const isFavorited = restaurant && localStorage.getItem(restaurant.id) === "true";
-  //   this.state = {
-  //     // isFavorited: false,
-  //     isFavorited,
-  //     user_id: favorite ? favorite.user_id : currentUser.id,
-  //     restaurant_id: favorite ? favorite.restaurant_id : restaurant && restaurant.id,
-  //     // user_id: this.props.favorite ? this.props.favorite.user_id : this.props.currentUser.id,
-  //     // restaurant_id: this.props.favorite ? this.props.favorite.restaurant_id : this.props.restaurant.id,
-  //   };
-  //   this.handleFavorite = this.handleFavorite.bind(this);
-  // }
+//     this.state = {
+//       isFavorited: false,
+//     }
+//     this.handleClick = this.handleClick.bind(this);
+//   }
+
+//   componentDidMount() {
+//     this.checkFavorite();
+//   }
+
+//   checkFavorite() {
+//     const { currentUser, restaurantId } = this.props;
+//     getFavorites(currentUser.id).then((favorites) => {
+//       const favorite = favorites.find(
+//         (fav) => fav.restaurantId === restaurantId
+//       ); 
+//       if (favorite) {
+//         this.setState({ isFavorited: true });
+//       }
+//     })
+//      .catch((error) => {
+//         console.error('Error retrieving favorites:', error);
+//       });
+    
+//   }
+
+//   handleClick(e) {
+//     e.preventDefault(); 
+//     if (this.state.isFavorited) {
+//       this.deleteFavorite();
+//     } else{
+//       this.createFavorite();
+//     }
+//   }
+
+//   render() {
+//     const { restaurant, favorite, favorites, currentUser } = this.props;
+//     if(!restaurant){
+//       return null;
+//     }
+//     let isFavorited = favorites && favorites.includes(restaurant.id);
+//     return (
+//       <div className="show-page-fave-btn">
+//         <button
+//           onClick={this.handleClick}
+//           className={isFavorited ? "favorited" : "not-favorited"}
+//         >
+//           {isFavorited ? "Remove from Favorites" : "Add to Favorites"}
+//           &nbsp;{" "}
+//           <FaHeart
+//             className={isFavorited ? "favorited-heart" : "not-favorited-heart"}
+//           />
+//         </button>
+      
+//       </div>
+//     );
+//   }
+
+// }
+
+// export default FavoritesCreate;
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import {
+  createFavorite,
+  deleteFavorite,
+  getFavorites,
+} from "../../actions/favorite_actions";
+
+class FavoriteButton extends Component {
   constructor(props) {
+    console.log("FavoriteButton PROPS:", props);
     super(props);
-    const { favorite, currentUser, restaurant } = this.props;
-    const isFavorited = restaurant && localStorage.getItem(restaurant.id) === "true";
-
     this.state = {
-      isFavorited,
-      user_id: favorite ? favorite.user_id : (currentUser && currentUser.id ? currentUser.id : null),
-      restaurant_id: favorite
-        ? favorite.restaurant_id
-        : restaurant && restaurant.id,
+      isFavorite: false, // Initialize isFavorite to false
     };
-    this.handleFavorite = this.handleFavorite.bind(this);
   }
 
   componentDidMount() {
-    const storedFavorite = localStorage.getItem("favorites");
-    if (this.props.currentUser && this.props.restaurant) {
-      this.props.getFavorites().then(() => {
-        const { favorites, restaurant } = this.props;
-        let isFavorited = false;
-        if (Array.isArray(favorites)) {
-          for (let i = 0; i < favorites.length; i++) {
-            if (favorites[i].restaurant_id === restaurant.id) {
-              isFavorited = true;
-              break;
-            }
-          }
-        } else if (favorites && favorites.restaurant_id === restaurant.id) {
-          isFavorited = true;
+    this.checkFavorite();
+  }
+
+  checkFavorite = async () => {
+    const { currentUser, restaurantId } = this.props;
+    const { getFavorites } = this.props;
+
+    try {
+      const favoritesData = await getFavorites(currentUser.id);
+      const favorites = favoritesData ? Object.values(favoritesData) : [];
+
+      if (Array.isArray(favorites)) {
+        const favorite = favorites.find(
+          (fav) => fav.restaurantId === restaurantId
+        );
+        if (favorite) {
+          this.setState({ isFavorite: true });
         }
-        this.setState({ isFavorited });
-      });
-    }
-  }
-
-  // componentDidMount() {
-  //   const storedFavorite = localStorage.getItem("favorites");
-  //   if (this.props.currentUser) {
-  //     this.props.getFavorites().then(() => {
-  //       const { favorites, restaurant } = this.props;
-  //       let isFavorited = false;
-  //       if (Array.isArray(favorites)) {
-  //         for (let i = 0; i < favorites.length; i++) {
-  //           if (favorites[i].restaurant_id === restaurant.id) {
-  //             isFavorited = true;
-  //             break;
-  //           }
-  //         }
-  //       } else if (favorites && favorites.restaurant_id === restaurant.id) {
-  //         isFavorited = true;
-  //       }
-  //       this.setState({ isFavorited });
-
-  //     });
-  //   }
-  // }
-  handleFavorite(e) {
-    e.preventDefault();
-    const { restaurant, favorite, favorites, currentUser } = this.props;
-    if(!restaurant){
-      return;
-    }
-    const favoriteId = favorites ? favorites.id : null;
-    // console.log("THE FAVORITEID IS", favoriteId);
-    // console.log("THE FAVORITE id IS", this.props.favorites.id);
-    // console.log("THE FAVORITE IS", this.props.favorite);
-
-    console.log("THE RESTAURANT IS", restaurant);
-    console.log("IS FAVORITED", this.state.isFavorited);
-    // console.log("FAVORITE ID", favoriteId);
-    if (favorite && this.state.isFavorited) {
-      if (favoriteId) {
-        this.props.deleteFavorite(favoriteId).then(() => {
-          console.log("FAVORITE DELETED")
-          localStorage.setItem(restaurant.id, false);
-          this.setState({ isFavorited: false });
-        });
+      } else {
+        console.error("Favorites data is not an array:", favoritesData);
       }
-    } else {
-      this.props
-        .createFavorite({
-          user_id: currentUser.id,
-          restaurant_id: restaurant.id,
-        })
-        .then((createdFavorite) => {
-          console.log("CREATED FAVORITE", createdFavorite);
-          //  console.log("THE FAVORITE id IS", this.props.favorite.id);
-           console.log("THE FAVORITE IS", favorite);
-          console.log("FAVORITE ID", favoriteId);
-
-
-          localStorage.setItem(restaurant.id, true);
-          this.setState({ isFavorited: true });
-        });
+    } catch (error) {
+      console.error("Error retrieving favorites:", error);
     }
-  }
+  };
 
-  // handleFavorite(e) {
-  //   e.preventDefault();
-  //   const { restaurant, favorite } = this.props;
-  //   const favoriteId = favorite ? favorite.id : null;
-  //   // console.log("THE FAVORITEID IS", favoriteId);
-  //   console.log("THE FAVORITE IS", this.props.favorites.id);
-  //   console.log("THE RESTAURANT IS", restaurant);
-  //   if (this.state.isFavorited) {
-  //     if (favoriteId) {
-  //       this.props.deleteFavorite(favoriteId).then(() => {
-  //         localStorage.setItem(restaurant.id, false);
-  //         this.setState({ isFavorited: false });
-  //       });
-  //     }
-  //   } else {
-  //     this.props
-  //       .createFavorite({
-  //         user_id: this.props.currentUser.id,
-  //         restaurant_id: this.props.restaurant.id,
-  //       })
-  //       .then(() => {
-  //         localStorage.setItem(restaurant.id, true);
-  //         this.setState({ isFavorited: true });
-  //       });
-  //   }
-  // }
+  handleFavoriteClick = () => {
+    if (this.state.isFavorite) {
+      this.removeFavorite();
+    } else {
+      this.createFavorite();
+    }
+  };
+
+  createFavorite = () => {
+    const { currentUser, restaurantId } = this.props;
+    const { createFavorite } = this.props;
+
+    const favoriteData = {
+      userId: currentUser.id,
+      restaurantId: restaurantId,
+    };
+
+    createFavorite(favoriteData)
+      .then(() => {
+        this.setState({ isFavorite: true });
+        console.log("Favorite created");
+      })
+      .catch((error) => {
+        console.error("Error creating favorite:", error);
+      });
+  };
+
+  removeFavorite = () => {
+    const { currentUser, restaurantId } = this.props;
+    const { deleteFavorite } = this.props;
+
+    getFavorites(currentUser.id)
+      .then((favorites) => {
+        const favorite = favorites.find(
+          (fav) => fav.restaurantId === restaurantId
+        );
+        if (favorite) {
+          deleteFavorite(favorite.id)
+            .then(() => {
+              this.setState({ isFavorite: false });
+              console.log("Favorite removed");
+            })
+            .catch((error) => {
+              console.error("Error removing favorite:", error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error("Error retrieving favorites:", error);
+      });
+  };
 
   render() {
-    const { isFavorited } = this.state;
-    console.log("favorited?", this.state.isFavorited);
     return (
-      <div className="show-page-fave-btn">
-        <button
-          onClick={this.handleFavorite}
-          className={isFavorited ? "favorited" : "not-favorited"}
-        >
-          {isFavorited ? "Remove from Favorites" : "Add to Favorites"}
-          &nbsp;{" "}
-          <FaHeart
-            className={isFavorited ? "favorited-heart" : "not-favorited-heart"}
-          />
-        </button>
-      </div>
+      <button onClick={this.handleFavoriteClick}>
+        {this.state.isFavorite ? "Remove from favorites" : "Save to favorites"}
+      </button>
     );
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-    let current_user_id = state.session?.id
-    // let current_user = state.entities.users[current_user_id]
-    let current_user = current_user_id
-      ? state.entities.users[current_user_id]
-      : null;
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state.session,
+    currentUserId: state.session.id,
+    favorites: state.entities.favorites
+    
+  };
+};
 
-    // let user_id = state.entities.users.id
-    // let user = state.entities.users[user_id]
-    return {
-      currentUser: current_user
-        ? {
-            id: current_user.id,
-            phone_number: "2002000200",
-            first_name: current_user.first_name,
-            last_name: current_user.last_name,
-            email: current_user.email,
-          }
-        : null,
-      //   currentUser: state.session.currentUser,
-      // user_id: current_user.id,
-      restaurants: Object.values(state.entities.restaurants),
-      restaurant_id: ownProps.restaurant.id,
-      favorites: Object.values(state.entities.favorites),
-    };
-
-}
-
-const mapDispatchToProps = (dispatch) => (
-  console.log("I AM IN THE FAVORITES CREATE CONTAINER"),
-  {
-    getFavorite: (favoriteId) => dispatch(getFavorite(favoriteId)),
-    getFavorites: () => dispatch(getFavorites()),
-    getRestaurant: (restaurantId) => dispatch(getRestaurant(restaurantId)),
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getFavorites: (userId) => dispatch(getFavorites(userId)),
     createFavorite: (favorite) => dispatch(createFavorite(favorite)),
     deleteFavorite: (favoriteId) => dispatch(deleteFavorite(favoriteId)),
-  }
-);
+  };
+};
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FavoritesCreate));
+export default connect(mapStateToProps, mapDispatchToProps)(FavoriteButton);

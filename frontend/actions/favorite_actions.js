@@ -36,10 +36,25 @@ export const removeErrors = () => ({
     type: REMOVE_ERRORS
 })
 
-export const getFavorites = () => dispatch => (
-    APIUtil.getFavorites()
-        .then(favorites => dispatch(receiveAllFavorites(favorites)))
-);
+// export const getFavorites = () => dispatch => (
+//     APIUtil.getFavorites()
+//         .then(favorites => dispatch(receiveAllFavorites(favorites)))
+// );
+
+export const getFavorites = (userId) => {
+  return async (dispatch) => {
+    try {
+      const favorites = await APIUtil.getFavorites(userId);
+      dispatch(receiveAllFavorites(favorites));
+    } catch (error) {
+      throw error;
+    }
+  };
+};
+
+
+
+
 
 export const getFavorite = favoriteId => dispatch => (
     APIUtil.getFavorite(favoriteId)
@@ -52,6 +67,20 @@ export const createFavorite = favorite => dispatch => {
             .then(favorite => dispatch(receiveFavorite(favorite)))
     )
 }
+
+// export const createFavorite = (favorite) => {
+//   return new Promise((resolve, reject) => {
+//     APIUtil.createFavorite(favorite)
+//       .then((createdFavorite) => {
+//         resolve(createdFavorite);
+//       })
+//       .catch((error) => {
+//         reject(error);
+//       });
+//   });
+// };
+
+
 
 export const deleteFavorite = favoriteId => dispatch => (
     APIUtil.deleteFavorite(favoriteId)

@@ -162,7 +162,7 @@ class ReviewUpdateForm extends React.Component {
               <br />
               <div className="rev-body">
                 <textarea
-                  placeholder="Write review here"
+                  placeholder={"Write review here"}
                   cols="70"
                   rows="10"
                   onChange={this.handleInputChange("body")}
