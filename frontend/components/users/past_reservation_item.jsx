@@ -63,7 +63,7 @@ class PastReservationItem extends React.Component {
             <li className="reservation-name">{reservation.resName}</li>
             <li className="reservation-date">Date: {reservation.date}</li>
             <li className="reservation-time">Time: {formattedTime}</li>
-            <li>hello</li>
+
             <li className="reservation-phone">
               Phone Number: {reservation.phone_number}
             </li>

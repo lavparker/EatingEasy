@@ -34,19 +34,32 @@ class PastReservations extends React.Component {
 
         return (
           <div className="reservations-index">
-            {/* <div className="reservation-boxes"> */}
-              {/* //             <img className="reservation-index-img" src={reservation.photoUrl} alt="restaurant image" /> */}
-              <ul className="reservation-items">
-                <h2 className="current-reservations">Past Reservations</h2>
-
-                {this.props.reservations.map((reservation) => (
-                  <PastReservationItem
-                    key={reservation.id}
-                    reservation={reservation}
-                    deleteReservation={this.props.deleteReservation}
-                  />
-                ))}
+            <div className="user-options">
+              <ul>
+                <li>
+                  <Link to={`/users/${user.id}/`}>
+                    <button className="past-res">Current Reservatons</button>
+                  </Link>
+                  &nbsp;
+                  <Link to="/">
+                    <button className="make-res">Make a Reservation</button>
+                  </Link>
+                </li>
               </ul>
+            </div>
+            {/* <div className="reservation-boxes"> */}
+            {/* //             <img className="reservation-index-img" src={reservation.photoUrl} alt="restaurant image" /> */}
+            <ul className="reservation-items">
+              <h2 className="current-reservations">Past Reservations</h2>
+
+              {this.props.reservations.map((reservation) => (
+                <PastReservationItem
+                  key={reservation.id}
+                  reservation={reservation}
+                  deleteReservation={this.props.deleteReservation}
+                />
+              ))}
+            </ul>
             {/* </div> */}
           </div>
         );
