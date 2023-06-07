@@ -33,6 +33,7 @@ const mapDispatchToProps = (dispatch) => {
   //dispatch appropriate action to update the reservation
   clearReservationErrors: () => dispatch(clearReservationErrors()),
   closeModal: () => dispatch(closeModal()),
+  login: () => dispatch(openModal("login")),
 }};
 
 export default connect(

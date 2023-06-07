@@ -62,7 +62,7 @@ class UsersShow extends React.Component {
         </div>
     
         <ul className="reservation-items">
-          <h2 className="current-reservations">Current Reservations</h2>
+          <h2 className="current-reservations">Your Upcoming Reservations</h2>
 
           {this.props.reservations.map((reservation) => (
             <ReservationItem

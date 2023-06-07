@@ -34,6 +34,7 @@ class ReservationForm extends React.Component {
       userId: this.props.currentUser ? this.props.currentUser.id : "",
       reservationId: this.props.reservation_id,
       showConfirmation: false,
+      showLoginModal: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -58,7 +59,10 @@ class ReservationForm extends React.Component {
   handleSubmit(e) {
     // debugger
     e.preventDefault();
-
+    if (!this.props.currentUser) {
+      this.props.login({ modal: "login"});
+      return;
+    }else {
     const reservation = {
       party_size: this.state.partySize,
       date: this.state.date,
@@ -75,11 +79,11 @@ class ReservationForm extends React.Component {
     };
 
     // const restaurant = this.props.restaurant;
-    this.props.createReservation(reservation).then(() => {  
-      this.setState({ showConfirmation: true });
-    });
+       this.props.createReservation(reservation).then(() => {  
+         this.setState({ showConfirmation: true });
+       });
 
-
+     }
   }
 
 

@@ -10,6 +10,7 @@ import {
 } from "../../actions/reservation_actions";
 import { getRestaurant } from '../../actions/restaurant_actions';
 import ReservationForm from './reservation_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) =>{
     //mapStateToProps, takes state and makes those parts available as props in the form 
@@ -45,14 +46,16 @@ const mapStateToProps = (state, ownProps) =>{
 
 }
 
-const mapDispatchToProps = dispatch =>({
-
-    getReservation: reservationId => dispatch(getReservation(reservationId)),
-    createReservation: reservation => dispatch(createReservation(reservation)),
-    deleteReservation: (reservationId) => dispatch(deleteReservation(reservationId)),
-    removeConfirmation: () => dispatch(removeConfirmation()),
-    clearReservationErrors: () => dispatch(clearReservationErrors()),
-})
+const mapDispatchToProps = (dispatch) => ({
+  getReservation: (reservationId) => dispatch(getReservation(reservationId)),
+  createReservation: (reservation) => dispatch(createReservation(reservation)),
+  deleteReservation: (reservationId) =>
+    dispatch(deleteReservation(reservationId)),
+  removeConfirmation: () => dispatch(removeConfirmation()),
+  clearReservationErrors: () => dispatch(clearReservationErrors()),
+  login: () => dispatch(openModal("login")),
+  closeModal: () => dispatch(closeModal()),
+});
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReservationForm));
 
