@@ -35,6 +35,7 @@ class ReservationForm extends React.Component {
       reservationId: this.props.reservation_id,
       showConfirmation: false,
       showLoginModal: false,
+
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -76,6 +77,7 @@ class ReservationForm extends React.Component {
       user_id: this.state.userId,
       reservation_id: this.state.reservationId,
       showConfirmation: false,
+      
     };
 
     // const restaurant = this.props.restaurant;
@@ -119,7 +121,7 @@ class ReservationForm extends React.Component {
     const { errors } = this.props;
 
     const successMessage = this.state.showConfirmation ? (
-      <div>Reservation Confirmed!</div>
+      <div className="reservation-confirmation">Reservation Confirmed!</div>
     ) : null;
 
 
