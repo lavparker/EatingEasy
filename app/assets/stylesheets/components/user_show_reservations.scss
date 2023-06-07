@@ -40,15 +40,15 @@
     box-shadow: 0 2px 10px;
     border-radius: 4px;
     height: 12rem;
-    width: 80%;
+    width: 90%;
     background-color: bisque;
     color: #0f4e63;
     font-family: Arial, Helvetica, sans-serif;
     border: 1px solid #0f4e63;
-    margin-left: 3.5rem;
+    margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 1rem;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .reservation-boxes:hover{
@@ -95,7 +95,8 @@
     font-size: 1.5rem;
     font-weight: 700;
     align-self: center;
-    // word-wrap: normal;
+    // overflow: wrap;
+    word-wrap: normal;
     font-style: oblique;
 }
 
