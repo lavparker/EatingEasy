@@ -54,6 +54,8 @@ class ReviewForm extends React.Component {
 
     this.props.createReview(review).then(() => {
       this.setState({ reviewSubmitted: true }); 
+    }).then(() => {
+      this.props.clearReviewErrors();
     });
     // .then((review) =>{
 
