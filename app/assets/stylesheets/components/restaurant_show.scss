@@ -134,9 +134,9 @@
     // border-style: none; 
     color:black;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     border-style: none; 
-    font-weight: 700;
+    font-weight: 600;
     background-color: whitesmoke;
     outline: none;
 
@@ -183,25 +183,13 @@
     background-color: whitesmoke;
     list-style: none;
     padding: 2rem;
-    // line-height: 1.15;
-    // font-family:BrandonText,
-    //     -apple-system,
-    //     BlinkMacSystemFont,
-    //     Segoe UI,
-    //     Roboto,
-    //     Helvetica,
-    //     Arial,
-    //     sans-serif,
-    //     Apple Color Emoji,
-    //     Segoe UI Emoji,
-    //     Segoe UI Symbol;
     justify-content: center;
     // box-shadow: 0 2px 20px;
     // margin-top: -3.5rem;
     margin-left: 10%;
     margin-bottom: 3rem;;
     // margin-right: 40%;
-    width: 95%;
+    width: 100%;
     // margin: 1rem; 
     border-radius: 4px;
     // flex-direction: row;
@@ -214,20 +202,7 @@
     height: 40px; 
 }
 
-// .res-form {
-    // display: grid;
-    // grid-template-rows: auto;
-    // grid-template-columns: 1fr 1fr;
-    // display: flex;
-    // margin-top: -315%;
-    // max-width: 80%; 
-    // margin-left: 85%;
-    // justify-content: center;
 
-    // margin-bottom: 30rem;
-
-
-// }
 
 .show-page-res-name {
     padding-top: 3rem;
@@ -255,6 +230,7 @@
     font-size: 18px;
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
     margin-top: 1rem;
+    padding: 1rem;
 }
 
 .res-review {
@@ -411,7 +387,11 @@
     flex-direction: row;
     margin-top: 1rem;
     float: right;
+    margin-bottom: 1rem;
+    
 }
+
+
 
 .reviews-index{
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
@@ -426,13 +406,14 @@
 }
 
 .delete-rev{
-    margin: 0%; 
+    // margin: 0%; 
      background-color: #247f9e;
     // color: bisque;
     color: antiquewhite;
     font-weight: 700;
     height: 40px;
     width: 90px;
+    margin-right: 1rem;
     // margin-bottom: ;
     // margin-left: 50%;
     // margin: 25%;
@@ -454,7 +435,7 @@
     float: bottom;  
     // margin-bottom: ;
     // margin-left: 50%;
-    margin: 4%;
+    // margin: 4%;
     align-items: center;
     border-radius: 4px;
     font: 10px;

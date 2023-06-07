@@ -249,7 +249,7 @@ class ReservationForm extends React.Component {
 
           <br />
 
-          <p>
+          <p className="booked-num-times">
             {" "}
             <FaChartLine size={25} /> &nbsp; Booked {num} times today{" "}
           </p>

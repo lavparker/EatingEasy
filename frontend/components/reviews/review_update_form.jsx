@@ -18,7 +18,7 @@ class ReviewUpdateForm extends React.Component {
           user_id: props.review ? props.review.user_id : "",
           restaurant_id: props.review ? props.review.restaurant_id : "",
           id: props.review ? props.review.id : "",
-         
+          reviewSubmitted: false,
         };
 
 
@@ -51,7 +51,9 @@ class ReviewUpdateForm extends React.Component {
             id: this.state.id,
         }
 
-        this.props.updateReview(review);
+        this.props.updateReview(review).then(() => {
+          this.setState({ reviewSubmitted: true });
+        });
     }
 
     changeRating(newRating, name) {
@@ -76,7 +78,10 @@ class ReviewUpdateForm extends React.Component {
     }
     
     render(){
-       const { review, restaurant } = this.props;
+      const { review, restaurant } = this.props;
+      const successMessage = this.state.reviewSubmitted ? (
+        <div>Review Submitted!</div>
+      ) : null;
 
         return (
           <div className="review-update-form">
@@ -172,9 +177,9 @@ class ReviewUpdateForm extends React.Component {
               <br />
               <button className="submit-review-btn">
                 <FaPencilAlt className="pencil-btn" />
-                &nbsp;
-                Submit Your Updated Review
+                &nbsp; Submit Updated Review
               </button>
+              <p className="success-message">{successMessage}</p>
             </form>
           </div>
         );
