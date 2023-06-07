@@ -104,13 +104,7 @@ class ReviewForm extends React.Component {
         <br />
         <form onSubmit={this.handleSubmit} className="review-form-main">
           <br />
-          {/* <p>Name</p>
-          <input
-            type="text"
-            className="name"
-            onChange={this.handleInput("name")}
-            value={this.state.name}
-          /> */}
+    
           <br />
           <p>Overall</p>
           <StarRatings

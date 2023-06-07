@@ -90,7 +90,7 @@ class ReviewUpdateForm extends React.Component {
               <br />
               <div>{this.renderErrors()}</div>
               <br />
-              <p>Overall update</p>
+              <p>Overall </p>
               <StarRatings
                 rating={this.state.overall_rating}
                 numberOfStars={5}
