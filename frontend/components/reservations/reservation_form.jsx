@@ -83,6 +83,8 @@ class ReservationForm extends React.Component {
     // const restaurant = this.props.restaurant;
        this.props.createReservation(reservation).then(() => {  
          this.setState({ showConfirmation: true });
+       }).then(() => {
+        this.props.clearReservationErrors();
        });
 
      }
