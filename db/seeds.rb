@@ -15,7 +15,7 @@ Reservation.destroy_all
 Review.destroy_all
 
 #Restaurant seeds
-#wills start at 3 next time 
+
 rest1 = Restaurant.create(
     :name => 'Aunts et Uncles', 
     :address => '1407 Nostrand Ave., Brooklyn, NY 11226', 
@@ -44,11 +44,9 @@ rest2 = Restaurant.create(
     :dining_style => "Fine Dining"
 )
 
-# rest2.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/la_grande_boucherie.png"), filename: 'la_grande_boucherie.png')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/la_grande_boucherie.png')
+rest2.photo.attach(io: file, filename: 'la_grande_boucherie.png')
 
-# photo2 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/la_grande_boucherie.png')
-
-# rest2.photo.attach(io: file, filename: 'la_grande_boucherie.png')
 
 rest3 = Restaurant.create(
     :name => 'Bunna Café', 
@@ -62,10 +60,9 @@ rest3 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
-# rest3.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/bunna_cafe.jpg"), filename: 'bunna_cafe.jpg')
-# photo3 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/bunna_cafe.jpg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/bunna_cafe.jpg')
+rest3.photo.attach(io: file, filename: 'bunna_cafe.jpg')
 
-# rest3.photo.attach(io: file, filename: 'bunna_cafe.jpg')
 
 rest4 = Restaurant.create(
     :name => 'Gramercy Tavern', 
@@ -79,10 +76,9 @@ rest4 = Restaurant.create(
     :dining_style => "Pre Fixe"
 )
 
-# rest4.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/gramerc_taver.png"), filename: 'gramerc_taver.png')
-# photo4 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/gramerc_taver.png')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/gramerc_taver.png')
+rest4.photo.attach(io: file, filename: 'gramerc_taver.png')
 
-# rest4.photo.attach(io: file, filename: 'gramerc_taver.png')
 
 rest5 = Restaurant.create(
     :name => 'Jasmine’s Caribbean Cuisine', 
@@ -95,6 +91,9 @@ rest5 = Restaurant.create(
     :website => "http://jasminescaribbeancuisine.com/", 
     :dining_style => "Casual Dining"
 )
+
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/jasmines.jpeg')
+rest5.photo.attach(io: file, filename: 'jasmines.jpeg')
 
 # rest5.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/jasmines.jpeg"), filename: 'jasmines.jpeg')
 # photo5 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/jasmines.jpeg')
@@ -113,10 +112,9 @@ rest6 = Restaurant.create(
     :dining_style => "Fine Dining"
 )
 
-# rest6.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/1803-nyc-new-york-ny-interior-2.png"), filename: '1803-nyc-new-york-ny-interior-2.png')
-# photo6 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/1803-nyc-new-york-ny-interior-2.png')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/1803-nyc-new-york-ny-interior-2.png')
+rest6.photo.attach(io: file, filename: '1803-nyc-new-york-ny-interior-2.png')
 
-# rest6.photo.attach(io: file, filename: '1803-nyc-new-york-ny-interior-2.png')
 
 rest7 = Restaurant.create(
     :name => 'Zou Zou’s', 
@@ -130,10 +128,10 @@ rest7 = Restaurant.create(
     :dining_style => "Casual Dining"
 )
 
-# rest7.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/zou-zous.png"), filename: 'zou-zous.png')
-# photo7 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/zou-zous.png')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/zou-zous.png')
+rest7.photo.attach(io: file, filename: 'zou-zous.png')
 
-# rest7.photo.attach(io: file, filename: 'zou-zous.png')
+
 
 rest8 = Restaurant.create(
     :name => 'COTE Korean Steakhouse', 
@@ -147,10 +145,9 @@ rest8 = Restaurant.create(
     :dining_style => "Fast Casual"
 )
 
-# rest8.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/cote-korean.jpg"), filename: 'cote-korean.jpg')
-# photo8 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/cote-korean.jpg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/cote-korean.jpg')
+rest8.photo.attach(io: file, filename: 'cote-korean.jpg')
 
-# rest8.photo.attach(io: file, filename: 'cote-korean.jpg')
 
 rest9 = Restaurant.create(
     :name => 'Melbas Restaurant', 
@@ -163,11 +160,9 @@ rest9 = Restaurant.create(
     :website => "www.melbasrestaurant.com", 
     :dining_style => "Casual"
 )
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/melbas.png')
+rest9.photo.attach(io: file, filename: 'melbas.png')
 
-# rest9.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/melbas.png"), filename: 'melbas.png')
-# photo9 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/melbas.png')
-
-# rest9.photo.attach(io: file, filename: 'melbas.png')
 
 rest10 = Restaurant.create!(
     :name =>  "Kochi", 
@@ -181,10 +176,9 @@ rest10 = Restaurant.create!(
     :dining_style =>  "multicourse tasting menu"
 )
 
-# rest10.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/kochi-1.jpeg"), filename: 'kochi.jpeg')
-# photo10 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/kochi.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/kochi.jpeg')
+rest10.photo.attach(io: file, filename: 'kochi.jpeg')
 
-# rest10.photo.attach(io: file, filename: 'kochi.jpeg')
 
 rest11 = Restaurant.create!(
     :name => "Cafe Himalaya",
@@ -199,10 +193,9 @@ rest11 = Restaurant.create!(
     :dining_style => "Relaxed"
 )
 
-# rest11.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/cafe_himalaya-1.jpeg"), filename: 'cafe_himalaya.jpeg')
-# photo11 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/cafe_himalaya.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/cafe_himalaya.jpeg')
+rest11.photo.attach(io: file, filename: 'cafe_himalaya.jpeg')
 
-# rest11.photo.attach(io: file, filename: 'cafe_himalaya.jpeg')
 
 rest12 = Restaurant.create!(
     :name => "Popular",
@@ -229,10 +222,9 @@ rest12 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-# rest12.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/popular_peru-1.jpeg"), filename: 'popular_peru.jpeg')
-# photo12 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/popular_peru.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/popular_peru.jpeg')
+rest12.photo.attach(io: file, filename: 'popular_peru.jpeg')
 
-# rest12.photo.attach(io: file, filename: 'popular_peru.jpeg')
 
 rest13 = Restaurant.create!(
     :name => "Momofuku Ko",
@@ -255,10 +247,9 @@ rest13 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-# rest13.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/momofuku_ko-1.jpeg"), filename: 'momofuku_ko.jpeg')
-# photo13 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/momofuku_ko.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/momofuku_ko.jpeg')
+rest13.photo.attach(io: file, filename: 'momofuku_ko.jpeg')
 
-# rest13.photo.attach(io: file, filename: 'momofuku_ko.jpeg')
 
 rest14 = Restaurant.create!(
     :name => "Max Brenner New York",
@@ -275,10 +266,10 @@ rest14 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-# rest14.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/max_brenner-1.jpeg"), filename: 'max_brenner.jpeg')
-# photo14 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/max_brenner.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/max_brenner.jpeg')
+rest14.photo.attach(io: file, filename: 'max_brenner.jpeg')
 
-# rest14.photo.attach(io: file, filename: 'max_brenner.jpeg')
+
 
 rest15 = Restaurant.create!(
     :name => "Upland",
@@ -301,10 +292,10 @@ rest15 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
-# rest15.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/upland-1.jpeg"), filename: 'upland.jpeg')
-# photo15 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/upland.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/upland.jpeg')
+rest15.photo.attach(io: file, filename: 'upland.jpeg')
 
-# rest15.photo.attach(io: file, filename: 'upland.jpeg')
+
 
 rest16 = Restaurant.create!(
     :name => "Sigiri",
@@ -327,10 +318,9 @@ rest16 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
-# rest16.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/sigri-1.jpeg"), filename: 'sigri.jpeg')
-# photo16 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/sigri.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/sigri.jpeg')
+rest16.photo.attach(io: file, filename: 'sigri.jpeg')
 
-# rest16.photo.attach(io: file, filename: 'sigri.jpeg')
 
 rest17 = Restaurant.create!(
     :name => "Manousheh Bleecker",
@@ -352,10 +342,10 @@ rest17 = Restaurant.create!(
     :dining_style => "Cafe"
 )
 
-# rest17.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/manousheh-1.jpeg"), filename: 'manousheh.jpeg')
-# photo17 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/manousheh.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/manousheh.jpeg')
+rest17.photo.attach(io: file, filename: 'manousheh.jpeg')
 
-# rest17.photo.attach(io: file, filename: 'manousheh.jpeg')
+
 
 rest18 = Restaurant.create!(
     :name => "Queen of Sheba",
@@ -382,10 +372,9 @@ rest18 = Restaurant.create!(
     :dining_style => "Family-style"
 )
 
-# rest18.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/queen_of_sheba-1.jpeg"), filename: 'queen_of_sheba.jpeg')
-# photo18 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/queen_of_sheba.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/queen_of_sheba.jpeg')
+rest18.photo.attach(io: file, filename: 'queen_of_sheba.jpeg')
 
-# rest18.photo.attach(io: file, filename: 'queen_of_sheba.jpeg')
 
 rest19 = Restaurant.create!(
     :name => "Salam",
@@ -408,10 +397,10 @@ rest19 = Restaurant.create!(
     :dining_style => "Fast Casual"
 )
 
-# rest19.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/salam-1.png"), filename: 'salam.png')
-# photo19 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/salam.png')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/salam.png')
+rest19.photo.attach(io: file, filename: 'salam.png')
 
-# rest19.photo.attach(io: file, filename: 'salam.png')
+
 
 rest20 = Restaurant.create!(
     :name => "Chama Mama",
@@ -437,10 +426,9 @@ rest20 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-# rest20.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/chama_mama-1.jpeg"), filename: 'chama_mama.jpeg')
-# photo20 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/chama_mama.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/chama_mama.jpeg')
+rest20.photo.attach(io: file, filename: 'chama_mama.jpeg')
 
-# rest20.photo.attach(io: file, filename: 'chama_mama.jpeg')
 
 rest21 = Restaurant.create!(
     :name => "Dirt Candy",
@@ -468,10 +456,9 @@ rest21 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-# rest21.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/dirt_candy-1.jpeg"), filename: 'dirt_candy.jpeg')
-# photo21 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/dirt_candy.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/dirt_candy.jpeg')
+rest21.photo.attach(io: file, filename: 'dirt_candy.jpeg')
 
-# rest21.photo.attach(io: file, filename: 'dirt_candy.jpeg')
 
 rest22 = Restaurant.create!(
     :name => "Verōnika",
@@ -497,10 +484,10 @@ rest22 = Restaurant.create!(
     :dining_style => "Fine dining"
 )
 
-# rest22.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/veronika-1.jpeg"), filename: 'veronika.jpeg')
-# photo22 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/veronika.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/veronika.jpeg')
+rest22.photo.attach(io: file, filename: 'veronika.jpeg')
 
-# rest22.photo.attach(io: file, filename: 'veronika.jpeg')
+
 
 rest23 = Restaurant.create!(
     :name => "Antique Garage Tribeca",
@@ -518,11 +505,9 @@ rest23 = Restaurant.create!(
     :additional_features => "Every night live Jazz 7:00 PM to 10:00 PM",
     :dining_style => "Casual Dining"
 )
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/antique_garage_tribeca.jpeg')
+rest23.photo.attach(io: file, filename: 'antique_garage_tribeca.jpeg')
 
-# rest23.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/antique_garage_tribeca+-1.jpeg"), filename: 'antique_garage_tribeca .jpeg')
-# photo23 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/antique_garage_tribeca .jpeg')
-
-# rest23.photo.attach(io: file, filename: 'antique_garage_tribeca .jpeg')
 
 rest24 = Restaurant.create!(
     :name => "A La Turka Restaurant",
@@ -545,10 +530,9 @@ rest24 = Restaurant.create!(
     :dining_style => "Fine Dining"
 )
 
-# rest24.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/a_la_turka-1.jpeg"), filename: 'a_la_turka.jpeg')
-# photo24 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/a_la_turka.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/a_la_turka.jpeg')
+rest24.photo.attach(io: file, filename: 'a_la_turka.jpeg')
 
-# rest24.photo.attach(io: file, filename: 'a_la_turka.jpeg')
 
 rest25 = Restaurant.create!(
     :name => "Tito Murphy's",
@@ -567,10 +551,9 @@ rest25 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-# rest25.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/tito_murphys-1.jpeg"), filename: 'tito_murphys.jpeg')
-# photo25 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/tito_murphys.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/tito_murphys.jpeg')
+rest25.photo.attach(io: file, filename: 'tito_murphys.jpeg')
 
-# rest25.photo.attach(io: file, filename: 'tito_murphys.jpeg')
 
 rest26 = Restaurant.create!(
     :name => "Peachy Keen",
@@ -587,10 +570,9 @@ rest26 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-# rest26.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/peachy_keen-1.jpeg"), filename: 'peachy_keen.jpeg')
-# photo26 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/peachy_keen.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/peachy_keen.jpeg')
+rest26.photo.attach(io: file, filename: 'peachy_keen.jpeg')
 
-# rest26.photo.attach(io: file, filename: 'peachy_keen.jpeg')
 
 rest27 = Restaurant.create!(
     :name => "Ashford & Simpson's Sugar Bar",
@@ -613,10 +595,9 @@ rest27 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-# rest27.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/ashford_simpsons_sugar_bar-1.jpeg"), filename: 'ashford_simpsons_sugar_bar.jpeg')
-# photo27 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/ashford_simpsons_sugar_bar.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/ashford_simpsons_sugar_bar.jpeg')
+rest27.photo.attach(io: file, filename: 'ashford_simpsons_sugar_bar.jpeg')
 
-# rest27.photo.attach(io: file, filename: 'ashford_simpsons_sugar_bar.jpeg')
 
 rest28 = Restaurant.create!(
     :name => "Renaissance Harlem",
@@ -641,10 +622,10 @@ rest28 = Restaurant.create!(
     :dining_style => "Casual"
 )
 
-# rest28.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/renaissance_harlem-1.png"), filename: 'renaissance_harlem.png')
-# photo28 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/renaissance_harlem.png')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/renaissance_harlem.png')
+rest28.photo.attach(io: file, filename: 'renaissance_harlem.png')
 
-# rest28.photo.attach(io: file, filename: 'renaissance_harlem.png')
+
 
 rest29 = Restaurant.create!(
     :name => "Chocobar Cortés",
@@ -672,10 +653,9 @@ rest29 = Restaurant.create!(
     :dining_style => "Casual Dining"
 )
 
-# rest29.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/chocobar-cortes-1.jpeg"), filename: 'chocobar-cortes.jpeg')
-# photo29 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/chocobar-cortes.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/chocobar-cortes.jpeg')
+rest29.photo.attach(io: file, filename: 'chocobar-cortes.jpeg')
 
-# rest29.photo.attach(io: file, filename: 'chocobar-cortes.jpeg')
 
 rest30 = Restaurant.create!(
     :name => "Trailer Park Lounge",
@@ -697,10 +677,11 @@ rest30 = Restaurant.create!(
     :website => "http://www.trailerparklounge.com/", 
     :dining_style => "Fast Casual"
 )
-# rest30.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/trailer_park_lounge.jpg"), filename: 'trailer_park_lounge.jpg')
-# photo30 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/trailer_park_lounge.jpg.jpg')
 
-# rest30.photo.attach(io: file, filename: 'trailer_park_lounge.jpg')
+
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/trailer-Park-Lounge.jpg')
+rest30.photo.attach(io: file, filename: 'trailer-Park-Lounge.jpg')
+
 
 #Reservations 
 
@@ -711,164 +692,9 @@ rest30 = Restaurant.create!(
 # review1 = Review.create(:user_id, :restaurant_id, :overall_rating, :food_rating, :ambiance_rating, :value_rating, :noise_level, :body )
 
 #start user id at 44 and start restaruant id at 251
-rev1 = Review.create(:user_id => 33, :restaurant_id => 221, :overall_rating => 5, :food_rating=> 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
-rev2 = Review.create(:user_id => 34, :restaurant_id => 222, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This is one of my favorite places. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. I want to hire their decorator to furnish my apartment. I was happy to see how clean everything was. The waiter did an excellent job. This is definitely a spot I'll be frequenting.")
-rev3 = Review.create(:user_id => 35, :restaurant_id => 223, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!")
-rev4 = Review.create(:user_id => 36, :restaurant_id => 224, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!")
-rev5 = Review.create(:user_id => 37, :restaurant_id => 225, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting.")
-rev6 = Review.create(:user_id => 38, :restaurant_id => 226, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!")
-rev7 = Review.create(:user_id => 39, :restaurant_id => 227, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!")
-rev8 = Review.create(:user_id => 40, :restaurant_id => 228, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!")
-rev9 = Review.create(:user_id => 41, :restaurant_id => 229, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!")
-rev10 = Review.create(:user_id => 42, :restaurant_id => 230, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!")
-rev11 = Review.create(:user_id => 43, :restaurant_id => 231, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!")
-rev12 = Review.create(:user_id => 33, :restaurant_id => 232, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!")
-rev13 = Review.create(:user_id => 34, :restaurant_id => 233, :overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting.")
-rev14 = Review.create(:user_id => 35, :restaurant_id => 234, :overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!")
-rev15 = Review.create(:user_id => 36, :restaurant_id => 235, :overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!")
-rev16 = Review.create(:user_id => 37, :restaurant_id => 236, :overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!")
-rev17 = Review.create(:user_id => 38, :restaurant_id => 237, :overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!")
-rev18 = Review.create(:user_id => 39, :restaurant_id => 238, :overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting.")
-rev19 = Review.create(:user_id => 40, :restaurant_id => 239, :overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!")
-rev20 = Review.create(:user_id => 41, :restaurant_id => 240, :overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!")
-rev21 = Review.create(:user_id => 42, :restaurant_id => 241, :overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!")
-rev22 = Review.create(:user_id => 43, :restaurant_id => 242, :overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting.")
-rev23 = Review.create(:user_id => 33, :restaurant_id => 243, :overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!")
-rev24 = Review.create(:user_id => 34, :restaurant_id => 244, :overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!")
-rev25 = Review.create(:user_id => 35, :restaurant_id => 245, :overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!")
-rev26 = Review.create(:user_id => 36, :restaurant_id => 246, :overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting.")
-rev27 = Review.create(:user_id => 37, :restaurant_id => 247, :overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!")
-rev28 = Review.create(:user_id => 38, :restaurant_id => 248, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!")
-rev29 = Review.create(:user_id => 39, :restaurant_id => 249, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!")
-rev30 = Review.create(:user_id => 40, :restaurant_id => 250, :overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!")
-
-rev31 = Review.create(:user_id => 41, :restaurant_id => 221, :overall_rating => 4, :food_rating => 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
-rev32 = Review.create(:user_id => 42, :restaurant_id => 222, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction.")
-rev33 = Review.create(:user_id => 43, :restaurant_id => 223, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again.")
-rev34 = Review.create(:user_id => 33, :restaurant_id => 224, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long.")
-rev35 = Review.create(:user_id => 34, :restaurant_id => 225, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky.")
-rev36 = Review.create(:user_id => 35, :restaurant_id => 226, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again.")
-rev37 = Review.create(:user_id => 36, :restaurant_id => 227, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction.")
-rev38 = Review.create(:user_id => 37, :restaurant_id => 228, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again.")
-rev39 = Review.create(:user_id => 38, :restaurant_id => 229, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I have been here several times before. Make sure to save room for dessert, because that was the best part of the meal! The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. I had a satisfactory experience and will have to try it again.")
-rev40 = Review.create(:user_id => 39, :restaurant_id => 230, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky.")
-rev41 = Review.create(:user_id => 40, :restaurant_id => 231, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long.")
-rev42 = Review.create(:user_id => 41, :restaurant_id => 232, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again.")
-rev43 = Review.create(:user_id => 42, :restaurant_id => 233, :overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction.")
-rev44 = Review.create(:user_id => 43, :restaurant_id => 234, :overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again.")
-rev45 = Review.create(:user_id => 33, :restaurant_id => 235, :overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky.")
-rev46 = Review.create(:user_id => 34, :restaurant_id => 236, :overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long.")
-rev47 = Review.create(:user_id => 35, :restaurant_id => 237, :overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again.")
-rev48 = Review.create(:user_id => 36, :restaurant_id => 238, :overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction.")
-rev49 = Review.create(:user_id => 37, :restaurant_id => 239, :overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again.")
-rev50 = Review.create(:user_id => 38, :restaurant_id => 240, :overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky.")
-rev51 = Review.create(:user_id => 39, :restaurant_id => 241, :overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long.")
-rev52 = Review.create(:user_id => 40, :restaurant_id => 242, :overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again.")
-rev53 = Review.create(:user_id => 41, :restaurant_id => 243, :overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction.")
-rev54 = Review.create(:user_id => 42, :restaurant_id => 244, :overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again.")
-rev55 = Review.create(:user_id => 33, :restaurant_id => 245, :overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky.")
-rev56 = Review.create(:user_id => 34, :restaurant_id => 246, :overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long.")
-rev57 = Review.create(:user_id => 35, :restaurant_id => 247, :overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again.")
-rev58 = Review.create(:user_id => 36, :restaurant_id => 248, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again.")
-rev59 = Review.create(:user_id => 37, :restaurant_id => 249, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky.")
-rev60 = Review.create(:user_id => 38, :restaurant_id => 250, :overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction.")
-
-rev61 = Review.create(:user_id => 39, :restaurant_id => 221, :overall_rating => 3, :food_rating => 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
-rev62 = Review.create(:user_id => 40, :restaurant_id => 222, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars.")
-rev63 = Review.create(:user_id => 41, :restaurant_id => 223, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again.")
-rev64 = Review.create(:user_id => 42, :restaurant_id => 224, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell.")
-rev65 = Review.create(:user_id => 43, :restaurant_id => 225, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again.")
-rev66 = Review.create(:user_id => 33, :restaurant_id => 226, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev67 = Review.create(:user_id => 34, :restaurant_id => 227, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again.")
-rev68 = Review.create(:user_id => 35, :restaurant_id => 228, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars.")
-rev69 = Review.create(:user_id => 36, :restaurant_id => 229, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell.")
-rev70 = Review.create(:user_id => 37, :restaurant_id => 230, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev71 = Review.create(:user_id => 38, :restaurant_id => 231, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again.")
-rev72 = Review.create(:user_id => 39, :restaurant_id => 232, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell.")
-rev73 = Review.create(:user_id => 40, :restaurant_id => 233, :overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars.")
-rev74 = Review.create(:user_id => 41, :restaurant_id => 234, :overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev75 = Review.create(:user_id => 42, :restaurant_id => 235, :overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again.")
-rev76 = Review.create(:user_id => 43, :restaurant_id => 236, :overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell.")
-rev77 = Review.create(:user_id => 33, :restaurant_id => 237, :overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev78 = Review.create(:user_id => 34, :restaurant_id => 238, :overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again.")
-rev79 = Review.create(:user_id => 35, :restaurant_id => 239, :overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev80 = Review.create(:user_id => 36, :restaurant_id => 240, :overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars.")
-rev81 = Review.create(:user_id => 37, :restaurant_id => 241, :overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell.")
-rev82 = Review.create(:user_id => 38, :restaurant_id => 242, :overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again.")
-rev83 = Review.create(:user_id => 39, :restaurant_id => 243, :overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev84 = Review.create(:user_id => 40, :restaurant_id => 244, :overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again.")
-rev85 = Review.create(:user_id => 41, :restaurant_id => 245, :overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell.")
-rev86 = Review.create(:user_id => 42, :restaurant_id => 246, :overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev87 = Review.create(:user_id => 43, :restaurant_id => 247, :overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars.")
-rev88 = Review.create(:user_id => 33, :restaurant_id => 248, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again.")
-rev89 = Review.create(:user_id => 34, :restaurant_id => 249, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again.")
-rev90 = Review.create(:user_id => 35, :restaurant_id => 250, :overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars.")
-
-rev91 = Review.create(:user_id => 36, :restaurant_id => 221, :overall_rating => 2, :food_rating => 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
-rev92 = Review.create(:user_id => 37, :restaurant_id => 222, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh.")
-rev93 = Review.create(:user_id => 38, :restaurant_id => 223, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back.")
-rev94 = Review.create(:user_id => 39, :restaurant_id => 224, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again.")
-rev95 = Review.create(:user_id => 40, :restaurant_id => 225, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous.")
-rev96 = Review.create(:user_id => 41, :restaurant_id => 226, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh.")
-rev97 = Review.create(:user_id => 42, :restaurant_id => 227, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh.")
-rev98 = Review.create(:user_id => 43, :restaurant_id => 228, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh.")
-rev99 = Review.create(:user_id => 33, :restaurant_id => 229, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous.")
-rev100 = Review.create(:user_id => 35, :restaurant_id => 230, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again.")
-rev101 = Review.create(:user_id => 36, :restaurant_id => 231, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh.")
-rev102 = Review.create(:user_id => 37, :restaurant_id => 232, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back.")
-rev103 = Review.create(:user_id => 38, :restaurant_id => 233, :overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh.")
-rev104 = Review.create(:user_id => 39, :restaurant_id => 234, :overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous.")
-rev105 = Review.create(:user_id => 40, :restaurant_id => 235, :overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again.")
-rev106 = Review.create(:user_id => 41, :restaurant_id => 236, :overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back.")
-rev107 = Review.create(:user_id => 42, :restaurant_id => 237, :overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh.")
-rev108 = Review.create(:user_id => 43, :restaurant_id => 238, :overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh.")
-rev109 = Review.create(:user_id => 33, :restaurant_id => 239, :overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"I really wanted to like this place. I shouldn't have to pay good money to be served vegetables from a can. Too many things on the menu look like crap, smell like crap, and taste like crap. I found the entrees to not be very agreeable to my personal flavor-profile. I had a less than satisfactory experience and will probably not be here again.")
-rev110 = Review.create(:user_id => 34, :restaurant_id => 240, :overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again.")
-rev111 = Review.create(:user_id => 35, :restaurant_id => 241, :overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back.")
-rev112 = Review.create(:user_id => 36, :restaurant_id => 242, :overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous.")
-rev113 = Review.create(:user_id => 37, :restaurant_id => 243, :overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh.")
-rev114 = Review.create(:user_id => 38, :restaurant_id => 244, :overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I really wanted to like this place. I shouldn't have to pay good money to be served vegetables from a can. Too many things on the menu look like crap, smell like crap, and taste like crap. I found the entrees to not be very agreeable to my personal flavor-profile. I had a less than satisfactory experience and will probably not be here again.")
-rev115 = Review.create(:user_id => 39, :restaurant_id => 245, :overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again.")
-rev116 = Review.create(:user_id => 40, :restaurant_id => 246, :overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back.")
-rev117 = Review.create(:user_id => 41, :restaurant_id => 247, :overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous.")
-rev118 = Review.create(:user_id => 42, :restaurant_id => 248, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh.")
-rev119 = Review.create(:user_id => 43, :restaurant_id => 249, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again.")
-rev120 = Review.create(:user_id => 33, :restaurant_id => 250, :overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back.")
-
-rev121 = Review.create(:user_id => 34, :restaurant_id => 221, :overall_rating => 1, :food_rating => 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
-rev122 = Review.create(:user_id => 34, :restaurant_id => 222, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous.")
-rev123 = Review.create(:user_id => 35, :restaurant_id => 223, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here.")
-rev124 = Review.create(:user_id => 36, :restaurant_id => 224, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here.")
-rev125 = Review.create(:user_id => 37, :restaurant_id => 225, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said. DONT EAT HERE!")
-rev126 = Review.create(:user_id => 38, :restaurant_id => 226, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasnt mine in my food. Wild horses couldnt drag me back here.")
-rev127 = Review.create(:user_id => 39, :restaurant_id => 227, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone elses. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous.")
-rev128 = Review.create(:user_id => 40, :restaurant_id => 228, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0.")
-rev129 = Review.create(:user_id => 41, :restaurant_id => 229, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Lame. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. This food will start the zombie apocalypse. Stay away!")
-rev130 = Review.create(:user_id => 42, :restaurant_id => 230, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here.")
-rev131 = Review.create(:user_id => 43, :restaurant_id => 231, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here.")
-rev132 = Review.create(:user_id => 33, :restaurant_id => 232, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said DONT EAT HERE!")
-rev133 = Review.create(:user_id => 34, :restaurant_id => 233, :overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone elses. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous.")
-rev134 = Review.create(:user_id => 35, :restaurant_id => 234, :overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I felt like this place wasnt trying at all. Eating here is like playing Russian Roulette, only you have a 5 out of 6 chance of getting food poisoning. Overhyped. The kitchen screwed up my order completely, mixing it up with someone elses. It took almost an hour to get it corrected! 1 star. Never again.")
-rev135 = Review.create(:user_id => 36, :restaurant_id => 235, :overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0.")
-rev136 = Review.create(:user_id => 37, :restaurant_id => 236, :overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here.")
-rev137 = Review.create(:user_id => 38, :restaurant_id => 237, :overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous.")
-rev138 = Review.create(:user_id => 39, :restaurant_id => 238, :overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"Lame. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. This food will start the zombie apocalypse. Stay away!")
-rev139 = Review.create(:user_id => 40, :restaurant_id => 239, :overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"I felt like this place wasn't trying at all. Eating here is like playing Russian Roulette, only you have a 5 out of 6 chance of getting food poisoning. Overhyped. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! 1 star. Never again.")
-rev140 = Review.create(:user_id => 41, :restaurant_id => 240, :overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here.")
-rev141 = Review.create(:user_id => 42, :restaurant_id => 241, :overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I felt like this place wasn't trying at all. Eating here is like playing Russian Roulette, only you have a 5 out of 6 chance of getting food poisoning. Overhyped. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! 1 star. Never again.")
-rev142 = Review.create(:user_id => 43, :restaurant_id => 242, :overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here.")
-rev143 = Review.create(:user_id => 33, :restaurant_id => 243, :overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0.")
-rev144 = Review.create(:user_id => 34, :restaurant_id => 244, :overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said DON'T EAT HERE!")
-rev145 = Review.create(:user_id => 35, :restaurant_id => 245, :overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous.")
-rev146 = Review.create(:user_id => 36, :restaurant_id => 246, :overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0.")
-rev147 = Review.create(:user_id => 37, :restaurant_id => 247, :overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here.")
-rev148 = Review.create(:user_id => 38, :restaurant_id => 248, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said DON'T EAT HERE!")
-rev149 = Review.create(:user_id => 39, :restaurant_id => 249, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here.")
-rev150 = Review.create(:user_id => 40, :restaurant_id => 250, :overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous.")
-
 
 #Demo User 
-#starts at 34 
+
 user1 = User.create!(first_name: "Beyonce", last_name: "User", username: "DemoUser1", email: "demo.user@ymail.com", password: "password", phone_number: "808-867-5309")
 user2 = User.create(first_name: "Larry", last_name: "Rekrap", username: "LRekrap", email: "demo.user1@ymail.com", password: "password", phone_number: "555-445-4656")
 user3 = User.create(first_name: "Denise", last_name: "Rekrap", username: "DRekrap", email: "demo.user2@ymail.com", password: "password", phone_number: "555-357-8858")
@@ -880,4 +706,179 @@ user8 = User.create(first_name: "Elsa", last_name: "Noeled", username: "ENoled",
 user9 = User.create(first_name: "Mema", last_name: "Coleman", username: "MCole", email: "demo.user8@ymail.com", password: "password", phone_number: "555-257-5775")
 user10 = User.create(first_name: "Pepa", last_name: "Coleman", username: "PCole", email: "demo.user9@ymail.com", password: "password", phone_number: "555-754-3637")
 user11 = User.create(first_name: "Darnishia", last_name: "Salguod", username: "DDoug", email:"demo.user10@ymail.com", password: "password", phone_number: "555-345-3456") 
+
+
+reviews = [
+
+# Review.create!(:user_id => 1, :restaurant_id => 1, :overall_rating => 5, :food_rating=> 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" )
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This is one of my favorite places. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. I want to hire their decorator to furnish my apartment. I was happy to see how clean everything was. The waiter did an excellent job. This is definitely a spot I'll be frequenting."},
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!"},
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!"},
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting."},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!"},
+{:overall_rating => 5, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting."},
+{:overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!"},
+{:overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!"},
+{:overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!"},
+{:overall_rating => 5, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!"},
+{:overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting."},
+{:overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!"},
+{:overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!"},
+{:overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!"},
+{:overall_rating => 5, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting."},
+{:overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"Yumm-o! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything was just so yummy. Easily earned their 5 stars!"},
+{:overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!"},
+{:overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"This is one of my favorite places. Everything was simply decadent. I found the ambiance to be very charming. 5 stars!"},
+{:overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I've got a fetish for good food and this place gets me hot! Everything was just so yummy. Try out the huge selection of incredible appetizers. I was happy to see how clean everything was. This is definitely a spot I'll be frequenting."},
+{:overall_rating => 5, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!"},
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I stumbled on this undiscovered gem right in our neighboorhood. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Everything I tried was bursting with flavor. The decor was unique and incredible. They got a new customer for life!"},
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Oh my God! So yummy! Try out the huge selection of incredible appetizers. Everything was just so yummy. I would eat here every day if I could afford it!"},
+{:overall_rating => 5, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Best experience ever! I found the ambiance to be very charming. The desserts must be sprinkled with crack because I just craved for more and more. The food was flavorful, savory, and succulent. I was happy to see how clean everything was. I'd give more than 5 stars if I could!"},
+
+{:overall_rating => 4, :food_rating => 5, :ambiance_rating => 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" },
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction."},
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long."},
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I have been here several times before. Make sure to save room for dessert, because that was the best part of the meal! The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction."},
+{:overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again."},
+{:overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky."},
+{:overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long."},
+{:overall_rating => 4, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction."},
+{:overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again."},
+{:overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky."},
+{:overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long."},
+{:overall_rating => 4, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction."},
+{:overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again."},
+{:overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky."},
+{:overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. Make sure to save room for dessert, because that was the best part of the meal! Everything was just so yummy. It failed to meet the 5-star experience because the wait to get in was so long."},
+{:overall_rating => 4, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place was nearby and I decided to check it out. Everything was mostly decadent. I was happy to see how clean everything was. There were a lot of interesting decorations on the walls. The waitress did an excellent job. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. Everything was just so yummy. The waiter did an excellent job. Satisfactory experience, will come again."},
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"It was much better than I expected. There were a lot of interesting decorations on the walls. The waiter was prompt and polite. I found the entrees to be very agreeable to my personal flavor-profile. It could have been perfect, but the chairs were a little sticky."},
+{:overall_rating => 4, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Decent place. Everything I tried was bursting with flavor. The desserts must be sprinkled with crack because I just craved for more and more. There were a lot of interesting decorations on the walls. 4 stars of satisfaction."},
+
+{:overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 5, :value_rating => 4, :noise_level => 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" },
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars."},
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again."},
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell."},
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell."},
+{:overall_rating => 3, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars."},
+{:overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again."},
+{:overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell."},
+{:overall_rating => 3, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars."},
+{:overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell."},
+{:overall_rating => 3, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"This place had a lot of heart. Some of my favorite dishes are no longer available. The entree I had was sublime. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again."},
+{:overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I had high hopes for this place. I felt the prices were too high given the quality of the food. The service wasn't that good and the waiter was clueless. Might be back. Time will tell."},
+{:overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars."},
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"This place had a lot of heart. I was not very pleased to find out that the coffee wasn't fair trade. The menu didn't match the one on their website. There were a lot of interesting decorations on the walls. Satisfactory experience, will come again."},
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I have been here several times before. Some of my favorite dishes are no longer available. The menu didn't match the one on their website. The chicken was a little dry. I had a satisfactory experience and will have to try it again."},
+{:overall_rating => 3, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I'm torn about this place. The entree I had was sublime. The ambiance gives off an earthy feel-good vibe. Overall experience: 3 stars."},
+
+{:overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 4, :noise_level=> 4, :body => "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" },
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh."},
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back."},
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again."},
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back."},
+{:overall_rating => 2, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh."},
+{:overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous."},
+{:overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again."},
+{:overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back."},
+{:overall_rating => 2, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I felt like this place wasn't trying at all. I found the entrees to not be very agreeable to my personal flavor-profile. Seriously, how difficult is it to get a clean glass around here? Meh."},
+{:overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh."},
+{:overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"I really wanted to like this place. I shouldn't have to pay good money to be served vegetables from a can. Too many things on the menu look like crap, smell like crap, and taste like crap. I found the entrees to not be very agreeable to my personal flavor-profile. I had a less than satisfactory experience and will probably not be here again."},
+{:overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again."},
+{:overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back."},
+{:overall_rating => 2, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous."},
+{:overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh."},
+{:overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I really wanted to like this place. I shouldn't have to pay good money to be served vegetables from a can. Too many things on the menu look like crap, smell like crap, and taste like crap. I found the entrees to not be very agreeable to my personal flavor-profile. I had a less than satisfactory experience and will probably not be here again."},
+{:overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again."},
+{:overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back."},
+{:overall_rating => 2, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I am never coming back here! The waitress was barely there. Too many things on the menu look like crap, smell like crap, and taste like crap. The chicken was a little dry. The menu didn't match the one on their website. I gave this place two stars because I was feeling extra generous."},
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Bleh. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waitress was tired. Meh."},
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I felt like this place wasn't trying at all. The photos of the food were appetizing and palpable, but didn't live up to the hype. The service wasn't that good and the waiter was clueless. Too many things on the menu look like crap, smell like crap, and taste like crap. I shouldn't have to pay good money to be served vegetables from a can. They need to get their act together before I set foot in this place again."},
+{:overall_rating => 2, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I am never coming back here! Overhyped. The food was all right but seriously lacked presentation. I would be hard pressed to come back."},
+
+{:overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 4, :noise_level=> 4, :body=> "Oh! My! God! So good! Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. The decor was unique and incredible. 5 stars!" },
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous."},
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said. DONT EAT HERE!"},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 1, :value_rating=> 5, :noise_level=> 1, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasnt mine in my food. Wild horses couldnt drag me back here."},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 5, :noise_level=> 1, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone elses. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous."},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0."},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Lame. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. This food will start the zombie apocalypse. Stay away!"},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 2, :value_rating=> 4, :noise_level=> 2, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said DONT EAT HERE!"},
+{:overall_rating => 1, :food_rating=> 3, :ambiance_rating=> 3, :value_rating=> 4, :noise_level=> 3, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone elses. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous."},
+{:overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I felt like this place wasnt trying at all. Eating here is like playing Russian Roulette, only you have a 5 out of 6 chance of getting food poisoning. Overhyped. The kitchen screwed up my order completely, mixing it up with someone elses. It took almost an hour to get it corrected! 1 star. Never again."},
+{:overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0."},
+{:overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 2, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 3, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous."},
+{:overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 3, :noise_level=> 4, :body=>"Lame. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. This food will start the zombie apocalypse. Stay away!"},
+{:overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 3, :value_rating=> 2, :noise_level=> 4, :body=>"I felt like this place wasn't trying at all. Eating here is like playing Russian Roulette, only you have a 5 out of 6 chance of getting food poisoning. Overhyped. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! 1 star. Never again."},
+{:overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"I felt like this place wasn't trying at all. Eating here is like playing Russian Roulette, only you have a 5 out of 6 chance of getting food poisoning. Overhyped. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! 1 star. Never again."},
+{:overall_rating => 1, :food_rating=> 1, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 4, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 2, :noise_level=> 5, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0."},
+{:overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said DON'T EAT HERE!"},
+{:overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 4, :value_rating=> 1, :noise_level=> 5, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous."},
+{:overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"I can summarize my visit in one word: Horrible. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! I asked for my steak medium, but it was frozen in the center. The dead flies on the window sill indicated to me that they don't do a good job cleaning and the flies found the food to be toxic. I gave 1 star because I couldn't give 0."},
+{:overall_rating => 1, :food_rating=> 5, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Yuck! I found an eyelash that definitely wasn't mine in my food. Too many things on the menu look like crap, smell like crap, and taste like crap. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 1, :noise_level=> 5, :body=>"Worst experience ever! Even Chef Boyardee would be disgusted by this sorry attempt at a meal. I heard a rumor that the vegetarian dishes are prepared alongside the meat. I think this place was featured on Kitchen Nightmares, or at least it should have been. I wish I could put a sign out front that said DON'T EAT HERE!"},
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"Dreadful place. I found a dead cockroach on the floor of my booth. They can survive a nuclear explosion, but the entree was too much for them. I threw up in my mouth a little when they brought me my food. Overhyped. I found an eyelash that definitely wasn't mine in my food. Wild horses couldn't drag me back here."},
+{:overall_rating => 1, :food_rating=> 4, :ambiance_rating=> 5, :value_rating=> 2, :noise_level=> 1, :body=>"I can summarize my visit in one word: Dreadful. The whole place was just dirty. The kitchen screwed up my order completely, mixing it up with someone else's. It took almost an hour to get it corrected! Overhyped. Seriously, how difficult is it to get a clean glass around here? 1 star was too generous."}
+
+]; 
+
+(0...reviews.length).each do |i|
+    # give the review at that current index a variable 
+    rev = reviews[i]
+    # create your random restaurant id
+    res_num = rand(1..30) 
+    # create your random user id
+    user_num = rand(1..11)
+    # create your new key-value pairs in the current review for user and resturant id
+    rev[:user_id] = user_num
+    rev[:restaurant_id] = res_num
+    # send the whole object to .create
+    Review.create(rev)
+end
+
 
