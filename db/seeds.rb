@@ -27,14 +27,11 @@ rest1 = Restaurant.create(
     :website => "http://www.auntsetuncles.com/", 
     :dining_style => "Casual Dining"
 )
-# pr1 = open('https://eatingeasy-dev.s3.amazonaws.com/6GwX2UNihvUppTqAuEF85yAn') 
-# rest1.photo.attach(io: pr1, filename: 'aunt_et_uncles.jpeg')
-# rest1.photo.attach(io: File.open("https://eatingeasy-dev.s3.amazonaws.com/aunts_et_uncles.jpeg"), filename: 'aunts_et_uncles.jpeg')
 
-    # photo1 = File.open('https://eatingeasy-dev.us-east-1.amazonaws.com/aunts_et_uncles.jpeg')
+file = URI.open('https://eatingeasy-dev.s3.amazonaws.com/aunts_et_uncles.jpeg')
+rest1.photo.attach(io: file, filename: 'aunts_et_uncles.jpeg')
 
-    # rest1.photo.attach(io: file, filename: 'aunts_et_uncles.jpeg')
-    
+
 rest2 = Restaurant.create(
     :name => 'La Grande Boucherie', 
     :address => '145 W 53rd St, New York, NY 10019', 
