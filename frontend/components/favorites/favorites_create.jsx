@@ -7,6 +7,7 @@ import {
   getFavorite,
 } from "../../actions/favorite_actions";
 import { getRestaurant } from "../../actions/restaurant_actions";
+import { FaHeart } from "react-icons/fa";
 import { withRouter } from "react-router-dom";
 
 
@@ -57,15 +58,23 @@ class FavoriteButton extends Component {
 
   render() {
     const { isFavorite } = this.state;
-
-    console.log("USERID", this.props.currentUserId);
-    console.log("RESTAURANTID", this.props.restaurant.id);
     return (
       <div>
-        <button onClick={this.handleToggleFavorite}>
-
-          {isFavorite ? "Remove from favorites" : "Save to favorites"}
-        </button>
+        {isFavorite ? (
+          <button
+            onClick={this.handleToggleFavorite}
+            className="show-page-fave-btn"
+          >
+            <FaHeart className="favorited-heart" /> Restaurant Saved!{" "}
+          </button>
+        ) : (
+          <button
+            onClick={this.handleToggleFavorite}
+            className="show-page-fave-btn"
+          >
+            <FaHeart className="not-favorited-heart" /> Save this Restaurant{" "}
+          </button>
+        )}
       </div>
     );
   }

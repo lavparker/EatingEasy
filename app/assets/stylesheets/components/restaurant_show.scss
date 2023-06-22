@@ -26,14 +26,16 @@
     padding: 1rem;
     // background-color: #247f9e;
     // color: antiquewhite;
-    border-radius: 0.5rem;
     font-weight: bold;
     width: 235px;
     margin-left: 70%;
+    border-radius: 0.5rem;
     // box-sizing: border-box;
     // margin-right: 100%;
-    margin-top: -18%;
-    // z-index: -2000;
+    background-color: #247f9e;
+    color: antiquewhite;
+    margin-top: 2rem;
+    z-index: 200;
     cursor: pointer;
 }
 .not-favorited {
@@ -77,7 +79,7 @@
 
 .favorited-heart{
     color: red;
-    font-size: 1.5rem;
+    font-size: 1rem;
     // margin-left: 70%;
     // margin-top: -18%;
     // z-index: -2000;
@@ -86,7 +88,7 @@
 
 .not-favorited-heart{
     color: antiquewhite;
-    font-size: 1.5rem;
+    font-size: 1rem;
     // margin-left: 70%;
     // margin-top: -18%;
     // z-index: -2000;
