@@ -5,8 +5,8 @@ import ReservationConfirmation from "./reservation_confirmation";
 
 class ReservationForm extends React.Component {
   constructor(props) {
-    console.log("ERRORS", props.errors);
-    console.log("RESERVATION FORM PROPS", props); 
+    // console.log("ERRORS", props.errors);
+    // console.log("RESERVATION FORM PROPS", props); 
 
     super(props);
 
@@ -103,8 +103,8 @@ class ReservationForm extends React.Component {
     if(!this.props.errors){
       return null;
     }
-    console.log("PROPS", this.props);
-    console.log("ERRORS", this.props.errors)
+    // console.log("PROPS", this.props);
+    // console.log("ERRORS", this.props.errors)
     return (
        
       <ul className="res-errors">

@@ -5,6 +5,7 @@ import ReservationUpdateContainer from "../reservations/reservation_update_conta
 
 class ReservationItem extends React.Component {
   constructor(props) {
+    console.log("RESERVATION ITEM PROPS", props);
     super(props);
 
     this.state = {

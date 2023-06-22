@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
     reservations: Object.values(state.entities.reservations),
     user: state.entities.users[state.session.id],
     user_id: state.session.id,
+    restaurants: Object.values(state.entities.restaurants),
   };
 };
 

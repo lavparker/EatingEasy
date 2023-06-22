@@ -38,10 +38,10 @@ class FavoriteButton extends Component {
     removeFavoriteAPI(this.props.currentUser.id, this.props.restaurantId)
       .then(() => {
         this.setState({ isFavorite: false });
-        console.log("Favorite removed");
+        // console.log("Favorite removed");
       })
       .catch((error) => {
-        console.error("Error removing favorite:", error);
+        // console.error("Error removing favorite:", error);
       });
   };
 

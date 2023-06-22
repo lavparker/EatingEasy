@@ -3,6 +3,7 @@ import { FaChartLine, FaCheckCircle } from "react-icons/fa";
 
 class ReservationUpdateForm extends React.Component {
   constructor(props) {
+    console.log("RESERVATION UPDATE FORM PROPS", props);
     super(props);
 
     const tdyDate = new Date();
@@ -41,6 +42,7 @@ class ReservationUpdateForm extends React.Component {
       userId: this.props.reservation.user_id,
       reservationId: this.props.reservation.id,
       reviewSubmitted: false,
+      photoUrl: this.props.currentUser ? this.props.currentUser.photoUrl : "",
 
       // divShowing: false,
     };
@@ -81,6 +83,7 @@ class ReservationUpdateForm extends React.Component {
       restaurant_id: this.state.restaurantId,
       user_id: this.state.userId,
       id: this.state.reservationId,
+      photoUrl: this.state.photoUrl,
       
 
     };

@@ -80,7 +80,7 @@ import {
 
 class FavoriteButton extends Component {
   constructor(props) {
-    console.log("FavoriteButton PROPS:", props);
+    // console.log("FavoriteButton PROPS:", props);
     super(props);
     this.state = {
       isFavorite: false, // Initialize isFavorite to false
