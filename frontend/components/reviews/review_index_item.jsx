@@ -7,7 +7,8 @@ import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
 class ReviewIndexItem extends React.Component{
     constructor(props){
         // debugger
-        // console.log("REVIEW INDEX ITEM PROPS", props);
+        console.log("REVIEW INDEX ITEM PROPS", props);
+        // console.log("REVIEW INDEX ITEM PROPSDISPATCH", users);
         super(props); 
     }
 
@@ -15,6 +16,9 @@ class ReviewIndexItem extends React.Component{
          const { reviews } = this.props; 
         const { reservation } = this.props;
         const { currentUser } = this.props;
+
+        console.log('REVIEW FIRST NAME', reviews.name)
+        // const { users } = this.props;
         // console.log("THESE ARE THE REVIEW PROPS", reviews); 
         // console.log("THE USER IS", currentUser)
         if (!reviews) return null;
@@ -28,7 +32,11 @@ class ReviewIndexItem extends React.Component{
           <div className="review-details-left">
             <li className="review-firstname">
               <section className="column-1">
-                {currentUser.first_name[0]}
+                {/* {currentUser.first_name[0]} */}
+                {/* {users.id.first_name[0]} */}
+                {reviews.name[0]}
+                {/* {reviews.restaurant_id} */}
+                
               </section>
             </li>
           </div>

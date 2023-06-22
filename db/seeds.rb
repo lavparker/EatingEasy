@@ -874,9 +874,13 @@ reviews = [
     res_num = rand(1..30) 
     # create your random user id
     user_num = rand(1..11)
+    #create user name
+    user_name = User.find(user_num).first_name
     # create your new key-value pairs in the current review for user and resturant id
     rev[:user_id] = user_num
     rev[:restaurant_id] = res_num
+    rev[:name] = user_name
+
     # send the whole object to .create
     Review.create(rev)
 end

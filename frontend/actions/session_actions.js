@@ -4,6 +4,8 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS'; 
+export const RECEIVE_ALL_USERS = 'RECEIVE_ALL_USERS';
+export const RECEIVE_USER = 'RECEIVE_USER';
 
 //action creators 
 const receiveCurrentUser = user =>({
@@ -21,6 +23,15 @@ const receiveSessionErrors = errors =>({
     errors
 })
 
+const receiveAllUsers = users =>({
+    type: RECEIVE_ALL_USERS,
+    users
+})
+
+const receiveUser = user =>({
+    type: RECEIVE_USER,
+    user
+})
 
 //thunk action creators 
 
@@ -42,8 +53,20 @@ export const createNewUser = user => dispatch =>{
         err => (dispatch(receiveSessionErrors(err.responseJSON))))
 }
 
+
+
 export const clearSessionErrors = () =>{
     return{
         type: CLEAR_SESSION_ERRORS
     }
 }
+
+export const getUsers = () => dispatch =>(
+    APIUtil.getUsers()
+    .then(users => dispatch(receiveAllUsers(users)))
+); 
+
+export const getUser = userId => dispatch =>(
+    APIUtil.getUser(userId)
+    .then(user => dispatch(receiveUser(user)))
+)

@@ -8,6 +8,7 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = {
       // name: "",
+      name: this.props.currentUser.first_name,
       overall_rating: 0,
       food_rating: 0,
       ambiance_rating: 0,
@@ -41,7 +42,7 @@ class ReviewForm extends React.Component {
     // debugger
     const review = {
       
-      // name: this.state.name,
+      name: this.state.name,
       overall_rating: this.state.overall_rating,
       food_rating: this.state.food_rating,
       ambiance_rating: this.state.ambiance_rating,
