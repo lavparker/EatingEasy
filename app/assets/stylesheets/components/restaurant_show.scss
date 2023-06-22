@@ -1,5 +1,5 @@
 .restaurant-show-page {
-    margin-top: 10%;
+    // margin-top: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     // flex-direction: column;
@@ -10,11 +10,11 @@
 
 .show-page-res-img {
     object-fit: cover;
-    width: 111%;
+    width: 200%;
     height: 300px;
     margin-left: 0%;
     margin-right: 0%;
-    margin-top: 1rem;
+    // margin-top: 1rem;
     z-index: 5000;
     background-color: #247f9e;
 }
@@ -348,6 +348,7 @@
     width: auto;
     height: auto;
     color: black;
+    padding: 1rem;
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
     cursor: pointer;
 }
