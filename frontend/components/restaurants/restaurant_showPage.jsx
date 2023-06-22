@@ -14,7 +14,7 @@ import {
 import ReservationFormContainer from "../reservations/reservation_form_container";
 import StarRatings from "react-star-ratings";
 import ReviewIndexContainer from "../reviews/review_index_container"; 
-import FavoritesCreate from "../favorites/favorites_create";
+import FavoriteButton from "../favorites/favorites_create";
 import { HashLink} from 'react-router-hash-link';
 
 
@@ -67,7 +67,7 @@ class RestaurantShow extends React.Component {
           {/* <button className="show-page-fave-btn">
             <FaHeart /> favorite this restaurant{" "}
           </button> */}
-          <FavoritesCreate restaurant={this.props.restaurant} />
+          <FavoriteButton restaurant={this.props.restaurant} />
         </div>
         <div className="res-form">
           <ReservationFormContainer

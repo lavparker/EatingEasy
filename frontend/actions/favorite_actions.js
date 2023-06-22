@@ -36,21 +36,21 @@ export const removeErrors = () => ({
     type: REMOVE_ERRORS
 })
 
-// export const getFavorites = () => dispatch => (
-//     APIUtil.getFavorites()
-//         .then(favorites => dispatch(receiveAllFavorites(favorites)))
-// );
+export const getFavorites = () => dispatch => (
+    APIUtil.getFavorites()
+        .then(favorites => dispatch(receiveAllFavorites(favorites)))
+);
 
-export const getFavorites = (userId) => {
-  return async (dispatch) => {
-    try {
-      const favorites = await APIUtil.getFavorites(userId);
-      dispatch(receiveAllFavorites(favorites));
-    } catch (error) {
-      throw error;
-    }
-  };
-};
+// export const getFavorites = (userId) => {
+//   return async (dispatch) => {
+//     try {
+//       const favorites = await APIUtil.getFavorites(userId);
+//       dispatch(receiveAllFavorites(favorites));
+//     } catch (error) {
+//       throw error;
+//     }
+//   };
+// };
 
 
 
