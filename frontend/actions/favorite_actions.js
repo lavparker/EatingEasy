@@ -68,19 +68,6 @@ export const createFavorite = favorite => dispatch => {
     )
 }
 
-// export const createFavorite = (favorite) => {
-//   return new Promise((resolve, reject) => {
-//     APIUtil.createFavorite(favorite)
-//       .then((createdFavorite) => {
-//         resolve(createdFavorite);
-//       })
-//       .catch((error) => {
-//         reject(error);
-//       });
-//   });
-// };
-
-
 
 export const deleteFavorite = favoriteId => dispatch => (
     APIUtil.deleteFavorite(favoriteId)

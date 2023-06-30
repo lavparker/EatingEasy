@@ -82,7 +82,8 @@ const NavBar = ({ currentUser, login, logout, openModal }) => {
           </Link>
           <li className="dropdown-faves">
             {" "}
-            &nbsp; &nbsp; My Favorites &nbsp; &nbsp; </li>
+            {/* &nbsp; &nbsp; My Favorites &nbsp; &nbsp;  */}
+            </li>
         </ul>
       </div>
 

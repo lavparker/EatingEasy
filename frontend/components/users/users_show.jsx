@@ -52,7 +52,7 @@ class UsersShow extends React.Component {
                 <button className="past-res">Past Reservations</button>
               </Link>
               &nbsp;
-              <button className="fave-res">Favorite Restaurants</button>
+              {/* <button className="fave-res">Favorite Restaurants</button> */}
               &nbsp;
               <Link to="/">
                 <button className="make-res">Make a Reservation</button>

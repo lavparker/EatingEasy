@@ -59,7 +59,7 @@ class RestaurantShow extends React.Component {
     return (
       <div className="restaurant-show-page">
         <div className="res-show-head">
-          <FavoriteButton restaurant={this.props.restaurant} />
+          {/* <FavoriteButton restaurant={this.props.restaurant} /> */}
           <img
             className="show-page-res-img"
             src={this.props.restaurant.photoUrl}

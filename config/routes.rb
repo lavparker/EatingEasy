@@ -10,9 +10,5 @@ Rails.application.routes.draw do
     resources :favorites, only: [:index, :create, :show, :destroy]
 
   end
-  # root to: 'static_pages#root'
-
-  #config/routes.rb
-
-  get '*path', to: "static_pages#frontend_index"
+  root to: 'static_pages#root'
 end
