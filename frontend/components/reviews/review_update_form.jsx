@@ -37,7 +37,7 @@ class ReviewUpdateForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
 
-        console.log("PROPS", this.props)
+        // console.log("PROPS", this.props)
 
         const review = {
             overall_rating: this.state.overall_rating,
@@ -64,7 +64,7 @@ class ReviewUpdateForm extends React.Component {
     }
 
     renderErrors() {
-      console.log("REVIEW FORM ERRORS", this.props.errors)
+      // console.log("REVIEW FORM ERRORS", this.props.errors)
       // if (!this.props.errors) {
       //   return null;
       // }

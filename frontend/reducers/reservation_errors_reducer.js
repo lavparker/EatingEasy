@@ -5,7 +5,7 @@ const reservationErrorsReducer = (oldState = [], action) => {
     switch (action.type) {
         
         case RECEIVE_RESERVATION_ERRORS:
-            console.log("THESE ARE THE ERRORS ACTIONS", action.errors)
+            // console.log("THESE ARE THE ERRORS ACTIONS", action.errors)
             return action.errors;
             // console.log("THESE ARE THE ERRORS ACTIONS", action.errors)
    

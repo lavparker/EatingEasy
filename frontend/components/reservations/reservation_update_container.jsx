@@ -24,7 +24,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    console.log("I AM IN THE RESERVATION UPDATE FORM CONTAINER");
+    // console.log("I AM IN THE RESERVATION UPDATE FORM CONTAINER");
   return{
   
   // getReservation: reservationId => dispatch(getReservation(reservationId)),

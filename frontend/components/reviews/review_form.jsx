@@ -4,7 +4,7 @@ import StarRatings from "react-star-ratings";
 
 class ReviewForm extends React.Component {
   constructor(props) {
-    console.log("REVIEW FORM PROPS", props);
+    // console.log("REVIEW FORM PROPS", props);
     super(props);
     this.state = {
       // name: "",
@@ -98,7 +98,7 @@ class ReviewForm extends React.Component {
       <div>Review Submitted!</div>
     ) : null;
 
-    console.log("REVIEW FORM NAME", this.props.currentUser.first_name);
+    // console.log("REVIEW FORM NAME", this.props.currentUser.first_name);
     return (
       <div className="review-form">
         <h1>Please review your experience at {restaurant.name}</h1>

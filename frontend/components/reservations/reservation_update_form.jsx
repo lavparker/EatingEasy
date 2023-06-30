@@ -3,7 +3,7 @@ import { FaChartLine, FaCheckCircle } from "react-icons/fa";
 
 class ReservationUpdateForm extends React.Component {
   constructor(props) {
-    console.log("RESERVATION UPDATE FORM PROPS", props);
+    // console.log("RESERVATION UPDATE FORM PROPS", props);
     super(props);
 
     const tdyDate = new Date();

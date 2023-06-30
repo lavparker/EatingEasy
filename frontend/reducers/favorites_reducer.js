@@ -9,7 +9,7 @@ const favoritesReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_FAVORITES:
             return action.favorites;
         case RECEIVE_FAVORITE:
-            console.log("FAVORITE REDUCER", action.favorite);
+            // console.log("FAVORITE REDUCER", action.favorite);
             nextState[action.favorite.id] = action.favorite;
             return nextState;
         case REMOVE_FAVORITE:
