@@ -35,7 +35,6 @@ class ReviewIndexItem extends React.Component{
                 {/* {users.id.first_name[0]} */}
                 {reviews.name && reviews.name[0]}
                 {/* {reviews.restaurant_id} */}
-                
               </section>
             </li>
           </div>
@@ -63,20 +62,20 @@ class ReviewIndexItem extends React.Component{
               </div>
             </div>
             <div className="review-details-right-bottom">
-              {reviews && reviews.user_id === currentUser.id && (
+              {reviews && reviews.user_id === currentUser?.id && (
                 <div className="review-res-buttons">
                   <button
                     className="delete-rev"
                     onClick={() => this.props.deleteReview(reviews.id)}
                   >
-                    <FaRegTrashAlt className="trash-can-btn" /> Delete Review{" "}
+                    <FaRegTrashAlt className="trash-can-btn" /> Delete Review
                   </button>
                   <Link
-                    to={`/restaurants/${reviews.restaurant_id}/edit-review/${reviews.id}`}
+                    to={`/restaurants/${reviews?.restaurant_id}/edit-review/${reviews?.id}`}
                   >
                     <button className="modify-rev">
                       <FaPencilAlt className="pencil-btn" />
-                      Modify Review{" "}
+                      Modify Review
                     </button>
                   </Link>
                 </div>
