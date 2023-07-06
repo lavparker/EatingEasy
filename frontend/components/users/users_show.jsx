@@ -14,6 +14,17 @@ class UsersShow extends React.Component {
       return <h1>Loading!</h1>;
     }
 
+    const { reservations } = this.props;
+
+    const ascReservations = reservations.slice().sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateA - dateB;
+      
+    });
+
+    console.log("ASC RESERVATIONS", ascReservations);
+
     if (
       (this.props.reservations != null ||
         this.props.reservations != undefined) &&
@@ -64,7 +75,7 @@ class UsersShow extends React.Component {
         <ul className="reservation-items">
           <h2 className="current-reservations">Your Upcoming Reservations</h2>
 
-          {this.props.reservations.map((reservation) => (
+          {ascReservations.map((reservation) => (
             <ReservationItem
               key={reservation.id}
               reservation={reservation}
