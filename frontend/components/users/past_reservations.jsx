@@ -53,7 +53,7 @@ class PastReservations extends React.Component {
             {/* <div className="reservation-boxes"> */}
             {/* //             <img className="reservation-index-img" src={reservation.photoUrl} alt="restaurant image" /> */}
             <ul className="reservation-items">
-              <h2 className="current-reservations">Past Reservations</h2>
+              <h2 className="past-reservations">Past Reservations</h2>
 
               {this.props.reservations.map((reservation) => (
                 <PastReservationItem
