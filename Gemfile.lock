@@ -51,7 +51,7 @@ GEM
       io-like (~> 0.3.0)
     arel (9.0.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.782.0)
+    aws-partitions (1.783.0)
     aws-sdk (3.1.0)
       aws-sdk-resources (~> 3)
     aws-sdk-accessanalyzer (1.37.0)
@@ -156,7 +156,7 @@ GEM
     aws-sdk-backupstorage (1.5.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-batch (1.72.0)
+    aws-sdk-batch (1.73.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-billingconductor (1.10.0)
@@ -284,7 +284,7 @@ GEM
     aws-sdk-comprehend (1.71.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-comprehendmedical (1.43.0)
+    aws-sdk-comprehendmedical (1.44.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-computeoptimizer (1.44.0)
@@ -293,7 +293,7 @@ GEM
     aws-sdk-configservice (1.94.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-connect (1.116.0)
+    aws-sdk-connect (1.117.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-connectcampaignservice (1.6.0)
@@ -619,7 +619,7 @@ GEM
     aws-sdk-kinesisvideowebrtcstorage (1.5.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-kms (1.68.0)
+    aws-sdk-kms (1.69.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-lakeformation (1.37.0)
@@ -727,7 +727,7 @@ GEM
     aws-sdk-memorydb (1.16.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-mgn (1.21.0)
+    aws-sdk-mgn (1.22.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-migrationhub (1.45.0)
@@ -1276,7 +1276,7 @@ GEM
     aws-sdk-s3outposts (1.20.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-sagemaker (1.193.0)
+    aws-sdk-sagemaker (1.194.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-sagemakeredgemanager (1.17.0)
@@ -1306,7 +1306,7 @@ GEM
     aws-sdk-secretsmanager (1.78.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-securityhub (1.86.0)
+    aws-sdk-securityhub (1.87.0)
       aws-sdk-core (~> 3, >= 3.176.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-securitylake (1.7.0)
@@ -1532,7 +1532,6 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.2)
     minitest (5.18.1)
     msgpack (1.7.1)
     net-imap (0.3.6)
@@ -1545,8 +1544,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.13.10)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
     open-uri (0.3.0)
       stringio
@@ -1648,7 +1646,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-21
 
 DEPENDENCIES
   annotate
@@ -1684,4 +1682,4 @@ RUBY VERSION
    ruby 2.6.8p205
 
 BUNDLED WITH
-   1.17.2
+   2.4.15

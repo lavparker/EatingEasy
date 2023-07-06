@@ -119,6 +119,8 @@ class ReservationItem extends React.Component {
               <ReservationUpdateContainer
                 toggleUpdateForm={this.toggleUpdateForm}
                 reservationId={reservation.id}
+                // restaurantId={reservation.restaurant_id}
+                // restaurant={restaurant}
               />
             </div>
           ) : null}

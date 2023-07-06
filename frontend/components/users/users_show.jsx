@@ -69,6 +69,7 @@ class UsersShow extends React.Component {
               key={reservation.id}
               reservation={reservation}
               deleteReservation={this.props.deleteReservation}
+              // restaurant={this.props.restaurant}
             />
           ))}
         </ul>
