@@ -1,5 +1,10 @@
 import React from "react";
-import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
+import {
+  FaRegTrashAlt,
+  FaPencilAlt,
+  FaCheckCircle,
+  FaGlassMartini,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import PastReservationsContainer from "./past_reservations_container";
 
@@ -77,6 +82,11 @@ class PastReservationItem extends React.Component {
             >
               <button className="review-res">
                 <FaCheckCircle className="review-btn" /> &nbsp; Leave a Review
+              </button>
+            </Link>
+            &nbsp;
+            <Link to={`/restaurants/${reservation.restaurant_id}`}>
+              <button className="review-res"><FaGlassMartini className="review-btn"/> &nbsp; View Restaurant
               </button>
             </Link>
           </div>

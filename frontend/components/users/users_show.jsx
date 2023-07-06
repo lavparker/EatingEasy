@@ -23,7 +23,7 @@ class UsersShow extends React.Component {
       
     });
 
-    console.log("ASC RESERVATIONS", ascReservations);
+   
 
     if (
       (this.props.reservations != null ||

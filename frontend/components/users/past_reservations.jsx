@@ -15,6 +15,7 @@ class PastReservations extends React.Component {
 
     componentDidMount() {
         this.props.getReservations();
+        this.props.getRestaurants();
 
     }
 
@@ -23,6 +24,8 @@ class PastReservations extends React.Component {
         // // const formattedTime = new Date(reservation.time)
         // // .toLocaleTimeString(undefined, { hour12: true })
         // // .replace(/:\d{2}\s/, " ");
+
+        // console.log("RESERVATIONS", reservations);
 
         // const currentDate = new Date();
         // const reservationDate = new Date(reservation.date);
