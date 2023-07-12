@@ -108,7 +108,7 @@ class ReviewForm extends React.Component {
         <br />
         <form onSubmit={this.handleSubmit} className="review-form-main">
           <br />
-    
+
           <br />
           <p>Overall</p>
           <StarRatings
@@ -195,11 +195,12 @@ class ReviewForm extends React.Component {
           </div>
           <br />
           <br />
+          <p className="success-message">{successMessage}</p>
+          <br />
           <button className="submit-review-btn">
             <FaPencilAlt className="pencil-btn" />
             &nbsp; Submit Review
           </button>
-          <p className="success-message">{successMessage}</p>
         </form>
       </div>
     );
