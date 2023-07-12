@@ -73,6 +73,7 @@
     border-bottom: 1px solid rgba(14, 12, 62, 0.3);
     border-top: 1px solid rgba(14, 12, 62, 0.3);
     padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
     // margin-left: 50px;
     padding-bottom: 20px;
@@ -182,6 +183,7 @@
     color: black;
     text-overflow: ellipsis;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
     align-items: center;
     font-weight: 900;
@@ -194,6 +196,7 @@
     font-size: 12px;
     text-overflow: ellipsis;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
     overflow: hidden;
     white-space: nowrap;
@@ -227,6 +230,7 @@
 .num-res{
     font-size: .750rem;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .res-stars {
