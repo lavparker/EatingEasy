@@ -18,17 +18,12 @@ class RestaurantIndex extends React.Component {
 
     return (
       <div className="restaurants-index">
-        <h2>Local Restaurants</h2>
+        <h2>&nbsp;&nbsp; Local Restaurants</h2>
 
         <ul className="local-restaurants">
-           {
-                this.props.restaurants.map( restaurant => 
-                    <RestaurantIndexItem
-                        restaurant={restaurant} 
-                        key={restaurant.id} 
-                        />
-                )
-            }
+          {this.props.restaurants.map((restaurant) => (
+            <RestaurantIndexItem restaurant={restaurant} key={restaurant.id} />
+          ))}
         </ul>
       </div>
     );
