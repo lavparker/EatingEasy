@@ -4,7 +4,7 @@ import StarRatings from "react-star-ratings";
 
 class ReviewForm extends React.Component {
   constructor(props) {
-    // console.log("REVIEW FORM PROPS", props);
+    console.log("REVIEW FORM PROPS", props);
     super(props);
     this.state = {
       // name: "",
@@ -56,13 +56,15 @@ class ReviewForm extends React.Component {
     this.props.createReview(review).then(() => {
       this.setState({ reviewSubmitted: true }); 
     }).then(() => {
-      this.props.clearReviewErrors();
+      this.props.clearReviewErrors(); 
+    }).then(() => {
+      setTimeout(() => {
+        const restaurantId = this.props.match.params.id;
+        this.props.history.push(`/restaurants/${restaurantId}`);
+      }, 2000);
+      
     });
-    // .then((review) =>{
 
-    // })
-
-    // this.props.handleSubmit(review);
   }
 
   // changeStarRating(rating, name) {
