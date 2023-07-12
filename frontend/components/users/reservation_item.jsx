@@ -1,5 +1,5 @@
 import React from "react";
-import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle } from "react-icons/fa";
+import { FaRegTrashAlt, FaPencilAlt, FaCheckCircle, FaGlassMartini  } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ReservationUpdateContainer from "../reservations/reservation_update_container";
 
@@ -91,7 +91,6 @@ class ReservationItem extends React.Component {
                 <FaCheckCircle className="review-btn" /> &nbsp; Leave a Review
               </button>
             </Link>
-
             <button
               className="delete-res"
               onClick={() => this.props.deleteReservation(reservation.id)}
@@ -99,7 +98,6 @@ class ReservationItem extends React.Component {
               <FaRegTrashAlt className="trash-can-btn" />
               &nbsp; Cancel Reservation{" "}
             </button>
-
             <button
               className="modify-res"
               onClick={() => this.toggleUpdateForm()}
@@ -107,6 +105,11 @@ class ReservationItem extends React.Component {
               {/* {" "} */}
               <FaPencilAlt className="pencil-btn" /> &nbsp; Modify Reservation{" "}
             </button>
+            <Link to={`/restaurants/${reservation.restaurant_id}`}>
+              <button className="review-res">
+                <FaGlassMartini className="review-btn" /> &nbsp; View Restaurant
+              </button>
+            </Link>
           </div>
         </div>
         {/* </div> */}
